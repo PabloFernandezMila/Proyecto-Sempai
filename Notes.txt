@@ -1,0 +1,31 @@
+----- Proyecto Full stack Developer ----
+ E-commerce: Venta de libros  online
+--Features--
+- Users & Login (encriptacion que no se puede volver atras)
+- Informative Pages
+- Product pages
+- Cart
+- Checkout using paypal or MP dummy
+- Search by title, author, category (like)
+- page not found
+
+---Paleta de colores --
+
+Background negro #1c1d26
+detalles en negro con transparency .08
+
+detalles:
+    verde #39c088
+    rojo #e44c65
+    azul #5480f1
+
+
+    #35b0ab
+    #ffffff
+    #4ecac5
+    #298985
+    #e6e6e6
+    #75d6d2
+
+
+Fonts https://fonts.google.com/specimen/Roboto
