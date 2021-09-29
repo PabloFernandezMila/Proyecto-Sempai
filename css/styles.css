@@ -1,0 +1,28 @@
+/* For the body an image was added, and a tint overlay also, the image will take the full size of the page*/
+
+body {
+    background-image: url("https://cutewallpaper.org/21/clean-background-wallpaper/Clean-Grey-Background-1920x1080-75-Clean-Background-.jpg");
+       background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+}
