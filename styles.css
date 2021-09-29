@@ -1,0 +1,50 @@
+/* For the body an image was added, and a tint overlay also, the image will take the full size of the page*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital, wght@1, 500 &display=swap');
+
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+}
+
+#section1 {
+    background-image: url("resources/Brand.png");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+
+}
+
+#section2 {
+    background-image: url("https://images.pexels.com/photos/9656584/pexels-photo-9656584.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+
+}
+
+#section3 {
+    background-image: url("https://images.pexels.com/photos/9567590/pexels-photo-9567590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+
+}
