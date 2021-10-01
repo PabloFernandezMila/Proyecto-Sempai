@@ -1,50 +1,78 @@
-/* For the body an image was added, and a tint overlay also, the image will take the full size of the page*/
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital, wght@1, 500 &display=swap');
-
-
-h1 {
-    color: white;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    font-size: 32px;
-    font-weight: 500;
+html {
+    height: 100%;
 }
 
-h2 {
-    color: white;
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    font-size: 28px;
+body {
+    min-height: 100%;
+    margin: 0%;
 }
 
-h3 {
-    color: rgb(231, 3, 3);
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    font-size: 24px;
+section {
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 #section1 {
-    background-image: url("resources/Brand.png");
-    background-attachment: fixed;
-    background-size: cover;
-    height: 500px;
+    background-image: url(/resources/section1.jpg);
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: multiply;
+    color: whitesmoke;
+    position: relative;
+}
 
+#section1-center-block {
+    width: 60vw;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section1-center-block-colum1 {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#section1-center-block-colum2 {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#section1-center-block-colum2-img {
+    width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #35b0ab;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 #section2 {
     background-image: url("https://images.pexels.com/photos/9656584/pexels-photo-9656584.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-attachment: fixed;
-    background-size: cover;
-    height: 500px;
-
 }
 
 #section3 {
     background-image: url("https://images.pexels.com/photos/9567590/pexels-photo-9567590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-attachment: fixed;
-    background-size: cover;
-    height: 500px;
-
 }
