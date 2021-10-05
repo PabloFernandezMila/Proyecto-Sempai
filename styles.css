@@ -203,11 +203,10 @@ p {
     border-left-color: #25dad3;
     border-left-style: solid;
     border-left-width: 5px;
-    position: relative;
 }
 
 #section2-content-text {
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 50%;
     width: 100%;
