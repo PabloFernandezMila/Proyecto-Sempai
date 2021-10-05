@@ -1,14 +1,88 @@
-/* Applies to the entire body of the HTML document (except where overridden by more specific
-selectors). */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital, wght@1, 500 &display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 html {
     height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     min-height: 100%;
     margin: 0%;
+    width: 100%;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-wrapper {
+    margin-left: 2%;
+}
+
+#logo {
+    font-weight: 500;
+}
+
+#logo:hover {
+    color: #25dad3;
+}
+
+#contact {
+    margin-right: 2%;
+    color: white;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 0.3% 0.5%;
+    border-style: none;
+}
+
+#contact:hover {
+    background-color: #25dad3;
+    color: white;
+    cursor: pointer;
+}
+
+#nav_bar {
+    margin-right: 2%;
+}
+
+#nav_bar-list {
+    list-style: none;
+}
+
+.nav_bar-elements {
+    display: inline-block;
+    margin: 0px 20px;
+    padding: 0px 10px;
+    /* Added a border to stop moving the links while hover*/
+    border-bottom: solid;
+    border-bottom-color: transparent;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 0.5%;
+}
+
+.nav_bar-elements:hover {
+    color: #25dad3;
+    border-bottom: solid;
+    border-bottom-color: #25dad3;
 }
 
 section {
@@ -17,19 +91,51 @@ section {
     height: 100vh;
 }
 
+#section1-center-block-colum1-text h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    color: white;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
+    margin: 5%;
+}
+
+#section1-center-block-colum1-text p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+    color: white;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+
 #section1 {
-    background-image: url(/resources/section1.jpg);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1469&q=80");
+    background-color: rgba(34, 33, 29, 0.75);
     background-blend-mode: multiply;
-    color: whitesmoke;
+    color: white;
     position: relative;
+    margin-bottom: -60px;
 }
 
 #section1-center-block {
     width: 60vw;
     height: 50vh;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -38,6 +144,31 @@ section {
     float: left;
     width: 50%;
     height: 100%;
+    position: relative;
+    text-align: right;
+}
+
+#section1-center-block-colum1-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 100%;
+}
+
+#down-arrow {
+    height: 3%;
+    width: 2%;
+    left: 50%;
+    top: 80%;
+    position: absolute;
+    background-image: url(/resources/chevron-down.svg);
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#down-arrow:hover {
+    background-image: url(/resources/chevron-down-hover.svg);
 }
 
 #section1-center-block-colum2 {
@@ -54,25 +185,36 @@ section {
     height: 25vh;
     object-fit: cover;
     border-radius: 50%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #35b0ab;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+    transform: translate(0%, -50%);
+    margin-left: 3vw;
 }
 
 #section2 {
-    background-image: url("https://images.pexels.com/photos/9656584/pexels-photo-9656584.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("/resources/outside-reading.png");
+}
+
+#section2-content {
+    float: right;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left-color: #25dad3;
+    border-left-style: solid;
+    border-left-width: 5px;
+    position: relative;
+}
+
+#section2-content-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 #section3 {
-    background-image: url("https://images.pexels.com/photos/9567590/pexels-photo-9567590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("https://cdn.mos.cms.futurecdn.net/E9EgTqVKS7EFziZUiENMvC-970-80.jpg.webp");
 }
