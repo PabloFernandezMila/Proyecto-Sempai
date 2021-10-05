@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500 &display=swap');
 html {
     height: 100%;
     width: 100%;
@@ -7,7 +7,7 @@ html {
 
 body {
     min-height: 100%;
-    margin: 0%;
+    margin: 0;
     width: 100%;
 }
 
@@ -63,8 +63,8 @@ header {
 
 .nav_bar-elements {
     display: inline-block;
-    margin: 0px 20px;
-    padding: 0px 10px;
+    margin: 0 20px;
+    padding: 0 10px;
     /* Added a border to stop moving the links while hover*/
     border-bottom: solid;
     border-bottom-color: transparent;
@@ -118,12 +118,12 @@ p {
     font-weight: 100;
     font-size: 25px;
     color: white;
-    margin-top: 0%;
+    margin-top: 0;
     margin-bottom: 2%;
 }
 
 #section1 {
-    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1469&q=80");
+    background-image: url("resources/section1.jpg");
     background-color: rgba(34, 33, 29, 0.75);
     background-blend-mode: multiply;
     color: white;
@@ -161,14 +161,14 @@ p {
     left: 50%;
     top: 80%;
     position: absolute;
-    background-image: url(/resources/chevron-down.svg);
+    background-image: url('/resources/chevron-down.svg');
     z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #down-arrow:hover {
-    background-image: url(/resources/chevron-down-hover.svg);
+    background-image: url('/resources/chevron-down-hover.svg');
 }
 
 #section1-center-block-colum2 {
@@ -205,15 +205,39 @@ p {
     border-left-width: 5px;
 }
 
-#section2-content-text {
+#section2-content-text,
+#section3-content-text {
     position: relative;
-    top: 30%;
+    top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
     text-align: center;
+    height: 50%;
+}
+
+#section2-button {
+    margin-top: 25%;
+    background-color: #0707077c;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border: lightslategray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 1vh 10vw;
+}
+
+#section2-button:hover {
+    color: #25dad3;
+    border-color: #25dad3;
+    background-color: transparent;
 }
 
 #section3 {
     background-image: url("https://cdn.mos.cms.futurecdn.net/E9EgTqVKS7EFziZUiENMvC-970-80.jpg.webp");
+}
+
+#section3-content-text {
+    margin-top: 10vh;
 }
