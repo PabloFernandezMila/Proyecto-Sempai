@@ -122,7 +122,7 @@ p {
 }
 
 #section1 {
-    background-image: url("/assets/images/section1.jpg");
+    background-image: url("../assets/images/section1.jpg");
     background-color: rgba(34, 33, 29, 0.75);
     background-blend-mode: multiply;
     color: white;
