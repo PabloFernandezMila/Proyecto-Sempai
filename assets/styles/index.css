@@ -41,7 +41,7 @@ header {
     background-color: transparent;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 12px;
     padding: 0.3% 0.5%;
     border-style: none;
@@ -73,7 +73,7 @@ header {
 a {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
     padding: 0.5%;
@@ -122,7 +122,7 @@ p {
 }
 
 #section1 {
-    background-image: url("resources/section1.jpg");
+    background-image: url("/assets/images/section1.jpg");
     background-color: rgba(34, 33, 29, 0.75);
     background-blend-mode: multiply;
     color: white;
@@ -160,14 +160,14 @@ p {
     left: 50%;
     top: 80%;
     position: absolute;
-    background-image: url('/resources/chevron-down.svg');
+    background-image: url('/assets/images/chevron-down.svg');
     z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #down-arrow:hover {
-    background-image: url('/resources/chevron-down-hover.svg');
+    background-image: url('/assets/images/chevron-down-hover.svg');
 }
 
 #section1-center-block-colum2 {
@@ -191,7 +191,7 @@ p {
 }
 
 #section2 {
-    background-image: url("/resources/section2.png");
+    background-image: url("/assets/images/section2.png");
 }
 
 #section2-content {
@@ -233,7 +233,7 @@ p {
 }
 
 #section3 {
-    background-image: url("/resources/section3.jpg");
+    background-image: url("/assets/images/section3.jpg");
     height: 100vh;
     position: relative;
 }
@@ -260,7 +260,7 @@ p {
 }
 
 footer {
-    height: 10vh;
+    height: 12vh;
     width: 100%;
     background-color: rgb(34, 33, 33);
     position: absolute;
@@ -283,6 +283,7 @@ footer {
     font-size: 12px;
     color: rgb(110 102 102);
     margin: 0;
+    bottom: 0%;
 }
 
 #footer-social-media {
@@ -291,18 +292,40 @@ footer {
     font-size: 12px;
     color: rgb(70, 70, 70);
     margin: 0;
-    display: inline-block;
+    padding: 0;
 }
 
 .social-media {
     display: inline-block;
     width: 100%;
-    height: 20px;
+    height: 30px;
+    margin: 1vh 1vw;
+    cursor: pointer;
 }
 
 #facebook {
-    width: 20px;
-    background-image: url('/resources/chevron-down.svg');
+    width: 30px;
+    background-image: url('/assets/images/facebook.svg');
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#facebook:hover {
+    background-image: url('/assets/images/facebook-hover.svg');
+}
+
+#linkedin {
+    width: 30px;
+    background-image: url('/assets/images/linkedin.svg');
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#github {
+    width: 30px;
+    background-image: url('/assets/images/github.svg');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: cover;
