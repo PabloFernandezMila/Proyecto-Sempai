@@ -226,7 +226,7 @@ p {
     padding: 1vh 10vw;
 }
 
-#section2-button:hover {
+button:hover {
     color: #25dad3;
     border-color: #25dad3;
     background-color: transparent;
@@ -257,6 +257,22 @@ p {
     width: 100%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+#section3-button {
+    background-color: #0707077c;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border: lightslategray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 1vh 10vw;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 footer {
@@ -301,13 +317,13 @@ footer {
 
 .social-media a {
     width: 100%;
-    height: 30px;
+    height: 40px;
     margin: 1vh 1vw;
     cursor: pointer;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 30px;
+    width: 40px;
 }
 
 #facebook {
@@ -322,6 +338,14 @@ footer {
     background-image: url('../images/linkedin.svg');
 }
 
+#linkedin:hover {
+    background-image: url('../images/linkedin-hover.svg');
+}
+
 #github {
     background-image: url('../images/github.svg');
+}
+
+#github:hover {
+    background-image: url('../images/github-hover.svg');
 }
