@@ -120,7 +120,7 @@ p {
 }
 
 #section1 {
-    background-image: url("../images/section1.jpg");
+    background-image: url("../images/index/section1.jpg");
     background-blend-mode: multiply;
     position: relative;
     margin-bottom: -60px;
@@ -176,8 +176,7 @@ p {
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
-    margin-left: 3vw;
+    transform: translate(-50%, -50%);
 }
 
 .down-arrow {
@@ -186,18 +185,18 @@ p {
     left: 50%;
     top: 80%;
     position: absolute;
-    background-image: url('../images/chevron-down.svg');
+    background-image: url('../images/index/chevron-down.svg');
     z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .down-arrow:hover {
-    background-image: url('../images/chevron-down-hover.svg');
+    background-image: url('../images/index/chevron-down-hover.svg');
 }
 
 #section2 {
-    background-image: url("../images/section2.png");
+    background-image: url("../images/index/section2.png");
 }
 
 #section2-content {
@@ -225,7 +224,7 @@ p {
 }
 
 #section3 {
-    background-image: url("../images/section3.jpg");
+    background-image: url("../images/index/section3.jpg");
     height: 100vh;
     position: relative;
 }
@@ -283,27 +282,27 @@ footer {
 }
 
 #facebook {
-    background-image: url('../images/facebook.svg');
+    background-image: url('../images/index/facebook.svg');
 }
 
 #facebook:hover {
-    background-image: url('../images/facebook-hover.svg');
+    background-image: url('../images/index/facebook-hover.svg');
 }
 
 #linkedin {
-    background-image: url('../images/linkedin.svg');
+    background-image: url('../images/index/linkedin.svg');
 }
 
 #linkedin:hover {
-    background-image: url('../images/linkedin-hover.svg');
+    background-image: url('../images/index/linkedin-hover.svg');
 }
 
 #github {
-    background-image: url('../images/github.svg');
+    background-image: url('../images/index/github.svg');
 }
 
 #github:hover {
-    background-image: url('../images/github-hover.svg');
+    background-image: url('../images/index/github-hover.svg');
 }
 
 #footer-copyright {
