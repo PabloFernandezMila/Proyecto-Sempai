@@ -88,10 +88,17 @@ select {
     padding: 0 1%;
 }
 
+select:hover {
+    border-bottom: solid 1px var(--details-color);
+}
+
 option {
     background-color: rgb(34, 34, 34);
 }
 
 section {
-    height: 70%;
+    height: 80%;
+    width: 80%;
+    background-color: slategrey;
+    margin: auto;
 }
