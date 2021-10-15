@@ -8,22 +8,33 @@
 }
 
 html {
+    height: 100%;
+    margin: 0;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     background-color: rgb(34, 34, 34);
+    height: 100%;
 }
 
 h1 {
     font-weight: 500;
     font-size: 45px;
+    margin-top: 70px;
 }
 
 h2 {
     font-weight: 300;
     font-size: 25px;
+}
+
+a {
+    font-weight: 100;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0.5%;
 }
 
 .title {
@@ -33,4 +44,54 @@ h2 {
 .roboto-white {
     font-family: 'Roboto', sans-serif;
     color: white;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.breadcrumb {
+    margin-left: 2%;
+    padding: 0 1%;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    content: "/\00a0";
+}
+
+.breadcrumb li a {
+    padding-left: 0;
+}
+
+.breadcrumb li a:hover {
+    color: var(--details-color);
+}
+
+select {
+    margin: 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 0%;
+    padding: 0 1%;
+}
+
+option {
+    background-color: rgb(34, 34, 34);
+}
+
+section {
+    height: 70%;
 }
