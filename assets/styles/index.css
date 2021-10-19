@@ -17,24 +17,24 @@ body {
 
 a {
     font-weight: 100;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     padding: 0.5%;
 }
 
 h1 {
     font-weight: 400;
-    font-size: 45px;
+    font-size: 2.625rem;
 }
 
 h2 {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 2.125rem;
 }
 
 p {
     font-weight: 100;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .roboto-white {
@@ -56,7 +56,6 @@ section {
     background-image: url("../images/index/section1.jpg");
     background-blend-mode: multiply;
     position: relative;
-    margin-bottom: -60px;
 }
 
 #section1 .centered {
@@ -138,13 +137,13 @@ section {
     height: 100%;
     border-left-color: var(--details-color);
     border-left-style: solid;
-    border-left-width: 5px;
+    border-left-width: 0.125rem;
 }
 
 .section-button {
     background-color: #0707077c;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     border: lightslategray;
     border-style: solid;
     border-width: 1px;
@@ -167,21 +166,20 @@ section {
     height: 50vh;
     border-top-color: var(--details-color);
     border-top-style: solid;
-    border-top-width: 5px;
+    border-top-width: 0.125rem;
     position: absolute;
     bottom: 0;
-}
-
-.section3-position {
-    position: relative;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 #section3-content-text {
     width: 100%;
     text-align: center;
+}
+
+#section3-button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 button:hover,
