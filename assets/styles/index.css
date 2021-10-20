@@ -25,6 +25,7 @@ a {
 h1 {
     font-weight: 400;
     font-size: 2.625rem;
+    margin-top: 0;
 }
 
 h2 {
@@ -58,11 +59,6 @@ section {
     position: relative;
 }
 
-#section1 .centered {
-    width: 60vw;
-    height: 50vh;
-}
-
 .centered {
     position: relative;
     top: 50%;
@@ -72,43 +68,27 @@ section {
     text-align: center;
 }
 
-#section1-block-colum1 {
-    float: left;
+#section1>.centered {
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
     width: 50%;
     height: 100%;
-    position: relative;
-    text-align: right;
 }
 
-#section1-block-colum1-text {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    width: 100%;
-}
-
-#section1-block-colum1-text p {
-    font-size: 25px;
-    margin-top: 0;
-    margin-bottom: 2%;
-}
-
-#section1-block-colum2 {
-    float: left;
-    width: 50%;
-    height: 100%;
-    background-attachment: fixed;
-    position: relative;
-}
-
-#section1-block-colum2-img {
-    width: 25vh;
-    height: 25vh;
-    object-fit: cover;
+#column2-image {
+    background-image: url("../images/index/section1-column2.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 25vh;
+    width: 25vh;
 }
 
 .down-arrow {

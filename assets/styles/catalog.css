@@ -22,7 +22,7 @@ body {
 h1 {
     font-weight: 500;
     font-size: 2.625rem;
-    margin-top: 3%;
+    margin-top: 15vh;
 }
 
 h2 {
@@ -64,18 +64,16 @@ a {
     display: inline;
 }
 
-.breadcrumb li+li:before {
-    padding: 80.6rem;
-    color: white;
-    content: "/\00a0";
-}
-
 .breadcrumb li a {
     padding-left: 0;
 }
 
 .breadcrumb li a:hover {
     color: var(--details-color);
+}
+
+.breadcrumb-separator {
+    pointer-events: none;
 }
 
 select {
