@@ -99,4 +99,8 @@ section {
     width: 80%;
     background-color: slategrey;
     margin: auto;
+    margin-bottom: 5%;
+    display: flex;
 }
+
+.row {}

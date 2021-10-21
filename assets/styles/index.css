@@ -68,6 +68,14 @@ section {
     text-align: center;
 }
 
+.centered-vertically {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    transform: translate(0%, -50%);
+    text-align: center;
+}
+
 #section1>.centered {
     width: 60vw;
     height: 50vh;
@@ -82,6 +90,14 @@ section {
     height: 100%;
 }
 
+#section1-block-column1 {
+    width: 70%;
+}
+
+#section1-block-column2 {
+    width: 30%;
+}
+
 #column2-image {
     background-image: url("../images/index/section1-column2.jfif");
     background-repeat: no-repeat;
@@ -89,6 +105,7 @@ section {
     border-radius: 50%;
     height: 25vh;
     width: 25vh;
+    margin-left: 3%;
 }
 
 .down-arrow {
