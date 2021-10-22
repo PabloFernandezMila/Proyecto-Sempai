@@ -32,21 +32,22 @@ header>div {
     margin-left: 2%;
 }
 
-header>div>a {
+#logo {
     font-weight: 500;
+    color: var(--details-color);
 }
 
 header>div>a:hover {
-    color: var(--details-color);
+    color: white;
 }
 
 header>button {
     margin-right: 2%;
     color: white;
-    background-color: transparent;
+    background-color: var(--details-color);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.250rem;
     border-radius: 12px;
     padding: 0.3% 0.5%;
     border-style: none;
