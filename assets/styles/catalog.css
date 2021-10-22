@@ -95,12 +95,28 @@ option {
 }
 
 section {
-    height: 80%;
-    width: 80%;
-    background-color: slategrey;
+    width: 1000px;
+    height: 1700px;
     margin: auto;
     margin-bottom: 5%;
-    display: flex;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 534px 534px 534px;
+    align-content: center;
+    justify-content: center;
 }
 
-.row {}
+.book {
+    background: url(../images/Catalog/bookcover1.jpg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.3);
+}
