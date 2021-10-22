@@ -29,7 +29,7 @@ footer {
 }
 
 header>div {
-    margin-left: 2%;
+    padding-left: 2%;
 }
 
 #logo {
@@ -37,7 +37,7 @@ header>div {
     color: var(--details-color);
 }
 
-header>div>a:hover {
+header>div:hover #logo {
     color: white;
 }
 
@@ -54,8 +54,8 @@ header>button {
 }
 
 header>button:hover {
-    background-color: var(--details-color);
-    color: white;
+    background-color: white;
+    color: var(--details-color);
     cursor: pointer;
 }
 
