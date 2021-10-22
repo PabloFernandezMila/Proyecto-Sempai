@@ -104,15 +104,15 @@ option {
 }
 
 section {
-    width: 940px;
-    height: 1700px;
+    width: 80vh;
+    height: 150vh;
     margin: auto;
     margin-bottom: 5%;
     display: grid;
     gap: 20px 20px;
-    grid-template-columns: 270px 300px 300px 300px;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
     ;
-    grid-template-rows: 480px 534px 534px;
+    grid-template-rows: 50vh 50vh 50vh;
     align-content: center;
     justify-content: center;
 }
