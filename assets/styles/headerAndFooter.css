@@ -59,6 +59,10 @@ header>button:hover {
     cursor: pointer;
 }
 
+header>nav {
+    margin-left: -4%;
+}
+
 .nav_bar-elements {
     display: inline-block;
     margin: 0 20px;
