@@ -76,7 +76,7 @@ section {
     text-align: center;
 }
 
-#section1>.centered {
+#section1>.centered:first-child {
     width: 60vw;
     height: 50vh;
     display: flex;
@@ -112,11 +112,16 @@ section {
     margin-left: 3%;
 }
 
+#arrow-container {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+}
+
 .down-arrow {
     height: 40px;
     width: 40px;
-    left: 50%;
-    top: 80%;
     position: absolute;
     background-image: url('../images/index/chevron-down.svg');
     z-index: 1;
@@ -170,17 +175,12 @@ section {
     border-top-width: 0.125rem;
     position: absolute;
     bottom: 0;
+    padding: 20px;
 }
 
 #section3-content-text {
     width: 100%;
     text-align: center;
-}
-
-#section3-button {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 button:hover,

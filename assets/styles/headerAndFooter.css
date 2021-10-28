@@ -11,8 +11,10 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 3fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo empty navbar search login";
     padding: 0 2%;
 }
 
@@ -27,11 +29,14 @@ footer {
     width: 100%;
     background-color: rgb(34, 33, 33);
     display: inline-block;
+    min-height: 80px;
 }
 
 #logo {
     font-weight: 500;
     color: var(--details-color);
+    grid-area: logo;
+    margin: auto;
 }
 
 header>div:hover #logo {
@@ -45,8 +50,11 @@ header>button {
     font-weight: 300;
     font-size: 1.250rem;
     border-radius: 12px;
-    padding: 0.3% 0.5%;
+    padding: 5px 10px;
     border-style: none;
+    grid-area: login;
+    width: fit-content;
+    margin: auto;
 }
 
 header>button:hover {
@@ -56,7 +64,8 @@ header>button:hover {
 }
 
 header>nav {
-    margin-left: -3%;
+    grid-area: navbar;
+    text-align: center;
 }
 
 .nav_bar-elements {
@@ -75,6 +84,10 @@ header>nav {
 
 .nav_bar-elements:hover {
     border-bottom: 1px solid var(--details-color);
+}
+
+#search {
+    grid-area: search;
 }
 
 .social-media {

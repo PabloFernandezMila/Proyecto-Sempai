@@ -31,8 +31,11 @@
                 </li>
             </ul>
         </nav>
-        <button type="button">
-                                        Login</button>
+        <form id="search">
+            <input type="search" id="imput-search" placeholder="Search...">
+            <button>Search</button>
+        </form>
+        <button type="button">Login</button>
     </header>
     <section id="section1" class="tint">
         <div class="centered">
@@ -52,7 +55,9 @@
                 <div id="column2-image" class="centered-vertically"></div>
             </div>
         </div>
-        <a class="down-arrow" href="#section2"></a>
+        <div id="arrow-container">
+            <a class="down-arrow" href="#section2"></a>
+        </div>
     </section>
     <section id="section2">
         <div id="section2-content" class="tint">
@@ -73,7 +78,8 @@
     </section>
     <section id="section3" class="tint">
         <div id="section3-content" class="tint">
-            <div id="section3-content-text" class="section3-position">
+            <div id="section3-content-text" class="section3-position centered">
+
                 <h2 class="roboto-white">
                     Over 1000+ titles available!</h2>
                 <p class="roboto-white">
@@ -82,10 +88,11 @@
                     On our site you will find more than 1000 titles, some indie writers, unprinted titles, old and new editions of classic books and much more.
                 </p>
 
+                <a target="_self" href="/pages/catalog.html">
+                    <button id="section3-button" type="button" class="section-button roboto-white  section3-position">Catalog</button>
+                </a>
+
             </div>
-            <a target="_self" href="/pages/catalog.html">
-                <button id="section3-button" type="button" class="section-button roboto-white  section3-position">Catalog</button>
-            </a>
         </div>
     </section>
 
