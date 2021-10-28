@@ -7,6 +7,7 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     align-items: center;
     height: 8vh;
+    min-height: 70px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -86,12 +87,24 @@ header>nav {
     border-bottom: 1px solid var(--details-color);
 }
 
-#search {
+#search-button {
+    text-align: right;
     grid-area: search;
+    align-items: center;
+}
+
+#search-button i {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .social-media {
     display: inline-block;
+}
+
+#search-button>i:hover {
+    color: var(--details-color);
 }
 
 .social-media a {
