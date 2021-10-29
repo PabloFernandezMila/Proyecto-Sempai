@@ -189,3 +189,15 @@ button:hover,
     border-color: var(--details-color);
     background-color: transparent;
 }
+
+@media screen and (max-width: 730px) {
+    #section1-block-column2 {
+        display: none;
+    }
+    #section1-block-column1 {
+        width: 100%;
+    }
+    #section1-block-column1-text {
+        text-align: center;
+    }
+}

@@ -44,7 +44,12 @@ header>div:hover #logo {
     color: white;
 }
 
-header>button {
+#login-wrapper {
+    grid-area: login;
+    text-align: center;
+}
+
+header>div>button {
     color: white;
     background-color: var(--details-color);
     font-family: 'Roboto', sans-serif;
@@ -53,7 +58,6 @@ header>button {
     border-radius: 12px;
     padding: 5px 10px;
     border-style: none;
-    grid-area: login;
     width: fit-content;
     margin: auto;
 }
@@ -151,4 +155,40 @@ header>nav {
     bottom: 0%;
     color: #6e6666;
     font-family: 'Roboto', sans-serif;
+}
+
+
+/* Start of media queries */
+
+@media screen and (max-width: 1024px) {
+    #search-button {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    header {
+        background-color: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        height: 20vh;
+        min-height: 70px;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "search logo login" "navbar navbar navbar ";
+        padding: 0 2%;
+    }
+    a {
+        font-size: 1.1rem;
+    }
+    #logo-wrapper {
+        grid-area: logo;
+        text-align: center;
+    }
+    #section2-content {
+        width: 100%;
+    }
 }
