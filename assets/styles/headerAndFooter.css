@@ -179,8 +179,8 @@
                 grid-template-areas: "search logo login" "navbar navbar navbar ";
                 padding: 0 2%;
             }
-            a {
-                font-size: 1.1rem;
+            .nav_bar-elements {
+                margin: 0;
             }
             #logo-wrapper {
                 grid-area: logo;
@@ -198,6 +198,18 @@
         }
         
         @media screen and (max-width: 340px) {
+            #section3-content {
+                height: 80vh;
+            }
+        }
+        
+        @media screen and (max-width: 340px) {
+            #section3-content {
+                height: 80vh;
+            }
+        }
+        
+        @media screen and (max-width: 281px) {
             #section3-content {
                 height: 80vh;
             }

@@ -190,6 +190,9 @@ button:hover,
     background-color: transparent;
 }
 
+
+/* Start of media queries */
+
 @media screen and (max-width: 800px) {
     #section1-block-column2,
     #arrow-container {
