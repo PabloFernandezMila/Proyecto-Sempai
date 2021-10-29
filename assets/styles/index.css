@@ -191,7 +191,8 @@ button:hover,
 }
 
 @media screen and (max-width: 730px) {
-    #section1-block-column2 {
+    #section1-block-column2,
+    #arrow-container {
         display: none;
     }
     #section1-block-column1 {
