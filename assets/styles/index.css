@@ -184,7 +184,8 @@ section {
 }
 
 button:hover,
-#section2-button:hover {
+#section2-button:hover,
+#section3-button:hover {
     color: var(--details-color);
     border-color: var(--details-color);
     background-color: transparent;

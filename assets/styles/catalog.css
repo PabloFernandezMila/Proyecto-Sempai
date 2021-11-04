@@ -44,7 +44,8 @@ h3 {
     padding: 2%;
 }
 
-a {
+a,
+.breadcrumb li p {
     font-weight: 100;
     font-size: 1.5rem;
     text-decoration: none;
@@ -59,7 +60,7 @@ p {
     font-size: 0.9rem;
 }
 
-.book-content>a>button {
+input.roboto-white {
     margin-right: 2%;
     color: white;
     background-color: var(--details-color);
@@ -72,8 +73,12 @@ p {
     margin-top: 3%;
 }
 
-.book-content>a>button:hover {
+input.roboto-white:hover {
     cursor: pointer;
+    background-color: transparent;
+    color: var(--details-color);
+    border-bottom: solid 1px var(--details-color);
+    border-radius: 0px;
 }
 
 .title {
@@ -112,7 +117,7 @@ p {
 }
 
 .breadcrumb li {
-    display: inline;
+    display: inline-block;
 }
 
 .breadcrumb li a {
