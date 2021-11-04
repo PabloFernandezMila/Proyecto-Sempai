@@ -7,7 +7,7 @@ Added this to load the colored svgs on the footer, this prevents blinking when t
         
         body:after {
             display: none;
-            content: url(/assets/images/index/facebook-hover.svg) url(/assets/images/index/linkedin-hover.svg) url(/assets/images/index/github-hover.svg);
+            content: url(../images/index/facebook-hover.svg) url(../images/index/linkedin-hover.svg) url(../images/index/github-hover.svg);
         }
         
         header {
