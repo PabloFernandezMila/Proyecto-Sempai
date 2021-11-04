@@ -2,13 +2,6 @@
          :root {
             --details-color: #5480f1;
         }
-        /*
-Added this to load the colored svgs on the footer, this prevents blinking when the image is hovered the fist time, this happens because the hover image was not loaded yet*/
-        
-        footer:after {
-            display: none;
-            content: url(../images/index/facebook-hover.svg) url(../images/index/linkedin-hover.svg) url(../images/index/github-hover.svg);
-        }
         
         header {
             background-color: rgba(0, 0, 0, 0.7);
@@ -138,6 +131,14 @@ Added this to load the colored svgs on the footer, this prevents blinking when t
         #facebook {
             background-image: url('../images/index/facebook.svg');
         }
+        /*Added the before block to load the hover image to pevent blinking the fist time the user hovers on the icon*/
+        
+        #facebook:before {
+            content: url('../images/index/facebook-hover.svg');
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
         
         #facebook:hover {
             background-image: url('../images/index/facebook-hover.svg');
@@ -147,12 +148,26 @@ Added this to load the colored svgs on the footer, this prevents blinking when t
             background-image: url('../images/index/linkedin.svg');
         }
         
+        #linkedin:before {
+            content: url('../images/index/linkedin-hover.svg');
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+        
         #linkedin:hover {
             background-image: url('../images/index/linkedin-hover.svg');
         }
         
         #github {
             background-image: url('../images/index/github.svg');
+        }
+        
+        #github:before {
+            content: url('../images/index/github-hover.svg');
+            width: 0;
+            height: 0;
+            visibility: hidden;
         }
         
         #github:hover {
