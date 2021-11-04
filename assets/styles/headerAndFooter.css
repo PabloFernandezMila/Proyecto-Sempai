@@ -5,11 +5,6 @@
         /*
 Added this to load the colored svgs on the footer, this prevents blinking when the image is hovered the fist time, this happens because the hover image was not loaded yet*/
         
-        body:after {
-            display: none;
-            content: url(/assets/images/index/facebook-hover.svg) url(/assets/images/index/linkedin-hover.svg) url(/assets/images/index/github-hover.svg);
-        }
-        
         header {
             background-color: rgba(0, 0, 0, 0.7);
             align-items: center;
