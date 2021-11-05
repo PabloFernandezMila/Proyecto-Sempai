@@ -266,6 +266,8 @@ section>div:nth-child(12) {
 
 .active {
     border-bottom: solid 1px var(--details-color);
+    cursor: default;
+    pointer-events: none;
 }
 
 
@@ -290,6 +292,11 @@ section>div:nth-child(12) {
         height: 2560px;
         width: 600px;
     }
+    /*For smaller resolutions had to change the background-size to fit the image inside the book element,
+     if i set contain for higher resolutions the tint on hover has gliches for some images*/
+    .book {
+        background-size: contain;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -297,21 +304,36 @@ section>div:nth-child(12) {
         height: 50vh;
     }
     h1 {
-        margin-top: 12%;
+        margin-top: 20%;
     }
 }
 
 @media screen and (max-width: 600px) {
+    h2 {
+        padding: 3%;
+    }
     section {
         grid-template-columns: 250px;
         grid-template-rows: 400px 400px 400px 400px 400px 400px;
         height: 4900px;
         width: 300px;
     }
+    #breadcrumb-wrapper {
+        text-align: center;
+    }
+    #select-wrapper {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 325px) {
     h1 {
-        margin-top: 15%;
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    section {
+        width: 280px;
     }
 }

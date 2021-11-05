@@ -205,4 +205,14 @@ button:hover,
     #section1-block-column1-text {
         text-align: center;
     }
+    #section2-content {
+        padding: 20px;
+    }
+    button,
+    #section2-button,
+    #section3-button {
+        color: var(--details-color);
+        border-color: var(--details-color);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 }
