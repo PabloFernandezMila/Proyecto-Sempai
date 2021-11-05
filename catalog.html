@@ -23,14 +23,14 @@
             </div>
             <nav>
                 <ul>
-                    <li class="nav_bar-elements inactive">
+                    <li class="nav_bar-elements inactive bounce">
                         <a target="_self" href="index.html" class="roboto-white">
                                 Home</a>
                     </li>
                     <li class="nav_bar-elements active">
                         <a target="_self" href="#" class="roboto-white">Catalog</a>
                     </li>
-                    <li class="nav_bar-elements inactive">
+                    <li class="nav_bar-elements inactive bounce">
                         <a target="_self" href="#" class="roboto-white">About</a>
                     </li>
                 </ul>
@@ -68,13 +68,15 @@
     </div>
     <!--  Breadcrumb end -->
     <!--  Category select start -->
-    <select class="roboto-white" name="select">
+    <div id="select-wrapper">
+        <select class="roboto-white" name="select">
             <option value="" disabled selected>Select a category
             </option>
             <option value="value1">Classics</option>
             <option value="value2">Fantasy</option>
             <option value="value3">Horror</option>
         </select>
+    </div>
     <!--  Category select end -->
     <!--  Catalog grid start -->
     <section>

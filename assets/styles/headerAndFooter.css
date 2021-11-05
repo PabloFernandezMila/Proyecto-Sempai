@@ -82,6 +82,43 @@
             border-bottom-color: transparent;
         }
         
+        @keyframes bounce {
+            0% {
+                transform: scale(1, 1) translateY(0);
+            }
+            10% {
+                transform: scale(1.1, .9) translateY(0);
+            }
+            30% {
+                transform: scale(.9, 1.1) translateY(-20px);
+            }
+            50% {
+                transform: scale(1, 1) translateY(0);
+            }
+            57% {
+                transform: scale(1, 1) translateY(-3px);
+            }
+            64% {
+                transform: scale(1, 1) translateY(0);
+            }
+            100% {
+                transform: scale(1, 1) translateY(0);
+            }
+        }
+        
+        .bounce {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+        
+        .bounce:hover {
+            cursor: pointer;
+            animation-name: bounce;
+            -moz-animation-name: bounce;
+        }
+        
         .roboto-white {
             font-family: 'Roboto', sans-serif;
             color: white;
@@ -91,6 +128,7 @@
             font-weight: 400;
             border-bottom: 1px solid var(--details-color);
             cursor: default;
+            pointer-events: none;
         }
         
         .nav_bar-elements.inactive:hover {
@@ -177,11 +215,11 @@
         #footer-copyright {
             display: inline-block;
             font-weight: 300;
-            font-size: 12px;
+            font-size: 0.9rem;
             color: rgb(110 102 102);
             margin: 0;
             bottom: 0%;
-            color: #6e6666;
+            color: var(--details-color);
             font-family: 'Roboto', sans-serif;
         }
         /* Start of media queries */
@@ -217,6 +255,9 @@
             #section2-content {
                 width: 100%;
             }
+            #footer-copyright {
+                font-size: 0.7rem;
+            }
         }
         
         @media screen and (max-width: 415px) {
@@ -240,5 +281,11 @@
         @media screen and (max-width: 281px) {
             #section3-content {
                 height: 80vh;
+            }
+            .nav_bar-elements {
+                padding: 0px 5px;
+            }
+            header>div>button {
+                padding: 3px;
             }
         }
