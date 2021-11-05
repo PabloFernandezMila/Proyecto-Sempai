@@ -4,7 +4,7 @@
         }
         
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.9);
             align-items: center;
             height: 8vh;
             min-height: 70px;
@@ -226,18 +226,12 @@
         
         @media screen and (max-width: 750px) {
             header {
-                background-color: rgba(0, 0, 0, 0.7);
-                align-items: center;
                 height: 20vh;
                 min-height: 70px;
                 width: 100%;
-                top: 0;
-                z-index: 1;
-                display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
                 grid-template-areas: "search logo login" "navbar navbar navbar ";
-                padding: 0 2%;
             }
             .nav_bar-elements {
                 margin: 0;
