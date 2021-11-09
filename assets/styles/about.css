@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+:root {
+    --details-color: #5480f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #141414;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/about/cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.625rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--details-color);
+    margin-top: 4%;
+    margin-bottom: 1%;
+    z-index: 1;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--details-color);
+    padding: 2%;
+}
+
+a,
+.breadcrumb li p {
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+section {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #00000057;
+    /* box-shadow: 0 0 20px rgb(253 254 255);
+    border-radius: 20px; */
+    max-width: 1000px;
+    margin: auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.tint {
+    background-color: ;
+}
+
+#top-wrapper {
+    height: 24vh;
+}
+
+.roboto-white {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.breadcrumb {
+    margin-left: 2%;
+}
+
+.breadcrumb li {
+    display: inline-block;
+}
+
+.breadcrumb li a {
+    padding-left: 0;
+}
+
+.breadcrumb li a:hover {
+    color: var(--details-color);
+}
+
+.breadcrumb-separator {
+    pointer-events: none;
+}
+
+.section-text {
+    background-color: red;
+}
+
+.section-image {
+    background-color: blue;
+}
+
+
+/* Start of media queries */
