@@ -218,3 +218,9 @@ section div p {
         position: absolute;
     }
 }
+
+@media screen and (max-height: 600px) {
+    .title {
+        margin-top: 26vh;
+    }
+}

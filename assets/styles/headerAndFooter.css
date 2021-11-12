@@ -16,7 +16,8 @@
             grid-template-columns: 0.5fr 0.5fr 3fr 0.5fr 0.5fr;
             grid-template-rows: 1fr;
             grid-template-areas: "logo empty navbar search login";
-            padding: 2% 0%;
+            padding: 2% 2%;
+            align-content: center;
         }
         
         ul {
