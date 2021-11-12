@@ -274,6 +274,18 @@ section>div:nth-child(12) {
 
 /* Start of media queries */
 
+@media screen and (max-width: 1300px) {
+    # {
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 400px 400px 400px 400px;
+        height: 1720px;
+        width: 800px;
+    }
+    #top-wrapper {
+        height: 40vh;
+    }
+}
+
 @media screen and (max-width: 1160px) {
     section {
         grid-template-columns: 250px 250px 250px;

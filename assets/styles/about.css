@@ -5,25 +5,26 @@
 
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
 }
 
 html {
-    height: 100%;
-    margin: 0;
     scroll-behavior: smooth;
+    height: 100vh;
 }
 
 body {
     margin: 0;
-    background-color: #141414;
-    height: 100%;
-    width: 100%;
     background-image: url(../images/about/cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
 h1 {
@@ -64,28 +65,13 @@ p {
     font-size: 0.9rem;
 }
 
-section {
-    height: 50vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #00000057;
-    /* box-shadow: 0 0 20px rgb(253 254 255);
-    border-radius: 20px; */
-    max-width: 1000px;
-    margin: auto;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-}
-
 .title {
     text-align: center;
+    margin-top: 14vh;
 }
 
 .tint {
-    background-color: ;
+    background-color: rgba(34, 33, 29, 0.75);
 }
 
 #top-wrapper {
@@ -126,12 +112,21 @@ footer {
     pointer-events: none;
 }
 
-.section-text {
-    background-color: red;
+section div {
+    padding: 2%;
+    background-color: rgb(12, 12, 10, 80%);
+    border: solid 3px var(--details-color);
+    border-radius: 20px;
+    max-width: 80%;
+    margin: 2% auto;
+    text-align: center;
 }
 
-.section-image {
-    background-color: blue;
+section div p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 1.5% 2%;
 }
 
 
