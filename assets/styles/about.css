@@ -117,14 +117,14 @@ p {
     pointer-events: none;
 }
 
-section div {
+.section-wrapper {
     padding: 2%;
-    background-color: rgb(12, 12, 10, 80%);
-    border: solid 3px var(--details-color);
-    border-radius: 20px;
-    max-width: 80%;
+    max-width: 100%;
     margin: 2% auto;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 2%;
 }
 
 section div p {
@@ -132,6 +132,21 @@ section div p {
     font-size: 1.5rem;
     margin: auto;
     padding: 1.5% 2%;
+}
+
+#about-text {
+    border: solid 3px var(--details-color);
+    background-color: rgb(12, 12, 10, 80%);
+    border-radius: 20px;
+    padding: 2%;
+}
+
+#about-image {
+    background-image: url("../images/about/about.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    height: 100%;
 }
 
 
@@ -173,5 +188,33 @@ section div p {
     }
     h2 {
         margin: 2%;
+        font-size: 1.125rem;
+    }
+    .section-wrapper {
+        display: inline-block;
+    }
+    #image-wrapper {
+        display: none;
+    }
+    footer {
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .title {
+        margin-top: 30vh;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    section div p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-height: 802px) {
+    footer {
+        position: absolute;
     }
 }
