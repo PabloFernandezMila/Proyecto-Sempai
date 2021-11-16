@@ -57,7 +57,6 @@ section {
 #section1 {
     background-image: url("../images/index/section1.jpg");
     background-blend-mode: multiply;
-    position: relative;
 }
 
 .centered {
