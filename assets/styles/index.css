@@ -47,6 +47,7 @@ section {
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
+    min-height: 500px;
 }
 
 .tint {
@@ -76,30 +77,11 @@ section {
     text-align: center;
 }
 
-#section1>.centered:first-child {
+#section1-wrapper {
     width: 60vw;
     height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: right;
-}
-
-#section1-block-column1-text {
-    text-align: right;
-}
-
-.column {
-    width: 50%;
-    height: 100%;
-}
-
-#section1-block-column1 {
-    width: 50%;
-}
-
-#section1-block-column2 {
-    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #column2-image {
@@ -107,8 +89,8 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    height: 25vh;
-    width: 25vh;
+    height: 20vw;
+    width: 20vw;
 }
 
 #arrow-container {
@@ -175,6 +157,7 @@ section {
     position: absolute;
     bottom: 0;
     padding: 20px;
+    min-height: 300px;
 }
 
 #section3-content-text {
@@ -194,15 +177,8 @@ button:hover,
 /* Start of media queries */
 
 @media screen and (max-width: 800px) {
-    #section1-block-column2,
     #arrow-container {
         display: none;
-    }
-    #section1-block-column1 {
-        width: 100%;
-    }
-    #section1-block-column1-text {
-        text-align: center;
     }
     #section2-content {
         padding: 20px;
@@ -213,5 +189,15 @@ button:hover,
         color: var(--details-color);
         border-color: var(--details-color);
         background-color: rgba(0, 0, 0, 0.4);
+    }
+    @media screen and (max-width: 650px) {
+        #section1-wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr, 1fr;
+        }
+        #column2-image {
+            height: 20vh;
+            width: 20vh;
+        }
     }
 }

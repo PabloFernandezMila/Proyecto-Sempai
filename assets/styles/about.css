@@ -201,6 +201,12 @@ section div p {
     }
 }
 
+@media screen and (max-height: 600px) {
+    .title {
+        margin-top: 26vh;
+    }
+}
+
 @media screen and (max-width: 541px) {
     .title {
         margin-top: 30vh;
@@ -210,17 +216,5 @@ section div p {
     }
     section div p {
         font-size: 1rem;
-    }
-}
-
-@media screen and (min-height: 802px) {
-    footer {
-        position: absolute;
-    }
-}
-
-@media screen and (max-height: 600px) {
-    .title {
-        margin-top: 26vh;
     }
 }

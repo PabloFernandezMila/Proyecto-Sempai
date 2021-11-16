@@ -278,3 +278,9 @@
                 padding: 3px;
             }
         }
+        
+        @media screen and (max-height: 968px) {
+            footer {
+                position: initial;
+            }
+        }
