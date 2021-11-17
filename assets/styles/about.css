@@ -1,220 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
-:root {
-    --details-color: #5480f1;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    height: 100vh;
-}
-
-body {
-    margin: 0;
-    background-image: url(../images/about/cover.jpg);
-    background-size: cover;
-    background-blend-mode: multiply;
-    position: relative;
-    min-height: 86vh;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-}
-
-h1 {
-    font-weight: 500;
-    font-size: 2.625rem;
-    display: inline-block;
-    border-bottom: 2px solid var(--details-color);
-    margin-top: 4%;
-    margin-bottom: 1%;
-    z-index: 1;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin: 0% 2%;
-}
-
-h3 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    color: var(--details-color);
-    padding: 2%;
-}
-
-a,
-.breadcrumb li p {
-    font-weight: 100;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-    margin: 0% 2%;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
-section {
-    margin-top: 5vh;
-}
-
-p {
-    font-size: 0.9rem;
-}
-
-.title {
-    text-align: center;
-    margin-top: 14vh;
-}
-
-.tint {
-    background-color: rgba(34, 33, 29, 0.75);
-}
-
-#top-wrapper {
-    height: 24vh;
-}
-
-.roboto-white {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.breadcrumb {
-    margin-left: 2%;
-}
-
-.breadcrumb li {
-    display: inline-block;
-}
-
-.breadcrumb li a {
-    padding-left: 0;
-}
-
-.breadcrumb li a:hover {
-    color: var(--details-color);
-}
-
-.breadcrumb-separator {
-    pointer-events: none;
-}
-
-.section-wrapper {
-    padding: 2%;
-    max-width: 100%;
-    margin: 2% auto;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-column-gap: 2%;
-}
-
-section div p {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin: auto;
-    padding: 1.5% 2%;
-}
-
-#about-text {
-    border: solid 3px var(--details-color);
-    background-color: rgb(12, 12, 10, 80%);
-    border-radius: 20px;
-    padding: 2%;
-}
-
-#about-image {
-    background-image: url("../images/about/about.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    height: 100%;
-}
-
-
-/* Start of media queries */
-
-
-/* Reduce space on regular screens, this was added only for resolution lower than 1080, beacuse on iPad Pro this would break the styles */
-
-@media screen and (max-height: 1081px) {
-    #breadcrumb-wrapper {
-        margin-top: -5vh;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+     :root {
+        --details-color: #5480f1;
     }
-}
-
-
-/* Support for Nest Hub Max*/
-
-@media screen and (max-width: 1300px) and (max-height: 801px) {
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        height: 100vh;
+    }
+    
+    body {
+        margin: 0;
+        background-image: url(../images/about/cover.jpg);
+        background-size: cover;
+        background-blend-mode: multiply;
+        position: relative;
+        min-height: 86vh;
+    }
+    
     footer {
-        position: initial;
+        position: absolute;
+        bottom: 0;
     }
-}
-
-
-/* Support for Nest Hub */
-
-@media screen and (max-width: 1100px) and (max-height: 620px) {
-    .title {
-        margin-top: 20vh;
+    
+    h1 {
+        font-weight: 500;
+        font-size: 2.625rem;
+        display: inline-block;
+        border-bottom: 2px solid var(--details-color);
+        margin-top: 4%;
+        margin-bottom: 1%;
+        z-index: 1;
     }
-}
-
-
-/* Support for iPad */
-
-@media screen and (max-width: 769px) {
-    #breadcrumb-wrapper {
-        margin-top: 0
-    }
+    
     h2 {
-        margin: 2%;
-        font-size: 1.125rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin: 0% 2%;
     }
-    .section-wrapper {
+    
+    h3 {
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: var(--details-color);
+        padding: 2%;
+    }
+    
+    a,
+    .breadcrumb li p {
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 0.5%;
+        margin: 0% 2%;
+    }
+    
+    a:hover {
+        cursor: pointer;
+    }
+    
+    section {
+        margin-top: 5vh;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    .title {
+        text-align: center;
+        margin-top: 14vh;
+    }
+    
+    .tint {
+        background-color: rgba(34, 33, 29, 0.75);
+    }
+    
+    #top-wrapper {
+        height: 24vh;
+    }
+    
+    .roboto-white {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+    
+    .centered {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .breadcrumb {
+        margin-left: 2%;
+    }
+    
+    .breadcrumb li {
         display: inline-block;
     }
-    #image-wrapper {
-        display: none;
+    
+    .breadcrumb li a {
+        padding-left: 0;
     }
-    footer {
-        position: initial;
+    
+    .breadcrumb li a:hover {
+        color: var(--details-color);
     }
-}
-
-@media screen and (max-height: 600px) {
-    .title {
-        margin-top: 26vh;
+    
+    .breadcrumb-separator {
+        pointer-events: none;
     }
-}
-
-@media screen and (max-width: 541px) {
-    .title {
-        margin-top: 30vh;
+    
+    .section-wrapper {
+        padding: 2%;
+        max-width: 100%;
+        margin: 2% auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-column-gap: 2%;
     }
-    h1 {
-        font-size: 2rem;
-    }
+    
     section div p {
-        font-size: 1rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin: auto;
+        padding: 1.5% 2%;
     }
-}
+    
+    #about-text {
+        border: solid 3px var(--details-color);
+        background-color: rgb(12, 12, 10, 80%);
+        border-radius: 20px;
+        padding: 2%;
+    }
+    
+    #about-image {
+        background-image: url("../images/about/about.JPG");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        height: 100%;
+    }
+    /* Start of media queries */
+    /* Reduce space on regular screens, this was added only for resolution lower than 1080, beacuse on iPad Pro this would break the styles */
+    
+    @media screen and (max-height: 1081px) {
+        #breadcrumb-wrapper {
+            margin-top: -5vh;
+        }
+    }
+    /* Support for Nest Hub Max*/
+    
+    @media screen and (max-width: 1300px) and (max-height: 801px) {
+        footer {
+            position: initial;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .section-wrapper {
+            grid-template-columns: 1fr;
+            row-gap: 2%;
+            grid-template-areas: 'text' 'image';
+        }
+        #about-image {
+            background-image: url(../images/about/brand.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 133px;
+            width: 260px;
+            grid-area: image;
+        }
+        #about-text {
+            grid-area: text;
+        }
+        footer {
+            position: initial;
+        }
+    }
+    
+    @media screen and (max-height: 800px) {
+        .title {
+            margin-top: 26vh;
+        }
+    }
+    /* Support for Nest Hub */
+    
+    @media screen and (max-width: 1100px) and (max-height: 620px) {
+        .title {
+            margin-top: 20vh;
+        }
+    }
+    /* Support for iPad */
+    
+    @media screen and (max-width: 769px) {
+        #breadcrumb-wrapper {
+            margin-top: 0
+        }
+        h2 {
+            margin: 2%;
+            font-size: 1.125rem;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .title {
+            margin-top: 26vh;
+        }
+    }
+    
+    @media screen and (max-width: 541px) {
+        .title {
+            margin-top: 30vh;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        section div p {
+            font-size: 1rem;
+        }
+        #about-image {
+            height: 102px;
+            width: 200px;
+        }
+        .section-wrapper {
+            margin-bottom: 20px;
+        }
+        .breadcrumb li a {
+            font-size: 1rem;
+        }
+    }
