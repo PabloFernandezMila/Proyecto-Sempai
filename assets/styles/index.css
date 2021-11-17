@@ -81,6 +81,16 @@ section {
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: 'column1 column2' 'arrow-container arrow-container';
+}
+
+#column1 {
+    grid-area: column1;
+}
+
+#column2 {
+    grid-area: column2;
 }
 
 #column2-image {
@@ -93,20 +103,19 @@ section {
 }
 
 #arrow-container {
-    text-align: center;
-    position: absolute;
-    top: 80%;
-    left: 50%;
+    grid-area: arrow-container;
 }
 
 .down-arrow {
-    height: 40px;
-    width: 40px;
-    position: absolute;
     background-image: url('../images/index/chevron-down.svg');
-    z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
 }
 
 .down-arrow:hover {
