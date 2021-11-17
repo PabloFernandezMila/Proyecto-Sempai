@@ -81,7 +81,7 @@ section {
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr, 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 'column1 column2' 'arrow-container arrow-container';
 }
 
@@ -191,21 +191,20 @@ button:hover,
     #section2-content {
         padding: 20px;
     }
-    button,
-    #section2-button,
-    #section3-button {
-        color: var(--details-color);
-        border-color: var(--details-color);
-        background-color: rgba(0, 0, 0, 0.4);
-    }
     @media screen and (max-width: 650px) {
         #section1-wrapper {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr, 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 'column1' 'column2' 'arrow-container';
         }
         #column2-image {
             height: 20vh;
             width: 20vh;
+        }
+    }
+    @media screen and (max-width: 350px) {
+        section {
+            min-height: 660px;
         }
     }
 }
