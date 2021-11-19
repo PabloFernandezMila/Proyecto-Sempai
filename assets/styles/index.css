@@ -83,10 +83,15 @@ section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 'column1 column2' 'arrow-container arrow-container';
+    column-gap: 5%;
 }
 
 #column1 {
     grid-area: column1;
+}
+
+#column1>div {
+    text-align: right;
 }
 
 #column2 {
@@ -100,6 +105,8 @@ section {
     border-radius: 50%;
     height: 20vw;
     width: 20vw;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 #arrow-container {
@@ -108,14 +115,13 @@ section {
 
 .down-arrow {
     background-image: url('../images/index/chevron-down.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 40px;
     cursor: pointer;
-    display: inline-block;
     background-repeat: no-repeat;
     background-size: cover;
     width: 40px;
+    display: inline-block;
+    align-self: flex-end;
 }
 
 .down-arrow:hover {
@@ -191,16 +197,20 @@ button:hover,
     #section2-content {
         padding: 20px;
     }
-    @media screen and (max-width: 650px) {
-        #section1-wrapper {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-areas: 'column1' 'column2' 'arrow-container';
-        }
-        #column2-image {
-            height: 20vh;
-            width: 20vh;
-        }
+    #section1-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 'column1' 'column2' 'arrow-container';
+        row-gap: 20px;
+    }
+    #column1>div {
+        text-align: center;
+    }
+    #column2-image {
+        height: 20vh;
+        width: 20vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     @media screen and (max-width: 350px) {
         section {

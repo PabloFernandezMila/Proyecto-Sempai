@@ -34,6 +34,29 @@
             min-height: 80px;
         }
         
+        #burger-menu {
+            display: none;
+            background-image: url('../images/headerAndFooter/hamburger-menu.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30px;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 30px;
+        }
+        
+        #burger-menu:before {
+            background-image: url('../images/headerAndFooter/hamburger-menu-hover.svg');
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        #burger-menu:hover {
+            background-image: url('../images/headerAndFooter/hamburger-menu-hover.svg');
+        }
+        
         #logo {
             font-weight: 500;
             color: var(--details-color);
@@ -45,28 +68,35 @@
             color: white;
         }
         
+        .flex-centered {
+            display: flex;
+            justify-content: center;
+        }
+        
         #login-wrapper {
             grid-area: login;
-            text-align: center;
+            text-align: right;
         }
         
-        header>div>button {
-            color: white;
-            background-color: var(--details-color);
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            font-size: 1.250rem;
-            border-radius: 12px;
-            padding: 5px 10px;
-            border-style: none;
-            width: fit-content;
-            margin: auto;
-        }
-        
-        header>div>button:hover {
-            background-color: white;
-            color: var(--details-color);
+        #login-wrapper>a {
+            background-image: url('../images/headerAndFooter/avatar.svg');
+            height: 40px;
             cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 40px;
+            display: inline-block;
+        }
+        
+        #login-wrapper:before {
+            background-image: url('../images/headerAndFooter/avatar-hover.svg');
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        #login-wrapper>a:hover {
+            background-image: url('../images/headerAndFooter/avatar-hover.svg');
         }
         
         header>nav {
@@ -161,49 +191,49 @@
         }
         
         #facebook {
-            background-image: url('../images/index/facebook.svg');
+            background-image: url('../images/headerAndFooter/facebook.svg');
         }
         /*Added the before block to load the hover image to pevent blinking the fist time the user hovers on the icon*/
         
         #facebook:before {
-            content: url('../images/index/facebook-hover.svg');
+            content: url('../images/headerAndFooter/facebook-hover.svg');
             width: 0;
             height: 0;
             visibility: hidden;
         }
         
         #facebook:hover {
-            background-image: url('../images/index/facebook-hover.svg');
+            background-image: url('../images/headerAndFooter/facebook-hover.svg');
         }
         
         #linkedin {
-            background-image: url('../images/index/linkedin.svg');
+            background-image: url('../images/headerAndFooter/linkedin.svg');
         }
         
         #linkedin:before {
-            content: url('../images/index/linkedin-hover.svg');
+            content: url('../images/headerAndFooter/linkedin-hover.svg');
             width: 0;
             height: 0;
             visibility: hidden;
         }
         
         #linkedin:hover {
-            background-image: url('../images/index/linkedin-hover.svg');
+            background-image: url('../images/headerAndFooter/linkedin-hover.svg');
         }
         
         #github {
-            background-image: url('../images/index/github.svg');
+            background-image: url('../images/headerAndFooter/github.svg');
         }
         
         #github:before {
-            content: url('../images/index/github-hover.svg');
+            content: url('../images/headerAndFooter/github-hover.svg');
             width: 0;
             height: 0;
             visibility: hidden;
         }
         
         #github:hover {
-            background-image: url('../images/index/github-hover.svg');
+            background-image: url('../images/headerAndFooter/github-hover.svg');
         }
         
         #footer-copyright {
@@ -224,14 +254,28 @@
             }
         }
         
+        @media screen and (max-width: 980px) {
+            .nav_bar-elements {
+                margin: 0;
+            }
+        }
+        
         @media screen and (max-width: 750px) {
             header {
-                height: 20vh;
-                min-height: 70px;
+                height: 10vh;
+                min-height: 50px;
                 width: 100%;
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-template-areas: "search logo login" "navbar navbar navbar ";
+                grid-template-rows: 1fr;
+                grid-template-areas: "burger logo login";
+            }
+            #burger-menu {
+                grid-area: burger;
+                display: initial;
+            }
+            header>nav,
+            #search-button {
+                display: none;
             }
             .nav_bar-elements {
                 margin: 0;

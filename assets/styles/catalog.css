@@ -1,346 +1,339 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
-:root {
-    --details-color: #5480f1;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-html {
-    height: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background-color: #141414;
-    height: 100%;
-    width: 100%;
-}
-
-h1 {
-    font-weight: 500;
-    font-size: 2.625rem;
-    display: inline-block;
-    border-bottom: 2px solid var(--details-color);
-    margin-top: 4%;
-    margin-bottom: 1%;
-    z-index: 1;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    color: var(--details-color);
-    padding: 2%;
-}
-
-a,
-.breadcrumb li p {
-    font-weight: 100;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
-p {
-    font-size: 0.9rem;
-}
-
-input.roboto-white {
-    margin-right: 2%;
-    color: white;
-    background-color: var(--details-color);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    border-radius: 12px;
-    padding: 2%;
-    border-style: none;
-    margin-top: 3%;
-}
-
-input.roboto-white:hover {
-    cursor: pointer;
-    background-color: transparent;
-    color: var(--details-color);
-    border-bottom: solid 1px var(--details-color);
-    border-radius: 0px;
-}
-
-.title {
-    text-align: center;
-}
-
-.tint {
-    background-color: rgba(34, 33, 29, 0.75);
-}
-
-#top-wrapper {
-    background-image: url(../images/Catalog/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 25vh;
-    margin-bottom: 3vh;
-    background-blend-mode: multiply;
-}
-
-.roboto-white {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.breadcrumb {
-    margin-left: 2%;
-}
-
-.breadcrumb li {
-    display: inline-block;
-}
-
-.breadcrumb li a {
-    padding-left: 0;
-}
-
-.breadcrumb li a:hover {
-    color: var(--details-color);
-}
-
-.breadcrumb-separator {
-    pointer-events: none;
-}
-
-select {
-    margin: 2%;
-    background-color: transparent;
-    border: none;
-    font-size: 1.125rem;
-    display: inline-block;
-    margin-right: 0%;
-}
-
-select:hover {
-    border-bottom: solid 1px var(--details-color);
-}
-
-option {
-    background-color: rgb(34, 34, 34);
-}
-
-section {
-    width: 1100px;
-    height: 1300px;
-    margin: auto;
-    margin-bottom: 5%;
-    display: grid;
-    gap: 40px 40px;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 400px 400px 400px;
-    align-content: center;
-    justify-content: center;
-}
-
-.book {
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    background-blend-mode: multiply;
-    background-position: center;
-    cursor: default;
-}
-
-.grow {
-    transition: all .2s ease-in-out;
-}
-
-.grow:hover {
-    transform: scale(1.1);
-    background-color: rgba(34, 33, 29, 1);
-}
-
-.book-content {
-    visibility: hidden;
-    height: 100%;
-    text-align: center;
-    padding: 10%;
-    text-transform: capitalize;
-}
-
-
-/* This is to ensure that title and author text is displayed camelCase */
-
-.book-title .book-author {
-    text-transform: capitalize;
-}
-
-
-/* This is to make visible the content of each book of the grid*/
-
-.book:hover .book-content {
-    visibility: visible;
-}
-
-section>div:nth-child(1) {
-    background-image: url(../images/Catalog/bookcover1.jpg);
-}
-
-section>div:nth-child(2) {
-    background-image: url(../images/Catalog/bookcover2.jpg);
-}
-
-section>div:nth-child(3) {
-    background-image: url(../images/Catalog/bookcover3.jpg);
-}
-
-section>div:nth-child(4) {
-    background-image: url(../images/Catalog/bookcover4.jpg);
-}
-
-section>div:nth-child(5) {
-    background-image: url(../images/Catalog/bookcover5.jpg);
-}
-
-section>div:nth-child(6) {
-    background-image: url(../images/Catalog/bookcover6.jpg);
-}
-
-section>div:nth-child(7) {
-    background-image: url(../images/Catalog/bookcover7.jpg);
-}
-
-section>div:nth-child(8) {
-    background-image: url(../images/Catalog/bookcover8.jpg);
-}
-
-section>div:nth-child(9) {
-    background-image: url(../images/Catalog/bookcover9.jpg);
-}
-
-section>div:nth-child(10) {
-    background-image: url(../images/Catalog/bookcover10.jpg);
-}
-
-section>div:nth-child(11) {
-    background-image: url(../images/Catalog/bookcover11.jpg);
-}
-
-section>div:nth-child(12) {
-    background-image: url(../images/Catalog/bookcover12.jpg);
-}
-
-.pagination {
-    text-align: center;
-    margin: 5%;
-    font-size: 1.5rem;
-}
-
-.pagination a {
-    margin: 1%;
-}
-
-.pagination a:hover {
-    background-color: var(--details-color);
-    border-radius: 5px;
-}
-
-.active {
-    border-bottom: solid 1px var(--details-color);
-    cursor: default;
-    pointer-events: none;
-}
-
-
-/* Start of media queries */
-
-@media screen and (max-width: 1300px) {
-    #top-wrapper {
-        height: 40vh;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+     :root {
+        --details-color: #5480f1;
     }
-}
-
-@media screen and (max-width: 1160px) {
-    section {
-        grid-template-columns: 250px 250px 250px;
-        grid-template-rows: 400px 400px 400px 400px;
-        height: 1720px;
-        width: 800px;
+    
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
     }
-    #top-wrapper {
-        height: 30vh;
+    
+    html {
+        height: 100%;
+        margin: 0;
+        scroll-behavior: smooth;
     }
-}
-
-@media screen and (max-width: 880px) {
-    section {
-        grid-template-columns: 250px 250px;
-        grid-template-rows: 400px 400px 400px 400px 400px;
-        height: 2560px;
-        width: 600px;
+    
+    body {
+        margin: 0;
+        background-color: #141414;
+        height: 100%;
+        width: 100%;
     }
-    /*For smaller resolutions had to change the background-size to fit the image inside the book element,
-     if i set contain for higher resolutions the tint on hover has gliches for some images*/
-    .book {
-        background-size: contain;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    #top-wrapper {
-        height: 50vh;
-    }
+    
     h1 {
-        margin-top: 20%;
+        font-weight: 500;
+        font-size: 2.625rem;
+        display: inline-block;
+        border-bottom: 2px solid var(--details-color);
+        margin-top: 4%;
+        margin-bottom: 1%;
+        z-index: 1;
     }
-}
-
-@media screen and (max-width: 600px) {
+    
     h2 {
-        padding: 3%;
+        font-weight: 300;
+        font-size: 1.5rem;
     }
-    section {
-        grid-template-columns: 250px;
-        grid-template-rows: 400px 400px 400px 400px 400px 400px;
-        height: 4900px;
-        width: 300px;
+    
+    h3 {
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: var(--details-color);
+        padding: 2%;
     }
-    #breadcrumb-wrapper {
+    
+    a,
+    .breadcrumb li p {
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 0.5%;
+    }
+    
+    a:hover {
+        cursor: pointer;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    input.roboto-white {
+        margin-right: 2%;
+        color: white;
+        background-color: var(--details-color);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        border-radius: 12px;
+        padding: 2%;
+        border-style: none;
+        margin-top: 3%;
+    }
+    
+    input.roboto-white:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--details-color);
+        border-bottom: solid 1px var(--details-color);
+        border-radius: 0px;
+    }
+    
+    .title {
         text-align: center;
     }
-    #select-wrapper {
+    
+    .tint {
+        background-color: rgba(34, 33, 29, 0.75);
+    }
+    
+    #top-wrapper {
+        background-image: url(../images/Catalog/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25vh;
+        margin-bottom: 3vh;
+        background-blend-mode: multiply;
+    }
+    
+    .roboto-white {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+    
+    .centered {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
         text-align: center;
     }
-}
-
-@media screen and (max-width: 325px) {
-    h1 {
-        margin-top: 30%;
+    
+    .breadcrumb {
+        margin-left: 2%;
     }
-}
-
-@media screen and (max-width: 281px) {
+    
+    .breadcrumb li {
+        display: inline-block;
+    }
+    
+    .breadcrumb li a {
+        padding-left: 0;
+    }
+    
+    .breadcrumb li a:hover {
+        color: var(--details-color);
+    }
+    
+    .breadcrumb-separator {
+        pointer-events: none;
+    }
+    
+    select {
+        margin: 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.125rem;
+        display: inline-block;
+        margin-right: 0%;
+    }
+    
+    select:hover {
+        border-bottom: solid 1px var(--details-color);
+    }
+    
+    option {
+        background-color: rgb(34, 34, 34);
+    }
+    
     section {
-        width: 280px;
+        width: 1100px;
+        height: 1300px;
+        margin: auto;
+        margin-bottom: 5%;
+        display: grid;
+        gap: 40px 40px;
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 400px 400px 400px;
+        align-content: center;
+        justify-content: center;
     }
-}
+    
+    .book {
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        background-blend-mode: multiply;
+        background-position: center;
+        cursor: default;
+    }
+    
+    .grow {
+        transition: all .2s ease-in-out;
+    }
+    
+    .grow:hover {
+        transform: scale(1.1);
+        background-color: rgba(34, 33, 29, 1);
+    }
+    
+    .book-content {
+        visibility: hidden;
+        height: 100%;
+        text-align: center;
+        padding: 10%;
+        text-transform: capitalize;
+    }
+    /* This is to ensure that title and author text is displayed camelCase */
+    
+    .book-title .book-author {
+        text-transform: capitalize;
+    }
+    /* This is to make visible the content of each book of the grid*/
+    
+    .book:hover .book-content {
+        visibility: visible;
+    }
+    
+    section>div:nth-child(1) {
+        background-image: url(../images/Catalog/bookcover1.jpg);
+    }
+    
+    section>div:nth-child(2) {
+        background-image: url(../images/Catalog/bookcover2.jpg);
+    }
+    
+    section>div:nth-child(3) {
+        background-image: url(../images/Catalog/bookcover3.jpg);
+    }
+    
+    section>div:nth-child(4) {
+        background-image: url(../images/Catalog/bookcover4.jpg);
+    }
+    
+    section>div:nth-child(5) {
+        background-image: url(../images/Catalog/bookcover5.jpg);
+    }
+    
+    section>div:nth-child(6) {
+        background-image: url(../images/Catalog/bookcover6.jpg);
+    }
+    
+    section>div:nth-child(7) {
+        background-image: url(../images/Catalog/bookcover7.jpg);
+    }
+    
+    section>div:nth-child(8) {
+        background-image: url(../images/Catalog/bookcover8.jpg);
+    }
+    
+    section>div:nth-child(9) {
+        background-image: url(../images/Catalog/bookcover9.jpg);
+    }
+    
+    section>div:nth-child(10) {
+        background-image: url(../images/Catalog/bookcover10.jpg);
+    }
+    
+    section>div:nth-child(11) {
+        background-image: url(../images/Catalog/bookcover11.jpg);
+    }
+    
+    section>div:nth-child(12) {
+        background-image: url(../images/Catalog/bookcover12.jpg);
+    }
+    
+    .pagination {
+        text-align: center;
+        margin: 5%;
+        font-size: 1.5rem;
+    }
+    
+    .pagination a {
+        margin: 1%;
+    }
+    
+    .pagination a:hover {
+        background-color: var(--details-color);
+        border-radius: 5px;
+    }
+    
+    .active {
+        border-bottom: solid 1px var(--details-color);
+        cursor: default;
+        pointer-events: none;
+    }
+    /* Start of media queries */
+    
+    @media screen and (max-width: 1300px) {}
+    
+    @media screen and (max-width: 1160px) {
+        section {
+            grid-template-columns: 250px 250px 250px;
+            grid-template-rows: 400px 400px 400px 400px;
+            height: 1720px;
+            width: 800px;
+        }
+        #top-wrapper {
+            height: 30vh;
+        }
+    }
+    
+    @media screen and (max-width: 880px) {
+        section {
+            grid-template-columns: 250px 250px;
+            grid-template-rows: 400px 400px 400px 400px 400px;
+            height: 2560px;
+            width: 600px;
+        }
+        /*For smaller resolutions had to change the background-size to fit the image inside the book element,
+     if i set contain for higher resolutions the tint on hover has gliches for some images*/
+        .book {
+            background-size: contain;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        h2 {
+            padding: 3%;
+        }
+        section {
+            grid-template-columns: 250px;
+            grid-template-rows: 400px 400px 400px 400px 400px 400px;
+            height: 4900px;
+            width: 300px;
+        }
+        #breadcrumb-wrapper {
+            text-align: center;
+        }
+        #select-wrapper {
+            text-align: center;
+        }
+    }
+    
+    @media screen and (max-width: 510px) {
+        h1 {
+            margin-top: 10%;
+        }
+    }
+    
+    @media screen and (max-width: 410px) {
+        h1 {
+            margin-top: 20%;
+        }
+    }
+    
+    @media screen and (max-width: 325px) {
+        h1 {
+            margin-top: 30%;
+        }
+    }
+    
+    @media screen and (max-width: 281px) {
+        section {
+            width: 280px;
+        }
+    }
