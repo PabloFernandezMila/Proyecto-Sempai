@@ -80,11 +80,11 @@
         
         #login-wrapper>a {
             background-image: url('../images/headerAndFooter/avatar.svg');
-            height: 40px;
+            height: 30px;
+            width: 30px;
             cursor: pointer;
             background-repeat: no-repeat;
             background-size: cover;
-            width: 40px;
             display: inline-block;
         }
         
@@ -168,7 +168,7 @@
         
         #search-button i {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
         }
         

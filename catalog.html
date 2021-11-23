@@ -15,74 +15,78 @@
 
 <body>
     <!--  Header start -->
+    <header>
+
+        <div id="burger-menu"></div>
+        <div id="logo-wrapper">
+            <a target="_self" id="logo" href="index.html" class="roboto-white">
+                    Bookshelf</a>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="index.html" class="roboto-white">
+                            Home</a>
+                </li>
+                <li class="nav_bar-elements active">
+                    <a target="_self" href="#" class="roboto-white">Catalog</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="register.html" class="roboto-white">Register</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="about.html" class="roboto-white">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="search-button">
+            <i class="fas fa-search"></i>
+        </div>
+        <div id="login-wrapper" class="flex-centered">
+            <a href="#" class="bounce"></a>
+        </div>
+
+    </header>
+    <!--  Header end -->
+
     <div id="top-wrapper" class="tint">
-        <header>
 
-            <div id="burger-menu"></div>
-            <div id="logo-wrapper">
-                <a target="_self" id="logo" href="index.html" class="roboto-white">
-                        Bookshelf</a>
-            </div>
-            <nav>
-                <ul>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="index.html" class="roboto-white">
-                                Home</a>
-                    </li>
-                    <li class="nav_bar-elements active">
-                        <a target="_self" href="#" class="roboto-white">Catalog</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="register.html" class="roboto-white">Register</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="about.html" class="roboto-white">About</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div id="search-button">
-                <i class="fas fa-search"></i>
-            </div>
-            <div id="login-wrapper" class="flex-centered">
-                <a href="#" class="bounce"></a>
-            </div>
-
-        </header>
-        <div class="title centered">
+        <div class="title">
             <div>
                 <h1 class="roboto-white">Catalog</h1>
             </div>
             <h2 class="roboto-white">Browse our catalog and find what you need!</h2>
         </div>
+        <!--  Breadcrumb start -->
+        <div id="breadcrumb-wrapper">
+            <ul class="breadcrumb">
+                <li>
+                    <a target="_self" href="index.html" class="roboto-white">Home</a>
+                </li>
+                <li>
+                    <p class="roboto-white breadcrumb-separator">&nbsp;/&nbsp;</p>
+                </li>
+                <li>
+                    <a target="_self" href="" class="roboto-white">Catalog</a>
+                </li>
+            </ul>
+        </div>
+        <!--  Breadcrumb end -->
+        <!--  Category select start -->
+        <div id="select-wrapper">
+            <select class="roboto-white" name="select">
+                    <option value="" disabled selected>Select a category
+                    </option>
+                    <option value="value1">Classics</option>
+                    <option value="value2">Fantasy</option>
+                    <option value="value3">Horror</option>
+                </select>
+        </div>
+        <!--  Category select end -->
     </div>
-    <!--  Header end -->
-    <!--  Breadcrumb start -->
-    <div id="breadcrumb-wrapper">
-        <ul class="breadcrumb">
-            <li>
-                <a target="_self" href="index.html" class="roboto-white">Home</a>
-            </li>
-            <li>
-                <p class="roboto-white breadcrumb-separator">&nbsp;/&nbsp;</p>
-            </li>
-            <li>
-                <a target="_self" href="" class="roboto-white">Catalog</a>
-            </li>
-        </ul>
-    </div>
-    <!--  Breadcrumb end -->
-    <!--  Category select start -->
-    <div id="select-wrapper">
-        <select class="roboto-white" name="select">
-            <option value="" disabled selected>Select a category
-            </option>
-            <option value="value1">Classics</option>
-            <option value="value2">Fantasy</option>
-            <option value="value3">Horror</option>
-        </select>
-    </div>
-    <!--  Category select end -->
+
+
     <!--  Catalog grid start -->
     <section>
         <!--  Book 1 -->
