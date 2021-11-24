@@ -198,54 +198,6 @@
         visibility: visible;
     }
     
-    section>div:nth-child(1) {
-        background-image: url(../images/Catalog/bookcover1.jpg);
-    }
-    
-    section>div:nth-child(2) {
-        background-image: url(../images/Catalog/bookcover2.jpg);
-    }
-    
-    section>div:nth-child(3) {
-        background-image: url(../images/Catalog/bookcover3.jpg);
-    }
-    
-    section>div:nth-child(4) {
-        background-image: url(../images/Catalog/bookcover4.jpg);
-    }
-    
-    section>div:nth-child(5) {
-        background-image: url(../images/Catalog/bookcover5.jpg);
-    }
-    
-    section>div:nth-child(6) {
-        background-image: url(../images/Catalog/bookcover6.jpg);
-    }
-    
-    section>div:nth-child(7) {
-        background-image: url(../images/Catalog/bookcover7.jpg);
-    }
-    
-    section>div:nth-child(8) {
-        background-image: url(../images/Catalog/bookcover8.jpg);
-    }
-    
-    section>div:nth-child(9) {
-        background-image: url(../images/Catalog/bookcover9.jpg);
-    }
-    
-    section>div:nth-child(10) {
-        background-image: url(../images/Catalog/bookcover10.jpg);
-    }
-    
-    section>div:nth-child(11) {
-        background-image: url(../images/Catalog/bookcover11.jpg);
-    }
-    
-    section>div:nth-child(12) {
-        background-image: url(../images/Catalog/bookcover12.jpg);
-    }
-    
     .pagination {
         text-align: center;
         margin: 5%;
