@@ -89,8 +89,8 @@
         background-color: rgba(34, 33, 29, 0.75);
     }
     
-    #top-wrapper {
-        background-image: url(../images/Catalog/banner.jpg);
+    #title-wrapper {
+        background-image: url(../images/catalog/banner.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 45vh;
@@ -220,6 +220,18 @@
     }
     /* Start of media queries */
     
+    @media screen and (max-width: 1700px) {
+        .title {
+            padding-top: 6vh;
+        }
+    }
+    
+    @media screen and (max-width: 1400px) {
+        .title {
+            padding-top: 8vh;
+        }
+    }
+    
     @media screen and (max-width: 1160px) {
         section {
             grid-template-columns: 250px 250px 250px;
@@ -230,8 +242,8 @@
     }
     
     @media screen and (max-width: 1025px) {
-        #top-wrapper {
-            height: 30vh;
+        #title-wrapper {
+            height: 34vh;
         }
         #breadcrumb-wrapper {
             margin-top: 20px;
@@ -256,22 +268,19 @@
         .book {
             background-size: contain;
         }
-    }
-    
-    @media screen and (max-width: 769px) {
         .title {
             padding-top: 0vh;
         }
     }
     
     @media (min-height: 500px) and (max-height: 700px) {
-        #top-wrapper {
+        #title-wrapper {
             height: 50vh;
         }
     }
     
     @media screen and (max-width: 600px) {
-        #top-wrapper {
+        #title-wrapper {
             height: 48vh;
         }
         h2 {
