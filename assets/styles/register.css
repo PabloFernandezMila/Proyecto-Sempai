@@ -1,229 +1,248 @@
                             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
-                         :root {
-                            --details-color: #5480f1;
-                        }
-                        
-                        * {
-                            box-sizing: border-box;
-                        }
-                        
-                        html {
-                            scroll-behavior: smooth;
-                            height: 100%;
-                        }
-                        
-                        body {
-                            /* Padding top with the height of the header */
-                            padding-top: 8vh;
-                            margin: 0;
-                            background-image: url("../images/registration/cover.jpg");
-                            background-attachment: fixed;
-                            background-size: cover;
-                            min-height: 100%;
-                        }
-                        
-                        h1 {
-                            font-weight: 400;
-                            font-size: 1.8rem;
-                            margin: 35px;
-                        }
-                        
-                        p {
-                            font-size: 1.5rem;
-                            font-weight: 100;
-                            margin: 0
-                        }
-                        
-                        a {
-                            color: var(--details-color);
-                            padding: 0;
-                        }
-                        
-                        a:hover {
-                            border-bottom: solid 1px var(--details-color);
-                        }
-                        
-                        hr {
-                            border: solid 1px var(--details-color);
-                        }
-                        
-                        .centered {
-                            position: relative;
-                            top: 50%;
-                            left: 50%;
-                            width: 100%;
-                            transform: translate(-50%, -50%);
-                            text-align: center;
-                        }
-                        
-                        #breadcrumb-wrapper {
-                            margin-top: 20px;
-                        }
-                        
-                        form {
-                            width: 70%;
-                            margin: auto;
-                        }
-                        
-                        a,
-                        .breadcrumb li p {
-                            font-weight: 100;
-                            font-size: 1.5rem;
-                            text-decoration: none;
-                            padding: 0.5%;
-                        }
-                        
-                        .breadcrumb {
-                            margin-left: 2%;
-                        }
-                        
-                        .breadcrumb li {
-                            display: inline-block;
-                        }
-                        
-                        .breadcrumb li a {
-                            padding-left: 0;
-                        }
-                        
-                        .breadcrumb li a:hover {
-                            color: var(--details-color);
-                        }
-                        
-                        .breadcrumb-separator {
-                            pointer-events: none;
-                        }
-                        
-                        .tint {
-                            background-color: rgba(20, 20, 20, 0.80);
-                            backdrop-filter: blur(5px)
-                        }
-                        
-                        section {
-                            min-height: 674px;
-                        }
-                        
-                        #section-content {
-                            text-align: center;
-                            width: 50%;
-                            height: 70vh;
-                            margin: auto;
-                            border-color: var(--details-color);
-                            border-style: solid;
-                            border-width: 2px;
-                            border-radius: 25px;
-                            padding: 0 20px;
-                            min-width: 500px;
-                        }
-                        
-                        label {
-                            margin-bottom: 5px;
-                        }
-                        
-                        input,
-                        hr {
-                            margin-bottom: 30px;
-                        }
-                        
-                        label,
-                        input {
-                            display: block;
-                            text-align: left;
-                        }
-                        
-                        b {
-                            font-size: 1.25rem;
-                            font-weight: 100;
-                            border: none;
-                        }
-                        
-                         ::placeholder {
-                            border: none;
-                            color: grey;
-                        }
-                        
-                        input {
-                            width: 100%;
-                            background-color: white;
-                            font-size: 1.25rem;
-                            font-weight: 100;
-                            border: none;
-                            border-radius: 5px;
-                            padding-left: 5px;
-                        }
-                        
-                        .register-button {
-                            background-color: #0707077c;
-                            cursor: pointer;
-                            font-size: 1rem;
-                            border: lightslategray;
-                            border-style: solid;
-                            border-width: 1px;
-                            border-radius: 5px;
-                            padding: 1vh 10vw;
-                            font-weight: 500;
-                            margin: 24px 0px;
-                        }
-                        
-                        .register-button:hover {
-                            color: var(--details-color);
-                            border-color: var(--details-color);
-                        }
-                        
-                        footer {
-                            position: absolute;
-                            bottom: 0;
-                        }
-                        /* Start of media queries */
-                        
-                        @media screen and (max-width: 1460px) {
-                            #section-content {
-                                width: 70%;
+                             :root {
+                                --details-color: #5480f1;
                             }
-                            section,
-                            #section-content {
-                                margin-top: 4vh;
+                            
+                            * {
+                                box-sizing: border-box;
                             }
-                        }
-                        
-                        @media screen and (max-width: 1460px) {
-                            #section-content {
-                                width: 80%;
+                            
+                            html {
+                                scroll-behavior: smooth;
+                                height: 100%;
+                                min-height: 950px;
                             }
-                        }
-                        
-                        @media screen and (max-width: 670px) {
-                            .signin>p>a {
-                                display: block;
-                                margin-bottom: 20px;
+                            
+                            body {
+                                /* Padding top with the height of the header */
+                                padding-top: 8vh;
+                                margin: 0;
+                                background-image: url("../images/registration/cover.jpg");
+                                background-attachment: fixed;
+                                background-size: cover;
+                                min-height: 100%;
                             }
-                        }
-                        
-                        @media screen and (max-width: 550px) {
+                            
+                            h1 {
+                                font-weight: 400;
+                                font-size: 1.8rem;
+                                margin: 35px;
+                            }
+                            
+                            p {
+                                font-size: 1.5rem;
+                                font-weight: 100;
+                                margin: 0
+                            }
+                            
+                            a {
+                                color: var(--details-color);
+                                padding: 0;
+                            }
+                            
+                            a:hover {
+                                border-bottom: solid 1px var(--details-color);
+                            }
+                            
+                            hr {
+                                border: solid 1px var(--details-color);
+                            }
+                            
+                            .centered {
+                                position: relative;
+                                top: 50%;
+                                left: 50%;
+                                width: 100%;
+                                transform: translate(-50%, -50%);
+                                text-align: center;
+                            }
+                            
+                            #breadcrumb-wrapper {
+                                margin-top: 20px;
+                            }
+                            
                             form {
-                                width: auto;
+                                width: 70%;
+                                margin: auto;
                             }
-                            #section-content {
-                                width: 90%;
-                                min-width: 350px;
+                            
+                            a,
+                            .breadcrumb li p {
+                                font-weight: 100;
+                                font-size: 1.5rem;
+                                text-decoration: none;
+                                padding: 0.5%;
                             }
-                        }
-                        
-                        @media screen and (max-width: 375px) {
-                            section,
-                            #section-content {
-                                min-height: 740px;
-                                margin-bottom: 40px;
+                            
+                            .breadcrumb {
+                                margin-left: 2%;
                             }
-                            #section-content {
-                                width: 95%;
-                                min-width: 200px;
+                            
+                            .breadcrumb li {
+                                display: inline-block;
                             }
-                            footer {
-                                position: initial;
+                            
+                            .breadcrumb li a {
+                                padding-left: 0;
                             }
-                        }
-                        
-                        @media screen and (max-width: 290px) {
+                            
+                            .breadcrumb li a:hover {
+                                color: var(--details-color);
+                            }
+                            
+                            .breadcrumb-separator {
+                                pointer-events: none;
+                            }
+                            
+                            .tint {
+                                background-color: rgba(20, 20, 20, 0.80);
+                                backdrop-filter: blur(5px)
+                            }
+                            
                             section {
-                                min-height: 800px;
+                                min-height: 674px;
+                            }
+                            
+                            #section-content {
+                                text-align: center;
+                                width: 50%;
+                                min-height: 700px;
+                                margin: auto;
+                                border-color: var(--details-color);
+                                border-style: solid;
+                                border-width: 2px;
+                                border-radius: 25px;
+                                padding: 0 20px;
+                                min-width: 500px;
+                            }
+                            
+                            label {
+                                margin-bottom: 5px;
+                            }
+                            
+                            input,
+                            hr {
+                                margin-bottom: 30px;
+                            }
+                            
+                            label,
+                            input {
+                                display: block;
+                                text-align: left;
+                            }
+                            
+                            b {
+                                font-size: 1.25rem;
+                                font-weight: 100;
+                                border: none;
+                            }
+                            
+                             ::placeholder {
+                                border: none;
+                                color: grey;
+                            }
+                            
+                            input {
+                                width: 100%;
+                                background-color: white;
+                                font-size: 1.25rem;
+                                font-weight: 100;
+                                border: none;
+                                border-radius: 5px;
+                                padding-left: 5px;
+                            }
+                            
+                            .register-button {
+                                background-color: #0707077c;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                border: lightslategray;
+                                border-style: solid;
+                                border-width: 1px;
+                                border-radius: 5px;
+                                padding: 1vh 10vw;
+                                font-weight: 500;
+                                margin: 24px 0px;
+                            }
+                            
+                            .register-button:hover {
+                                color: var(--details-color);
+                                border-color: var(--details-color);
+                            }
+                            
+                            footer {
+                                position: absolute;
+                                bottom: 0;
+                            }
+                            /* Start of media queries */
+                            
+                            @media screen and (max-width: 1460px) {
+                                #section-content {
+                                    width: 70%;
+                                }
+                                section,
+                                #section-content {
+                                    margin-top: 4vh;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 1460px) {
+                                #section-content {
+                                    width: 80%;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 750px) {
+                                #section-content {
+                                    height: 650px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 670px) {
+                                .signin>p>a {
+                                    display: block;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 550px) {
+                                form {
+                                    width: auto;
+                                }
+                                #section-content {
+                                    width: 90%;
+                                    min-width: 350px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 375px) {
+                                section,
+                                #section-content {
+                                    min-height: 740px;
+                                    margin-bottom: 40px;
+                                }
+                                #section-content {
+                                    width: 95%;
+                                    min-width: 200px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 320px) {
+                                section,
+                                #section-content {
+                                    min-height: 800px;
+                                }
+                                footer {
+                                    position: inherit;
+                                }
+                            }
+                            
+                            @media screen and (max-height: 950px) {
+                                #section-content {
+                                    height: 700px;
+                                    margin-bottom: 100px;
+                                }
+                                footer {
+                                    position: initial;
+                                }
                             }
