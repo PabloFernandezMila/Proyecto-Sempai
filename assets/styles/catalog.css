@@ -96,6 +96,7 @@
         height: 45vh;
         margin-bottom: 3vh;
         background-blend-mode: multiply;
+        min-height: 350px;
     }
     
     .roboto-white {
@@ -264,7 +265,7 @@
             margin-top: 11vh;
         }
         /*For smaller resolutions had to change the background-size to fit the image inside the book element,
-     if i set contain for higher resolutions the tint on hover has gliches for some images*/
+     if I set contain for higher resolutions the tint on hover has glitches for some images*/
         .book {
             background-size: contain;
         }
