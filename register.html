@@ -14,7 +14,6 @@
 </head>
 
 
-
 <body>
 
     <!--  Header start -->
@@ -22,13 +21,13 @@
         <div id="burger-menu"></div>
         <div id="logo-wrapper">
             <a target="_self" id="logo" href="index.html" class="roboto-white">
-                        Bookshelf</a>
+                    Bookshelf</a>
         </div>
         <nav>
             <ul>
                 <li class="nav_bar-elements inactive">
                     <a target="_self" href="index.html" class="roboto-white">
-                                Home</a>
+                            Home</a>
                 </li>
                 <li class="nav_bar-elements inactive">
                     <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
@@ -70,32 +69,47 @@
         <!--  Breadcrumb end -->
         <div id="section-content" class="tint">
 
-            <form action="/welcome.html">
+            <form action="/welcome.html" autocomplete="off">
 
 
                 <h1 class="roboto-white">Create an account</h1>
                 <p class="roboto-white">Create an account and start enjoying all benefits from Bookshelf now!</p>
                 <hr>
                 <div class="form-elements">
-                    <label for="email" class="roboto-white"><b>Email</b></label>
-                    <input type="text" c placeholder="Enter your Email" name="email" id="email" required>
 
-                    <label for="password" class="roboto-white"><b>Password</b></label>
+                    <label for="name" class="roboto-white">
+                            <b>Name</b>
+                        </label>
+                    <input type="text" placeholder="Enter your Name" name="name" id="name" required>
+                    <label for="lastname" class="roboto-white">
+                            <b>Last Name</b>
+                        </label>
+                    <input type="text" placeholder="Enter your Last Name" name="lastname" id="lastname" required>
+                    <label for="email" class="roboto-white">
+                            <b>Email</b>
+                        </label>
+                    <input type="text" placeholder="Enter your Email" name="email" id="email" required>
+
+                    <label for="password" class="roboto-white">
+                            <b>Password</b>
+                        </label>
                     <input type="password" placeholder="Enter your Password" name="password" id="password" required>
 
-                    <label for="password-repeat" class="roboto-white"><b>Repeat Password</b></label>
+                    <label for="password-repeat" class="roboto-white">
+                            <b>Repeat Password</b>
+                        </label>
                     <input type="password" placeholder="Repeat your Password" name="password-repeat" id="password-repeat" required>
                     <hr>
 
                     <button type="submit" class="register-button roboto-white">Register</button>
                 </div>
                 <div class="signin roboto-white">
-                    <p>Already have an account? <a id="signin" href="#">Sign in</a></p>
+                    <p>Already have an account?
+                        <a id="signin" href="#">Sign in</a>
+                    </p>
 
             </form>
             </div>
-
-
 
 
         </div>

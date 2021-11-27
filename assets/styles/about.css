@@ -148,7 +148,7 @@
         height: 100%;
     }
     /* Start of media queries */
-    /* Reduce space on regular screens, this was added only for resolution lower than 1080, beacuse on iPad Pro this would break the styles */
+    /* Reduce space on regular screens, this was added only for resolution lower than 1080, because on iPad Pro this would break the styles */
     
     @media screen and (max-height: 1081px) {
         #breadcrumb-wrapper {
