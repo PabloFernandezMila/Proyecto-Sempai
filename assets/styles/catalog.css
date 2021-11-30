@@ -60,7 +60,7 @@
         font-size: 0.9rem;
     }
     
-    input.roboto-white {
+    .book-content>form>input {
         margin-right: 2%;
         color: white;
         background-color: var(--details-color);
@@ -73,7 +73,7 @@
         margin-top: 3%;
     }
     
-    input.roboto-white:hover {
+    .book-content>form>input {
         cursor: pointer;
         background-color: transparent;
         color: var(--details-color);
