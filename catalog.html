@@ -39,14 +39,15 @@
         </nav>
 
         <div id="search-login">
-            <form action="/" method="GET" class="form js-search-form">
-                <button class="search-button js-search-button js-collapsed"> </button>
-                <input type="search" placeholder="Title, Author, Category..." class="search-field roboto-white" />
-            </form>
-            <div id="login-wrapper">
-                <p class="roboto-white">Hello Pablo</p>
-                <a href="#" class="bounce"></a>
-            </div>
+            <form class="search js-search-form">
+                <div class="search-button js-search-button"> </div>
+                <div class="search-field roboto-white" />
+                <input id="search-text" type="text" placeholder="Title, author or gender" class="roboto-white js-search-input" maxlength="35"></div>
+        </form>
+        <div id="login-wrapper">
+            <p class="roboto-white">Hello Pablo</p>
+            <a href="#" class="bounce"></a>
+        </div>
 
         </div>
 
@@ -304,25 +305,22 @@
 </body>
 
 <script>
+    /* Define the elements to be used */
     const searchForm = document.querySelector(".js-search-form");
-    const searchButton = document.querySelector(".js-search-button")
-    let count = 0;
+    const searchButton = document.querySelector(".js-search-button");
+    const searchField = document.querySelector(".js-search-input")
 
 
-    searchButton.addEventListener("click", () => {
-        searchForm.addEventListener('submit', searchForm => {
-            if (searchButton.classList.contains("js-collapsed")) {
-                searchForm.preventDefault();
-                searchButton.classList.toggle("js-collapsed")
-            } else {
-                searchForm.submit();
-            }
+    searchButton.addEventListener("click", function() {
+        /* When the icon of search is clicked, the search area is expanded or collapsed */
+        searchForm.classList.toggle('expanded');
 
+        /* When the search field is expanded, the script sets the focus on the input field*/
+        if (searchForm.classList.contains("expanded")) {
 
-
-
-        })
-    })
+            document.getElementById("search-text").focus();
+        }
+    });
 </script>
 
 </html>
