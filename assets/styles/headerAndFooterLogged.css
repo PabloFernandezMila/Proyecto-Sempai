@@ -304,9 +304,6 @@ input[type="search"]::-webkit-search-cancel-button {
     .nav_bar-elements {
         margin: 0;
     }
-}
-
-@media screen and (max-width: 900px) {
     header {
         display: flex;
         height: 10vh;

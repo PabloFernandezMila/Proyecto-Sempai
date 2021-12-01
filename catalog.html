@@ -39,8 +39,8 @@
         </nav>
 
         <div id="search-login">
-            <form action="/" method="GET" class="form">
-                <button type="submit" class="search-button"></button>
+            <form action="/" method="GET" class="form js-search-form">
+                <button class="search-button js-search-button js-collapsed"> </button>
                 <input type="search" placeholder="Title, Author, Category..." class="search-field roboto-white" />
             </form>
             <div id="login-wrapper">
@@ -302,5 +302,27 @@
     </footer>
     <!--  Footer end -->
 </body>
+
+<script>
+    const searchForm = document.querySelector(".js-search-form");
+    const searchButton = document.querySelector(".js-search-button")
+    let count = 0;
+
+
+    searchButton.addEventListener("click", () => {
+        searchForm.addEventListener('submit', searchForm => {
+            if (searchButton.classList.contains("js-collapsed")) {
+                searchForm.preventDefault();
+                searchButton.classList.toggle("js-collapsed")
+            } else {
+                searchForm.submit();
+            }
+
+
+
+
+        })
+    })
+</script>
 
 </html>
