@@ -90,7 +90,7 @@
     }
     
     #title-wrapper {
-        background-image: url(./images/catalog/banner.jpg);
+        background-image: url("../images/catalog/banner.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 45vh;
