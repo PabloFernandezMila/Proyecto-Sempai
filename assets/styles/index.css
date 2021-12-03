@@ -124,6 +124,13 @@ section {
     align-self: flex-end;
 }
 
+.down-arrow::before {
+    content: url('../images/index/chevron-down-hover.svg');
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
 .down-arrow:hover {
     background-image: url('../images/index/chevron-down-hover.svg');
 }

@@ -78,6 +78,11 @@
         text-align: center;
     }
     
+    header>nav>ul {
+        display: flex;
+        justify-content: center;
+    }
+    
     .nav_bar-elements {
         display: inline-block;
         margin: 0 20px;
@@ -94,33 +99,6 @@
         justify-content: end;
     }
     
-    #login-wrapper>a {
-        height: 50px;
-        width: 50px;
-        background-image: url(../images/headerAndFooter/avatar-edit.svg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        grid-area: login;
-        cursor: pointer;
-    }
-    
-    #login-wrapper>a:before {
-        content: url('../images/headerAndFooter/avatar-edit-hover.svg');
-        width: 0;
-        height: 0;
-        visibility: hidden;
-    }
-    
-    #login-wrapper>a:hover {
-        background-image: url(../images/headerAndFooter/avatar-edit-hover.svg);
-    }
-    
-    #login-wrapper>p {
-        font-size: 1.1rem;
-        font-weight: 300;
-    }
-    
     .search {
         position: relative;
         width: 40px;
@@ -131,8 +109,8 @@
         margin-right: 10px;
     }
     
-    .search.expanded {
-        width: 400px;
+    .search.js-expanded {
+        width: 100%;
         background: rgb(35, 35, 35);
         height: 40px;
         overflow: hidden;
@@ -205,6 +183,33 @@
         height: 100%;
         border: none;
         outline: none;
+    }
+    
+    #login-wrapper>a {
+        height: 50px;
+        width: 50px;
+        background-image: url(../images/headerAndFooter/avatar-edit.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-area: login;
+        cursor: pointer;
+    }
+    
+    #login-wrapper>a:before {
+        content: url('../images/headerAndFooter/avatar-edit-hover.svg');
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    #login-wrapper>a:hover {
+        background-image: url(../images/headerAndFooter/avatar-edit-hover.svg);
+    }
+    
+    #login-wrapper>p {
+        font-size: 1.1rem;
+        font-weight: 300;
     }
     
     #login-wrapper {
@@ -331,7 +336,7 @@
     }
     /* Start of media queries */
     
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 1000px) {
         .nav_bar-elements {
             margin: 0;
         }

@@ -41,9 +41,12 @@
                 </ul>
             </nav>
 
-            <div id="search-button">
-                <i class="fas fa-search"></i>
-            </div>
+            <div id="search-login">
+                <form class="search js-search-form">
+                    <div class="search-button js-search-button"> </div>
+                    <div class="search-field roboto-white" />
+                    <input id="search-text" type="text" placeholder="Title, author or gender" class="roboto-white js-search-input" maxlength="35"></div>
+            </form>
             <div id="login-wrapper">
                 <a href="#" class="bounce"></a>
             </div>
@@ -51,6 +54,8 @@
         </header>
     </div>
     <!--  Header end -->
+
+
     <!--  First section start -->
     <section id="section1" class="tint">
 
@@ -126,6 +131,7 @@
         </div>
     </section>
     <!--  Third section end -->
+
     <!--  Footer section start -->
     <footer>
         <div class="centered">
@@ -147,5 +153,29 @@
     </footer>
     <!--  Footer section end -->
 </body>
+
+<script>
+    /* Define the elements to be used */
+    const searchForm = document.querySelector(".js-search-form");
+    const searchButton = document.querySelector(".js-search-button");
+    const searchField = document.querySelector(".js-search-input");
+    const loginWrapper = document.getElementById("login-wrapper");
+
+
+    searchButton.addEventListener("click", function() {
+        /* When the icon of search is clicked, the search area is expanded or collapsed */
+        searchForm.classList.toggle('js-expanded');
+        /* When the search field is expanded, the script sets the focus on the input field*/
+        if (searchForm.classList.contains("js-expanded")) {
+
+            document.getElementById("search-text").focus();
+            loginWrapper.style.display = "none";
+        } else {
+            loginWrapper.style.display = "flex";
+        }
+
+
+    });
+</script>
 
 </html>
