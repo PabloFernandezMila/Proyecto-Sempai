@@ -324,8 +324,18 @@
             loginWrapper.style.display = "flex";
         }
 
-
     });
+
+
+    window.onkeyup = function(event) {
+        if (event.keyCode == 27) {
+            console.log("entro en if")
+            loginWrapper.style.display = "flex";
+            searchForm.classList.toggle('js-expanded');
+            searchField.value = '';
+
+        }
+    }
 </script>
 
 </html>
