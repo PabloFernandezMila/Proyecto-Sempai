@@ -16,37 +16,46 @@
 <body class="tint">
     <!--  Header start -->
     <header>
+
         <div id="burger-menu"></div>
         <div id="logo-wrapper">
             <a target="_self" id="logo" href="index.html" class="roboto-white">
-                        Bookshelf</a>
+                    Bookshelf</a>
         </div>
         <nav>
             <ul>
                 <li class="nav_bar-elements inactive">
                     <a target="_self" href="index.html" class="roboto-white">
-                                Home</a>
+                            Home</a>
                 </li>
                 <li class="nav_bar-elements inactive">
                     <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
                 </li>
-                <li class="nav_bar-elements inactive">
-                    <a target="_self" href="register.html" class="roboto-white">Register</a>
-                </li>
+
                 <li class="nav_bar-elements active">
                     <a target="_self" href="#" class="roboto-white">About</a>
                 </li>
             </ul>
         </nav>
-        <div id="search-button">
-            <i class="fas fa-search"></i>
-        </div>
+
+        <div id="search-login">
+            <form class="search js-search-form">
+                <div class="search-button js-search-button">
+                    <div class="search-button-image"></div>
+                </div>
+                <div class="search-field roboto-white" />
+                <input id="search-text" type="text" autocomplete="off" placeholder="Title, author or genres" class="roboto-white js-search-input" maxlength="35"></div>
+        </form>
         <div id="login-wrapper">
-            <p class="roboto-white">Hello Jesica</p>
+            <p class="roboto-white">Hello Pablo</p>
             <a href="#" class="bounce"></a>
         </div>
+
+        </div>
+
     </header>
     <!--  Header end -->
+
 
     <!--Title and sub title start-->
     <div class="title centered">
@@ -114,5 +123,6 @@
     </footer>
     <!--  Footer end -->
 </body>
+<script src="./assets/scripts/search.js"></script>
 
 </html>

@@ -15,46 +15,45 @@
 
 
 <body>
+
     <!--  Header start -->
-    <div id="top-wrapper" class="tint">
-        <header>
-            <div id="burger-menu"></div>
-            <div id="logo-wrapper">
-                <a target="_self" id="logo" href="index.html" class="roboto-white">
+    <header>
+        <div id="burger-menu"></div>
+        <div id="logo-wrapper">
+            <a target="_self" id="logo" href="index.html" class="roboto-white">
                         Bookshelf</a>
-            </div>
-            <nav>
-                <ul>
-                    <li class="nav_bar-elements active">
-                        <a target="_self" href="index.html" class="roboto-white">
+        </div>
+        <nav>
+            <ul>
+                <li class="nav_bar-elements active">
+                    <a target="_self" href="index.html" class="roboto-white">
                                 Home</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="register.html" class="roboto-white">Register</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="about.html" class="roboto-white">About</a>
-                    </li>
-                </ul>
-            </nav>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="register.html" class="roboto-white">Register</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="about.html" class="roboto-white">About</a>
+                </li>
+            </ul>
+        </nav>
 
-            <div id="search-login">
-                <form class="search js-search-form" autocomplete="off">
-                    <div class="search-button js-search-button"> </div>
-                    <div class="search-field roboto-white" />
-                    <input id="search-text" type="text" placeholder="Title, author or gender" class="roboto-white js-search-input" maxlength="35"></div>
-            </form>
-            <div id="login-wrapper">
-                <a href="#" class="bounce"></a>
-            </div>
-
-        </header>
-    </div>
+        <div id="search-login">
+            <form class="search js-search-form" autocomplete="off">
+                <div class="search-button js-search-button">
+                    <div class="search-button-image"></div>
+                </div>
+                <div class="search-field roboto-white" />
+                <input id="search-text" type="text" placeholder="Title, author or genres" class="roboto-white js-search-input" maxlength="35"></div>
+        </form>
+        <div id="login-wrapper">
+            <a href="#" class="bounce"></a>
+        </div>
+    </header>
     <!--  Header end -->
-
 
     <!--  First section start -->
     <section id="section1" class="tint">
@@ -79,18 +78,18 @@
                 <div id="column2-image" class="centered-vertically"></div>
             </div>
 
-            <div id="arrow-container" class="flex-centered">
-                <a id="down-arrow" class="bounce down-arrow" href="#section2"></a>
 
-
-            </div>
         </div>
-
-
+        <div class="flex-centered centered arrow-container ">
+            <a class="bounce down-arrow" href="#section2"></a>
+        </div>
     </section>
     <!--  First section end -->
     <!--  Second section start -->
     <section id="section2">
+        <div class="flex-centered centered arrow-container">
+            <a class="bounce down-arrow" href="#section3"></a>
+        </div>
         <div id="section2-content" class="tint">
             <div class="centered">
                 <h2 class="roboto-white">
@@ -107,7 +106,9 @@
 
             </div>
 
+
         </div>
+
     </section>
     <!--  Second section end -->
     <!--  Third section end -->
@@ -154,28 +155,6 @@
     <!--  Footer section end -->
 </body>
 
-<script>
-    /* Define the elements to be used */
-    const searchForm = document.querySelector(".js-search-form");
-    const searchButton = document.querySelector(".js-search-button");
-    const searchField = document.querySelector(".js-search-input");
-    const loginWrapper = document.getElementById("login-wrapper");
-
-
-    searchButton.addEventListener("click", function() {
-        /* When the icon of search is clicked, the search area is expanded or collapsed */
-        searchForm.classList.toggle('js-expanded');
-        /* When the search field is expanded, the script sets the focus on the input field*/
-        if (searchForm.classList.contains("js-expanded")) {
-
-            document.getElementById("search-text").focus();
-            loginWrapper.style.display = "none";
-        } else {
-            loginWrapper.style.display = "flex";
-        }
-
-
-    });
-</script>
+<script src="./assets/scripts/search.js"></script>
 
 </html>

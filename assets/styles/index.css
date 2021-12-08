@@ -15,13 +15,6 @@ body {
     margin: 0;
 }
 
-a {
-    font-weight: 100;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-}
-
 h1 {
     font-weight: 400;
     font-size: 2.625rem;
@@ -48,6 +41,7 @@ section {
     background-size: cover;
     height: 100vh;
     min-height: 500px;
+    position: relative;
 }
 
 .tint {
@@ -109,8 +103,12 @@ section {
     max-height: 300px;
 }
 
-#arrow-container {
-    grid-area: arrow-container;
+.arrow-container {
+    top: 30%;
+}
+
+#section2 .arrow-container {
+    top: 80%;
 }
 
 .down-arrow {
@@ -122,6 +120,8 @@ section {
     width: 40px;
     display: inline-block;
     align-self: flex-end;
+    position: absolute;
+    bottom: 0;
 }
 
 .down-arrow::before {
@@ -198,7 +198,7 @@ button:hover,
 /* Start of media queries */
 
 @media screen and (max-width: 800px) {
-    #arrow-container {
+    .arrow-container {
         display: none;
     }
     #section2-content {

@@ -34,11 +34,17 @@
         min-height: 80px;
     }
     
+    a {
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 0.5%;
+        margin: 0;
+    }
+    
     #burger-menu {
         display: none;
         background-image: url('../images/headerAndFooter/hamburger-menu.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
         height: 30px;
         cursor: pointer;
         background-repeat: no-repeat;
@@ -139,25 +145,17 @@
         z-index: 1000;
         cursor: pointer;
         margin-top: 2px;
+        /*   Padding used to visually center the magnifying glass */
+        padding-bottom: 2px;
     }
     
-    .search-button::before {
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        border: 3px solid white;
-        border-radius: 50%;
-        transform: translate(-4px, -4px);
-    }
-    
-    .search-button::after {
-        content: "";
-        position: absolute;
-        width: 3px;
-        height: 8px;
-        background: white;
-        transform: translate(6px, 6px) rotate(315deg);
+    .search-button-image {
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/headerAndFooter/search.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
     }
     
     .search-field input {

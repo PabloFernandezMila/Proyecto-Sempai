@@ -5,14 +5,19 @@
     
     * {
         box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
     }
     
     html {
+        height: 100%;
+        margin: 0;
         scroll-behavior: smooth;
     }
     
     body {
         margin: 0;
+        width: 100%;
         background-image: url(../images/about/cover.jpg);
         background-size: cover;
         background-blend-mode: multiply;
@@ -30,7 +35,6 @@
         font-size: 2.625rem;
         display: inline-block;
         border-bottom: 2px solid var(--details-color);
-        margin-top: 4%;
         margin-bottom: 1%;
         z-index: 1;
     }
