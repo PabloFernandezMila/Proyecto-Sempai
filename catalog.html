@@ -40,9 +40,11 @@
 
         <div id="search-login">
             <form class="search js-search-form">
-                <div class="search-button js-search-button"> </div>
+                <div class="search-button js-search-button">
+                    <div class="search-button-image"></div>
+                </div>
                 <div class="search-field roboto-white" />
-                <input id="search-text" type="text" autocomplete="off" placeholder="Title, author or gender" class="roboto-white js-search-input" maxlength="35"></div>
+                <input id="search-text" type="text" autocomplete="off" placeholder="Title, author or genres" class="roboto-white js-search-input" maxlength="35"></div>
         </form>
         <div id="login-wrapper">
             <p class="roboto-white">Hello Pablo</p>
@@ -304,38 +306,7 @@
     <!--  Footer end -->
 </body>
 
-<script>
-    /* Define the elements to be used */
-    const searchForm = document.querySelector(".js-search-form");
-    const searchButton = document.querySelector(".js-search-button");
-    const searchField = document.querySelector(".js-search-input");
-    const loginWrapper = document.getElementById("login-wrapper");
 
-
-    searchButton.addEventListener("click", function() {
-        /* When the icon of search is clicked, the search area is expanded or collapsed */
-        searchForm.classList.toggle('js-expanded');
-        /* When the search field is expanded, the script sets the focus on the input field*/
-        if (searchForm.classList.contains("js-expanded")) {
-
-            document.getElementById("search-text").focus();
-            loginWrapper.style.display = "none";
-        } else {
-            loginWrapper.style.display = "flex";
-        }
-
-    });
-
-
-    window.onkeyup = function(event) {
-        if (event.keyCode == 27) {
-            console.log("entro en if")
-            loginWrapper.style.display = "flex";
-            searchForm.classList.toggle('js-expanded');
-            searchField.value = '';
-
-        }
-    }
-</script>
+<script src="./assets/scripts/search.js"></script>
 
 </html>
