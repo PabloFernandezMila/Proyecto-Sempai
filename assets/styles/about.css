@@ -56,8 +56,8 @@ h1 {
     font-size: 2.625rem;
     display: inline-block;
     border-bottom: 2px solid var(--details-color);
+    padding-top: 7%;
     margin-bottom: 1%;
-    z-index: 1;
 }
 
 h2 {
@@ -108,10 +108,6 @@ p {
 
 
 /* 5. Class specific selectors */
-
-#top-wrapper {
-    height: 24vh;
-}
 
 .roboto-white {
     font-family: 'Roboto', sans-serif;
