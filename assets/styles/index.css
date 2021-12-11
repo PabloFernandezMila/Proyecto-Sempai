@@ -1,7 +1,28 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Fonts import              #
+#       2. Root                      #
+#       3. HTML tags selectors       #
+#       4. General selector          #
+#       5. Specific selectors        #   
+#       6.Media queries              #
+#                                    #
+######################################
+ */
+
+
+/*  1. Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+
+/* 2. Root */
+
 :root {
     --details-color: #5480f1;
 }
+
+
+/* 3. HTML tags selectors */
 
 * {
     box-sizing: border-box;
@@ -31,11 +52,6 @@ p {
     font-size: 1.25rem;
 }
 
-.roboto-white {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
 section {
     background-attachment: fixed;
     background-size: cover;
@@ -44,13 +60,16 @@ section {
     position: relative;
 }
 
-.tint {
-    background-color: rgba(34, 33, 29, 0.75);
+
+/* 4. General selector */
+
+.roboto-white {
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
-#section1 {
-    background-image: url("../images/index/section1.jpg");
-    background-blend-mode: multiply;
+.tint {
+    background-color: rgba(34, 33, 29, 0.75);
 }
 
 .centered {
@@ -68,6 +87,14 @@ section {
     width: 100%;
     transform: translate(0%, -50%);
     text-align: center;
+}
+
+
+/* 5. Class specific selectors */
+
+#section1 {
+    background-image: url("../images/index/section1.jpg");
+    background-blend-mode: multiply;
 }
 
 #section1-wrapper {
@@ -105,6 +132,8 @@ section {
 
 .arrow-container {
     top: 30%;
+    display: flex;
+    justify-content: center;
 }
 
 #section2 .arrow-container {
@@ -195,9 +224,9 @@ button:hover,
 }
 
 
-/* Start of media queries */
+/* 6.Media queries */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .arrow-container {
         display: none;
     }

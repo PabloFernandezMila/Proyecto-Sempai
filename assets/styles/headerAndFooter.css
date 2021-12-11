@@ -1,7 +1,27 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Fonts import              #
+#       2. Root                      #
+#       3. HTML tags selectors       #
+#       4. Specific selectors        #   
+#       5.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/* 1. Fonts import */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+
+/* . Root */
+
 :root {
     --details-color: #5480f1;
 }
+
+
+/* 3. HTML tags selectors */
 
 header {
     background-color: rgba(0, 0, 0, 0.9);
@@ -41,6 +61,9 @@ a {
     padding: 0.5%;
     margin: 0;
 }
+
+
+/* 4. Specific selectors */
 
 #burger-menu {
     display: none;
@@ -339,7 +362,7 @@ header>nav>ul {
 }
 
 
-/* Start of media queries */
+/* 5.Media queries */
 
 @media screen and (max-width: 1000px) {
     .nav_bar-elements {
