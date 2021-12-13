@@ -55,7 +55,14 @@
     </header>
     <!--  Header end -->
 
-    <section>
+    <!--Title and sub title start-->
+    <div id="title-wrapper">
+        <div class="title">
+
+            <h1 class="roboto-white">Create an account</h1>
+            <h2 class="roboto-white">Create an account and start enjoying all benefits from Bookshelf now!</h2>
+
+        </div>
         <!--  Breadcrumb start -->
         <div id="breadcrumb-wrapper">
             <ul class="breadcrumb">
@@ -71,56 +78,79 @@
             </ul>
         </div>
         <!--  Breadcrumb end -->
-        <div id="section-content" class="tint">
+    </div>
+
+    <section id="section-content">
+
+        <form action="/welcome.html" autocomplete="off" class="flex-item roboto-white tint">
+
+            <div class="form-elements">
+                <p>Please complete the following form to create a new account</p>
+                <label for="name">
+                            <b>Name</b>
+                        </label>
+                <input type="text" placeholder="Enter your Name" name="name" id="name" required>
+                <label for="lastname">
+                            <b>Last Name</b>
+                        </label>
+                <input type="text" placeholder="Enter your Last Name" name="lastname" id="lastname" required>
+                <label for="email">
+                            <b>Email</b>
+                        </label>
+                <input type="email" placeholder="Enter your Email" name="email" id="email" required>
+
+                <label for="password">
+                            <b>Password</b>
+                        </label>
+                <input type="password" placeholder="Enter your Password" name="password" id="password" required>
+
+                <label for="password-repeat">
+                            <b>Repeat Password</b>
+                        </label>
+                <input type="password" placeholder="Repeat your Password" name="password-repeat" id="password-repeat" required>
+                <hr>
+
+                <button type="submit" class="register-button roboto-white">Register</button>
+            </div>
+        </form>
+        <div class="signin flex-item roboto-white tint">
 
             <form action="/welcome.html" autocomplete="off">
 
+                <div class="form-elements">
+                    <p>If you already have an account, enter your email and password</p>
+                </div>
 
-                <h1 class="roboto-white">Create an account</h1>
-                <p class="roboto-white">Create an account and start enjoying all benefits from Bookshelf now!</p>
-                <hr>
                 <div class="form-elements">
 
-                    <label for="name" class="roboto-white">
-                            <b>Name</b>
-                        </label>
-                    <input type="text" placeholder="Enter your Name" name="name" id="name" required>
-                    <label for="lastname" class="roboto-white">
-                            <b>Last Name</b>
-                        </label>
-                    <input type="text" placeholder="Enter your Last Name" name="lastname" id="lastname" required>
-                    <label for="email" class="roboto-white">
-                            <b>Email</b>
-                        </label>
-                    <input type="text" placeholder="Enter your Email" name="email" id="email" required>
+                    <label for="email">
+                                    <b>Email</b>
+                                </label>
+                    <input type="email" placeholder="Enter your Email" name="email" id="email" required>
 
-                    <label for="password" class="roboto-white">
-                            <b>Password</b>
-                        </label>
+                    <label for="password">
+                                    <b>Password</b>
+                                </label>
                     <input type="password" placeholder="Enter your Password" name="password" id="password" required>
-
-                    <label for="password-repeat" class="roboto-white">
-                            <b>Repeat Password</b>
-                        </label>
-                    <input type="password" placeholder="Repeat your Password" name="password-repeat" id="password-repeat" required>
                     <hr>
+                    <button type="button" class="signin-button roboto-white">Sign in</button>
+                    <div>
+                        <a id="password-recovery" href="/password-recovery">Forgot your password?</a>
+                    </div>
 
-                    <button type="submit" class="register-button roboto-white">Register</button>
                 </div>
-                <div class="signin roboto-white">
-                    <p>Already have an account?
-                        <a id="signin" href="#">Sign in</a>
-                    </p>
-
             </form>
-            </div>
 
 
         </div>
+
+
     </section>
+
     <!--  Footer section start -->
     <footer>
         <div class="centered">
+
             <ul>
                 <li class="social-media">
                     <a id="facebook" class="bounce" href="https://www.facebook.com/senpaiacademy"></a>

@@ -31,6 +31,7 @@ window.onkeyup = function(event) {
         /* The login section is displayed again */
         loginWrapper.style.display = "flex";
         searchForm.classList.toggle('js-expanded');
+        /* Search field is cleared */
         searchField.value = '';
         searchField.style.display = "none";
 
