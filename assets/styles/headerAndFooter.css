@@ -183,6 +183,10 @@ header>nav>ul {
     margin: auto;
 }
 
+.search-button-image:focus {
+    border: solid 1px white;
+}
+
 .search-field input {
     position: relative;
     height: 40px;

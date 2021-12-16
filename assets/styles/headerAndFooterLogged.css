@@ -172,10 +172,6 @@ header>nav>ul {
     padding-bottom: 2px;
 }
 
-.search-button:focus {
-    border: solid 1px white;
-}
-
 .search-button-image {
     width: 30px;
     height: 30px;
@@ -183,6 +179,10 @@ header>nav>ul {
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
+}
+
+.search-button-image:focus {
+    border: solid 1px white;
 }
 
 .search-field input {
