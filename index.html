@@ -15,111 +15,124 @@
 
 
 <body>
+
     <!--  Header start -->
-    <div id="top-wrapper" class="tint">
-        <header>
-            <div id="logo-wrapper">
-                <a target="_self" id="logo" href="index.html" class="roboto-white">
+    <header>
+        <div class="burger-wrapper">
+            <div id="burger-menu" class="js-burger-menu">
+                <div id="burger-menu-icon"></div>
+            </div>
+        </div>
+        <div id="logo-wrapper">
+            <a target="_self" id="logo" href="index.html" class="roboto-white">
                         Bookshelf</a>
-            </div>
-            <nav>
-                <ul>
-                    <li class="nav_bar-elements active">
-                        <a target="_self" href="index.html" class="roboto-white">
-                                Home</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
-                    </li>
-                    <li class="nav_bar-elements inactive">
-                        <a target="_self" href="#" class="roboto-white">About</a>
-                    </li>
-                </ul>
-            </nav>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav_bar-elements active">
+                    <a target="_self" href="index.html" class="roboto-white">Home</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="register.html" class="roboto-white">Register</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="about.html" class="roboto-white">About</a>
+                </li>
+            </ul>
+        </nav>
 
-            <div id="search-button">
-                <i class="fas fa-search"></i>
-            </div>
+        <div id="search-login">
+            <form class="search js-search-form" autocomplete="off">
+                <div class="search-button js-search-button" tabindex="0">
+                    <div class="search-button-image"></div>
+                </div>
+                <div class="search-field roboto-white">
+                    <input id="search-text" type="text" placeholder="Title, author or genres" class="roboto-white js-search-input" maxlength="35"></div>
+            </form>
             <div id="login-wrapper">
-                <button type="button">Login</button>
-            </div>
 
-        </header>
-    </div>
+                <a href="#" class="bounce"></a>
+            </div>
+    </header>
     <!--  Header end -->
+
     <!--  First section start -->
     <section id="section1" class="tint">
-        <div class="centered">
-            <div id="section1-block-column1" class="column">
-                <div id="section1-block-column1-text" class="centered">
 
+        <div id="section1-wrapper">
+            <div id="column1">
+                <div class="centered">
                     <h1 class="roboto-white">
                         Welcome to Bookshelf</h1>
-                    <p class="roboto-white">
-                        Take your books anywhere and anytime.</p>
-                    <p class="roboto-white">
-                        Pick yours from our wide catalog.</p>
-
+                    <h2 class="roboto-white">
+                        Take your books anywhere and anytime.</h2>
+                    <h2 class="roboto-white">
+                        Pick yours from our wide catalog.</h2>
                 </div>
             </div>
-            <div id="section1-block-column2" class="column">
+            <div id="column2">
                 <div id="column2-image" class="centered-vertically"></div>
             </div>
+            <div class=" arrow-container ">
+                <a class="bounce down-arrow" href="#section2"></a>
+            </div>
         </div>
-        <div id="arrow-container">
-            <a class="down-arrow" href="#section2"></a>
-        </div>
+
+
+
     </section>
     <!--  First section end -->
+
     <!--  Second section start -->
     <section id="section2">
+        <div class="centered arrow-container">
+            <a class="bounce down-arrow" href="#section3"></a>
+        </div>
         <div id="section2-content" class="tint">
             <div class="centered">
-                <h2 class="roboto-white">
-                    Start today</h2>
+                <h1 class="roboto-white">
+                    Start today</h1>
                 <p class="roboto-white">
                     Browse our wide catalog and select the titles that you like.</p>
                 <p class="roboto-white">
                     Immerse in your reading whenever you want, carry all the books with you.
                 </p>
-
-                <form action="catalog.html">
-                    <input type="submit" id="section2-button" class="section-button roboto-white" value="See more" />
+                <form action="register.html">
+                    <input type="submit" id="section2-button" class="section-button roboto-white" value="Create an account" />
                 </form>
-
             </div>
-
         </div>
     </section>
     <!--  Second section end -->
+
     <!--  Third section end -->
     <section id="section3" class="tint">
         <div id="section3-content" class="tint">
             <div id="section3-content-text" class="section3-position centered">
-
-                <h2 class="roboto-white">
-                    Over 1000+ titles available!</h2>
+                <h1 class="roboto-white">
+                    Over 1000+ titles available!</h1>
                 <p class="roboto-white">
                     Don&apos;t know what to read? Bored of finding the same books everywhere?</p>
                 <p class="roboto-white">
                     On our site you will find more than 1000 titles, some indie writers, unprinted titles, old and new editions of classic books and much more.
                 </p>
                 <form action="catalog.html">
-                    <input type="submit" id="section3-button" class="section-button roboto-white section3-position" value="See more" />
+                    <input type="submit" id="section3-button" class="section-button roboto-white section3-position" value="Browse our Catalog" />
                 </form>
-
-
             </div>
         </div>
     </section>
     <!--  Third section end -->
+
     <!--  Footer section start -->
     <footer>
         <div class="centered">
             <ul>
                 <li class="social-media">
                     <a id="facebook" class="bounce" href="https://www.facebook.com/senpaiacademy"></a>
-
                 </li>
                 <li class="social-media">
                     <a id="github" class="bounce" href="https://github.com/PabloFernandezMila/Proyecto-Sempai/tree/Dev"></a>
@@ -133,6 +146,10 @@
         </div>
     </footer>
     <!--  Footer section end -->
+
 </body>
+
+<script src="assets/scripts/search.js"></script>
+<script src="assets/scripts/burgerMenu.js"></script>
 
 </html>
