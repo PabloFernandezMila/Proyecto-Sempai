@@ -192,6 +192,10 @@ section {
     margin-top: 10%;
 }
 
+#section3-button {
+    margin-top: 5%;
+}
+
 #section3 {
     background-image: url("../images/index/section3.jpg");
     height: 100vh;
@@ -252,5 +256,29 @@ button:hover,
         section {
             min-height: 660px;
         }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    #section3-content {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #section3-content {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #section3-content {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    #section3-content {
+        height: 80vh;
     }
 }

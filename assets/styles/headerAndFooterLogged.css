@@ -4,7 +4,8 @@
 #       2. Root                      #
 #       3. HTML tags selectors       #
 #       4. Specific selectors        #   
-#       5.Media queries              #
+#       5. JS styles
+#       6.Media queries              #
 #                                    #
 ######################################
 */
@@ -65,24 +66,35 @@ a {
 
 /* 4. Specific selectors  */
 
+.burger-wrapper {
+    display: none;
+    grid-area: burger-wrapper;
+}
+
 #burger-menu {
     display: none;
+    height: 50px;
+    cursor: pointer;
+    width: 50px;
+}
+
+#burger-menu-icon {
     background-image: url('../images/headerAndFooter/hamburger-menu.svg');
-    height: 30px;
     cursor: pointer;
     background-repeat: no-repeat;
     background-size: cover;
     width: 30px;
+    height: 30px;
 }
 
-#burger-menu:before {
+#burger-menu-icon:before {
     background-image: url('../images/headerAndFooter/hamburger-menu-hover.svg');
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
-#burger-menu:hover {
+#burger-menu-icon:hover {
     background-image: url('../images/headerAndFooter/hamburger-menu-hover.svg');
 }
 
@@ -93,7 +105,7 @@ a {
     margin: auto;
 }
 
-header>div:hover #logo {
+#logo:hover {
     color: white;
 }
 
@@ -136,13 +148,6 @@ header>nav>ul {
     transition: 0.5s;
     box-shadow: var(--details-color);
     margin-right: 10px;
-}
-
-.search.js-expanded {
-    width: 100%;
-    background: rgb(35, 35, 35);
-    height: 40px;
-    overflow: hidden;
 }
 
 .search-field {
@@ -364,30 +369,75 @@ header>nav>ul {
 }
 
 
-/* 5.Media queries */
+/* 6.JS styles */
+
+.js-header-expanded {
+    height: 100vh;
+    grid-template-areas: "burger-wrapper logo search-login" "header-second-row header-second-row header-second-row";
+}
+
+.js-header-second-row {
+    height: 90vh;
+    grid-area: header-second-row;
+}
+
+.search.js-expanded {
+    width: 100%;
+    background: rgb(35, 35, 35);
+    height: 40px;
+    overflow: hidden;
+}
+
+.js-burger-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+
+/* This is added to the body when the user expands the burger menu, this css combined with JS disables the scroll on the page */
+
+.js-stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* 7.Media queries */
 
 @media screen and (max-width: 1000px) {
     .nav_bar-elements {
         margin: 0;
     }
     header {
-        display: flex;
         height: 10vh;
         min-height: 50px;
         width: 100%;
         justify-content: space-between;
+        grid-template-areas: "burger-wrapper logo search-login";
+        grid-template-rows: 1fr 0fr;
     }
-    #burger-menu {
+    .burger-wrapper {
         display: initial;
     }
+    #burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     header>nav,
-    #search-login>form,
+    .search,
     #login-wrapper>p {
         display: none;
+    }
+    .search {
+        margin-top: 20px;
     }
     #logo-wrapper {
         grid-area: logo;
         text-align: center;
+        display: flex;
     }
     #section2-content {
         width: 100%;
@@ -395,6 +445,14 @@ header>nav>ul {
     #footer-copyright {
         font-size: 0.7rem;
     }
+}
+
+#header-second-row>nav>ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 @media screen and (max-width: 415px) {

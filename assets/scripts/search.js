@@ -8,7 +8,7 @@ const loginWrapper = document.getElementById("login-wrapper");
 
 /* This function expand or collapse the search area */
 function expandAndCollapseSearch() {
-    /* When the icon of search is clicked, the search area is expanded or collapsed */
+    /* When the icon of search is clicked, the search area is expanded or collapsed, this behavior is triggered by js-expanded class */
     searchForm.classList.toggle('js-expanded');
     /* When the search field is expanded, the script makes the field visible and sets the focus on the input field*/
     if (searchForm.classList.contains("js-expanded")) {
