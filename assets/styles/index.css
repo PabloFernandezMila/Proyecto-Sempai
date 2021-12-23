@@ -95,6 +95,11 @@ section {
 #section1 {
     background-image: url("../images/index/section1.jpg");
     background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
 }
 
 #section1-wrapper {
@@ -134,6 +139,7 @@ section {
     top: 30%;
     display: flex;
     justify-content: center;
+    grid-area: arrow-container;
 }
 
 #section2 .arrow-container {
@@ -149,8 +155,6 @@ section {
     width: 40px;
     display: inline-block;
     align-self: flex-end;
-    position: absolute;
-    bottom: 0;
 }
 
 .down-arrow::before {
@@ -231,6 +235,16 @@ button:hover,
 /* 6.Media queries */
 
 @media screen and (max-width: 1000px) {
+    section {
+        display: flex;
+        justify-content: center;
+        padding-top: 14vh;
+    }
+    #section1 {
+        flex-direction: row;
+        align-items: initial;
+        align-content: initial;
+    }
     .arrow-container {
         display: none;
     }
@@ -269,11 +283,8 @@ button:hover,
     #section3-content {
         height: 80vh;
     }
-}
-
-@media screen and (max-width: 340px) {
-    #section3-content {
-        height: 80vh;
+    h1 {
+        font-size: 2rem;
     }
 }
 
