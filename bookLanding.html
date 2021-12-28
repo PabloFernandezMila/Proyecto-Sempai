@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/bookLanding.css">
+    <link rel="stylesheet" href="assets/styles/headerAndFooterLogged.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <title>
+        Bookshelf - A game of Thrones</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body class="tint">
+    <!--  Header start -->
+    <header>
+        <div class="burger-wrapper">
+            <div id="burger-menu" class="js-burger-menu">
+                <div id="burger-menu-icon"></div>
+            </div>
+        </div>
+        <div id="logo-wrapper">
+            <a target="_self" id="logo" href="index.html" class="roboto-white">
+                    Bookshelf</a>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="index.html" class="roboto-white">
+                            Home</a>
+                </li>
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
+                </li>
+
+                <li class="nav_bar-elements inactive">
+                    <a target="_self" href="about.html" class="roboto-white">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="search-login">
+            <form class="search js-search-form">
+                <div class="search-button js-search-button" tabindex="0">
+                    <div class="search-button-image"></div>
+                </div>
+                <div class="search-field roboto-white" />
+                <input id="search-text" type="text" autocomplete="off" placeholder="Title, author or genres" class="roboto-white js-search-input" maxlength="35"></div>
+        </form>
+        <div id="login-wrapper">
+            <p class="roboto-white">Hello Pablo</p>
+            <a href="#" class="bounce"></a>
+        </div>
+
+        </div>
+
+    </header>
+    <!--  Header end -->
+
+    <!--Title and sub title start-->
+    <div id="title-wrapper">
+
+        <div class="title">
+            <h1 class="roboto-white">A game of Thrones</h1>
+            <h2 class="roboto-white">By George R.R. Martin</h2>
+        </div>
+
+
+        <!--  Breadcrumb start -->
+        <div id="breadcrumb-wrapper">
+            <ul class="breadcrumb">
+                <li>
+                    <a target="_self" href="index.html" class="roboto-white">Home</a>
+                </li>
+                <li>
+                    <p class="roboto-white breadcrumb-separator">&nbsp;/&nbsp;</p>
+                </li>
+                <li>
+                    <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
+                </li>
+            </ul>
+        </div>
+        <!--  Breadcrumb end -->
+
+    </div>
+
+</body>
+
+<script src="assets/scripts/search.js"></script>
+<script src="assets/scripts/burgerMenu.js"></script>
+
+</html>

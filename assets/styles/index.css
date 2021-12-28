@@ -235,7 +235,7 @@ button:hover,
 /* 6.Media queries */
 
 @media screen and (max-width: 1000px) {
-    section {
+    #section1 {
         display: flex;
         justify-content: center;
         padding-top: 14vh;
