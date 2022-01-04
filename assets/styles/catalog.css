@@ -141,7 +141,7 @@ section {
 
 /* 5. Specific selectors */
 
-.book-content>form>input {
+.book-content>a {
     margin-top: 10px;
     color: white;
     background-color: var(--details-color);
@@ -155,7 +155,7 @@ section {
     padding: 5px 10px;
 }
 
-.book-content>form>input:hover {
+.book-content>a:hover {
     background-color: white;
     color: var(--details-color);
 }
