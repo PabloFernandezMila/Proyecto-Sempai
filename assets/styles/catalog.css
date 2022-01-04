@@ -142,24 +142,22 @@ section {
 /* 5. Specific selectors */
 
 .book-content>form>input {
-    margin-right: 2%;
+    margin-top: 10px;
     color: white;
     background-color: var(--details-color);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    border-radius: 12px;
-    padding: 2%;
     border-style: none;
-    margin-top: 3%;
+    border-radius: 12px;
+    cursor: pointer;
+    border-bottom: solid 1px var(--details-color);
+    padding: 5px 10px;
 }
 
-.book-content>form>input {
-    cursor: pointer;
-    background-color: transparent;
+.book-content>form>input:hover {
+    background-color: white;
     color: var(--details-color);
-    border-bottom: solid 1px var(--details-color);
-    border-radius: 0px;
 }
 
 #title-wrapper {
