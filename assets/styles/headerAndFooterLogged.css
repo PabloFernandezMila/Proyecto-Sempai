@@ -248,6 +248,13 @@ header>nav>ul {
     align-items: center;
 }
 
+footer>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @keyframes bounce {
     0%,
     20%,
