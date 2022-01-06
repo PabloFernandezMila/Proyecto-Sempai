@@ -69,6 +69,13 @@ a:hover {
     cursor: pointer;
 }
 
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: lightslategrey;
+    display: grid;
+}
+
 
 /* 4. General selector */
 
@@ -104,4 +111,15 @@ a:hover {
 
 .breadcrumb-separator {
     pointer-events: none;
+}
+
+
+/* 6.Media queries  */
+
+@media screen and (min-width: 1262px)and (min-width: 1270px) {
+    #title-wrapper {
+        padding-top: 30px;
+        margin-bottom: 30px;
+        min-height: 200px;
+    }
 }

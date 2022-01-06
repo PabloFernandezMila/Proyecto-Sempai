@@ -227,9 +227,9 @@ section div p {
 
 @media screen and (min-width: 1262px)and (min-width: 1270px) {
     #title-wrapper {
-        min-height: 200px;
         padding-top: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        min-height: 200px;
     }
 }
 
