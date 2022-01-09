@@ -51,9 +51,16 @@ h1 {
     margin-bottom: 1%;
 }
 
-h2 {
+h2,
+p {
     font-weight: 300;
     font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 a,
@@ -71,9 +78,33 @@ a:hover {
 
 section {
     width: 100%;
-    height: 100vh;
-    background-color: lightslategrey;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "description cover" "tags buttons";
+    padding: 30px;
+}
+
+.book-information p {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+.label {
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.tags {}
+
+.tag {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.tag:hover {
+    text-decoration: underline;
 }
 
 
@@ -94,7 +125,7 @@ section {
 }
 
 .breadcrumb {
-    margin-left: 2%;
+    margin-left: 30px;
 }
 
 .breadcrumb li {
@@ -111,6 +142,59 @@ section {
 
 .breadcrumb-separator {
     pointer-events: none;
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.book-cover img {
+    height: 100%;
+    border-radius: 10px;
+    grid-area: cover
+}
+
+.book-info {
+    padding: 0px 30px;
+    grid-area: description;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    gap: 30px;
+}
+
+.buttons-container button {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    border: lightslategray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    height: 100%;
+}
+
+.buttons-container button:hover {
+    color: var(--details-color);
+    border-color: var(--details-color);
+    background-color: transparent;
+}
+
+.tags {
+    grid-area: tags;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
 }
 
 
