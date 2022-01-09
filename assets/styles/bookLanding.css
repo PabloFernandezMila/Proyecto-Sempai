@@ -75,8 +75,8 @@ section {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4fr 1fr;
-    grid-template-areas: "description cover" "tags buttons";
+    grid-template-rows: 4fr 1fr 2fr;
+    grid-template-areas: "description cover" "tags buttons" "related-content related-content";
     padding: 30px;
 }
 
@@ -90,8 +90,6 @@ section {
     font-size: 1rem;
     text-decoration: underline;
 }
-
-.tags {}
 
 .tag {
     font-weight: 300;
@@ -195,6 +193,11 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.related-content {
+    background-color: coral;
+    grid-area: related-content;
 }
 
 
