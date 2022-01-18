@@ -107,7 +107,7 @@ section {
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 9fr 1fr;
     grid-template-areas: 'column1 column2' 'arrow-container arrow-container';
     column-gap: 5%;
 }
