@@ -1,4 +1,4 @@
-/*######## Table of contents ##########
+    /*######## Table of contents ##########
 #                                    #
 #       1. Fonts import              #
 #       2. Root                      #
@@ -9,233 +9,309 @@
 #                                    #
 ######################################
 */
-
-
-/*  1. Fonts import */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
-
-/*  2. Root  */
-
- :root {
-    --details-color: #5480f1;
-}
-
-
-/* 3. HTML tags selectors */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background-color: #141414
-}
-
-h1 {
-    margin-top: 20px;
-    font-weight: 500;
-    font-size: 2.625rem;
-    display: inline-block;
-    border-bottom: 2px solid var(--details-color);
-    margin-bottom: 1%;
-}
-
-h2,
-p {
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-a,
-.breadcrumb li p {
-    font-weight: 100;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-    margin: 0% 2%;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
-section {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4fr 1fr 2fr;
-    grid-template-areas: "description cover" "tags buttons" "related-content related-content";
-    padding: 30px;
-}
-
-.book-information p {
-    font-size: 1.5rem;
-    margin-top: 30px;
-}
-
-.label {
-    font-weight: 300;
-    font-size: 1rem;
-    text-decoration: underline;
-}
-
-.tag {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.tag:hover {
-    text-decoration: underline;
-}
-
-
-/* 4. General selector */
-
-.title {
-    text-align: center;
-    padding-top: 10vh;
-    margin-bottom: 2vh;
-}
-
-
-/* 5. Specific selectors */
-
-.roboto-white {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.breadcrumb {
-    margin-left: 30px;
-}
-
-.breadcrumb li {
-    display: inline-block;
-}
-
-.breadcrumb li a {
-    padding-left: 0;
-}
-
-.breadcrumb li a:hover {
-    color: var(--details-color);
-}
-
-.breadcrumb-separator {
-    pointer-events: none;
-}
-
-.book-cover {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-.book-cover img {
-    height: 100%;
-    border-radius: 10px;
-    grid-area: cover;
-    max-width: 500px;
-}
-
-.book-info {
-    padding: 0px 30px;
-    grid-area: description;
-}
-
-.buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 50px;
-    margin: auto;
-    gap: 30px;
-}
-
-.buttons-container button {
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 1rem;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    width: 100%;
-    color: white;
-    height: 100%;
-    color: var(--details-color);
-    border-color: var(--details-color);
-}
-
-.buttons-container button:hover {
-    border: solid 1px lightslategray;
-    background-color: transparent;
-    color: white;
-}
-
-.tags {
-    grid-area: tags;
-    width: 100%;
-    height: 100%;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.related-content {
-    background-color: coral;
-    grid-area: related-content;
-}
-
-
-/* 6.Media queries  */
-
-@media screen and (min-width: 1262px)and (min-width: 1270px) {
-    #title-wrapper {
-        padding-top: 30px;
-        margin-bottom: 30px;
-        min-height: 200px;
+    /*  1. Fonts import */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+    /*  2. Root  */
+    
+     :root {
+        --details-color: #5480f1;
     }
-}
-
-@media screen and (max-width: 1000px) {
-    section {
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
+    /* 3. HTML tags selectors */
+    
+    * {
+        box-sizing: border-box;
     }
-    .book-cover img {
-        padding: 20px;
-        border-radius: 30px;
-        max-height: 500px;
+    
+    html {
+        scroll-behavior: smooth;
     }
-    #breadcrumb-wrapper {
-        text-align: center;
+    
+    body {
+        margin: 0;
+        background-color: #141414
     }
-    .book-information p {
-        font-size: 1.2rem;
+    
+    h1 {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 2.625rem;
+        display: inline-block;
+        border-bottom: 2px solid var(--details-color);
+        margin-bottom: 1%;
     }
-    section {
+    
+    h2,
+    p {
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
         margin-bottom: 20px;
     }
-    h1 {
-        margin-top: 0;
+    
+    a,
+    .breadcrumb li p {
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 0.5%;
+        margin: 0% 2%;
     }
+    
+    a:hover {
+        cursor: pointer;
+    }
+    
+    section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4fr 1fr 3fr;
+        grid-template-areas: "description cover" "tags buttons" "related-content related-content";
+        padding: 30px;
+    }
+    
+    .book-information p {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+    
+    .label {
+        font-weight: 300;
+        font-size: 1rem;
+        text-decoration: underline;
+    }
+    
+    .tag {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+    
+    .tag:hover {
+        text-decoration: underline;
+    }
+    /* 4. General selector */
+    
     .title {
-        padding: 0 20px;
-        padding-top: 14vh;
+        text-align: center;
+        padding-top: 10vh;
+        margin-bottom: 2vh;
     }
-}
+    /* 5. Specific selectors */
+    
+    .roboto-white {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+    
+    .breadcrumb {
+        margin-left: 30px;
+    }
+    
+    .breadcrumb li {
+        display: inline-block;
+    }
+    
+    .breadcrumb li a {
+        padding-left: 0;
+    }
+    
+    .breadcrumb li a:hover {
+        color: var(--details-color);
+    }
+    
+    .breadcrumb-separator {
+        pointer-events: none;
+    }
+    
+    .book-cover {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .book-cover img {
+        height: 100%;
+        border-radius: 10px;
+        grid-area: cover;
+        max-width: 500px;
+    }
+    
+    .book-info {
+        padding: 0px 30px;
+        grid-area: description;
+    }
+    
+    .buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 50px;
+        margin: auto;
+        gap: 30px;
+    }
+    
+    .buttons-container button {
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 1rem;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        width: 100%;
+        color: white;
+        height: 100%;
+        color: var(--details-color);
+        border-color: var(--details-color);
+    }
+    
+    .buttons-container button:hover {
+        border: solid 1px lightslategray;
+        background-color: transparent;
+        color: white;
+    }
+    
+    .tags {
+        grid-area: tags;
+        width: 100%;
+        height: 100%;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .related-content {
+        grid-area: related-content;
+        padding: 0px 30px;
+        height: 100%;
+    }
+    
+    .related-content-container {
+        height: 80%;
+        display: grid;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .related-book {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .related-cover {
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all .2s ease-in-out;
+        border-radius: 15px;
+    }
+    
+    .related-cover:hover {
+        transform: scale(1.1);
+    }
+    
+    .related-title {
+        font-size: 1.2rem;
+        text-decoration: underline;
+        margin: 15px;
+        text-align: center;
+    }
+    
+    .related-title:hover,
+    .related-author:hover {
+        color: var(--details-color);
+    }
+    
+    .related-author {
+        font-size: 1rem;
+        margin: 0;
+        text-decoration: none;
+        text-align: center;
+    }
+    /* 6.Media queries  */
+    
+    @media screen and (max-width: 1501px) {
+        .related-content-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            min-height: 560px;
+            gap: 20px;
+        }
+        .related-title {
+            margin-bottom: 0;
+        }
+    }
+    
+    @media screen and (min-width: 1262px)and (min-width: 1270px) {
+        #title-wrapper {
+            padding-top: 30px;
+            margin-bottom: 30px;
+            min-height: 200px;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        section {
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+        }
+        .book-cover img {
+            padding: 20px;
+            border-radius: 30px;
+            max-height: 500px;
+        }
+        #breadcrumb-wrapper {
+            text-align: center;
+        }
+        .book-information p {
+            font-size: 1.2rem;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .title {
+            padding: 0 20px;
+            padding-top: 14vh;
+        }
+    }
+    
+    @media screen and (max-width: 501px) {
+        .related-content-container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            min-height: 740px;
+        }
+        .related-title {
+            font-size: 1rem;
+        }
+        .related-author {
+            font-size: 0.75rem;
+        }
+    }
+    
+    @media screen and (max-width: 300px) {
+        .book-cover>img {
+            max-width: 270px;
+        }
+        .related-content-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            min-height: 920px;
+        }
+    }
