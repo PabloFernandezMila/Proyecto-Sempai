@@ -107,7 +107,7 @@ section {
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 9fr 1fr;
     grid-template-areas: 'column1 column2' 'arrow-container arrow-container';
     column-gap: 5%;
 }
@@ -140,6 +140,12 @@ section {
     display: flex;
     justify-content: center;
     grid-area: arrow-container;
+}
+
+#section2>div.arrow-container {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
 }
 
 #section2 .arrow-container {
@@ -235,7 +241,7 @@ button:hover,
 /* 6.Media queries */
 
 @media screen and (max-width: 1000px) {
-    section {
+    #section1 {
         display: flex;
         justify-content: center;
         padding-top: 14vh;

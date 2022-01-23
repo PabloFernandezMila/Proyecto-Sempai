@@ -56,7 +56,7 @@ footer {
 }
 
 a {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.5rem;
     text-decoration: none;
     padding: 0.5%;
@@ -246,6 +246,13 @@ header>nav>ul {
 #login-wrapper {
     display: flex;
     align-items: center;
+}
+
+footer>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @keyframes bounce {
