@@ -37,7 +37,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url("../images/registration/cover.jpg");
+    background-image: url("../images/login/login.jpg");
     background-attachment: fixed;
     background-size: cover;
     min-height: 100%;
