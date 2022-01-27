@@ -108,7 +108,10 @@ input {
     font-family: 'Roboto', sans-serif;
     width: 100%;
 }
-
+footer {
+    position: absolute;
+    bottom: 0;
+}
 
 /* 4. General selector */
 
@@ -272,12 +275,10 @@ input {
     .form-elements {
         width: 90%;
     }
-    footer {
-        position: initial;
-    }
+
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 916px) {
     footer {
         position: initial;
     }
