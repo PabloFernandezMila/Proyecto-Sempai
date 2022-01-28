@@ -37,7 +37,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url("../images/registration/cover.jpg");
+    background-image: url("../images/login/login.jpg");
     background-attachment: fixed;
     background-size: cover;
     min-height: 100%;
@@ -73,12 +73,9 @@ a,
 }
 
 label {
-    
     display: block;
     text-align: center;
 }
-
-
 
 label,
 input {
@@ -107,6 +104,11 @@ input {
     padding-left: 5px;
     font-family: 'Roboto', sans-serif;
     width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -164,7 +166,6 @@ input {
     width: 90%;
     margin: 2vh auto;
     min-height: 500px;
- 
 }
 
 .form-elements {
@@ -179,7 +180,6 @@ input {
 
 #section-content>form {
     margin: auto;
-
     height: 100%;
     padding: 30px;
     border-radius: 10px;
@@ -191,7 +191,6 @@ input {
     margin: auto;
 }
 
-.register-button,
 .signin-button {
     background-color: #0707077c;
     cursor: pointer;
@@ -206,8 +205,6 @@ input {
     white-space: nowrap;
 }
 
-
-.register-button:hover,
 .signin-button:hover {
     color: var(--details-color);
     border-color: var(--details-color);
@@ -242,7 +239,6 @@ input {
     border-bottom: solid 1px var(--details-color);
 }
 
-
 .register-text {
     display: inline-block;
 }
@@ -251,9 +247,12 @@ input {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
 .form-elements>label {
     margin-top: 0;
 }
+
+
 /* 6.Media queries   */
 
 @media screen and (max-width: 1000px) {
@@ -290,7 +289,6 @@ input {
     #breadcrumb-wrapper {
         margin-top: 20px;
     }
-
     .signin {
         width: 100%;
     }

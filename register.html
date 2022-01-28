@@ -36,8 +36,8 @@
                 <li class="nav_bar-elements inactive">
                     <a target="_self" href="catalog.html" class="roboto-white">Catalog</a>
                 </li>
-                <li class="nav_bar-elements active">
-                    <a target="_self" href="register.html" class="roboto-white">Register</a>
+                <li class="nav_bar-elements">
+                    <a target="_self" href="register.html" class="roboto-white active">Register</a>
                 </li>
                 <li class="nav_bar-elements inactive">
                     <a target="_self" href="about.html" class="roboto-white">About</a>
@@ -62,7 +62,7 @@
         <div class="title">
 
             <h1 class="roboto-white">Create an account</h1>
-            <h2 class="roboto-white">Create an account and start enjoying all benefits from Bookshelf now!</h2>
+            <h2 class="roboto-white">Please complete the following form</h2>
 
         </div>
         <!--  Breadcrumb start -->
@@ -83,65 +83,37 @@
     </div>
 
     <section id="section-content">
-
-        <form action="/welcome.html" autocomplete="off" class="flex-item roboto-white tint">
-
-            <div class="form-elements">
-                <p>Please complete the following form to create a new account</p>
-                <label for="name">
-                            <b>Name</b>
-                        </label>
-                <input type="text" placeholder="Enter your Name" name="name" id="name" required>
-                <label for="lastname">
-                            <b>Last Name</b>
-                        </label>
-                <input type="text" placeholder="Enter your Last Name" name="lastname" id="lastname" required>
-                <label for="email">
-                            <b>Email</b>
-                        </label>
-                <input type="email" placeholder="Enter your Email" name="email" id="email" required>
-
-                <label for="password">
-                            <b>Password</b>
-                        </label>
-                <input type="password" placeholder="Enter your Password" name="password" id="password" required>
-
-                <label for="password-repeat">
-                            <b>Repeat Password</b>
-                        </label>
-                <input type="password" placeholder="Repeat your Password" name="password-repeat" id="password-repeat" required>
-
-
-                <button type="submit" class="register-button roboto-white">Register</button>
-            </div>
-        </form>
         <div class="signin flex-item roboto-white tint">
 
-            <form action="/welcome.html" autocomplete="off">
+            <form autocomplete="off" action=" /index.html " autocomplete="off ">
+                <div class="form-elements ">
+                    <label class="form-element " for="name ">
+                                    <b>Name</b>
+                                </label>
+                    <input class="form-element " type="text " placeholder="Enter your Name " name="name " id="name " required>
 
-                <div class="form-elements">
-                    <p>If you already have an account, enter your email and password</p>
-                </div>
+                    <label class="form-element " for="lastname ">
+                                    <b>Name</b>
+                                </label>
+                    <input class="form-element " type="text " placeholder="Enter your Last Name " name="lastname " id="lastname " required>
 
-                <div class="form-elements">
-
-                    <label for="email">
+                    <label class="form-element " for="email ">
                                     <b>Email</b>
                                 </label>
-                    <input type="email" placeholder="Enter your Email" name="email" id="email" required>
+                    <input class="form-element " type="email " placeholder="Enter your Email " name="email " id="email " required>
 
-                    <label for="password">
+                    <label class="form-element " for="password ">
                                     <b>Password</b>
                                 </label>
-                    <input type="password" placeholder="Enter your Password" name="password" id="password" required>
+                    <input class="form-element " type="password " placeholder="Enter your Password " name="password " id="password " required>
 
 
-                    <button type="submit" class="signin-button roboto-white">Sign in</button>
+                    <button type="submit " class="register-button roboto-white form-element ">Sign up</button>
+
 
                     <div>
-                        <a id="password-recovery" href="/password-recovery">Forgot your password?</a>
+                        <p class="register-text form-element ">Already have an account?&nbsp;</p><a class="form-links " href="/login.html ">Login</a>
                     </div>
-
                 </div>
             </form>
 
@@ -173,7 +145,7 @@
     </footer>
     <!--  Footer section end -->
 </body>
-<script src="assets/scripts/search.js"></script>
-<script src="assets/scripts/burgerMenu.js"></script>
+<script src="assets/scripts/search.js "></script>
+<script src="assets/scripts/burgerMenu.js "></script>
 
 </html>
