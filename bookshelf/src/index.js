@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Header } from './components/Header';
-import "../src/assets/styles/headerAndFooter.css"
+import { Home } from './pages/Home';
+
 
 
 
 ReactDOM.render(
-<Header></Header>,
+<Home></Home>,
+
   document.getElementById('root')
 );
 

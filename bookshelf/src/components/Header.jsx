@@ -1,4 +1,4 @@
-import "../assets/styles/headerAndFooter.css"
+import "../assets/styles/header.css"
 
 export function Header() {
     return (    <header>

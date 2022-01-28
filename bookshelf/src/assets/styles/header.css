@@ -54,14 +54,6 @@
         padding: 0;
     }
     
-    footer {
-        height: 10vh;
-        width: 100%;
-        background-color: rgb(34, 33, 33);
-        display: inline-block;
-        min-height: 80px;
-    }
-    
     a {
         font-weight: 300;
         font-size: 1.5rem;
@@ -142,7 +134,7 @@
         display: flex;
         grid-area: search-login;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
     }
     
     .search {
@@ -260,13 +252,6 @@
         align-items: center;
     }
     
-    footer>div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
     @keyframes bounce {
         0%,
         20%,
@@ -312,77 +297,6 @@
     
     .nav_bar-elements.inactive:hover {
         border-bottom: 1px solid var(--details-color);
-    }
-    
-    .social-media {
-        display: inline-block;
-    }
-    
-    .social-media a {
-        height: 40px;
-        margin: 1vh 1vw;
-        cursor: pointer;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 40px;
-    }
-    
-    #facebook {
-        background-image: url('../images/headerAndFooter/facebook.svg');
-    }
-    /*Added the before block to load the hover image to prevent blinking the fist time the user hovers on the icon*/
-    
-    #facebook:before {
-        content: url('../images/headerAndFooter/facebook-hover.svg');
-        width: 0;
-        height: 0;
-        visibility: hidden;
-    }
-    
-    #facebook:hover {
-        background-image: url('../images/headerAndFooter/facebook-hover.svg');
-    }
-    
-    #linkedin {
-        background-image: url('../images/headerAndFooter/linkedin.svg');
-    }
-    
-    #linkedin:before {
-        content: url('../images/headerAndFooter/linkedin-hover.svg');
-        width: 0;
-        height: 0;
-        visibility: hidden;
-    }
-    
-    #linkedin:hover {
-        background-image: url('../images/headerAndFooter/linkedin-hover.svg');
-    }
-    
-    #github {
-        background-image: url('../images/headerAndFooter/github.svg');
-    }
-    
-    #github:before {
-        content: url('../images/headerAndFooter/github-hover.svg');
-        width: 0;
-        height: 0;
-        visibility: hidden;
-    }
-    
-    #github:hover {
-        background-image: url('../images/headerAndFooter/github-hover.svg');
-    }
-    
-    #footer-copyright {
-        display: inline-block;
-        font-weight: 300;
-        font-size: 0.9rem;
-        color: rgb(110 102 102);
-        margin: 0;
-        bottom: 0%;
-        color: var(--details-color);
-        font-family: 'Roboto', sans-serif;
     }
     /* 6.JS styles */
     
@@ -452,9 +366,6 @@
         }
         #section2-content {
             width: 100%;
-        }
-        #footer-copyright {
-            font-size: 0.7rem;
         }
     }
     
