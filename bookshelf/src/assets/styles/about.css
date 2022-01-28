@@ -1,0 +1,288 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Fonts import              #
+#       2. Root                      #
+#       3. HTML tags selectors       #
+#       4. General selector          #
+#       5. Specific selectors        #   
+#       6.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/*  1. Fonts import */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+
+/*  2. Root  */
+
+ :root {
+    --details-color: #5480f1;
+}
+
+
+/* 3. HTML tags selectors */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-image: url(../images/about/cover.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    min-height: 86vh;
+    height: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.625rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--details-color);
+    margin-bottom: 1%;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--details-color);
+    padding: 2%;
+}
+
+a,
+.breadcrumb li p {
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5%;
+    margin: 0% 2%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+section {
+    margin-top: 3vh;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+
+/* 4. General selector */
+
+.title {
+    text-align: center;
+    padding-top: 14vh;
+    margin-bottom: 2vh;
+}
+
+.tint {
+    background-color: rgba(34, 33, 29, 0.75);
+}
+
+
+/* 5. Specific selectors */
+
+.roboto-white {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.breadcrumb {
+    margin-left: 2%;
+}
+
+.breadcrumb li {
+    display: inline-block;
+}
+
+.breadcrumb li a {
+    padding-left: 0;
+}
+
+.breadcrumb li a:hover {
+    color: var(--details-color);
+}
+
+.breadcrumb-separator {
+    pointer-events: none;
+}
+
+.section-wrapper {
+    padding: 2%;
+    max-width: 100%;
+    margin: 2% auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 2%;
+}
+
+section div p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 1.5% 2%;
+}
+
+#about-text {
+    border: solid 3px var(--details-color);
+    background-color: rgb(12, 12, 10, 80%);
+    border-radius: 20px;
+    padding: 2%;
+    text-align: justify;
+}
+
+#about-image {
+    background-image: url("../images/about/about.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    height: 100%;
+}
+
+
+/* 6.Media queries  */
+
+@media screen and (max-width: 1700px) {
+    .title {
+        padding-top: 13vh;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .title {
+        padding-top: 15vh;
+    }
+}
+
+
+/* Support for Nest Hub Max*/
+
+@media screen and (max-width: 1000px) {
+    .section-wrapper {
+        grid-template-columns: 1fr;
+        row-gap: 2%;
+        grid-template-areas: 'text' 'image';
+    }
+    #about-image {
+        background-image: url(../images/about/brand.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 133px;
+        width: 260px;
+        grid-area: image;
+    }
+    #about-text {
+        grid-area: text;
+        padding: 20px 10px;
+        text-align: initial;
+    }
+    section {
+        margin-bottom: 5vh;
+        margin-top: 0;
+    }
+    footer {
+        position: initial;
+    }
+}
+
+
+/* Support for Nest Hub */
+
+@media screen and (min-width: 1262px)and (min-width: 1270px) {
+    #title-wrapper {
+        padding-top: 30px;
+        margin-bottom: 30px;
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    footer {
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 1100px) and (max-height: 620px) {
+    .title {
+        margin-top: 20vh;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #title-wrapper {
+        height: 28vh;
+    }
+    #breadcrumb-wrapper {
+        margin-top: 20px;
+    }
+    .title {
+        padding-top: 14vh;
+    }
+}
+
+@media (min-height: 500px) and (max-height: 700px) {
+    #title-wrapper {
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #title-wrapper {
+        height: 42vh;
+    }
+    h2 {
+        padding: 3%;
+    }
+    #breadcrumb-wrapper {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #title-wrapper {
+        height: 48vh;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #title-wrapper {
+        height: 52vh;
+    }
+}
