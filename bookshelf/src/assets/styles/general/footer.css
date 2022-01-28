@@ -1,35 +1,13 @@
  /*######## Table of contents ##########
 #                                    #
-#       1. Fonts import              #
-#       2. Root                      #
-#       3. HTML tags selectors       #
-#       4. Specific selectors        #   
-#       6.Media queries              # 
+#      1. HTML tags selectors        #
+#       2. Specific selectors        #   
+#       3.Media queries              # 
 #                                    #
 #                                    #
 ######################################
 */
- /* 1. Fonts import */
- 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
- /* 2. Root */
- 
- :root {
-     --details-color: #5480f1;
- }
- 
- * {
-     box-sizing: border-box;
-     margin: 0px;
-     padding: 0px;
- }
- 
- html {
-     height: 100%;
-     margin: 0;
-     scroll-behavior: smooth;
- }
- /* 3. HTML tags selectors */
+ /* 1. HTML tags selectors */
  
  footer {
      height: 10vh;
@@ -38,7 +16,7 @@
      display: inline-block;
      min-height: 80px;
  }
- /* 4. Specific selectors */
+ /* 2. Specific selectors */
  
  footer>div {
      display: flex;
@@ -98,49 +76,50 @@
  }
  
  #facebook {
-     background-image: url('../images/headerAndFooter/facebook.svg');
+     background-image: url('../../images/headerAndFooter/facebook.svg');
+     background-image: url('../../images/headerAndFooter/facebook.svg');
  }
  /*Added the before block to load the hover image to prevent blinking the fist time the user hovers on the icon*/
  
  #facebook:before {
-     content: url('../images/headerAndFooter/facebook-hover.svg');
+     content: url('../../images/headerAndFooter/facebook-hover.svg');
      width: 0;
      height: 0;
      visibility: hidden;
  }
  
  #facebook:hover {
-     background-image: url('../images/headerAndFooter/facebook-hover.svg');
+     background-image: url('../../images/headerAndFooter/facebook-hover.svg');
  }
  
  #linkedin {
-     background-image: url('../images/headerAndFooter/linkedin.svg');
+     background-image: url('../../images/headerAndFooter/linkedin.svg');
  }
  
  #linkedin:before {
-     content: url('../images/headerAndFooter/linkedin-hover.svg');
+     content: url('../../images/headerAndFooter/linkedin-hover.svg');
      width: 0;
      height: 0;
      visibility: hidden;
  }
  
  #linkedin:hover {
-     background-image: url('../images/headerAndFooter/linkedin-hover.svg');
+     background-image: url('../../images/headerAndFooter/linkedin-hover.svg');
  }
  
  #github {
-     background-image: url('../images/headerAndFooter/github.svg');
+     background-image: url('../../images/headerAndFooter/github.svg');
  }
  
  #github:before {
-     content: url('../images/headerAndFooter/github-hover.svg');
+     content: url('../../images/headerAndFooter/github-hover.svg');
      width: 0;
      height: 0;
      visibility: hidden;
  }
  
  #github:hover {
-     background-image: url('../images/headerAndFooter/github-hover.svg');
+     background-image: url('../../images/headerAndFooter/github-hover.svg');
  }
  
  #footer-copyright {
@@ -153,7 +132,7 @@
      color: var(--details-color);
      font-family: 'Roboto', sans-serif;
  }
- /* 5.Media queries */
+ /* 3.Media queries */
  
  @media screen and (max-width: 1000px) {
      #footer-copyright {
