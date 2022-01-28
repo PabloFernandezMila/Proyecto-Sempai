@@ -271,12 +271,9 @@ footer {
     .form-elements {
         width: 90%;
     }
-    footer {
-        position: initial;
-    }
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 916px) {
     footer {
         position: initial;
     }
