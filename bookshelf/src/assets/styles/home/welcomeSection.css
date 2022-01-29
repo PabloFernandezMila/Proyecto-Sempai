@@ -63,7 +63,7 @@ section {
 /* 5. Specific selectors */
 
 #section1 {
-    background-image: url("../../images/index/section1.jpg");
+    background-image: url("../../images/home/section1.jpg");
     background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ section {
 }
 
 #column2-image {
-    background-image: url("../../images/index/section1-column2.jfif");
+    background-image: url("../../images/home/section1-column2.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -113,7 +113,7 @@ section {
 }
 
 .down-arrow {
-    background-image: url('../../images/index/chevron-down.svg');
+    background-image: url('../../images/home/chevron-down.svg');
     height: 40px;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -124,14 +124,14 @@ section {
 }
 
 .down-arrow::before {
-    content: url('../../images/index/chevron-down-hover.svg');
+    content: url('../../images/home/chevron-down-hover.svg');
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
 .down-arrow:hover {
-    background-image: url('../../images/index/chevron-down-hover.svg');
+    background-image: url('../../images/home/chevron-down-hover.svg');
 }
 
 .section-button {

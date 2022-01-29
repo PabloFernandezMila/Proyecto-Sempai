@@ -1,6 +1,18 @@
-import "../../assets/styles/general/header.css"
+import { useState } from "react";
+import "../../assets/styles/general/header.css" 
+
+
+
+
+
 
 export function Header() {
+
+    let [isSearchExpanded, setSearch] = useState(false);
+
+       
+    
+
     return (    <header>
         <div className="burger-wrapper">
             <div id="burger-menu" className="js-burger-menu">
@@ -28,14 +40,16 @@ export function Header() {
         </nav>
 
         <div id="search-login">
-            <form className="search js-search-form" autoComplete="off">
+            <form className={isSearchExpanded ? "search js-search-form js-expanded" :"search js-search-form"} autoComplete="off" onClick={() => setSearch(true)}>
                 <div className="search-button js-search-button" tabIndex="0">
                     <div className="search-button-image"></div>
                 </div>
                 <div className="search-field roboto-white">
-                    <input id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" /></div>
+                    <input autoFocus  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"none"}}/></div>
             </form>
             </div>
     </header>);
 }
+
+
 
