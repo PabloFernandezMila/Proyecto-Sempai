@@ -45,7 +45,7 @@ export function Header() {
                     <div className="search-button-image"></div>
                 </div>
                 <div className="search-field roboto-white">
-                    <input autoFocus  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"none"}}/></div>
+                    <input ref={input => input && input.focus()}  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"none"}}/></div>
             </form>
             </div>
     </header>);
