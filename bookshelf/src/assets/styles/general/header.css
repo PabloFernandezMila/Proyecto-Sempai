@@ -1,414 +1,492 @@
-/*######## Table of contents ##########
-#       1.Root                       #
-#       2. HTML tags selectors       #
-#       2. Specific selectors        #   
-#       3. JS styles
-#       4.Media queries              #
+    /*######## Table of contents ##########
+#                                    #
+#       1. Fonts import              #
+#       2. Root                      #
+#       3. HTML tags selectors       #
+#       4. Specific selectors        #   
+#       5. JS styles
+#       6.Media queries              #
 #                                    #
 ######################################
-
-/* 1. Root */
-
-:root {
-    --details-color: #5480f1;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
-
-/* 2. HTML tags selectors */
-
-header {
-    background-color: rgba(0, 0, 0, 0.9);
-    align-items: center;
-    height: 8vh;
-    min-height: 70px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 4fr 2.5fr 4fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logo navbar search-login";
-    padding: 2% 2%;
-    align-content: center;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    font-weight: 300;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-    margin: 0;
-}
-
-
-/* 4. Specific selectors */
-
-.burger-wrapper {
-    display: none;
-    grid-area: burger-wrapper;
-}
-
-#burger-menu {
-    display: none;
-    height: 50px;
-    cursor: pointer;
-    width: 50px;
-}
-
-#burger-menu-icon {
-    background-image: url('../../images/headerAndFooter/hamburger-menu.svg');
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-}
-
-#burger-menu-icon:before {
-    background-image: url('../../images/headerAndFooter/hamburger-menu-hover.svg');
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-
-#burger-menu-icon:hover {
-    background-image: url('../../images/headerAndFooter/hamburger-menu-hover.svg');
-}
-
-#logo {
-    font-weight: 500;
-    color: var(--details-color);
-    grid-area: logo;
-    margin: auto;
-}
-
-#logo:hover {
-    color: white;
-}
-
-.flex-centered {
-    display: flex;
-    justify-content: center;
-}
-
-header>nav {
-    grid-area: navbar;
-    text-align: center;
-}
-
-header>nav>ul {
-    display: flex;
-    justify-content: center;
-}
-
-.nav_bar-elements {
-    display: inline-block;
-    margin: 0 20px;
-    padding: 0 10px;
-    /* Added a border to stop moving the links while hover*/
-    border-bottom: solid;
-    border-bottom-color: transparent;
-}
-
-#search-login {
-    display: flex;
-    grid-area: search-login;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.search {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    transition: 0.5s;
-    box-shadow: var(--details-color);
-    margin-right: 10px;
-}
-
-.search.js-expanded {
-    width: 100%;
-    background: rgb(35, 35, 35);
-    height: 40px;
-    overflow: hidden;
-}
-
-.search-field {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    width: 100%;
-    color: white;
-    overflow: hidden;
-}
-
-.search-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer;
-    margin-top: 2px;
-    /*   Padding used to visually center the magnifying glass */
-    padding-bottom: 2px;
-}
-
-.search-button-image {
-    width: 30px;
-    height: 30px;
-    background-image: url(../../images/headerAndFooter/search.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: auto;
-}
-
-.search-button-image:focus {
-    border: solid 1px white;
-}
-
-.search-field input {
-    position: relative;
-    height: 40px;
-    left: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(35, 35, 35);
-    border-width: 0;
-    font-size: 1rem;
-    width: initial;
-}
-
-.search-field input:focus {
-    outline: none;
-}
-
-.search-field input input {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-}
-
-#login-wrapper>a {
-    height: 32px;
-    width: 32px;
-    background-image: url(../../images/headerAndFooter/avatar.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    grid-area: login;
-    cursor: pointer;
-}
-
-#login-wrapper>a:before {
-    content: url('../../images/headerAndFooter/avatar-hover.svg');
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-
-#login-wrapper>a:hover {
-    background-image: url(../../images/headerAndFooter/avatar-hover.svg);
-}
-
-#login-wrapper>p {
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-#login-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-@keyframes bounce {
-    0%,
-    20%,
-    60%,
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+*/
+    /* 1. Fonts import */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
+    /* . Root */
+    
+     :root {
+        --details-color: #5480f1;
     }
-    40% {
-        -webkit-transform: translateY(-20px);
-        transform: translateY(-20px);
+    
+    #root,
+    html,
+    body {
+        margin: 0;
+        padding: 0;
     }
-    80% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
+    /* 3. HTML tags selectors */
+    
+    header {
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        height: 8vh;
+        min-height: 70px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 4fr 2.5fr 4fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo navbar search-login";
+        padding: 2% 2%;
+        align-content: center;
     }
-}
-
-.bounce {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-}
-
-.bounce:hover {
-    cursor: pointer;
-    animation-name: bounce;
-    -moz-animation-name: bounce;
-}
-
-.roboto-white {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.active>a {
-    font-weight: 400;
-    border-bottom: 1px solid var(--details-color);
-    cursor: default;
-    pointer-events: none;
-}
-
-.nav_bar-elements.inactive:hover {
-    border-bottom: 1px solid var(--details-color);
-}
-
-
-/* 6.JS styles */
-
-.js-header-expanded {
-    height: 100vh;
-    grid-template-areas: "burger-wrapper logo search-login" "header-second-row header-second-row header-second-row";
-}
-
-.js-header-second-row {
-    height: 90vh;
-    grid-area: header-second-row;
-}
-
-.search.js-expanded {
-    width: 100%;
-    background: rgb(35, 35, 35);
-    height: 40px;
-    overflow: hidden;
-}
-
-.js-burger-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    justify-content: space-between;
-}
-
-
-/* This is added to the body when the user expands the burger menu, this css combined with JS disables the scroll on the page */
-
-.js-stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-}
-
-
-/* 7.Media queries */
-
-@media screen and (max-width: 1000px) {
-    .nav_bar-elements {
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    footer {
+        height: 10vh;
+        width: 100%;
+        background-color: rgb(34, 33, 33);
+        display: inline-block;
+        min-height: 80px;
+    }
+    
+    a {
+        font-weight: 300;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 0.5%;
         margin: 0;
     }
-    header {
-        height: 10vh;
-        min-height: 50px;
-        width: 100%;
-        justify-content: space-between;
-        grid-template-areas: "burger-wrapper logo search-login";
-        grid-template-rows: 1fr 0fr;
-    }
+    /* 4. Specific selectors */
+    
     .burger-wrapper {
-        display: initial;
+        display: none;
+        grid-area: burger-wrapper;
     }
+    
     #burger-menu {
+        display: none;
+        height: 50px;
+        cursor: pointer;
+        width: 50px;
+    }
+    
+    #burger-menu-icon {
+        background-image: url('../../images/headerAndFooter/hamburger-menu.svg');
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+    }
+    
+    #burger-menu-icon:before {
+        background-image: url('../../images/headerAndFooter/hamburger-menu-hover.svg');
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    #burger-menu-icon:hover {
+        background-image: url('../../images/headerAndFooter/hamburger-menu-hover.svg');
+    }
+    
+    #logo {
+        font-weight: 500;
+        color: var(--details-color);
+        grid-area: logo;
+        margin: auto;
+    }
+    
+    #logo:hover {
+        color: white;
+    }
+    
+    .flex-centered {
+        display: flex;
+        justify-content: center;
+    }
+    
+    header>nav {
+        grid-area: navbar;
+        text-align: center;
+    }
+    
+    header>nav>ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav_bar-elements {
+        display: inline-block;
+        margin: 0 20px;
+        padding: 0 10px;
+        /* Added a border to stop moving the links while hover*/
+        border-bottom: solid;
+        border-bottom-color: transparent;
+    }
+    
+    #search-login {
+        display: flex;
+        grid-area: search-login;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    .search {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        transition: 0.5s;
+        box-shadow: var(--details-color);
+        margin-right: 10px;
+    }
+    
+    .search.js-expanded {
+        width: 100%;
+        background: rgb(35, 35, 35);
+        height: 40px;
+        overflow: hidden;
+    }
+    
+    .search-field {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        width: 100%;
+        color: white;
+        overflow: hidden;
+    }
+    
+    .search-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+        margin-top: 2px;
+        /*   Padding used to visually center the magnifying glass */
+        padding-bottom: 2px;
+    }
+    
+    .search-button-image {
+        width: 30px;
+        height: 30px;
+        background-image: url(../../images/headerAndFooter/search.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+    }
+    
+    .search-button-image:focus {
+        border: solid 1px white;
+    }
+    
+    .search-field input {
+        position: relative;
+        height: 40px;
+        left: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(35, 35, 35);
+        border-width: 0;
+        font-size: 1rem;
+        width: initial;
+    }
+    
+    .search-field input:focus {
+        outline: none;
+    }
+    
+    .search-field input input {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+    }
+    
+    #login-wrapper>a {
+        height: 32px;
+        width: 32px;
+        background-image: url(../../images/headerAndFooter/avatar.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-area: login;
+        cursor: pointer;
+    }
+    
+    #login-wrapper>a:before {
+        content: url('../../images/headerAndFooter/avatar-hover.svg');
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    #login-wrapper>a:hover {
+        background-image: url(../../images/headerAndFooter/avatar-hover.svg);
+    }
+    
+    #login-wrapper>p {
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+    
+    #login-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    
+    footer>div {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
-    header>nav,
-    .search,
-    #login-wrapper>p {
-        display: none;
+    
+    @keyframes bounce {
+        0%,
+        20%,
+        60%,
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+        80% {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
     }
-    .search {
-        margin-top: 20px;
+    
+    .bounce {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
     }
-    #logo-wrapper {
-        grid-area: logo;
-        text-align: center;
-        display: flex;
+    
+    .bounce:hover {
+        cursor: pointer;
+        animation-name: bounce;
+        -moz-animation-name: bounce;
     }
-    #section2-content {
+    
+    .roboto-white {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+    
+    .active>a {
+        font-weight: 400;
+        border-bottom: 1px solid var(--details-color);
+        cursor: default;
+        pointer-events: none;
+    }
+    
+    .nav_bar-elements.inactive:hover {
+        border-bottom: 1px solid var(--details-color);
+    }
+    
+    .social-media {
+        display: inline-block;
+    }
+    
+    .social-media a {
+        height: 40px;
+        margin: 1vh 1vw;
+        cursor: pointer;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40px;
+    }
+    
+    #facebook {
+        background-image: url('../../images/headerAndFooter/facebook.svg');
+    }
+    /*Added the before block to load the hover image to prevent blinking the fist time the user hovers on the icon*/
+    
+    #facebook:before {
+        content: url('../../images/headerAndFooter/facebook-hover.svg');
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    #facebook:hover {
+        background-image: url('../../images/headerAndFooter/facebook-hover.svg');
+    }
+    
+    #linkedin {
+        background-image: url('../../images/headerAndFooter/linkedin.svg');
+    }
+    
+    #linkedin:before {
+        content: url('../../images/headerAndFooter/linkedin-hover.svg');
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    #linkedin:hover {
+        background-image: url('../../images/headerAndFooter/linkedin-hover.svg');
+    }
+    
+    #github {
+        background-image: url('../../images/headerAndFooter/github.svg');
+    }
+    
+    #github:before {
+        content: url('../../images/headerAndFooter/github-hover.svg');
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    #github:hover {
+        background-image: url('../../images/headerAndFooter/github-hover.svg');
+    }
+    
+    #footer-copyright {
+        display: inline-block;
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: rgb(110 102 102);
+        margin: 0;
+        bottom: 0%;
+        color: var(--details-color);
+        font-family: 'Roboto', sans-serif;
+    }
+    /* 6.JS styles */
+    
+    .js-header-expanded {
+        height: 100vh;
+        grid-template-areas: "burger-wrapper logo search-login" "header-second-row header-second-row header-second-row";
+    }
+    
+    .js-header-second-row {
+        height: 90vh;
+        grid-area: header-second-row;
+    }
+    
+    .search.js-expanded {
         width: 100%;
+        background: rgb(35, 35, 35);
+        height: 40px;
+        overflow: hidden;
     }
-}
-
-#header-second-row>nav>ul {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-@media screen and (max-width: 415px) {
-    #section3-content {
-        height: 70vh;
+    
+    .js-burger-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        justify-content: space-between;
     }
-}
-
-@media screen and (max-width: 340px) {
-    #section3-content {
-        height: 80vh;
+    /* This is added to the body when the user expands the burger menu, this css combined with JS disables the scroll on the page */
+    
+    .js-stop-scrolling {
+        height: 100%;
+        overflow: hidden;
     }
-}
-
-@media screen and (max-width: 340px) {
-    #section3-content {
-        height: 80vh;
+    /* 7.Media queries */
+    
+    @media screen and (max-width: 1000px) {
+        .nav_bar-elements {
+            margin: 0;
+        }
+        header {
+            height: 10vh;
+            min-height: 50px;
+            width: 100%;
+            justify-content: space-between;
+            grid-template-areas: "burger-wrapper logo search-login";
+            grid-template-rows: 1fr 0fr;
+        }
+        .burger-wrapper {
+            display: initial;
+        }
+        #burger-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header>nav,
+        .search,
+        #login-wrapper>p {
+            display: none;
+        }
+        .search {
+            margin-top: 20px;
+        }
+        #logo-wrapper {
+            grid-area: logo;
+            text-align: center;
+            display: flex;
+        }
+        #section2-content {
+            width: 100%;
+        }
+        #footer-copyright {
+            font-size: 0.7rem;
+        }
     }
-}
-
-@media screen and (max-width: 281px) {
-    #section3-content {
-        height: 80vh;
+    
+    #header-second-row>nav>ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 40px;
+        align-items: flex-start;
     }
-    .nav_bar-elements {
-        padding: 0px 5px;
+    
+    @media screen and (max-width: 415px) {
+        #section3-content {
+            height: 70vh;
+        }
     }
-    header>div>button {
-        padding: 3px;
+    
+    @media screen and (max-width: 340px) {
+        #section3-content {
+            height: 80vh;
+        }
     }
-}
+    
+    @media screen and (max-width: 340px) {
+        #section3-content {
+            height: 80vh;
+        }
+    }
+    
+    @media screen and (max-width: 281px) {
+        #section3-content {
+            height: 80vh;
+        }
+        .nav_bar-elements {
+            padding: 0px 5px;
+        }
+        header>div>button {
+            padding: 3px;
+        }
+    }

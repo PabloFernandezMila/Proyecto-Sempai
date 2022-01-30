@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../assets/styles/general/header.css" 
+
 export function Header() {
 
     //This state is used to trigger the display of the search field when the search icon is clicked
