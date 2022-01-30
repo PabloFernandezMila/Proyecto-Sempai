@@ -17,16 +17,9 @@
 
 /* 2. Root */
 
-:root {
-    --details-color: #5480f1;
-}
-
-
 /* 3. HTML tags selectors */
 
-* {
-    box-sizing: border-box;
-}
+
 
 html {
     scroll-behavior: smooth;
@@ -62,11 +55,6 @@ section {
 
 
 /* 4. General selector */
-
-.roboto-white {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
 
 .tint {
     background-color: rgba(34, 33, 29, 0.75);

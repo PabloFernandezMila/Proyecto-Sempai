@@ -11,22 +11,7 @@
 
 /* 1. Root */
 
-:root {
-    --details-color: #5480f1;
-}
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    width: 100%;
-}
 
 
 /* 2. HTML tags selectors */
