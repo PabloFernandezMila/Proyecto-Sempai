@@ -1,42 +1,16 @@
 /*######## Table of contents ##########
 #                                    #
-#       1. General selector          #
-#       2. Specific selectors        #   
+#       1. Specific selectors        #   
 #       3.Media queries              #
 #                                    #
 ######################################
  */
 
 
-/* 1. General selector */
-
-
-.tint {
-    background-color: rgba(34, 33, 29, 0.75);
-}
-
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.centered-vertically {
-    position: relative;
-    top: 50%;
-    width: 100%;
-    transform: translate(0%, -50%);
-    text-align: center;
-}
-
-
 /* 2. Specific selectors */
 
 #section3-button {
-    margin-top: 5%;
+    margin: 30px aut;
 }
 
 #section3 {
@@ -69,9 +43,9 @@
 }
 
 
-/* 3.Media queries */
+/* 2.Media queries */
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 550px) {
     #section3-content {
         height: 70vh;
     }
