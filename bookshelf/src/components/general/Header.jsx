@@ -51,7 +51,7 @@ function expandBurger(){
         <div id="logo-wrapper">
             <a target="_self" id="logo" href="index.html" className="roboto-white">Bookshelf</a>
         </div>
-        <nav>
+        <nav style={isBurgerMenuExpanded ? {display:"initial"} : {}} >
             <ul>
                 <li className="nav_bar-elements active">
                     <a target="_self" href="index.html" className="roboto-white">Home</a>
@@ -68,22 +68,22 @@ function expandBurger(){
             </ul>
         </nav>
 
-        <div id="search-login">
+      
             {/* The scripts checks if the search was expanded, if true adds a class, if not the class is removed. This allows the system to expand or collapse the search area*/}
                 {/* When the search button is clicked the isSearchExpanded variable changes its value to trigger the behaviors mentioned above */}
-            <form className={isSearchExpanded || isBurgerMenuExpanded ? "search js-search-form js-expanded" :"search js-search-form"} autoComplete="off" style={ isBurgerMenuExpanded ? {style:"block"}: {}}>
+            <form className={isSearchExpanded || isBurgerMenuExpanded ? "search js-search-form js-expanded" :"search js-search-form"} autoComplete="off" style={ isBurgerMenuExpanded ? {display:"block"}: {}}>
                 <div className="search-button js-search-button" tabIndex="0" onClick={() => setSearch(!isSearchExpanded)} onKeyDown={(e)=> pressTabToExpandSearch(e)} >
                     <div className="search-button-image" ></div>
                 </div>
-                <div className="search-field roboto-white">
+                <div className="search-field roboto-white" style={isSearchExpanded || isBurgerMenuExpanded ? {display:"initial"} : {}} >
                     {/* ref was added to allow the system to focus the input field when it is expanded. Also the style is changed when the search icon is clicked*/}
-                    <input ref={input => input && input.focus()}  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"none"}} onKeyDown={(e) => pressScapeToCloseSearch(e)} /></div>
+                    <input ref={!isBurgerMenuExpanded ? input => input && input.focus() : input => input }  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"block"}} onKeyDown={(e) => pressScapeToCloseSearch(e)} /></div>
             </form>
             <div id="login-wrapper">
 
                 <a href="/login.html" className="bounce"> </a>
             </div>
-            </div>
+            
     </header>);
 }
 

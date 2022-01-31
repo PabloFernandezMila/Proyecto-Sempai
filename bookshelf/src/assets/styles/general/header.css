@@ -43,9 +43,9 @@ header {
     top: 0;
     z-index: 1;
     display: grid;
-    grid-template-columns: 4fr 2.5fr 4fr;
+    grid-template-columns: 4fr 2.5fr 4fr 0fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "logo navbar search-login";
+    grid-template-areas: "logo navbar search login";
     padding: 2% 2%;
     align-content: center;
 }
@@ -148,14 +148,8 @@ header>nav>ul {
     border-radius: 40px;
     transition: 0.5s;
     box-shadow: var(--details-color);
-    margin-right: 10px;
-}
-
-.search.js-expanded {
-    width: 100%;
-    background: rgb(35, 35, 35);
-    height: 40px;
-    overflow: hidden;
+    justify-self: end;
+    grid-area: search;
 }
 
 .search-field {
@@ -166,6 +160,7 @@ header>nav>ul {
     width: 100%;
     color: white;
     overflow: hidden;
+    display: none;
 }
 
 .search-button {
@@ -192,6 +187,8 @@ header>nav>ul {
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
+    margin-right: 10px;
+    margin-left: 3px;
 }
 
 .search-button-image:focus {
@@ -224,6 +221,10 @@ header>nav>ul {
     outline: none;
 }
 
+#login-wrapper {
+    grid-area: login;
+}
+
 #login-wrapper>a {
     height: 32px;
     width: 32px;
@@ -231,7 +232,6 @@ header>nav>ul {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    grid-area: login;
     cursor: pointer;
 }
 
@@ -277,12 +277,10 @@ header>nav>ul {
 
 .js-header-expanded {
     height: 100vh;
-    grid-template-areas: "burger-wrapper logo search-login" "header-second-row header-second-row header-second-row";
-}
-
-.js-header-second-row {
-    height: 90vh;
-    grid-area: header-second-row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 8vh 8vh 84vh;
+    grid-template-areas: "burger-wrapper logo login" "search search search" "navbar navbar navbar";
+    padding-top: 25px;
 }
 
 .search.js-expanded {
@@ -290,6 +288,7 @@ header>nav>ul {
     background: rgb(35, 35, 35);
     height: 40px;
     overflow: hidden;
+    margin-right: 10px;
 }
 
 .js-burger-wrapper {
@@ -297,6 +296,14 @@ header>nav>ul {
     display: flex;
     justify-content: flex-end;
     justify-content: space-between;
+}
+
+.js-navbar-burger {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 
@@ -319,7 +326,7 @@ header>nav>ul {
         min-height: 50px;
         width: 100%;
         justify-content: space-between;
-        grid-template-areas: "burger-wrapper logo search-login";
+        grid-template-areas: "burger-wrapper logo login";
         grid-template-rows: 1fr 0fr;
     }
     .burger-wrapper {
@@ -335,6 +342,9 @@ header>nav>ul {
     #login-wrapper>p {
         display: none;
     }
+    header>nav {
+        align-self: baseline;
+    }
     .search {
         margin-top: 20px;
     }
@@ -346,17 +356,20 @@ header>nav>ul {
     #section2-content {
         width: 100%;
     }
-    .login-wrapper {
+    #login-wrapper {
         margin-right: 5px;
+        justify-self: right;
     }
-}
-
-#header-second-row>nav>ul {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    gap: 40px;
-    align-items: flex-start;
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .search.js-expanded {
+        width: 98%;
+    }
 }
 
 @media screen and (max-width: 281px) {

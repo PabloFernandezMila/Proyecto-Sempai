@@ -33,7 +33,7 @@ burgerMenu.addEventListener("click", () => {
             /* By default the search are is displayed expanded on mobile */
             // search.classList.toggle('js-expanded');
             /* By default on mobile the search is hidden so the script makes the elements visible again */
-        search.style.display = "block";
+            //search.style.display = "block";
         searchInput.style.display = "initial";
 
         /* Also add the navbar below the search area */
