@@ -58,6 +58,10 @@ export function Header() {
                     {/* ref was added to allow the system to focus the input field when it is expanded. Also the style is changed when the search icon is clicked*/}
                     <input ref={input => input && input.focus()}  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"none"}} onKeyDown={(e) => pressScapeToCloseSearch(e)} /></div>
             </form>
+            <div id="login-wrapper">
+
+                <a href="/login.html" class="bounce"> </a>
+            </div>
             </div>
     </header>);
 }

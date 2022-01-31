@@ -140,7 +140,7 @@ header>nav>ul {
     display: flex;
     grid-area: search-login;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .search {
@@ -348,8 +348,8 @@ header>nav>ul {
     #section2-content {
         width: 100%;
     }
-    #footer-copyright {
-        font-size: 0.7rem;
+    .login-wrapper {
+        margin-right: 5px;
     }
 }
 
