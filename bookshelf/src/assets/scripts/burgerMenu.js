@@ -12,11 +12,12 @@ const searchInput = document.querySelector(".js-search-input");
 /* Listen if the burger menu is clicked */
 burgerMenu.addEventListener("click", () => {
     /* When the burger is clicked the scroll is disabled, this with the css styles allows to cover the whole screen with the mobile header */
-    document.body.classList.toggle("js-stop-scrolling");
+    // document.body.classList.toggle("js-stop-scrolling");
+
     var secondRow = document.createElement("div");
 
     /* Toggle classes to apply styles */
-    header.classList.toggle("js-header-expanded")
+    //    header.classList.toggle("js-header-expanded")
 
     /* Create the div that will contain the navBar and search section */
     secondRow.id = "header-second-row";
@@ -29,9 +30,9 @@ burgerMenu.addEventListener("click", () => {
         header.appendChild(secondRow)
             /* Move the search area to the new row added */
         secondRow.appendChild(search)
-            /* By default the search are is diplayed expanded on mobile */
-        search.classList.toggle('js-expanded');
-        /* By default on mobile the search is hidden so the script makes the elements visible again */
+            /* By default the search are is displayed expanded on mobile */
+            // search.classList.toggle('js-expanded');
+            /* By default on mobile the search is hidden so the script makes the elements visible again */
         search.style.display = "block";
         searchInput.style.display = "initial";
 

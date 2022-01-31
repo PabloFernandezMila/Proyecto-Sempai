@@ -48,7 +48,7 @@ searchField.addEventListener('keydown', function(event) {
 
 })
 
-/* If the user press spacebar key, the search area is displayed */
+/* If the user press  space bar key, the search area is displayed */
 searchButton.addEventListener('keydown', function(event) {
     if (event.keyCode == 32) {
         /* Prevent the scroll down */

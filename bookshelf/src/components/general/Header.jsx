@@ -3,8 +3,9 @@ import "../../assets/styles/general/header.css"
 
 export function Header() {
 
-    //This state is used to trigger the display of the search field when the search icon is clicked
-    let [isSearchExpanded, setSearch] = useState(false);   
+//      <--Start of Search scripts-->
+//This state is used to trigger the display of the search field when the search icon is clicked
+let [isSearchExpanded, setSearch] = useState(false);   
 
 //This function is used to close the search are when the area is expanded and the user press escape key
     function pressScapeToCloseSearch(e){
@@ -20,10 +21,30 @@ export function Header() {
             e.preventDefault();
             setSearch(!isSearchExpanded)
     }
+//      <--Start of Search scripts-->
 
-    return (    <header>
+//      <--Start of Hamburger menu scripts-->
+//This function is used to expand or collapse the burger menu on mobile or small screens
+let [isBurgerMenuExpanded, setBurgerMenu] = useState(false); 
+
+function expandBurger(){
+    document.body.classList.toggle("js-stop-scrolling");
+    var secondRow = document.createElement("div");
+    secondRow.id = "header-second-row";
+    secondRow.className = "js-header-second-row"
+
+    
+
+}
+
+//      <--End of Hamburger menu scripts-->
+    return (    <header className={isBurgerMenuExpanded ? "js-header-expanded" : ""}>
         <div className="burger-wrapper">
-            <div id="burger-menu" className="js-burger-menu">
+            <div id="burger-menu" className="js-burger-menu" onClick={() =>{
+                setBurgerMenu(!isBurgerMenuExpanded);
+               expandBurger();
+
+                }}>
                 <div id="burger-menu-icon"></div>
             </div>
         </div>
@@ -49,8 +70,8 @@ export function Header() {
 
         <div id="search-login">
             {/* The scripts checks if the search was expanded, if true adds a class, if not the class is removed. This allows the system to expand or collapse the search area*/}
-            <form className={isSearchExpanded ? "search js-search-form js-expanded" :"search js-search-form"} autoComplete="off" >
                 {/* When the search button is clicked the isSearchExpanded variable changes its value to trigger the behaviors mentioned above */}
+            <form className={isSearchExpanded || isBurgerMenuExpanded ? "search js-search-form js-expanded" :"search js-search-form"} autoComplete="off" style={ isBurgerMenuExpanded ? {style:"block"}: {}}>
                 <div className="search-button js-search-button" tabIndex="0" onClick={() => setSearch(!isSearchExpanded)} onKeyDown={(e)=> pressTabToExpandSearch(e)} >
                     <div className="search-button-image" ></div>
                 </div>
@@ -58,6 +79,10 @@ export function Header() {
                     {/* ref was added to allow the system to focus the input field when it is expanded. Also the style is changed when the search icon is clicked*/}
                     <input ref={input => input && input.focus()}  id="search-text" type="text" placeholder="Title, author or genres" className="roboto-white js-search-input" maxLength="35" style={isSearchExpanded ? {display:"initial"} : {display:"none"}} onKeyDown={(e) => pressScapeToCloseSearch(e)} /></div>
             </form>
+            <div id="login-wrapper">
+
+                <a href="/login.html" className="bounce"> </a>
+            </div>
             </div>
     </header>);
 }

@@ -1,141 +1,144 @@
- /*######## Table of contents ##########
+/*######## Table of contents ##########
 #                                    #
 #      1. HTML tags selectors        #
-#       2. Specific selectors        #   
-#       3.Media queries              # 
+#      2. Specific selectors         #   
+#      3.Media queries               # 
 #                                    #
 #                                    #
 ######################################
 */
- /* 1. HTML tags selectors */
- 
- footer {
-     height: 10vh;
-     width: 100%;
-     background-color: rgb(34, 33, 33);
-     display: inline-block;
-     min-height: 80px;
- }
- /* 2. Specific selectors */
- 
- footer>div {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
- }
- 
- @keyframes bounce {
-     0%,
-     20%,
-     60%,
-     100% {
-         -webkit-transform: translateY(0);
-         transform: translateY(0);
-     }
-     40% {
-         -webkit-transform: translateY(-20px);
-         transform: translateY(-20px);
-     }
-     80% {
-         -webkit-transform: translateY(-10px);
-         transform: translateY(-10px);
-     }
- }
- 
- .bounce {
-     animation-duration: 1s;
-     animation-fill-mode: both;
-     animation-timing-function: ease-in-out;
-     animation-iteration-count: 1;
- }
- 
- .bounce:hover {
-     cursor: pointer;
-     animation-name: bounce;
-     -moz-animation-name: bounce;
- }
- 
- .roboto-white {
-     font-family: 'Roboto', sans-serif;
-     color: white;
- }
- 
- .social-media {
-     display: inline-block;
- }
- 
- .social-media a {
-     height: 40px;
-     margin: 1vh 1vw;
-     cursor: pointer;
-     display: inline-block;
-     background-repeat: no-repeat;
-     background-size: cover;
-     width: 40px;
- }
- 
- #facebook {
-     background-image: url('../../images/headerAndFooter/facebook.svg');
-     background-image: url('../../images/headerAndFooter/facebook.svg');
- }
- /*Added the before block to load the hover image to prevent blinking the fist time the user hovers on the icon*/
- 
- #facebook:before {
-     content: url('../../images/headerAndFooter/facebook-hover.svg');
-     width: 0;
-     height: 0;
-     visibility: hidden;
- }
- 
- #facebook:hover {
-     background-image: url('../../images/headerAndFooter/facebook-hover.svg');
- }
- 
- #linkedin {
-     background-image: url('../../images/headerAndFooter/linkedin.svg');
- }
- 
- #linkedin:before {
-     content: url('../../images/headerAndFooter/linkedin-hover.svg');
-     width: 0;
-     height: 0;
-     visibility: hidden;
- }
- 
- #linkedin:hover {
-     background-image: url('../../images/headerAndFooter/linkedin-hover.svg');
- }
- 
- #github {
-     background-image: url('../../images/headerAndFooter/github.svg');
- }
- 
- #github:before {
-     content: url('../../images/headerAndFooter/github-hover.svg');
-     width: 0;
-     height: 0;
-     visibility: hidden;
- }
- 
- #github:hover {
-     background-image: url('../../images/headerAndFooter/github-hover.svg');
- }
- 
- #footer-copyright {
-     display: inline-block;
-     font-weight: 300;
-     font-size: 0.9rem;
-     color: rgb(110 102 102);
-     margin: 0;
-     bottom: 0%;
-     color: var(--details-color);
-     font-family: 'Roboto', sans-serif;
- }
- /* 3.Media queries */
- 
- @media screen and (max-width: 1000px) {
-     #footer-copyright {
-         font-size: 0.7rem;
-     }
- }
+
+
+/* 1. HTML tags selectors */
+
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(34, 33, 33);
+    display: inline-block;
+    min-height: 80px;
+}
+
+
+/* 2. Specific selectors */
+
+footer>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.bounce:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+.social-media {
+    display: inline-block;
+}
+
+.social-media a {
+    height: 40px;
+    margin: 1vh 1vw;
+    cursor: pointer;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+}
+
+#facebook {
+    background-image: url('../../images/headerAndFooter/facebook.svg');
+    background-image: url('../../images/headerAndFooter/facebook.svg');
+}
+
+
+/*Added the before block to load the hover image to prevent blinking the fist time the user hovers on the icon*/
+
+#facebook:before {
+    content: url('../../images/headerAndFooter/facebook-hover.svg');
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#facebook:hover {
+    background-image: url('../../images/headerAndFooter/facebook-hover.svg');
+}
+
+#linkedin {
+    background-image: url('../../images/headerAndFooter/linkedin.svg');
+}
+
+#linkedin:before {
+    content: url('../../images/headerAndFooter/linkedin-hover.svg');
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#linkedin:hover {
+    background-image: url('../../images/headerAndFooter/linkedin-hover.svg');
+}
+
+#github {
+    background-image: url('../../images/headerAndFooter/github.svg');
+}
+
+#github:before {
+    content: url('../../images/headerAndFooter/github-hover.svg');
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#github:hover {
+    background-image: url('../../images/headerAndFooter/github-hover.svg');
+}
+
+#footer-copyright {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgb(110 102 102);
+    margin: 0;
+    bottom: 0%;
+    color: var(--details-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* 3.Media queries */
+
+@media screen and (max-width: 1000px) {
+    #footer-copyright {
+        font-size: 0.7rem;
+    }
+}
