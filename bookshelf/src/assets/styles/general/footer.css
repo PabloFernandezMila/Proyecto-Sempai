@@ -75,52 +75,52 @@ footer>div {
 }
 
 #facebook {
-    background-image: url('../../images/headerAndFooter/facebook.svg');
-    background-image: url('../../images/headerAndFooter/facebook.svg');
+    background-image: url("../../images/headerAndFooter/facebook.svg");
+    background-image: url("../../images/headerAndFooter/facebook.svg");
 }
 
 
 /*Added the before block to load the hover image to prevent blinking the fist time the user hovers on the icon*/
 
 #facebook:before {
-    content: url('../../images/headerAndFooter/facebook-hover.svg');
+    content: url("../../images/headerAndFooter/facebook-hover.svg");
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
 #facebook:hover {
-    background-image: url('../../images/headerAndFooter/facebook-hover.svg');
+    background-image: url("../../images/headerAndFooter/facebook-hover.svg");
 }
 
 #linkedin {
-    background-image: url('../../images/headerAndFooter/linkedin.svg');
+    background-image: url("../../images/headerAndFooter/linkedin.svg");
 }
 
 #linkedin:before {
-    content: url('../../images/headerAndFooter/linkedin-hover.svg');
+    content: url("../../images/headerAndFooter/linkedin-hover.svg");
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
 #linkedin:hover {
-    background-image: url('../../images/headerAndFooter/linkedin-hover.svg');
+    background-image: url("../../images/headerAndFooter/linkedin-hover.svg");
 }
 
 #github {
-    background-image: url('../../images/headerAndFooter/github.svg');
+    background-image: url("../../images/headerAndFooter/github.svg");
 }
 
 #github:before {
-    content: url('../../images/headerAndFooter/github-hover.svg');
+    content: url("../../images/headerAndFooter/github-hover.svg");
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
 #github:hover {
-    background-image: url('../../images/headerAndFooter/github-hover.svg');
+    background-image: url("../../images/headerAndFooter/github-hover.svg");
 }
 
 #footer-copyright {
@@ -131,7 +131,7 @@ footer>div {
     margin: 0;
     bottom: 0%;
     color: var(--details-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 

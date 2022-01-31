@@ -78,7 +78,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 9fr 1fr;
-    grid-template-areas: 'column1 column2' 'arrow-container arrow-container';
+    grid-template-areas: "column1 column2" "arrow-container arrow-container";
     column-gap: 5%;
 }
 
@@ -113,7 +113,7 @@ section {
 }
 
 .down-arrow {
-    background-image: url('../../images/home/chevron-down.svg');
+    background-image: url("../../images/home/chevron-down.svg");
     height: 40px;
     cursor: pointer;
     background-repeat: no-repeat;
@@ -124,14 +124,14 @@ section {
 }
 
 .down-arrow::before {
-    content: url('../../images/home/chevron-down-hover.svg');
+    content: url("../../images/home/chevron-down-hover.svg");
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
 .down-arrow:hover {
-    background-image: url('../../images/home/chevron-down-hover.svg');
+    background-image: url("../../images/home/chevron-down-hover.svg");
 }
 
 
@@ -154,7 +154,7 @@ section {
     #section1-wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 'column1' 'column2' 'arrow-container';
+        grid-template-areas: "column1" "column2" "arrow-container";
         row-gap: 20px;
     }
     #column1>div {
