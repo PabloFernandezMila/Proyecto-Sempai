@@ -52,7 +52,7 @@ export function Header() {
           Bookshelf
         </a>
       </div>
-      <nav style={isBurgerMenuExpanded ? { display: "initial" } : {}}>
+      <nav style={isBurgerMenuExpanded ? { display: "initial" } : null}>
         <ul>
           <li className="nav_bar-elements active">
             <a target="_self" href="index.html" className="roboto-white">
@@ -86,7 +86,7 @@ export function Header() {
             : "search js-search-form"
         }
         autoComplete="off"
-        style={isBurgerMenuExpanded ? { display: "block" } : {}}
+        style={isBurgerMenuExpanded ? { display: "block" } : null}
       >
         <div
           className="search-button js-search-button"
@@ -101,7 +101,7 @@ export function Header() {
           style={
             isSearchExpanded || isBurgerMenuExpanded
               ? { display: "initial" }
-              : {}
+              : null
           }
         >
           {/* ref was added to allow the system to focus the input field when it is expanded. Also the style is changed when the search icon is clicked*/}
