@@ -3,7 +3,7 @@ export function BrowseCatalog() {
   return (
     <section id="section3" className="tint">
       <div id="section3-content" className="tint">
-        <div id="section3-content-text" className="section3-position centered">
+        <div id="section3-content-text" className="section3-position">
           <h1 className="roboto-white">Over 1000+ titles available!</h1>
           <p className="roboto-white">
             Don&apos;t know what to read? Bored of finding the same books

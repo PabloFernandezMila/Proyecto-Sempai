@@ -10,7 +10,7 @@
 /* 2. Specific selectors */
 
 #section3-button {
-    margin: 30px aut;
+    margin: 30px auto;
 }
 
 #section3 {
@@ -34,6 +34,11 @@
 #section3-content-text {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 #section3-button:hover {
