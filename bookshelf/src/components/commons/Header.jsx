@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../assets/styles/general/header.css";
+import "../../assets/styles/common/header.css";
 
 export function Header() {
   //      <--Start of Search scripts-->

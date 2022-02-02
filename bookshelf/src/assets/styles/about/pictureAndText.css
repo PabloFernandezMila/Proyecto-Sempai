@@ -1,0 +1,51 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Specific selectors        #   
+#       2.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/*  1. Specific selectors  */
+
+.pictureAndText {
+    margin-top: 3vh;
+}
+
+.about-p {
+    font-size: 0.9rem;
+}
+
+.about-section-wrapper {
+    padding: 2%;
+    max-width: 100%;
+    margin: 2% auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 2%;
+}
+
+.pictureAndText div p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 1.5% 2%;
+}
+
+#about-text {
+    border: solid 3px var(--details-color);
+    background-color: rgb(12, 12, 10, 80%);
+    border-radius: 20px;
+    padding: 2%;
+    text-align: justify;
+}
+
+#about-image {
+    background-image: url("../../images/about/about.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    height: 100%;
+}

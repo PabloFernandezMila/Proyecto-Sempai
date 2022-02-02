@@ -72,19 +72,6 @@ h3 {
     padding: 2%;
 }
 
-a,
-.breadcrumb li p {
-    font-weight: 100;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-    margin: 0% 2%;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
 section {
     margin-top: 3vh;
 }

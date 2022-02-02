@@ -1,0 +1,58 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Specific selectors        #   
+#       2.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/* 1. Specific selector */
+
+.about-a,
+.breadcrumb li p {
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5%;
+    margin: 0% 2%;
+}
+
+.about-a:hover {
+    cursor: pointer;
+}
+
+.breadcrumb {
+    margin-left: 2%;
+}
+
+.breadcrumb li {
+    display: inline-block;
+}
+
+.breadcrumb li a {
+    padding-left: 0;
+}
+
+.breadcrumb li a:hover {
+    color: var(--details-color);
+}
+
+.breadcrumb-separator {
+    pointer-events: none;
+}
+
+
+/* 2.Media queries  */
+
+@media screen and (max-width: 1025px) {
+    #breadcrumb-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #breadcrumb-wrapper {
+        text-align: center;
+    }
+}
