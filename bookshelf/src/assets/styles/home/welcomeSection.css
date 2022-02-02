@@ -20,11 +20,13 @@ h1 {
 h2 {
     font-weight: 300;
     font-size: 1.5rem;
+    margin: 20px 0;
 }
 
 p {
     font-weight: 100;
     font-size: 1.25rem;
+    margin: 20px 0;
 }
 
 section {
