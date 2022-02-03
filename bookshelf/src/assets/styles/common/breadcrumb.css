@@ -9,7 +9,7 @@
 
 /* 1. Specific selector */
 
-.about-a,
+.breadcrumb-a,
 .breadcrumb li p {
     font-weight: 100;
     font-size: 1.5rem;
@@ -18,7 +18,7 @@
     margin: 0% 2%;
 }
 
-.about-a:hover {
+.breadcrumb-a:hover {
     cursor: pointer;
 }
 
@@ -48,6 +48,7 @@
 @media screen and (max-width: 1025px) {
     #breadcrumb-wrapper {
         margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 

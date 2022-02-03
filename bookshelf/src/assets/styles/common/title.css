@@ -81,21 +81,39 @@
 
 @media screen and (max-width: 600px) {
     #title-wrapper {
-        height: 42vh;
+        height: 35vh;
     }
     .title-h2 {
         padding: 3%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 414px) {
     #title-wrapper {
-        height: 48vh;
+        height: 32vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #title-wrapper {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #title-wrapper {
+        height: 38vh;
     }
 }
 
 @media screen and (max-width: 330px) {
     #title-wrapper {
         height: 52vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #title-wrapper {
+        height: 50vh;
     }
 }

@@ -21,7 +21,6 @@
 .about-section-wrapper {
     padding: 2%;
     max-width: 100%;
-    margin: 2% auto;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 5fr;
