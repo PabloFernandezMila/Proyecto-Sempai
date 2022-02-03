@@ -28,34 +28,30 @@ export function Header() {
   //This function is used to expand or collapse the burger menu on small screens
   let [isBurgerMenuExpanded, setBurgerMenu] = useState(false);
 
-  function stopScroll() {
+  function toggleBurgerMenu() {
     document.body.classList.toggle("js-stop-scrolling");
+    setBurgerMenu(!isBurgerMenuExpanded);
   }
 
   //      <--End of Hamburger menu scripts-->
   return (
-    <header
-      className={isBurgerMenuExpanded ? "js-header-expanded" : ""}
-      onClick={() => {
-        if (isBurgerMenuExpanded) {setBurgerMenu(!isBurgerMenuExpanded);
-        stopScroll()};
-       
-      }}
-    >
+    <header className={isBurgerMenuExpanded ? "js-header-expanded" : ""}>
       <div className="burger-wrapper">
         <div
           id="burger-menu"
           className="js-burger-menu"
-          onClick={() => {
-            setBurgerMenu(!isBurgerMenuExpanded);
-            stopScroll();
-          }}
+          onClick={toggleBurgerMenu}
         >
           <div id="burger-menu-icon"></div>
         </div>
       </div>
       <div id="logo-wrapper">
-        <Link id="logo" className="roboto-white" to={"/home"}>
+        <Link
+          id="logo"
+          className="roboto-white"
+          to={"/home"}
+          onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
+        >
           Bookshelf
         </Link>
       </div>
@@ -66,6 +62,7 @@ export function Header() {
               className="roboto-white"
               to={"/home"}
               activeclassname="active"
+              onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               Home
             </NavLink>
@@ -75,6 +72,7 @@ export function Header() {
               to={"/catalog"}
               className="roboto-white"
               activeclassname="active"
+              onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               Catalog
             </NavLink>
@@ -84,6 +82,7 @@ export function Header() {
               className="roboto-white"
               to={"/login"}
               activeclassname="active"
+              onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               Login
             </NavLink>
@@ -93,6 +92,7 @@ export function Header() {
               className="roboto-white"
               to={"/about"}
               activeclassname="active"
+              onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               About
             </NavLink>

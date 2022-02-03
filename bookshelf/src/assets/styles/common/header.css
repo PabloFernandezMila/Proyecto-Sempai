@@ -276,8 +276,6 @@ header>nav>ul {
 .active {
     font-weight: 400;
     border-bottom: 1px solid var(--details-color);
-    cursor: default;
-    pointer-events: none;
 }
 
 .nav_bar-elements.inactive:hover {
