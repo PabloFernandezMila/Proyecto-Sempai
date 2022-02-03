@@ -1,0 +1,24 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Fonts import              #
+#       2. Root                      #
+#       3. HTML tags selectors       #
+#       4. General selector          #
+#       5. Specific selectors        #   
+#       6.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/*  1. Fonts import */
+
+.about-container {
+    margin: 0;
+    width: 100%;
+    background-image: url(../../images/about/cover.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    min-height: 91vh;
+}

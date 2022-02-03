@@ -28,23 +28,27 @@ export function Header() {
   //This function is used to expand or collapse the burger menu on small screens
   let [isBurgerMenuExpanded, setBurgerMenu] = useState(false);
 
-  function expandBurger() {
+  function stopScroll() {
     document.body.classList.toggle("js-stop-scrolling");
-    var secondRow = document.createElement("div");
-    secondRow.id = "header-second-row";
-    secondRow.className = "js-header-second-row";
   }
 
   //      <--End of Hamburger menu scripts-->
   return (
-    <header className={isBurgerMenuExpanded ? "js-header-expanded" : ""}>
+    <header
+      className={isBurgerMenuExpanded ? "js-header-expanded" : ""}
+      onClick={() => {
+        if (isBurgerMenuExpanded) {setBurgerMenu(!isBurgerMenuExpanded);
+        stopScroll()};
+       
+      }}
+    >
       <div className="burger-wrapper">
         <div
           id="burger-menu"
           className="js-burger-menu"
           onClick={() => {
             setBurgerMenu(!isBurgerMenuExpanded);
-            expandBurger();
+            stopScroll();
           }}
         >
           <div id="burger-menu-icon"></div>
