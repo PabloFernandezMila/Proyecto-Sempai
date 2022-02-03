@@ -13,7 +13,11 @@ export function StartToday() {
           Immerse in your reading whenever you want, carry all the books with
           you.
         </p>
-        <Link id="section2-button" className="section-button roboto-white">
+        <Link
+          id="section2-button"
+          className="section-button roboto-white"
+          to="/register"
+        >
           Create an account
         </Link>
       </div>

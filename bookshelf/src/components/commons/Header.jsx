@@ -25,7 +25,7 @@ export function Header() {
   //      <--Start of Search scripts-->
 
   //      <--Start of Hamburger menu scripts-->
-  //This function is used to expand or collapse the burger menu on mobile or small screens
+  //This function is used to expand or collapse the burger menu on small screens
   let [isBurgerMenuExpanded, setBurgerMenu] = useState(false);
 
   function expandBurger() {
@@ -61,7 +61,7 @@ export function Header() {
             <NavLink
               className="roboto-white"
               to={"/home"}
-              activeClassName="active"
+              activeclassname="active"
             >
               Home
             </NavLink>
@@ -70,7 +70,7 @@ export function Header() {
             <NavLink
               to={"/catalog"}
               className="roboto-white"
-              activeClassName="active"
+              activeclassname="active"
             >
               Catalog
             </NavLink>
@@ -79,7 +79,7 @@ export function Header() {
             <NavLink
               className="roboto-white"
               to={"/login"}
-              activeClassName="active"
+              activeclassname="active"
             >
               Login
             </NavLink>
@@ -88,7 +88,7 @@ export function Header() {
             <NavLink
               className="roboto-white"
               to={"/about"}
-              activeClassName="active"
+              activeclassname="active"
             >
               About
             </NavLink>
@@ -143,7 +143,7 @@ export function Header() {
         </div>
       </form>
       <div id="login-wrapper">
-        <Link className="bounce" to={"login"}></Link>
+        <Link className="bounce" to={"/login"}></Link>
       </div>
     </header>
   );
