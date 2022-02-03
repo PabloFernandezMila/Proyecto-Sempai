@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "../../assets/styles/common/header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+//
 
 export function Header() {
   //      <--Start of Search scripts-->
@@ -49,31 +51,47 @@ export function Header() {
         </div>
       </div>
       <div id="logo-wrapper">
-        <a target="_self" id="logo" href="index.html" className="roboto-white">
+        <Link id="logo" className="roboto-white" to={"/home"}>
           Bookshelf
-        </a>
+        </Link>
       </div>
       <nav style={isBurgerMenuExpanded ? { display: "initial" } : null}>
         <ul>
-          <li className="nav_bar-elements active">
-            <a target="_self" href="index.html" className="roboto-white">
+          <li className="nav_bar-elements">
+            <NavLink
+              className="roboto-white"
+              to={"/home"}
+              activeClassName="active"
+            >
               Home
-            </a>
+            </NavLink>
           </li>
-          <li className="nav_bar-elements inactive">
-            <a target="_self" href="catalog.html" className="roboto-white">
+          <li className="nav_bar-elements">
+            <NavLink
+              to={"/catalog"}
+              className="roboto-white"
+              activeClassName="active"
+            >
               Catalog
-            </a>
+            </NavLink>
           </li>
-          <li className="nav_bar-elements inactive">
-            <a target="_self" href="login.html" className="roboto-white">
+          <li className="nav_bar-elements">
+            <NavLink
+              className="roboto-white"
+              to={"/login"}
+              activeClassName="active"
+            >
               Login
-            </a>
+            </NavLink>
           </li>
-          <li className="nav_bar-elements inactive">
-            <a target="_self" href="about.html" className="roboto-white">
+          <li className="nav_bar-elements">
+            <NavLink
+              className="roboto-white"
+              to={"/about"}
+              activeClassName="active"
+            >
               About
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -125,9 +143,7 @@ export function Header() {
         </div>
       </form>
       <div id="login-wrapper">
-        <a href="/login.html" className="bounce">
-          {" "}
-        </a>
+        <Link className="bounce" to={"login"}></Link>
       </div>
     </header>
   );

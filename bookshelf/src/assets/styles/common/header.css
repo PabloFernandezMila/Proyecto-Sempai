@@ -263,7 +263,7 @@ header>nav>ul {
     color: white;
 }
 
-.active>a {
+.active {
     font-weight: 400;
     border-bottom: 1px solid var(--details-color);
     cursor: default;
