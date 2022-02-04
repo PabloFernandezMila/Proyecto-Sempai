@@ -1,5 +1,4 @@
 import "../../assets/styles/common/title.css";
-import { Breadcrumb } from "./Breadcrumb";
 
 export function Title(props) {
   const title = props.title;
