@@ -106,9 +106,8 @@ input {
     width: 80%;
     max-width: 1000px;
     display: flex;
-    height: 50vh;
-    min-height: 500px;
     background-color: #0707077c;
+    margin-top: 30px;
 }
 
 .login-wrapper>form {
@@ -130,6 +129,7 @@ input {
 
 .register-text {
     display: inline-block;
+    margin-bottom: 0;
 }
 
 .form-element {
@@ -152,6 +152,7 @@ input {
         margin-top: 0;
         flex-direction: column;
         gap: 20px;
+        padding-bottom: 30px;
     }
     #login-content>form {
         padding: 20px 0;
@@ -190,7 +191,7 @@ input {
 
 @media screen and (max-width: 600px) {
     #title-wrapper {
-        height: 42vh;
+        height: 32vh;
     }
     h2 {
         padding: 3%;
@@ -202,7 +203,13 @@ input {
 
 @media screen and (max-width: 400px) {
     #title-wrapper {
-        height: 48vh;
+        height: 34vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #title-wrapper {
+        height: 42vh;
     }
 }
 

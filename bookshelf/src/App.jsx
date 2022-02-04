@@ -4,6 +4,7 @@ import { Header } from "./components/commons/Header";
 import { About } from "./pages/AboutPage";
 import { Home } from "./pages/HomePage";
 import { Login } from "./pages/LoginPage";
+import { Register } from "./pages/RegisterPage";
 import { UnderConstruction } from "./pages/UnderConstructionPage";
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/underConstruction" element={<UnderConstruction />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
       <Footer />

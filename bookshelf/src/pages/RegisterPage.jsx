@@ -1,28 +1,28 @@
 import { Title } from "../components/commons/Title";
 import { Breadcrumb } from "../components/commons/Breadcrumb";
-import { LoginForm } from "../components/login/LoginForm";
+import { RegisterForm } from "../components/register/RegisterForm";
 
 // Title Variables
-const loginTitle = "Login";
-const loginSubtitle = "Please enter your email and password";
+const registerTitle = "Register";
+const registerSubtitle = "Please complete the following form";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
 const firstLinkLabel = "Home";
-const secondLinkTo = "/login";
-const secondLinkLabel = "Login";
+const secondLinkTo = "/register";
+const secondLinkLabel = "Register";
 
-export function Login() {
+export function Register() {
   return (
-    <div className="login-container tint">
-      <Title title={loginTitle} subtitle={loginSubtitle}></Title>
+    <div className="register-container tint">
+      <Title title={registerTitle} subtitle={registerSubtitle}></Title>
       <Breadcrumb
         firstLinkTo={firstLinkTo}
         firstLinkLabel={firstLinkLabel}
         secondLinkTo={secondLinkTo}
         secondLinkLabel={secondLinkLabel}
       ></Breadcrumb>
-      <LoginForm></LoginForm>
+      <RegisterForm></RegisterForm>
     </div>
   );
 }

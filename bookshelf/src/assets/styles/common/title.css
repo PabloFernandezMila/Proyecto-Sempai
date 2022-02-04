@@ -58,12 +58,6 @@
     }
 }
 
-@media screen and (max-width: 1100px) and (max-height: 620px) {
-    .title {
-        margin-top: 20vh;
-    }
-}
-
 @media screen and (max-width: 1025px) {
     #title-wrapper {
         height: 28vh;
