@@ -2,7 +2,7 @@ import { WelcomeSection } from "../components/home/WelcomeSection";
 import { StartToday } from "../components/home/StartToday";
 import { BrowseCatalog } from "../components/home/BrowseCatalog";
 
-export function Home() {
+export function HomePage() {
   return (
     <>
       <WelcomeSection></WelcomeSection>

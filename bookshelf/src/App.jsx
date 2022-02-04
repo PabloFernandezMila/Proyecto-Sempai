@@ -1,11 +1,12 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import { Footer } from "./components/commons/Footer";
 import { Header } from "./components/commons/Header";
-import { About } from "./pages/AboutPage";
-import { Home } from "./pages/HomePage";
-import { Login } from "./pages/LoginPage";
-import { Register } from "./pages/RegisterPage";
-import { UnderConstruction } from "./pages/UnderConstructionPage";
+import { AboutPage } from "./pages/AboutPage";
+import { CatalogPage } from "./pages/CatalogPage";
+import { HomePage } from "./pages/HomePage";
+import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { UnderConstructionPage } from "./pages/UnderConstructionPage";
 
 export function App() {
   return (
@@ -13,13 +14,17 @@ export function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<HomePage />} />
           {/* Added navigate to always redirect to the home pages regardless if the URL has / or /home */}
           <Route path="/" element={<Navigate replace to="/home" />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/underConstruction" element={<UnderConstruction />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/underConstruction"
+            element={<UnderConstructionPage />}
+          />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
         </Routes>
       </main>
       <Footer />

@@ -12,7 +12,7 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/register";
 const secondLinkLabel = "Register";
 
-export function Register() {
+export function RegisterPage() {
   return (
     <div className="register-container tint">
       <Title title={registerTitle} subtitle={registerSubtitle}></Title>

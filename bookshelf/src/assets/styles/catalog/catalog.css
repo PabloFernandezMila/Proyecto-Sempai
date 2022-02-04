@@ -13,88 +13,7 @@
 
 /*  1. Fonts import */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap');
- :root {
-    --details-color: #5480f1;
-}
-
-
-/* 2. Root  */
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-/* 3. HTML tags selectors */
-
-html {
-    height: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background-color: #141414;
-    height: 100%;
-    width: 100%;
-}
-
-h1 {
-    font-weight: 500;
-    font-size: 2.625rem;
-    display: inline-block;
-    border-bottom: 2px solid var(--details-color);
-    margin-bottom: 1%;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    color: var(--details-color);
-    padding: 2%;
-}
-
-a,
-.breadcrumb li p {
-    font-weight: 100;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.5%;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
-p {
-    font-size: 0.9rem;
-}
-
-select {
-    margin: 2%;
-    background-color: transparent;
-    border: none;
-    font-size: 1.125rem;
-    display: inline-block;
-    margin-right: 0%;
-    cursor: pointer;
-    border-bottom: solid 1px var(--details-color);
-}
-
-option {
-    background-color: rgb(34, 34, 34);
-}
-
-section {
+.catalog-section {
     width: 1100px;
     height: 1300px;
     margin: auto;
@@ -125,7 +44,7 @@ section {
 }
 
 .roboto-white {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: white;
 }
 
@@ -145,7 +64,7 @@ section {
     margin-top: 10px;
     color: white;
     background-color: var(--details-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 1rem;
     border-style: none;
@@ -160,8 +79,8 @@ section {
     color: var(--details-color);
 }
 
-#title-wrapper {
-    background-image: url("../images/catalog/banner.jpg");
+.catalog-title-wrapper {
+    background-image: url("../../images/catalog/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 45vh;
@@ -206,7 +125,7 @@ section {
 }
 
 .grow {
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .grow:hover {
@@ -276,7 +195,7 @@ section {
 }
 
 @media screen and (max-width: 1160px) {
-    section {
+    .catalog-section {
         grid-template-columns: 250px 250px 250px;
         grid-template-rows: 400px 400px 400px 400px;
         height: 1720px;
@@ -297,7 +216,7 @@ section {
 }
 
 @media screen and (max-width: 880px) {
-    section {
+    .catalog-section {
         grid-template-columns: 250px 250px;
         grid-template-rows: 400px 400px 400px 400px 400px;
         height: 2560px;
@@ -323,7 +242,7 @@ section {
     h2 {
         padding: 3%;
     }
-    section {
+    .catalog-section {
         grid-template-columns: 250px;
         grid-template-rows: 400px 400px 400px 400px 400px 400px;
         height: 4900px;
@@ -338,7 +257,7 @@ section {
 }
 
 @media screen and (max-width: 281px) {
-    section {
+    .catalog-section {
         width: 280px;
     }
 }

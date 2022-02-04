@@ -14,7 +14,7 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/about";
 const secondLinkLabel = "About";
 
-export function About() {
+export function AboutPage() {
   return (
     <div className="about-container tint">
       <Title title={aboutTitle} subtitle={aboutSubtitle}></Title>
