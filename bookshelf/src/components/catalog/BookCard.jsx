@@ -8,7 +8,7 @@ export function BookCard() {
       >
         <div className="book-content roboto-white centered">
           <h3>Title</h3>
-          <p className="book-title">A Game of Thrones</p>
+          <p className="book-title">Game of Thrones</p>
           <h3>Description</h3>
           <p>
             A Game of Thrones is the first novel in A Song of Ice and Fire, a
