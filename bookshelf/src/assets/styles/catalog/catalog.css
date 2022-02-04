@@ -13,11 +13,17 @@
 
 /*  1. Fonts import */
 
+.catalog-wrapper {
+    margin: 0;
+    background-color: #141414;
+    height: 100%;
+    width: 100%;
+}
+
 .catalog-section {
     width: 1100px;
     height: 1300px;
     margin: auto;
-    margin-bottom: 5%;
     display: grid;
     gap: 40px 40px;
     grid-template-columns: 250px 250px 250px 250px;
@@ -29,32 +35,17 @@
 
 /* 4. General selector  */
 
-#title-wrapper {
-    min-height: 351px;
+.book-content>h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--details-color);
+    padding: 2%;
 }
 
-.title {
-    text-align: center;
-    padding-top: 14vh;
-    margin-bottom: 2vh;
-}
-
-.tint {
-    background-color: rgba(34, 33, 29, 0.75);
-}
-
-.roboto-white {
-    font-family: "Roboto", sans-serif;
-    color: white;
-}
-
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.book-content>p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0;
 }
 
 
@@ -182,18 +173,6 @@
 
 /* 6.Media queries  */
 
-@media screen and (max-width: 1700px) {
-    .title {
-        padding-top: 13vh;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .title {
-        padding-top: 15vh;
-    }
-}
-
 @media screen and (max-width: 1160px) {
     .catalog-section {
         grid-template-columns: 250px 250px 250px;
@@ -204,9 +183,6 @@
 }
 
 @media screen and (max-width: 1025px) {
-    #title-wrapper {
-        height: 34vh;
-    }
     #breadcrumb-wrapper {
         margin-top: 20px;
     }
@@ -229,16 +205,7 @@
     }
 }
 
-@media (min-height: 500px) and (max-height: 700px) {
-    #title-wrapper {
-        height: 50vh;
-    }
-}
-
 @media screen and (max-width: 600px) {
-    #title-wrapper {
-        height: 48vh;
-    }
     h2 {
         padding: 3%;
     }
@@ -256,7 +223,13 @@
     }
 }
 
-@media screen and (max-width: 281px) {
+@media screen and (max-width: 400px) {
+    .catalog-title-wrapper {
+        min-height: 420px;
+    }
+}
+
+@media screen and (max-width: 280px) {
     .catalog-section {
         width: 280px;
     }

@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 
 // Title Variables
 const catalogTitle = "Catalog";
-const catalogSubtitle =
-  "Our goal is to share our passion for books with everyone anywhere";
+const catalogSubtitle = "Browse our catalog and find what you need!";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -17,7 +16,7 @@ const secondLinkLabel = "Catalog";
 
 export function CatalogPage() {
   return (
-    <>
+    <div className="catalog-wrapper">
       <div className="catalog-title-wrapper tint">
         <Title title={catalogTitle} subtitle={catalogSubtitle}></Title>
         <Breadcrumb
@@ -32,19 +31,34 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage:
-                "url(../../public/images/catalog/bookcover10.jpg)",
-            }}
-          ></div>
+            style={{ backgroundImage: "url(/images/catalog/bookcover1.jpg)" }}
+          >
+            <div className="book-content roboto-white centered">
+              <h3>Title</h3>
+              <p className="book-title">A Game of Thrones</p>
+              <h3>Description</h3>
+              <p>
+                A Game of Thrones is the first novel in A Song of Ice and Fire,
+                a series of fantasy novels by the American author George R. R.
+                Martin.
+              </p>
+              <h3>Author</h3>
+              <p className="book-author">George R.R. Martin</p>
+              <a
+                target="_self"
+                href="bookLanding.html"
+                className="roboto-white"
+              >
+                See More
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover2.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -71,9 +85,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover3.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -100,9 +112,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover4.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -129,9 +139,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover5.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -158,9 +166,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover6.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -187,9 +193,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover7.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -217,9 +221,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover8.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -246,9 +248,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover9.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -275,9 +275,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover10.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -304,9 +302,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover11.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -333,9 +329,7 @@ export function CatalogPage() {
         <div className="book-wrapper grow">
           <div
             className="book grow"
-            style={{
-              backgroundImage: "url(./assets/images/catalog/bookcover10.jpg)",
-            }}
+            style={{ backgroundImage: "url(/images/catalog/bookcover12.jpg)" }}
           >
             <div className="book-content roboto-white centered">
               <h3>Title</h3>
@@ -359,6 +353,6 @@ export function CatalogPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
