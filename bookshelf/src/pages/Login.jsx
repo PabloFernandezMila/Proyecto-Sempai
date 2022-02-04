@@ -61,7 +61,7 @@ export function Login() {
               <div>
                 <Link
                   className="form-links form-element"
-                  to="/password-recovery"
+                  to="/underConstruction"
                 >
                   Forgot your password?{" "}
                 </Link>
@@ -71,7 +71,7 @@ export function Login() {
                 <p className="register-text form-element">
                   Don&#39;t have an account?&nbsp;
                 </p>
-                <Link className="form-links" to="/register">
+                <Link className="form-links" to="/underConstruction">
                   Sign up
                 </Link>
               </div>

@@ -1,0 +1,9 @@
+#underConstruction {
+    background-image: url(../images/underConstruction.jpg);
+    width: "100%";
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #171926;
+}
