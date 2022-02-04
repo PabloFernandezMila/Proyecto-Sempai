@@ -15,8 +15,7 @@
     background-size: cover;
     background-blend-mode: multiply;
     position: relative;
-    min-height: 91vh;
-    padding-bottom: 30px;
+    min-height: 100vh;
 }
 
 #login-content {

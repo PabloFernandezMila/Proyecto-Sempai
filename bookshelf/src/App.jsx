@@ -1,10 +1,10 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import { Footer } from "./components/commons/Footer";
 import { Header } from "./components/commons/Header";
-import { About } from "./pages/About";
-import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { UnderConstruction } from "./pages/UnderConstruction";
+import { About } from "./pages/AboutPage";
+import { Home } from "./pages/HomePage";
+import { Login } from "./pages/LoginPage";
+import { UnderConstruction } from "./pages/UnderConstructionPage";
 
 export function App() {
   return (
