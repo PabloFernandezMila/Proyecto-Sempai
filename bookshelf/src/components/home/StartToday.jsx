@@ -1,5 +1,5 @@
 import "../../assets/styles/home/startToday.css";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export function StartToday() {
   return (
@@ -16,7 +16,7 @@ export function StartToday() {
         <Link
           id="section2-button"
           className="section-button roboto-white"
-          to="/register"
+          to="/Login"
         >
           Create an account
         </Link>
