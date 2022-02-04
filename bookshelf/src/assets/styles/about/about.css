@@ -1,17 +1,12 @@
 /*######## Table of contents ##########
 #                                    #
-#       1. Fonts import              #
-#       2. Root                      #
-#       3. HTML tags selectors       #
-#       4. General selector          #
-#       5. Specific selectors        #   
-#       6.Media queries              #
+#       1. Specific selectors        #   
 #                                    #
 ######################################
 */
 
 
-/*  1. Fonts import */
+/*  1. Specific selectors */
 
 .about-container {
     margin: 0;

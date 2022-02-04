@@ -40,10 +40,6 @@ section {
 
 /* 2. General selector */
 
-.tint {
-    background-color: rgba(34, 33, 29, 0.75);
-}
-
 .centered {
     position: relative;
     top: 50%;

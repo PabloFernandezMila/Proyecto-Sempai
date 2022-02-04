@@ -23,7 +23,7 @@ export function StartToday() {
       </div>
 
       <div className="arrow-container">
-        <Link className="bounce down-arrow" to="section3" smooth={true}></Link>
+        <Link className="bounce down-arrow" to="section3"></Link>
       </div>
     </section>
   );

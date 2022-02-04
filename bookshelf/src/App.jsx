@@ -3,6 +3,7 @@ import { Footer } from "./components/commons/Footer";
 import { Header } from "./components/commons/Header";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
+import { Login } from "./pages/Login";
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
           {/* Added navigate to always redirect to the home pages regardless if the URL has / or /home */}
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
       <Footer />

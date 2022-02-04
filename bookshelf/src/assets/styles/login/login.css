@@ -1,75 +1,26 @@
 /*######## Table of contents ##########
 #                                    #
-#       1. Fonts import              #
-#       2. Root                      #
-#       3. HTML tags selectors       #
-#       4. General selector          #
-#       5. Specific selectors        #   
-#       6.Media queries              #
+#       1. Specific selectors        #   
 #                                    #
 ######################################
- */
+*/
 
 
-/*  1. Fonts import */
+/*  1. Specific selectors */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,500&display=swap');
-
-/* 2. Root */
-
-:root {
-    --details-color: #5480f1;
-}
-
-
-/* 3. HTML tags selectors */
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-html {
-    scroll-behavior: smooth;
-    height: 100%;
-}
-
-body {
+.login-container {
     margin: 0;
-    background-image: url("../images/login/login.jpg");
-    background-attachment: fixed;
+    width: 100%;
+    background-image: url(../../images/login/login.jpg);
     background-size: cover;
-    min-height: 100%;
+    background-blend-mode: multiply;
+    position: relative;
+    min-height: 91vh;
+    padding-bottom: 30px;
 }
 
-h1 {
-    font-weight: 500;
-    font-size: 2.625rem;
-    display: inline-block;
-    border-bottom: 2px solid var(--details-color);
-    margin-bottom: 1%;
-    margin-top: 0;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin: 0
-}
-
-p {
-    font-size: 1.5rem;
-    font-weight: 100;
-    margin: 0
-}
-
-a,
-.breadcrumb li p {
-    font-weight: 100;
-    font-size: 1.25rem;
-    text-decoration: none;
-    padding: 0.5%;
+#login-content {
+    height: auto;
 }
 
 label {
@@ -90,7 +41,7 @@ b {
     border: none;
 }
 
- ::placeholder {
+::placeholder {
     border: none;
     color: grey;
     font-style: italic;
@@ -102,70 +53,8 @@ input {
     font-size: 1.25rem;
     border: none;
     padding-left: 5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     width: 100%;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-}
-
-
-/* 4. General selector */
-
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.tint {
-    background-color: rgba(20, 20, 20, 0.80);
-    backdrop-filter: blur(5px)
-}
-
-
-/* 5. Specific selectors */
-
-.title {
-    text-align: center;
-    padding-top: 12vh;
-    margin-bottom: 2vh;
-}
-
-#breadcrumb-wrapper {
-    margin-bottom: 2vh;
-}
-
-.breadcrumb {
-    margin-left: 2%;
-}
-
-.breadcrumb li {
-    display: inline-block;
-}
-
-.breadcrumb li a {
-    padding-left: 0;
-}
-
-.breadcrumb li a:hover {
-    color: var(--details-color);
-}
-
-.breadcrumb-separator {
-    pointer-events: none;
-}
-
-#section-content {
-    text-align: center;
-    width: 90%;
-    margin: 2vh auto;
-    min-height: 500px;
 }
 
 .form-elements {
@@ -178,7 +67,7 @@ footer {
     text-align: left;
 }
 
-#section-content>form {
+#login-content>form {
     margin: auto;
     height: 100%;
     padding: 30px;
@@ -187,7 +76,7 @@ footer {
     width: 100%;
 }
 
-#section-content>div>form {
+#login-content>div>form {
     margin: auto;
 }
 
@@ -210,7 +99,7 @@ footer {
     border-color: var(--details-color);
 }
 
-.signin {
+.login-wrapper {
     padding: 40px;
     border-radius: 10px;
     align-items: center;
@@ -222,7 +111,7 @@ footer {
     min-height: 500px;
 }
 
-.signin>form {
+.login-wrapper>form {
     width: 100%;
 }
 
@@ -259,17 +148,19 @@ footer {
     #title-wrapper {
         margin-bottom: 20px;
     }
-    #section-content {
-        margin-bottom: 5vh;
+    #login-content {
         margin-top: 0;
         flex-direction: column;
-        gap: 20px
+        gap: 20px;
     }
-    #section-content>form {
+    #login-content>form {
         padding: 20px 0;
     }
     .form-elements {
-        width: 90%;
+        width: 95%;
+    }
+    form>div>div>a {
+        font-size: 1.25 rem;
     }
 }
 
@@ -286,8 +177,8 @@ footer {
     #breadcrumb-wrapper {
         margin-top: 20px;
     }
-    .signin {
-        width: 100%;
+    .login-wrapper {
+        width: 90%;
     }
 }
 

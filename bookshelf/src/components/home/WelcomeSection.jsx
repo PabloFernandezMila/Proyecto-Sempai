@@ -1,5 +1,5 @@
 import "../../assets/styles/home/welcomeSection.css";
-import { Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 export function WelcomeSection() {
   return (
@@ -18,11 +18,7 @@ export function WelcomeSection() {
           <div id="column2-image" className="centered-vertically"></div>
         </div>
         <div className=" arrow-container ">
-          <Link
-            className="bounce down-arrow"
-            to="section2"
-            smooth={true}
-          ></Link>
+          <Link className="bounce down-arrow" to="section2"></Link>
         </div>
       </div>
     </section>
