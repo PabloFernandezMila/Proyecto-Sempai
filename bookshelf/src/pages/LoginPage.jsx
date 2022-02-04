@@ -25,7 +25,7 @@ export function Login() {
       ></Breadcrumb>
       <section id="login-content">
         <div className="login-wrapper flex-item roboto-white tint">
-          <form action="/home.html" autoComplete="off">
+          <form action="/home" autoComplete="off">
             <div className="form-elements">
               <label className="form-element" htmlFor="email">
                 <b>Email</b>

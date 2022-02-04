@@ -80,7 +80,7 @@ input {
 }
 
 .signin-button {
-    background-color: #0707077c;
+    background-color: #000000;
     cursor: pointer;
     font-size: 1.25rem;
     border: lightslategray;
@@ -108,6 +108,7 @@ input {
     display: flex;
     height: 50vh;
     min-height: 500px;
+    background-color: #0707077c;
 }
 
 .login-wrapper>form {

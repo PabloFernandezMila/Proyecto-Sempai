@@ -103,6 +103,7 @@ export function Header() {
       {/* The scripts checks if the search was expanded, if true adds a class, if not the class is removed. This allows the system to expand or collapse the search area*/}
       {/* When the search button is clicked the isSearchExpanded variable changes its value to trigger the behaviors mentioned above */}
       <form
+        action="/underConstruction"
         className={
           isSearchExpanded || isBurgerMenuExpanded
             ? "search js-search-form js-expanded"
