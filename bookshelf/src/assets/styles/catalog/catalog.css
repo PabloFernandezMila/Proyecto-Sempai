@@ -21,15 +21,21 @@
 }
 
 .catalog-section {
-    width: 1100px;
-    height: 1300px;
+    width: 90%;
+    text-align: center;
+    height: auto;
+    padding: 40px 0;
+    margin: auto;
+}
+
+.books-wrapper {
+    width: 100%;
     margin: auto;
     display: grid;
-    gap: 40px 40px;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 400px 400px 400px;
-    align-content: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 250px);
 }
 
 
@@ -75,34 +81,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 45vh;
-    margin-bottom: 3vh;
     background-blend-mode: multiply;
     min-height: 351px;
-}
-
-.breadcrumb {
-    margin-left: 2%;
-}
-
-.breadcrumb li {
-    display: inline-block;
-}
-
-.breadcrumb li a {
-    padding-left: 0;
-}
-
-.breadcrumb li a:hover {
-    color: var(--details-color);
-}
-
-.breadcrumb-separator {
-    pointer-events: none;
 }
 
 .book-wrapper {
     overflow: hidden;
     border-radius: 10px;
+    width: 250px;
+    height: 400px;
 }
 
 .book {
@@ -173,31 +160,7 @@
 
 /* 6.Media queries  */
 
-@media screen and (max-width: 1160px) {
-    .catalog-section {
-        grid-template-columns: 250px 250px 250px;
-        grid-template-rows: 400px 400px 400px 400px;
-        height: 1720px;
-        width: 800px;
-    }
-}
-
-@media screen and (max-width: 1025px) {
-    #breadcrumb-wrapper {
-        margin-top: 20px;
-    }
-    .title {
-        padding-top: 14vh;
-    }
-}
-
 @media screen and (max-width: 880px) {
-    .catalog-section {
-        grid-template-columns: 250px 250px;
-        grid-template-rows: 400px 400px 400px 400px 400px;
-        height: 2560px;
-        width: 600px;
-    }
     /*For smaller resolutions had to change the background-size to fit the image inside the book element,
      if I set contain for higher resolutions the tint on hover has glitches for some images*/
     .book {
@@ -208,15 +171,6 @@
 @media screen and (max-width: 600px) {
     h2 {
         padding: 3%;
-    }
-    .catalog-section {
-        grid-template-columns: 250px;
-        grid-template-rows: 400px 400px 400px 400px 400px 400px;
-        height: 4900px;
-        width: 300px;
-    }
-    #breadcrumb-wrapper {
-        text-align: center;
     }
     #select-wrapper {
         text-align: center;

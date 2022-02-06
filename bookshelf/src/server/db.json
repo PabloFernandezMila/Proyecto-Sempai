@@ -9,79 +9,72 @@
         {
             "id": 2,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover2.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "The Wise Man's Fear",
+            "bookDescription": "In The Wise Man's Fear, Kvothe searches for answers, attempting to uncover the truth about the mysterious Amyr, the Chandrian, and the...",
+            "bookAuthor": "Patrick Rothfuss"
         },
         {
             "id": 3,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover3.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "The Return of the King",
+            "bookDescription": "Gandalf brings Pippin with him, who enters the service of the steward. Aragorn, by his courage and leadership, proves himself a worthy ruler...",
+            "bookAuthor": "J.R.R Tolkien"
         },
         {
             "id": 4,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover4.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "A Quest of Heroes",
+            "bookDescription": "A Quest for Heroes revolves around the epic coming of age story of one special boy, a 14 year old from a small village on the outskirts of the...",
+            "bookAuthor": "Morgan Rice"
         },
         {
             "id": 5,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover5.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "It",
+            "bookDescription": "he story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise...",
+            "bookAuthor": "Stephen King"
         },
         {
             "id": 6,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover6.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "The Little Prince",
+            "bookDescription": "The story follows a young prince who visits various planets in space, including Earth, and addresses themes of loneliness, friendship, love, and...",
+            "bookAuthor": "Antoine de Saint-Exupéry"
         },
         {
             "id": 7,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover7.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "range of ghosts",
+            "bookDescription": "A powerful new fantasy from Hugo award–winning author Elizabeth Bear, Range of Ghosts creates a world both deep and broad, where a sorcerer-prince...",
+            "bookAuthor": "elizabeth bear"
         },
         {
             "id": 8,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover8.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "Temeraire",
+            "bookDescription": "The novels follow the adventures of Captain William Laurence and his dragon, the eponymous Temeraire, and reimagine events of the Napoleonic Wars with...",
+            "bookAuthor": "Naomi Novik"
         },
         {
             "id": 9,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover9.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "Nevermore",
+            "bookDescription": "As her world begins to unravel around her, Isabel discovers that dreams, like words, hold more power than she ever imagined, and that the most...",
+            "bookAuthor": "Sam Shore"
         },
         {
             "id": 10,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover10.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "Unspoken",
+            "bookDescription": "A young girl's courage is tested in this haunting, wordless story. When a farm girl discovers a runaway slave hiding in the barn...",
+            "bookAuthor": "Celia McMahon"
         },
         {
             "id": 11,
             "bookBackgroundImageURL": "url(/images/catalog/bookcover11.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
-        },
-        {
-            "id": 12,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover12.jpg)",
-            "bookTitle": "A Game of Thrones",
-            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookTitle": "The white raven",
+            "bookDescription": "Sprinkled in is jealousy, revenge, drinking, a little Halloween fun, and some fairies you don't want to get on the wrong side of...",
+            "bookAuthor": "Carrie D. Miller"
         }
     ]
 }

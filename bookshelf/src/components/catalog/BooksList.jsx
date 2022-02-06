@@ -31,5 +31,9 @@ export function BooksList(props) {
   });
 
   //Return a collection of book cards
-  return <section className="catalog-section">{booksFromDB}</section>;
+  return (
+    <section className="catalog-section">
+      <div className="books-wrapper">{booksFromDB}</div>
+    </section>
+  );
 }
