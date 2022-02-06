@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom";
-export function BookCard() {
+export function BookCard(props) {
+  const bookBackgroundImageURL = props.bookBackgroundImageURL;
+  const bookTitle = props.bookTitle;
+  const bookDescription = props.bookDescription;
+  const bookAuthor = props.bookAuthor;
+
   return (
     <div className="book-wrapper grow">
       <div
         className="book grow"
-        style={{ backgroundImage: "url(/images/catalog/bookcover1.jpg)" }}
+        style={{ backgroundImage: bookBackgroundImageURL }}
       >
         <div className="book-content roboto-white centered">
-          <h3>Title</h3>
-          <p className="book-title">Game of Thrones</p>
+          <h3>title</h3>
+          <p className="book-title">{bookTitle}</p>
           <h3>Description</h3>
-          <p>
-            A Game of Thrones is the first novel in A Song of Ice and Fire, a
-            series of fantasy novels by the American author George R. R. Martin.
-          </p>
+          <p>{bookDescription}</p>
           <h3>Author</h3>
-          <p className="book-author">George R.R. Martin</p>
+          <p className="book-author">{bookAuthor}</p>
           <Link to="/bookLanding" className="roboto-white">
             See More
           </Link>

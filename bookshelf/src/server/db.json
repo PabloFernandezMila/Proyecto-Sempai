@@ -1,12 +1,87 @@
 {
     "books": [{
-        "id": 1,
-        "backgroundImage": "url(/images/catalog/bookcover1.jpg)",
-        "bookTitle": "A Game of Throaaaaaanes",
-        "description": "       A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-        "author": "George R.R. Martin"
-    }],
-    "info_home": {
-        "intro": "BLA BLA"
-    }
+            "id": 1,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover1.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 2,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover2.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 3,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover3.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 4,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover4.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 5,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover5.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 6,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover6.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 7,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover7.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 8,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover8.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 9,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover9.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 10,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover10.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 11,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover11.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        },
+        {
+            "id": 12,
+            "bookBackgroundImageURL": "url(/images/catalog/bookcover12.jpg)",
+            "bookTitle": "A Game of Thrones",
+            "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
+            "bookAuthor": "George R.R. Martin"
+        }
+    ]
 }
