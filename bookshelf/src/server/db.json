@@ -1,80 +1,111 @@
 {
     "books": [{
             "id": 1,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover1.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover1.jpg",
             "bookTitle": "A Game of Thrones",
             "bookDescription": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin.",
-            "bookAuthor": "George R.R. Martin"
+            "bookFullDescription": "The first volume of A Song of Ice and Fire, the greatest fantasy epic of the modern age. GAME OF THRONES is now a major TV series from HBO, starring Sean Bean.\n Summers span decades. Winter can last a lifetime. And the struggle for the Iron Throne has begun.\n As Warden of the North, Lord Eddard Stark counts it a curse when King Robert bestows on him the office of the Hand. His honour weighs him down at court where a true man does what he will, not what he must … and a dead enemy is a thing of beauty.\n The old gods have no power in the south, Stark’s family is split and there is treachery at court. Worse, the vengeance-mad heir of the deposed Dragon King has grown to maturity in exile in the Free Cities. He claims the Iron Throne.",
+            "bookAuthor": "George R.R. Martin",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 2,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover2.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover2.jpg",
             "bookTitle": "The Wise Man's Fear",
             "bookDescription": "In The Wise Man's Fear, Kvothe searches for answers, attempting to uncover the truth about the mysterious Amyr, the Chandrian, and the...",
-            "bookAuthor": "Patrick Rothfuss"
+            "bookFullDescription": "On the second day of his recounting the story of his life to Chronicler at the Waystone Inn, Kvothe continues the narrative commenced in The Name of the Wind, wherein a younger Kvothe pursues his education at the University.\n There, he carries on a feud with fellow student Ambrose, culminating in Ambrose getting him brought up on charges of Consortation with Demonic Powers, a capital crime, for having called the Name of the Wind.\n Despite successfully defending himself in court, Kvothe has guaranteed himself an extremely high term tuition due to the negative attention he has attracted at the University.\n Kvothe follows the advice of his friends and teachers at the University and decides to take a term off to chase the wind. To postpone having to pay his debt to the loan shark Devi, he uses several of his more prized possessions as collateral before setting off.",
+            "bookAuthor": "Patrick Rothfuss",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 3,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover3.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover3.jpg",
             "bookTitle": "The Return of the King",
-            "bookDescription": "Gandalf brings Pippin with him, who enters the service of the steward. Aragorn, by his courage and leadership, proves himself a worthy ruler...",
-            "bookAuthor": "J.R.R Tolkien"
+            "bookDescription": "The Return of the King is the third and final volume of J.R.R. Tolkien's The Lord of the Rings, following The Fellowship of the Ring and The Two Towers. The Return of the King was originally released on October 20, 1955 in the United Kingdom.",
+            "bookFullDescription": "The Return of the King is the third and final volume of J.R.R. Tolkien's The Lord of the Rings, following The Fellowship of the Ring and The Two Towers. The Return of the King was originally released on October 20, 1955 in the United Kingdom.\n The story begins as Pippin is in Rohan, reunited with the remnants of the Fellowship of the Ring. He steals Saruman's palantír and sees that Sauron will attack Minas Tirith. Then Gandalf delivers news to the steward of Gondor that war is imminent.\n  Gandalf brings Pippin with him, who enters the service of the steward. Aragorn by his courage and leadership proves himself a worthy ruler of men. He is destined to find a lost army of men now dead yet entrapped in a curse set forth long ago by their own disobedience, in the place known as the paths of the dead. The remnants of the Fellowship lead the forces of Gondor and Rohan in defence of Gondor's capital city, Minas Tirith, resulting in the cataclysmic Battle of the Pelennor Fields.\n Those characters that manage to survive the battle are led by Aragorn on a assuredly suicidal feint-attack against the Black Gates of Mordor, partly to distract Sauron from defending his other borders so that Frodo and Sam can gain a clear passage into Mordor. Aragorn's company now surrounds the Black Gates of the Morannon exchanging idle words with the Mouth of Sauron.",
+            "bookAuthor": "J.R.R Tolkien",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 4,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover4.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover4.jpg",
             "bookTitle": "A Quest of Heroes",
             "bookDescription": "A Quest for Heroes revolves around the epic coming of age story of one special boy, a 14 year old from a small village on the outskirts of the...",
-            "bookAuthor": "Morgan Rice"
+            "bookFullDescription": "",
+            "bookAuthor": "Morgan Rice",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 5,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover5.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover5.jpg",
             "bookTitle": "It",
             "bookDescription": "he story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise...",
-            "bookAuthor": "Stephen King"
+            "bookFullDescription": "",
+            "bookAuthor": "Stephen King",
+            "bookCategory": "Horror"
         },
         {
             "id": 6,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover6.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover6.jpg",
             "bookTitle": "The Little Prince",
             "bookDescription": "The story follows a young prince who visits various planets in space, including Earth, and addresses themes of loneliness, friendship, love, and...",
-            "bookAuthor": "Antoine de Saint-Exupéry"
+            "bookFullDescription": "",
+            "bookAuthor": "Antoine de Saint-Exupery",
+            "bookCategory": "Classic"
         },
         {
             "id": 7,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover7.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover7.jpg",
             "bookTitle": "range of ghosts",
             "bookDescription": "A powerful new fantasy from Hugo award–winning author Elizabeth Bear, Range of Ghosts creates a world both deep and broad, where a sorcerer-prince...",
-            "bookAuthor": "elizabeth bear"
+            "bookFullDescription": "",
+            "bookAuthor": "elizabeth bear",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 8,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover8.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover8.jpg",
             "bookTitle": "Temeraire",
             "bookDescription": "The novels follow the adventures of Captain William Laurence and his dragon, the eponymous Temeraire, and reimagine events of the Napoleonic Wars with...",
-            "bookAuthor": "Naomi Novik"
+            "bookFullDescription": "",
+            "bookAuthor": "Naomi Novik",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 9,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover9.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover9.jpg",
             "bookTitle": "Nevermore",
             "bookDescription": "As her world begins to unravel around her, Isabel discovers that dreams, like words, hold more power than she ever imagined, and that the most...",
-            "bookAuthor": "Sam Shore"
+            "bookFullDescription": "",
+            "bookAuthor": "Sam Shore",
+            "bookCategory": "Fantasy"
         },
         {
             "id": 10,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover10.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover10.jpg",
             "bookTitle": "Unspoken",
             "bookDescription": "A young girl's courage is tested in this haunting, wordless story. When a farm girl discovers a runaway slave hiding in the barn...",
-            "bookAuthor": "Celia McMahon"
+            "bookFullDescription": "",
+            "bookAuthor": "Celia McMahon",
+            "bookCategory": "Classic"
         },
         {
             "id": 11,
-            "bookBackgroundImageURL": "url(/images/catalog/bookcover11.jpg)",
+            "bookBackgroundImageURL": "/images/catalog/bookcover11.jpg",
             "bookTitle": "The white raven",
             "bookDescription": "Sprinkled in is jealousy, revenge, drinking, a little Halloween fun, and some fairies you don't want to get on the wrong side of...",
-            "bookAuthor": "Carrie D. Miller"
+            "bookFullDescription": "",
+            "bookAuthor": "Carrie D. Miller",
+            "bookCategory": "Classic"
+        },
+        {
+            "id": 12,
+            "bookBackgroundImageURL": "/images/catalog/bookcover12.jpg",
+            "bookTitle": "The winter king",
+            "bookDescription": "Uther, the High King, has died, leaving the infant Mordred as his only heir. His uncle, the loyal and gifted warlord Arthur, now....",
+            "bookFullDescription": "",
+            "bookAuthor": "Christie Cohen",
+            "bookCategory": "Classic"
         }
     ]
 }
