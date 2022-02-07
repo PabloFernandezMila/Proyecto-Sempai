@@ -9,7 +9,7 @@ export function BookCard(props) {
     <div className="book-wrapper grow">
       <div
         className="book grow"
-        style={{ backgroundImage: bookBackgroundImageURL }}
+        style={{ backgroundImage: "url(" + bookBackgroundImageURL + ")" }}
       >
         <div className="book-content roboto-white centered">
           <h3>title</h3>

@@ -7,6 +7,7 @@ import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { UnderConstructionPage } from "./pages/UnderConstructionPage";
+import { BookLandingPage } from "./pages/BookLandingPage";
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/bookLanding" element={<BookLandingPage />} />
           <Route
             path="/underConstruction"
             element={<UnderConstructionPage />}

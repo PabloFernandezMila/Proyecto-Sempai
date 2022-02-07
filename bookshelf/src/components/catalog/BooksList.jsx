@@ -9,9 +9,12 @@ export function BooksList(props) {
   //Get info from Json Server
   useEffect(() => {
     //Get books
-    api.get("/books").then(function (response) {
-      const books = response.data;
 
+    //This prop is the filtered get from the DB
+    let filterApplied = props.filterApplied;
+    api.get(filterApplied).then(function (response) {
+      const books = response.data;
+      console.log(filterApplied);
       //Update list with the books retrieved from the server
       setBookList(books);
     });

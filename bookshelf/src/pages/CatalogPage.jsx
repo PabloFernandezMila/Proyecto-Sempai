@@ -3,6 +3,7 @@ import { Breadcrumb } from "../components/commons/Breadcrumb";
 import { CategoryFilter } from "../components/catalog/CategoryFilter";
 import "../assets/styles/catalog/catalog.css";
 import { BooksList } from "../components/catalog/BooksList";
+import { useState } from "react";
 
 // Title Variables
 const catalogTitle = "Catalog";
@@ -14,7 +15,11 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/catalog";
 const secondLinkLabel = "Catalog";
 
+// Booklist variables
+//const selectedFilter = "/books";
+
 export function CatalogPage() {
+  const [selectedFilter, setSelctedFilter] = useState("/books");
   return (
     <div className="catalog-wrapper">
       <div className="catalog-title-wrapper tint">
@@ -25,9 +30,11 @@ export function CatalogPage() {
           secondLinkTo={secondLinkTo}
           secondLinkLabel={secondLinkLabel}
         ></Breadcrumb>
-        <CategoryFilter></CategoryFilter>
+
+        <CategoryFilter setSelctedFilter={setSelctedFilter}></CategoryFilter>
+        {console.log(selectedFilter)}
       </div>
-      <BooksList></BooksList>
+      <BooksList filterApplied={selectedFilter}></BooksList>
     </div>
   );
 }
