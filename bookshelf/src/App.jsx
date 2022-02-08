@@ -20,7 +20,8 @@ export function App() {
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/bookLanding" element={<BookLandingPage />} />
+          <Route path="/bookLanding/:id" element={<BookLandingPage />} />
+
           <Route
             path="/underConstruction"
             element={<UnderConstructionPage />}

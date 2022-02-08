@@ -10,21 +10,22 @@ export function BooksList(props) {
   useEffect(() => {
     //Get books
 
-    //This prop is the filtered get from the DB
-    let filterApplied = props.filterApplied;
-    api.get(filterApplied).then(function (response) {
+    //This prop is the filtered URL
+
+    api.get(props.filterApplied).then(function (response) {
       const books = response.data;
-      console.log(filterApplied);
+      console.log(props.filterApplied);
       //Update list with the books retrieved from the server
       setBookList(books);
     });
-  }, []);
+  }, [props.filterApplied]);
 
   //For each book retrieve from the server, the system maps the book properties into a Book card
   const booksFromDB = booksList.map(function (book) {
     return (
       <BookCard
         key={book.id}
+        id={book.id}
         bookTitle={book.bookTitle}
         bookBackgroundImageURL={book.bookBackgroundImageURL}
         bookDescription={book.bookDescription}

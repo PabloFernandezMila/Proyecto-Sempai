@@ -4,6 +4,7 @@ import "../assets/styles/bookLanding.css";
 import { api } from "../api/api";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -11,14 +12,16 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/catalog";
 const secondLinkLabel = "Catalog";
 // Book variables
-let id = "";
 
 export function BookLandingPage() {
+  const params = useParams();
+  let id = params.id;
+  let idOnly = id.replace(":", "");
   const [bookInformation, setBookInformation] = useState([]);
   //Get info from Json Server
   useEffect(() => {
     //Get book info
-    const bookURL = "http://localhost:4000/books?id=3";
+    const bookURL = "http://localhost:4000/books?id=" + idOnly;
     api.get(bookURL).then(function (response) {
       const book = response.data;
 
@@ -28,7 +31,6 @@ export function BookLandingPage() {
   }, []);
 
   // Set of book variables
-  const id = bookInformation.id;
   const bookBackgroundImageURL = bookInformation.bookBackgroundImageURL;
   const bookTitle = bookInformation.bookTitle;
   const bookFullDescription = "" + bookInformation.bookFullDescription;

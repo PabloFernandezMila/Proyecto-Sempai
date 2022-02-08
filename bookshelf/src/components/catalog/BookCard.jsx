@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 export function BookCard(props) {
+  const id = props.id;
   const bookBackgroundImageURL = props.bookBackgroundImageURL;
   const bookTitle = props.bookTitle;
   const bookDescription = props.bookDescription;
@@ -18,7 +20,7 @@ export function BookCard(props) {
           <p>{bookDescription}</p>
           <h3>Author</h3>
           <p className="book-author">{bookAuthor}</p>
-          <Link to="/bookLanding" className="roboto-white">
+          <Link to={"/bookLanding/:" + id} className="roboto-white">
             See More
           </Link>
         </div>
