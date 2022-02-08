@@ -37,7 +37,14 @@ export function BooksList(props) {
   //Return a collection of book cards
   return (
     <section className="catalog-section">
-      <div className="books-wrapper">{booksFromDB}</div>
+      {/* Conditional message if the results is empty */}
+      {booksFromDB.length > 0 ? (
+        <div className="books-wrapper">{booksFromDB}</div>
+      ) : (
+        <h2 className="roboto-white title-h2">
+          This shelf is empty, please try another
+        </h2>
+      )}
     </section>
   );
 }
