@@ -15,17 +15,14 @@
     display: inline-block;
     border-bottom: 2px solid var(--details-color);
     margin-bottom: 1%;
-}
-
-.about-h2 {
-    font-weight: 300;
-    font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
 .title {
     text-align: center;
     padding-top: 14vh;
     margin-bottom: 2vh;
+    text-transform: capitalize;
 }
 
 .tint {

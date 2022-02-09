@@ -9,7 +9,7 @@ import "../assets/styles/bookLanding/bookLanding.css";
 import { api } from "../api/api";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -21,10 +21,9 @@ export function BookLandingPage() {
   //Get book id from params
   const params = useParams();
   let id = params.id;
-  console.log(id);
   //Remove the : character
   let idOnly = id.replace(":", "");
-  console.log(idOnly);
+
   const [bookInformation, setBookInformation] = useState([]);
   //Get info from Json Server
   useEffect(() => {
@@ -73,9 +72,13 @@ export function BookLandingPage() {
           <div>
             <span className="label roboto-white">Genre: </span>
             <span>
-              <a href="Fantasy" className="roboto-white tag">
+              <Link
+                to={"/catalog"}
+                className="roboto-white tag"
+                onClick={bookCategory}
+              >
                 {bookCategory}
-              </a>
+              </Link>
             </span>
           </div>
         </div>

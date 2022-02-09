@@ -4,7 +4,7 @@ export function BookCard(props) {
   const id = props.id;
   const bookBackgroundImageURL = props.bookBackgroundImageURL;
   const bookTitle = props.bookTitle;
-  const bookDescription = props.bookDescription;
+  let bookDescription = props.bookDescription;
   const bookAuthor = props.bookAuthor;
 
   return (
@@ -17,7 +17,11 @@ export function BookCard(props) {
           <h3>title</h3>
           <p className="book-title">{bookTitle}</p>
           <h3>Description</h3>
-          <p>{bookDescription}</p>
+          <p>
+            {bookDescription.length > 200
+              ? (bookDescription = bookDescription.substring(0, 200) + "...")
+              : bookDescription}
+          </p>
           <h3>Author</h3>
           <p className="book-author">{bookAuthor}</p>
           <Link to={"/bookLanding/:" + id} className="roboto-white">

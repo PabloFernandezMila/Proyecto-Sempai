@@ -20,8 +20,6 @@ export function RelatedContent(props) {
 
   //Map the books list with the variables, also check if the of the current book is on the related list, ignores it when creates all the books
   const booksFromDB = listOfrelatedBooks.map(function (book) {
-    console.log("" + book.id);
-    console.log(idOnly);
     return "" + book.id !== idOnly ? (
       <RelatedBook
         key={book.id}
@@ -33,20 +31,25 @@ export function RelatedContent(props) {
     ) : null;
   });
 
+  const areRelatedBooks = booksFromDB.length > 1;
   return (
     <div className="related-content roboto-white">
       <h2>Related content</h2>
       <hr></hr>
       {/* Check if the length of booksFromDB is bigger than 1, if its 1 it only contains the book of landing page, hence the section should be empty */}
-      <div className="related-content-container">
-        {booksFromDB.length > 1 ? (
-          booksFromDB
-        ) : (
-          <h2 className="roboto-white title-h2" style={{ display: "block" }}>
-            There are not related books for the current book
+
+      {areRelatedBooks ? (
+        <div className="related-content-container">{booksFromDB}</div>
+      ) : (
+        <div
+          className="related-content-container"
+          style={{ display: "block", minHeight: "auto", padding: 0 }}
+        >
+          <h2 className="roboto-white title-h2" style={{ padding: 0 }}>
+            There is not related content for the current book
           </h2>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

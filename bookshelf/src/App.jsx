@@ -12,6 +12,7 @@ import { BookLandingPage } from "./pages/BookLandingPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+//Function added to scroll to top when click on Related books
 function ScrollToTop() {
   const { pathname } = useLocation();
 

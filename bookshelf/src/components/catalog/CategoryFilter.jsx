@@ -13,6 +13,7 @@ export function CategoryFilter({ setSelctedFilter }) {
         <option value="/books?bookCategory=Classic">Classics</option>
         <option value="/books?bookCategory=Fantasy">Fantasy</option>
         <option value="/books?bookCategory=Horror">Horror</option>
+        <option value="/books?bookCategory=Romance">Romance</option>
       </select>
     </div>
   );
