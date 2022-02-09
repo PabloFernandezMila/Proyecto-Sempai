@@ -29,6 +29,7 @@ export function CatalogPage(props) {
 
         <CategoryFilter
           setSelectedFilter={props.setSelectedFilter}
+          selectedFilter={props.selectedFilter}
         ></CategoryFilter>
       </div>
       <BooksList selectedFilter={props.selectedFilter}></BooksList>
