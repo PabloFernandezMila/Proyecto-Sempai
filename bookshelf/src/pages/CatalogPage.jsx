@@ -15,11 +15,7 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/catalog";
 const secondLinkLabel = "Catalog";
 
-// Booklist variables
-//const selectedFilter = "/books";
-
-export function CatalogPage() {
-  const [selectedFilter, setSelctedFilter] = useState("/books");
+export function CatalogPage(props) {
   return (
     <div className="catalog-wrapper">
       <div className="catalog-title-wrapper tint">
@@ -31,10 +27,11 @@ export function CatalogPage() {
           secondLinkLabel={secondLinkLabel}
         ></Breadcrumb>
 
-        <CategoryFilter setSelctedFilter={setSelctedFilter}></CategoryFilter>
-        {console.log(selectedFilter)}
+        <CategoryFilter
+          setSelectedFilter={props.setSelectedFilter}
+        ></CategoryFilter>
       </div>
-      <BooksList filterApplied={selectedFilter}></BooksList>
+      <BooksList selectedFilter={props.selectedFilter}></BooksList>
     </div>
   );
 }

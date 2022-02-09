@@ -1,8 +1,8 @@
 import "../../assets/styles/catalog/categoryFilter.css";
 
-export function CategoryFilter({ setSelctedFilter }) {
+export function CategoryFilter({ setSelectedFilter }) {
   function handleChange(event) {
-    setSelctedFilter(event.target.value);
+    setSelectedFilter(event.target.value);
   }
   return (
     <div id="select-wrapper">

@@ -11,14 +11,12 @@ export function BooksList(props) {
     //Get books
 
     //This prop is the filtered URL
-
-    api.get(props.filterApplied).then(function (response) {
+    api.get(props.selectedFilter).then(function (response) {
       const books = response.data;
-      console.log(props.filterApplied);
       //Update list with the books retrieved from the server
       setBookList(books);
     });
-  }, [props.filterApplied]);
+  }, [props.selectedFilter]);
 
   //For each book retrieve from the server, the system maps the book properties into a Book card
   const booksFromDB = booksList.map(function (book) {

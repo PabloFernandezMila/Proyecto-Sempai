@@ -8,14 +8,12 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { UnderConstructionPage } from "./pages/UnderConstructionPage";
 import { BookLandingPage } from "./pages/BookLandingPage";
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 //Function added to scroll to top when click on Related books
 function ScrollToTop() {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -24,6 +22,8 @@ function ScrollToTop() {
 }
 
 export function App() {
+  //This state controls the filtered content on the Catalog Page
+  const [selectedFilter, setSelectedFilter] = useState("/books");
   return (
     <>
       <ScrollToTop />
@@ -42,7 +42,16 @@ export function App() {
             element={<UnderConstructionPage />}
           />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/catalog" element={<CatalogPage />} />
+          <Route
+            path="/catalog"
+            element={
+              <CatalogPage
+                /* Pass the parameters to catalog in order to filter the view */
+                selectedFilter={selectedFilter}
+                setSelectedFilter={setSelectedFilter}
+              />
+            }
+          />
         </Routes>
       </main>
       <Footer />
