@@ -35,7 +35,11 @@ export function App() {
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/bookLanding/:id" element={<BookLandingPage />} />
+          <Route
+            path="/bookLanding/:id"
+            //Pass the setSelectedFilter to the booklanding page in order to filter the catalog view when the user clicks on the genre link
+            element={<BookLandingPage setSelectedFilter={setSelectedFilter} />}
+          />
 
           <Route
             path="/underConstruction"

@@ -17,7 +17,7 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/catalog";
 const secondLinkLabel = "Catalog";
 
-export function BookLandingPage() {
+export function BookLandingPage(props) {
   //Get book id from params
   const params = useParams();
   let id = params.id;
@@ -75,7 +75,9 @@ export function BookLandingPage() {
               <Link
                 to={"/catalog"}
                 className="roboto-white tag"
-                onClick={bookCategory}
+                onClick={props.setSelectedFilter(
+                  "/books?bookCategory=" + bookCategory
+                )}
               >
                 {bookCategory}
               </Link>
