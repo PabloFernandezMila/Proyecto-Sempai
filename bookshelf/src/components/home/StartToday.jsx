@@ -1,6 +1,6 @@
 import "../../assets/styles/home/startToday.css";
 import { Link } from "react-router-dom";
-
+import { HashLink } from "react-router-hash-link";
 export function StartToday() {
   return (
     <section id="section2">
@@ -23,7 +23,7 @@ export function StartToday() {
       </div>
 
       <div className="arrow-container">
-        <Link className="bounce down-arrow" to="section3"></Link>
+        <HashLink className="bounce down-arrow" to="#section3"></HashLink>
       </div>
     </section>
   );

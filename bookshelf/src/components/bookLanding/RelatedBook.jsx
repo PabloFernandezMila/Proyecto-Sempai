@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 export function RelatedBook(props) {
-  const title = props.title;
-  const author = props.author;
+  const bookTitle = props.bookTitle;
+  const bookAuthor = props.bookAuthor;
   const id = props.id;
   const bookBackgroundImageURL = props.bookBackgroundImageURL;
 
@@ -14,10 +14,10 @@ export function RelatedBook(props) {
         style={{ backgroundImage: "url(" + bookBackgroundImageURL + ")" }}
       ></Link>
       <Link to={"/bookLanding/:" + id} className="related-title roboto-white ">
-        {title}
+        {bookTitle}
       </Link>
       <Link to={"/bookLanding/:" + id} className="related-author roboto-white ">
-        {author}
+        {bookAuthor}
       </Link>
     </div>
   );

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Welcome to Bookshelf 2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the following section will find the documentation for each page.
+The site is responsive adjusting its components in order to fit pc and mobile browsers
 
-## Available Scripts
+Json server url-> localhost:4000
 
-In the project directory, you can run:
+All books information is retrieved from the Json server
 
-### `npm start`
+<---Pages--->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Home Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The home page is divided on 3 sections. The first two have an arrow to scroll to the following section
+-The Welcome section is static date
+-Start today section has information and a button that redirects to the Login page
+-The last section has information and a button that redirects to the catalog page
 
-### `npm test`
+# Catalog
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Catalog list all the available books on JsonServer file
+-Here the user can filter by genre the list, using the Select dropdown by default all books are listed with the Select a genre option
+-Also the user can hover on a book card to see more information, the system will retrieve the description from the server, if it is too long it will be trim and added an ellipsis at the end of the string this is to prevent that larger text get out of the container
+-The user can get to the catalog by clicking on the Genre of a book on the book landing page, in this case the user will be redirected to the catalog page and the dropdown will select the genre clicked by the user, the catalog is filtered by this genre
 
-### `npm run build`
+# Book Landing page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here the user can see the book details in depth
+Related section, on this section the user can select a related book, if clicked the user will be redirected to the book landing page
+The user can click on the Genre of the book and will be redirected to the catalog filtered by that genre
+Add to wishlist and add to library are not implemented yet (Work in progress)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Login (Work in progress)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Layout is finished
+Email format validation
+Redirect to the Register page
+Redirection to the home page after completing the form
 
-### `npm run eject`
+# About
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Static data page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Register
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Layout is finished
+Email format validation
+Redirect to the Login page
+Redirection to the home page after completing the form
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<---Common Components--->
 
-## Learn More
+# Header
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Header has the logo, navbar, search and login on screens wider that 1000px, for smaller screens it has burger menu. When expanded the scroll is disabled and the header takes the screen full height, if the user selects an option of the navbar or taps on the burger, the menu is closed
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The search icon can be clicked and this will expand the search area for pc and focus on it, on mobile the search area is already expanded but not focused, to prevent that the keyboard is displayed.
 
-### Code Splitting
+Search is not working yet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Profile icon will have drop down menu where the user can go to its profile, see library, see wishlist and logout button
 
-### Analyzing the Bundle Size
+# Footer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Footer has the social media links buttons and copyright text

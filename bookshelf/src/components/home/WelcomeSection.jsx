@@ -1,5 +1,5 @@
 import "../../assets/styles/home/welcomeSection.css";
-import { Link } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
 
 export function WelcomeSection() {
   return (
@@ -18,7 +18,7 @@ export function WelcomeSection() {
           <div id="column2-image" className="centered-vertically"></div>
         </div>
         <div className=" arrow-container ">
-          <Link className="bounce down-arrow" to="section2"></Link>
+          <HashLink className="bounce down-arrow" to="#section2"></HashLink>
         </div>
       </div>
     </section>

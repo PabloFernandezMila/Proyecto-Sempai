@@ -8,18 +8,8 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { UnderConstructionPage } from "./pages/UnderConstructionPage";
 import { BookLandingPage } from "./pages/BookLandingPage";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-
-//Function added to scroll to top when click on Related books
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
+import { useState } from "react";
+import { ScrollToTop } from "./components/commons/ScrollToTop";
 
 export function App() {
   //This state controls the filtered content on the Catalog Page
@@ -56,6 +46,7 @@ export function App() {
               />
             }
           />
+          <Route path="*" element={<UnderConstructionPage />}></Route>
         </Routes>
       </main>
       <Footer />

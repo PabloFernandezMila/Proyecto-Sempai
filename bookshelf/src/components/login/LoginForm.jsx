@@ -17,6 +17,7 @@ export function LoginForm() {
               name="email"
               id="email"
               required
+              autoComplete="off"
             ></input>
 
             <label className="form-element" htmlFor="password">
@@ -29,6 +30,7 @@ export function LoginForm() {
               name="password"
               id="password"
               required
+              autoComplete="off"
             ></input>
 
             <button

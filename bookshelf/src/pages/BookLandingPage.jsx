@@ -64,9 +64,9 @@ export function BookLandingPage(props) {
           <div>
             <span className="label roboto-white">Author:</span>
             <span>
-              <a href="George R.R. Martin" className="roboto-white tag">
+              <Link to={"/underConstruction"} className="roboto-white tag">
                 {bookAuthor}
-              </a>
+              </Link>
             </span>
           </div>
           <div>
@@ -75,9 +75,10 @@ export function BookLandingPage(props) {
               <Link
                 to={"/catalog"}
                 className="roboto-white tag"
-                onClick={props.setSelectedFilter(
-                  "/books?bookCategory=" + bookCategory
-                )}
+                //Added useEffect in order to prevent an error while passing the value to the APP component while rendering other component
+                onClick={useEffect(() => {
+                  props.setSelectedFilter(props.setSelectedFilter);
+                }, [])}
               >
                 {bookCategory}
               </Link>

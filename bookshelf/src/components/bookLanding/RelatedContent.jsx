@@ -5,7 +5,7 @@ import { api } from "../../api/api";
 export function RelatedContent(props) {
   const bookCategory = props.bookCategory;
   const idOnly = props.idOnly;
-  const [listOfrelatedBooks, setListOfrelatedBooks] = useState([]);
+  const [listOfRelatedBooks, setListOfRelatedBooks] = useState([]);
   //Get info from Json Server
   useEffect(() => {
     //Get books related using the category of the book displayed on the landing page
@@ -14,12 +14,12 @@ export function RelatedContent(props) {
       const books = response.data;
 
       //Update list with the books returned
-      setListOfrelatedBooks(books);
+      setListOfRelatedBooks(books);
     });
   }, [bookCategory]);
 
-  //Map the books list with the variables, also check if the of the current book is on the related list, ignores it when creates all the books
-  const booksFromDB = listOfrelatedBooks.map(function (book) {
+  //Map the books list with the listOfRelatedBooksvariables, also check if the of the current book is on the related list, ignores it when creates all the books
+  const booksFromDB = listOfRelatedBooks.map(function (book) {
     return "" + book.id !== idOnly ? (
       <RelatedBook
         key={book.id}
@@ -27,6 +27,7 @@ export function RelatedContent(props) {
         bookBackgroundImageURL={book.bookBackgroundImageURL}
         bookDescription={book.bookDescription}
         bookAuthor={book.bookAuthor}
+        bookTitle={book.bookTitle}
       />
     ) : null;
   });

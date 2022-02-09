@@ -1,4 +1,5 @@
 import "../../assets/styles/home/browseCatalog.css";
+import { Link } from "react-router-dom";
 export function BrowseCatalog() {
   return (
     <section id="section3" className="tint">
@@ -14,14 +15,14 @@ export function BrowseCatalog() {
             unprinted titles, old and new editions of classic books and much
             more.
           </p>
-          <form action="catalog.html">
-            <input
-              type="submit"
-              id="section3-button"
-              className="section-button roboto-white section3-position"
-              value="Browse our Catalog"
-            />
-          </form>
+
+          <Link
+            id="section3-button"
+            className="section-button roboto-white section3-position"
+            to="/catalog"
+          >
+            Browse our Catalog
+          </Link>
         </div>
       </div>
     </section>
