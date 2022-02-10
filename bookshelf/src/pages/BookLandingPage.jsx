@@ -24,6 +24,8 @@ export function BookLandingPage(props) {
   let id = params.id;
   //Remove the : character
   let idOnly = id.replace(":", "");
+
+  //State added to control if the url redirects to an id existing on the DB
   const [bookFound, setBookFound] = useState(false);
 
   const [bookInformation, setBookInformation] = useState([]);
@@ -33,6 +35,8 @@ export function BookLandingPage(props) {
     const bookURL = "http://localhost:4000/books?id=" + idOnly;
     api.get(bookURL).then(function (response) {
       const book = response.data;
+
+      //If the array is empty means that the ID of the URL does not belong to any book on the DB
       setBookFound(book.length > 0);
 
       //Update list with the book first book returned
@@ -40,6 +44,7 @@ export function BookLandingPage(props) {
     });
   }, [idOnly]);
 
+  //If the book is found on the DB the system returns the book details
   if (bookFound) {
     // Set of book variables
     const bookBackgroundImageURL = bookInformation.bookBackgroundImageURL;
@@ -79,7 +84,6 @@ export function BookLandingPage(props) {
                 <Link
                   to={"/catalog"}
                   className="roboto-white tag"
-                  //Added useEffect in order to prevent an error while passing the value to the APP component while rendering other component
                   onClick={() =>
                     props.setSelectedFilter(
                       "/books?bookCategory=" + bookCategory
@@ -98,7 +102,9 @@ export function BookLandingPage(props) {
         </section>
       </div>
     );
-  } else {
+  }
+  // If the book is not found the system redirects to the Page no found component
+  else {
     return <UnderConstructionPage></UnderConstructionPage>;
   }
 }
