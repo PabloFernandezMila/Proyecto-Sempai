@@ -9,8 +9,9 @@ import "../assets/styles/bookLanding/bookLanding.css";
 import { api } from "../api/api";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { UnderConstructionPage } from "./UnderConstructionPage";
+import { Tags } from "../components/bookLanding/Tags";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -26,7 +27,7 @@ export function BookLandingPage(props) {
   let idOnly = id.replace(":", "");
 
   //State added to control if the url redirects to an id existing on the DB
-  const [bookFound, setBookFound] = useState(false);
+  const [bookFound, setBookFound] = useState(true);
 
   const [bookInformation, setBookInformation] = useState([]);
   //Get info from Json Server
@@ -69,32 +70,11 @@ export function BookLandingPage(props) {
             bookAuthor={bookAuthor}
             bookCategory={bookCategory}
           ></BookDetails>
-          <div className="tags">
-            <div>
-              <span className="label roboto-white">Author:</span>
-              <span>
-                <Link to={"/underConstruction"} className="roboto-white tag">
-                  {bookAuthor}
-                </Link>
-              </span>
-            </div>
-            <div>
-              <span className="label roboto-white">Genre: </span>
-              <span>
-                <Link
-                  to={"/catalog"}
-                  className="roboto-white tag"
-                  onClick={() =>
-                    props.setSelectedFilter(
-                      "/books?bookCategory=" + bookCategory
-                    )
-                  }
-                >
-                  {bookCategory}
-                </Link>
-              </span>
-            </div>
-          </div>
+          <Tags
+            bookAuthor={bookAuthor}
+            bookCategory={bookCategory}
+            setSelectedFilter={props.setSelectedFilter}
+          ></Tags>
           <RelatedContent
             bookCategory={bookCategory}
             idOnly={idOnly}

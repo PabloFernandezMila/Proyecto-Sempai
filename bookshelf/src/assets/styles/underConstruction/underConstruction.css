@@ -1,9 +1,27 @@
-#underConstruction {
+#underConstruction-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    height: 90vh;
+}
+
+#underConstruction-image {
     background-image: url(../../images/underConstruction.jpg);
-    width: "100%";
-    height: 100vh;
+    width: 500px;
+    height: 250px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #171926;
+    background-color: #000000;
+}
+
+#underConstruction-wrapper>div {
+    width: 100%;
+    text-align: center;
+}
+
+#underConstruction-wrapper>div>a {
+    border-bottom: 1px solid var(--details-color);
 }
