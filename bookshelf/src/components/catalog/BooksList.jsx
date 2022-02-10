@@ -2,17 +2,24 @@ import { BookCard } from "./BookCard";
 import { api } from "../../api/api.js";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Loader } from "../commons/Loader";
 
 export function BooksList(props) {
   const [booksList, setBookList] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {}, []);
 
   //Get info from Json Server
   useEffect(() => {
     //Get books
-
+    //Display loader by setting it true
+    setLoading(true);
     //This prop is the filtered URL
     api.get(props.selectedFilter).then(function (response) {
       const books = response.data;
+      //Hide loader by setting it  false
+      setLoading(false);
       //Update list with the books retrieved from the server
       setBookList(books);
     });
@@ -35,13 +42,19 @@ export function BooksList(props) {
   //Return a collection of book cards
   return (
     <section className="catalog-section">
-      {/* Conditional message if the results is empty */}
-      {booksFromDB.length > 0 ? (
-        <div className="books-wrapper">{booksFromDB}</div>
+      {loading ? (
+        <Loader></Loader>
       ) : (
-        <h2 className="roboto-white title-h2">
-          This shelf is empty, please try another
-        </h2>
+        <>
+          {/* Conditional message if the results is empty */}
+          {booksFromDB.length > 0 ? (
+            <div className="books-wrapper">{booksFromDB}</div>
+          ) : (
+            <h2 className="roboto-white title-h2">
+              This shelf is empty, please try another
+            </h2>
+          )}
+        </>
       )}
     </section>
   );

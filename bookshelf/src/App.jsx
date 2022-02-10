@@ -10,8 +10,13 @@ import { UnderConstructionPage } from "./pages/UnderConstructionPage";
 import { BookLandingPage } from "./pages/BookLandingPage";
 import { useState } from "react";
 import { ScrollToTop } from "./components/commons/ScrollToTop";
+import "../src/assets/styles/common/loader.css";
+import { PageNotFound } from "./pages/PageNotFound";
 
 export function App() {
+  //Loader
+  const [loading, setLoading] = useState(true);
+
   //This state controls the filtered content on the Catalog Page
   const [selectedFilter, setSelectedFilter] = useState("/books");
   return (
@@ -43,10 +48,12 @@ export function App() {
                 /* Pass the parameters to catalog in order to filter the view */
                 selectedFilter={selectedFilter}
                 setSelectedFilter={setSelectedFilter}
+                setLoading={setLoading}
+                loading={loading}
               />
             }
           />
-          <Route path="*" element={<UnderConstructionPage />}></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </main>
       <Footer />

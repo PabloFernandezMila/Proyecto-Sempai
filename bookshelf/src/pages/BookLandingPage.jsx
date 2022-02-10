@@ -12,6 +12,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { UnderConstructionPage } from "./UnderConstructionPage";
 import { Tags } from "../components/bookLanding/Tags";
+import { Loader } from "../components/commons/Loader";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -28,14 +29,16 @@ export function BookLandingPage(props) {
 
   //State added to control if the url redirects to an id existing on the DB
   const [bookFound, setBookFound] = useState(true);
-
   const [bookInformation, setBookInformation] = useState([]);
+  const [loading, setLoading] = useState(false);
   //Get info from Json Server
   useEffect(() => {
+    setLoading(true);
     //Get book info using the id to query the DB
     const bookURL = "http://localhost:4000/books?id=" + idOnly;
     api.get(bookURL).then(function (response) {
       const book = response.data;
+      setLoading(false);
 
       //If the array is empty means that the ID of the URL does not belong to any book on the DB
       setBookFound(book.length > 0);
@@ -44,7 +47,7 @@ export function BookLandingPage(props) {
       setBookInformation(book[0]);
     });
   }, [idOnly]);
-
+  let bookFoundData;
   //If the book is found on the DB the system returns the book details
   if (bookFound) {
     // Set of book variables
@@ -54,8 +57,9 @@ export function BookLandingPage(props) {
     const bookAuthor = bookInformation.bookAuthor;
     const bookCategory = bookInformation.bookCategory;
 
-    return (
-      <div className="landingWrapper">
+    //Moved book data to a variable to make easier to read the returns
+    bookFoundData = (
+      <>
         <Title title={bookTitle} subtitle={"By " + bookAuthor}></Title>
         <Breadcrumb
           firstLinkTo={firstLinkTo}
@@ -80,11 +84,17 @@ export function BookLandingPage(props) {
             idOnly={idOnly}
           ></RelatedContent>
         </section>
-      </div>
+      </>
     );
   }
+
   // If the book is not found the system redirects to the Page no found component
+  if (!bookFound) return <UnderConstructionPage></UnderConstructionPage>;
   else {
-    return <UnderConstructionPage></UnderConstructionPage>;
+    return (
+      <div className="landingWrapper">
+        {loading ? <Loader></Loader> : bookFoundData}
+      </div>
+    );
   }
 }

@@ -64,4 +64,6 @@ Profile icon will have drop down menu where the user can go to its profile, see 
 
 Footer has the social media links buttons and copyright text
 
-# Loaders implemented
+# Loaders
+
+Implemented loaders on Catalog grid and book landing page, loaders animations were imported from https://www.npmjs.com/package/react-spinners
