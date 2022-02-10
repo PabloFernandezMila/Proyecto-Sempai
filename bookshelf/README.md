@@ -63,3 +63,5 @@ Profile icon will have drop down menu where the user can go to its profile, see 
 # Footer
 
 Footer has the social media links buttons and copyright text
+
+# Loaders implemented
