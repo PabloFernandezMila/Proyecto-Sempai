@@ -14,9 +14,6 @@ import "../src/assets/styles/common/loader.css";
 import { PageNotFound } from "./pages/PageNotFound";
 
 export function App() {
-  //Loader
-  const [loading, setLoading] = useState(true);
-
   //This state controls the filtered content on the Catalog Page
   const [selectedFilter, setSelectedFilter] = useState("/books");
   return (
