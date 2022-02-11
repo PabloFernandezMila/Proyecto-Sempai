@@ -107,5 +107,12 @@
             "bookAuthor": "Christie Cohen",
             "bookCategory": "Classic"
         }
-    ]
+    ],
+    "users": [{
+        "userID": 1,
+        "userName": "Pablo",
+        "userLastname": "Pablo",
+        "email": "Pablo@gmail.com",
+        "avatarURL": "https://cdn-icons-png.flaticon.com/512/147/147144.png"
+    }]
 }

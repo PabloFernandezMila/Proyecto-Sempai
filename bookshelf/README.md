@@ -60,6 +60,10 @@ Search is not working yet
 
 Profile icon will have drop down menu where the user can go to its profile, see library, see wishlist and logout button
 
+# Header > Greeting
+
+The greeting component takes the name from the DB and is used on mobile burger and for Profile dropdown
+
 # Footer
 
 Footer has the social media links buttons and copyright text

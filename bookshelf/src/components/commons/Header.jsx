@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../assets/styles/common/header.css";
 import { Link, NavLink } from "react-router-dom";
+import { Greeting } from "./Greeting";
 
 //
 
@@ -45,15 +46,7 @@ export function Header() {
           <div id="burger-menu-icon"></div>
         </div>
       </div>
-      <div
-        id="greeting-user"
-        className="roboto-white"
-        style={
-          isBurgerMenuExpanded ? { display: "initial" } : { display: "none" }
-        }
-      >
-        <p>Welcome Fulano</p>
-      </div>
+      <Greeting isBurgerMenuExpanded={isBurgerMenuExpanded}></Greeting>
       <div id="logo-wrapper">
         <Link
           id="logo"

@@ -294,9 +294,8 @@ header>nav>ul {
 .js-header-expanded {
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 8vh 8vh 8vh 74vh;
+    grid-template-rows: 10vh 5vh 5vh 80vh;
     grid-template-areas: "burger-wrapper logo login" "greeting greeting greeting" "search search search" "navbar navbar navbar";
-    padding-top: 25px;
 }
 
 .search.js-expanded {
@@ -382,6 +381,7 @@ header>nav>ul {
         padding-top: 20px;
         gap: 40px;
         align-items: flex-start;
+        padding-top: 35px;
     }
     .search.js-expanded {
         width: 98%;
