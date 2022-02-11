@@ -41,11 +41,11 @@ export function BooksList(props) {
 
   //Return a collection of book cards
   return (
-    <section className="catalog-section">
+    <>
       {loading ? (
         <Loader></Loader>
       ) : (
-        <>
+        <section className="catalog-section">
           {/* Conditional message if the results is empty */}
           {booksFromDB.length > 0 ? (
             <div className="books-wrapper">{booksFromDB}</div>
@@ -54,8 +54,8 @@ export function BooksList(props) {
               This shelf is empty, please try another
             </h2>
           )}
-        </>
+        </section>
       )}
-    </section>
+    </>
   );
 }

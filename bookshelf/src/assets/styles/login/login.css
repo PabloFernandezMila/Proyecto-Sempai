@@ -169,9 +169,6 @@ input {
 }
 
 @media screen and (max-width: 1025px) {
-    #breadcrumb-wrapper {
-        margin-top: 20px;
-    }
     .login-wrapper {
         width: 90%;
     }
@@ -180,9 +177,6 @@ input {
 @media screen and (max-width: 600px) {
     h2 {
         padding: 3%;
-    }
-    #breadcrumb-wrapper {
-        text-align: center;
     }
 }
 

@@ -59,7 +59,7 @@ export function BookLandingPage(props) {
 
     //Moved book data to a variable to make easier to read the returns
     bookFoundData = (
-      <>
+      <div className="landingWrapper">
         <Title title={bookTitle} subtitle={"By " + bookAuthor}></Title>
         <Breadcrumb
           firstLinkTo={firstLinkTo}
@@ -84,7 +84,7 @@ export function BookLandingPage(props) {
             idOnly={idOnly}
           ></RelatedContent>
         </section>
-      </>
+      </div>
     );
   }
 
@@ -92,7 +92,7 @@ export function BookLandingPage(props) {
   if (!bookFound) return <UnderConstructionPage></UnderConstructionPage>;
   else {
     return (
-      <div className="landingWrapper">
+      <div className="landingWrapper flex-centered">
         {loading ? <Loader></Loader> : bookFoundData}
       </div>
     );

@@ -121,6 +121,7 @@ hr {
     text-decoration: underline;
     margin: 15px;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .related-title:hover,
@@ -133,6 +134,7 @@ hr {
     margin: 0;
     text-decoration: none;
     text-align: center;
+    text-transform: capitalize;
 }
 
 

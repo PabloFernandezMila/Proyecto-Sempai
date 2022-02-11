@@ -45,8 +45,6 @@ export function App() {
                 /* Pass the parameters to catalog in order to filter the view */
                 selectedFilter={selectedFilter}
                 setSelectedFilter={setSelectedFilter}
-                setLoading={setLoading}
-                loading={loading}
               />
             }
           />

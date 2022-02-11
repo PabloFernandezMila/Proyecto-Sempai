@@ -4,8 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: #000000;
-    height: 90vh;
-    gap: 40px;
+    min-height: 90vh;
 }
 
 #pageNotFound-wrapper>div {
