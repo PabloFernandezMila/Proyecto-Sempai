@@ -45,6 +45,15 @@ export function Header() {
           <div id="burger-menu-icon"></div>
         </div>
       </div>
+      <div
+        id="greeting-user"
+        className="roboto-white"
+        style={
+          isBurgerMenuExpanded ? { display: "initial" } : { display: "none" }
+        }
+      >
+        <p>Welcome Fulano</p>
+      </div>
       <div id="logo-wrapper">
         <Link
           id="logo"
@@ -99,7 +108,6 @@ export function Header() {
           </li>
         </ul>
       </nav>
-
       {/* The scripts checks if the search was expanded, if true adds a class, if not the class is removed. This allows the system to expand or collapse the search area*/}
       {/* When the search button is clicked the isSearchExpanded variable changes its value to trigger the behaviors mentioned above */}
       <form

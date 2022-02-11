@@ -112,6 +112,11 @@ a {
     background-image: url("../../images/headerAndFooter/hamburger-menu-hover.svg");
 }
 
+#greeting-user {
+    grid-area: greeting;
+    padding: 0 10px;
+}
+
 #logo {
     font-weight: 500;
     color: var(--details-color);
@@ -289,8 +294,8 @@ header>nav>ul {
 .js-header-expanded {
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 8vh 8vh 84vh;
-    grid-template-areas: "burger-wrapper logo login" "search search search" "navbar navbar navbar";
+    grid-template-rows: 8vh 8vh 8vh 74vh;
+    grid-template-areas: "burger-wrapper logo login" "greeting greeting greeting" "search search search" "navbar navbar navbar";
     padding-top: 25px;
 }
 

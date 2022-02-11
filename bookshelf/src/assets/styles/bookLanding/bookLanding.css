@@ -12,6 +12,7 @@
 
 .landingWrapper {
     background-color: #141414;
+    min-height: 90vh;
 }
 
 .book-section {
