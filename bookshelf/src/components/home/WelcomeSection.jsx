@@ -15,7 +15,7 @@ export function WelcomeSection() {
           </div>
         </div>
         <div id="column2">
-          <div id="column2-image" className="centered-vertically"></div>
+          <div id="column2-image"></div>
         </div>
         <div className=" arrow-container ">
           <HashLink className="bounce down-arrow" to="#section2"></HashLink>

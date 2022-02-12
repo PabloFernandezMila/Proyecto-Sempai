@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../assets/styles/bookLanding/bookDetails.css";
 
 export function BookDetails(props) {
@@ -10,12 +11,20 @@ export function BookDetails(props) {
         <img src={bookBackgroundImageURL} alt="Book Cover"></img>
       </div>
       <div className="buttons-container">
-        <button type="button" id="wishlist">
-          Add to Wishlist
-        </button>
-        <button type="button" id="request-book">
-          Add to Library
-        </button>
+        <div>
+          <Link id="wishlist" to="/underConstruction" class="roboto-white">
+            Add to Wishlist
+          </Link>
+        </div>
+        <div>
+          <Link
+            id="request-book"
+            to="/underConstruction"
+            className="roboto-white"
+          >
+            Add to Library
+          </Link>
+        </div>
       </div>
       <div className="book-info">
         <div className="book-information">

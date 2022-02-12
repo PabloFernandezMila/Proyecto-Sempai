@@ -38,7 +38,7 @@ export function Header() {
   return (
     <header
       className={
-        isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : null
+        isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : ""
       }
     >
       <div className="burger-wrapper">
