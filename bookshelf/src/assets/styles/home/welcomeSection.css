@@ -90,6 +90,20 @@ section {
 
 #column2 {
     grid-area: column2;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    animation: zoom 1s 1;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 #column2-image {
@@ -101,6 +115,7 @@ section {
     width: 20vw;
     max-width: 300px;
     max-height: 300px;
+    overflow: hidden;
 }
 
 .arrow-container {
@@ -161,8 +176,6 @@ section {
     #column2-image {
         height: 20vh;
         width: 20vh;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
     @media screen and (max-width: 350px) {
         section {
