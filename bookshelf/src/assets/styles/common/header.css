@@ -288,6 +288,19 @@ header>nav>ul {
     border-bottom: 1px solid var(--details-color);
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slideInFromLeft {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 
 /* 6.JS styles */
 

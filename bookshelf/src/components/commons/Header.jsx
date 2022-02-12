@@ -36,7 +36,11 @@ export function Header() {
 
   //      <--End of Hamburger menu scripts-->
   return (
-    <header className={isBurgerMenuExpanded ? "js-header-expanded" : ""}>
+    <header
+      className={
+        isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : null
+      }
+    >
       <div className="burger-wrapper">
         <div
           id="burger-menu"
