@@ -1,0 +1,24 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. General selector          #
+#                                    #
+######################################
+ */
+
+
+/* 1. General selector */
+
+select {
+    margin: 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.125rem;
+    display: inline-block;
+    margin-right: 0%;
+    cursor: pointer;
+    border-bottom: solid 1px var(--details-color);
+}
+
+option {
+    background-color: rgb(34, 34, 34);
+}

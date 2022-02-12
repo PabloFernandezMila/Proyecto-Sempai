@@ -1,3 +1,0 @@
-Implement grid template layout
-Create Profile page
-Create Product landing page 

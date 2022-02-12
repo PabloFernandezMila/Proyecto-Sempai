@@ -1,0 +1,108 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Specific selectors        #   
+#       2.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/*  1. Specific selectors  */
+
+.pictureAndText {
+    margin-top: 3vh;
+    height: auto;
+}
+
+.about-p {
+    font-size: 0.9rem;
+}
+
+.about-section-wrapper {
+    padding: 2%;
+    max-width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 2%;
+}
+
+.pictureAndText div p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 1.5% 2%;
+}
+
+#about-text {
+    border: solid 3px var(--details-color);
+    background-color: rgb(12, 12, 10, 80%);
+    border-radius: 20px;
+    padding: 2%;
+    text-align: justify;
+}
+
+#about-image {
+    background-image: url("../../images/about/about.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    height: 100%;
+}
+
+
+/* 6.Media queries  */
+
+@media screen and (max-width: 1000px) {
+    .about-section-wrapper {
+        grid-template-columns: 1fr;
+        row-gap: 2%;
+        grid-template-areas: "text" "image";
+    }
+    #about-image {
+        background-image: url(../../images/about/brand.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 133px;
+        width: 260px;
+        grid-area: image;
+    }
+    #about-text {
+        grid-area: text;
+        padding: 20px 10px;
+        text-align: initial;
+    }
+    .pictureAndText {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pictureAndText {
+        min-height: 70vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .pictureAndText {
+        min-height: 110vh;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .pictureAndText {
+        min-height: 120vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .pictureAndText {
+        min-height: 150vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .pictureAndText {
+        min-height: 190vh;
+    }
+}

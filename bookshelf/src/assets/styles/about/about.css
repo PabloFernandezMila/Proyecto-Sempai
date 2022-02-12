@@ -1,0 +1,19 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Specific selectors        #   
+#                                    #
+######################################
+*/
+
+
+/*  1. Specific selectors */
+
+.about-container {
+    margin: 0;
+    width: 100%;
+    background-image: url(../../images/about/cover.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    min-height: 100vh;
+}

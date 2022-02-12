@@ -1,0 +1,116 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Specific selectors        #   
+#       2.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/* 1. Specific selector */
+
+.title-h1 {
+    font-weight: 500;
+    font-size: 2.625rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--details-color);
+    margin-bottom: 1%;
+    text-transform: capitalize;
+}
+
+.title {
+    text-align: center;
+    padding-top: 14vh;
+    margin-bottom: 2vh;
+    text-transform: capitalize;
+}
+
+.tint {
+    background-color: rgba(34, 33, 29, 0.75);
+}
+
+
+/* 2.Media queries  */
+
+@media screen and (max-width: 1700px) {
+    .title {
+        padding-top: 13vh;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .title {
+        padding-top: 15vh;
+    }
+}
+
+
+/* Support for Nest Hub */
+
+@media screen and (min-width: 1262px) and (min-width: 1270px) {
+    #title-wrapper {
+        padding-top: 30px;
+        margin-bottom: 30px;
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #title-wrapper {
+        height: 28vh;
+    }
+    .title {
+        padding-top: 14vh;
+    }
+}
+
+@media (min-height: 500px) and (max-height: 700px) {
+    #title-wrapper {
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #title-wrapper {
+        height: 35vh;
+    }
+    .title-h2 {
+        padding: 3%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #title-wrapper {
+        height: 32vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #title-wrapper {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #title-wrapper {
+        height: 38vh;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #title-wrapper {
+        height: 52vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #title-wrapper {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .about-container>#title-wrapper {
+        height: 49vh;
+    }
+}
