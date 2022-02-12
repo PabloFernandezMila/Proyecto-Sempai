@@ -1,7 +1,7 @@
 import "../../assets/styles/login/login.css";
 import { Link } from "react-router-dom";
 
-export function LoginForm() {
+export function LoginForm(props) {
   return (
     <section id="login-content">
       <div className="login-wrapper flex-item roboto-white tint">

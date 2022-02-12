@@ -2,13 +2,15 @@ import { useState } from "react";
 import "../../assets/styles/common/header.css";
 import { Link, NavLink } from "react-router-dom";
 import { Greeting } from "./Greeting";
+import { LoginDropDown } from "./LoginDropDown";
 
 //
 
-export function Header() {
+export function Header(props) {
   //      <--Start of Search scripts-->
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
+  let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
 
   //This function is used to close the search are when the area is expanded and the user press escape key
   function pressScapeToCloseSearch(e) {
@@ -114,8 +116,13 @@ export function Header() {
             ? "search js-search-form js-expanded"
             : "search js-search-form"
         }
+        style={
+          isSearchExpanded || isBurgerMenuExpanded
+            ? { display: "initial" }
+            : null
+        }
         autoComplete="off"
-        style={isBurgerMenuExpanded ? { display: "block" } : null}
+        //When the user clicks on the Avatar icon, the search area is hidden, to leave room for the profile drop down
       >
         <div
           className="search-button js-search-button"
@@ -152,9 +159,17 @@ export function Header() {
           />
         </div>
       </form>
-      <div id="login-wrapper">
-        <Link className="bounce" to={"/login"}></Link>
+      <div
+        id="login-wrapper"
+        onClick={() => setIsLoginDropDownExpanded(!isLoginDropDownExpanded)}
+      >
+        <div className="bounce"></div>
       </div>
+
+      <LoginDropDown
+        isLoginDropDownExpanded={isLoginDropDownExpanded}
+        setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
+      ></LoginDropDown>
     </header>
   );
 }

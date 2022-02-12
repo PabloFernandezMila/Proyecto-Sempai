@@ -3,7 +3,6 @@ import { Breadcrumb } from "../components/commons/Breadcrumb";
 import { CategoryFilter } from "../components/catalog/CategoryFilter";
 import "../assets/styles/catalog/catalog.css";
 import { BooksList } from "../components/catalog/BooksList";
-import { useState } from "react";
 
 // Title Variables
 const catalogTitle = "Catalog";
