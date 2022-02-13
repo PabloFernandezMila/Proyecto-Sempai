@@ -39,7 +39,7 @@ export function BooksList(props) {
     );
   });
 
-  //Return a collection of book cards
+  //Return a collection of book cards after loading
   return (
     <>
       {loading ? (
@@ -51,7 +51,7 @@ export function BooksList(props) {
             <div className="books-wrapper">{booksFromDB}</div>
           ) : (
             <h2 className="roboto-white title-h2">
-              This shelf is empty, please try another
+              This shelf is empty, please select another
             </h2>
           )}
         </section>
