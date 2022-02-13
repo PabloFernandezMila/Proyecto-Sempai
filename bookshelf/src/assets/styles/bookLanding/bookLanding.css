@@ -20,7 +20,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4fr 1fr auto;
     grid-template-areas: "description cover" "tags buttons" "related-content related-content";
     padding: 30px;
 }
