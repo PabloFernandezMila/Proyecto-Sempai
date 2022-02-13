@@ -18,6 +18,7 @@ export function BookCard(props) {
           <p className="book-title">{bookTitle}</p>
           <h3>Description</h3>
           <p>
+            {/* Trim the description in order to fit the card */}
             {bookDescription.length > 200
               ? (bookDescription = bookDescription.substring(0, 200) + "...")
               : bookDescription}

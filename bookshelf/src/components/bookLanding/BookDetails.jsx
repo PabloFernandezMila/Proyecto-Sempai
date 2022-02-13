@@ -12,7 +12,7 @@ export function BookDetails(props) {
       </div>
       <div className="buttons-container">
         <div>
-          <Link id="wishlist" to="/underConstruction" class="roboto-white">
+          <Link id="wishlist" to="/underConstruction" className="roboto-white">
             Add to Wishlist
           </Link>
         </div>
@@ -29,6 +29,8 @@ export function BookDetails(props) {
       <div className="book-info">
         <div className="book-information">
           <h3 className="roboto-white">Description</h3>
+
+          {/* In order to look better added the \n  string on description to determine when a paragraph ends */}
           {bookFullDescription.split("\n").map((paragraph, i) => (
             <p key={i} className="roboto-white">
               {paragraph}

@@ -8,7 +8,8 @@ import { LoginDropDown } from "./LoginDropDown";
 //
 
 export function Header() {
-  //      <--Start of Search scripts-->
+  // Start of Search scripts
+
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
   let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
@@ -25,9 +26,9 @@ export function Header() {
     e.preventDefault();
     if ((key = " " && !isSearchExpanded)) setSearch(!isSearchExpanded);
   }
-  //      <--Start of Search scripts-->
+  // End of Search scripts
 
-  //      <--Start of Hamburger menu scripts-->
+  // Start of Hamburger menu scripts
   //This function is used to expand or collapse the burger menu on small screens
   let [isBurgerMenuExpanded, setBurgerMenu] = useState(false);
 
@@ -36,7 +37,8 @@ export function Header() {
     setBurgerMenu(!isBurgerMenuExpanded);
   }
 
-  //      <--End of Hamburger menu scripts-->
+  // End of Hamburger menu scripts
+
   return (
     <header
       className={

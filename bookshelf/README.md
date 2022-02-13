@@ -56,11 +56,17 @@ Header has the logo, navbar, search and login on screens wider that 1000px, for 
 
 The search icon can be clicked and this will expand the search area for pc and focus on it, on mobile the search area is already expanded but not focused, to prevent that the keyboard is displayed.
 
+# Header > Search
+
+The search icon can be clicked and this will expand the search area for pc and focus on it, on mobile the search area is already expanded but not focused, to prevent that the keyboard is displayed.
+
+Also added keyboard support, users can tab to the icon and press spacebar to expand or escape to collapse
+
 Search is not working yet, users will be redirected to UnderConstruction page
 
 # Header > Greeting
 
-The greeting component will take the name from the DB and is used on mobile burger and for Profile dropdown
+The greeting component will take the name from the DB and is used on mobile burger for now until Login is implemented, for demo purposes
 
 # Header > Profile icon
 
