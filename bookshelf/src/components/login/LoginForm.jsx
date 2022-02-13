@@ -1,7 +1,8 @@
 import "../../assets/styles/login/login.css";
 import { Link } from "react-router-dom";
+import { RequiredInput } from "../commons/RequiredInput";
 
-export function LoginForm(props) {
+export function LoginForm() {
   return (
     <section id="login-content">
       <div className="login-wrapper flex-item roboto-white tint">
@@ -10,28 +11,26 @@ export function LoginForm(props) {
             <label className="form-element" htmlFor="email">
               <b>Email</b>
             </label>
-            <input
+            <RequiredInput
               className="form-element"
               type="email"
               placeholder="Enter your Email"
               name="email"
               id="email"
-              required
               autoComplete="off"
-            ></input>
+            ></RequiredInput>
 
             <label className="form-element" htmlFor="password">
               <b>Password</b>
             </label>
-            <input
+            <RequiredInput
               className="form-element"
               type="password"
               placeholder="Enter your Password"
               name="password"
               id="password"
-              required
               autoComplete="off"
-            ></input>
+            ></RequiredInput>
 
             <button
               type="submit"
@@ -42,7 +41,7 @@ export function LoginForm(props) {
 
             <div>
               <Link className="form-links form-element" to="/underConstruction">
-                Forgot your password?{" "}
+                Forgot your password?
               </Link>
             </div>
 

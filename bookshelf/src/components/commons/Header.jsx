@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../assets/styles/common/header.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Greeting } from "./Greeting";
 import { LoginDropDown } from "./LoginDropDown";
 
@@ -54,14 +55,14 @@ export function Header(props) {
       </div>
       <Greeting isBurgerMenuExpanded={isBurgerMenuExpanded}></Greeting>
       <div id="logo-wrapper">
-        <Link
+        <HashLink
           id="logo"
           className="roboto-white"
-          to={"/home"}
+          to={"/home#section1"}
           onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
         >
           Bookshelf
-        </Link>
+        </HashLink>
       </div>
       <nav style={isBurgerMenuExpanded ? { display: "initial" } : null}>
         <ul>

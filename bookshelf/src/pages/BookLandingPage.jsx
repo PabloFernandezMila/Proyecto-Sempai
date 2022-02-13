@@ -3,6 +3,11 @@ import { Title } from "../components/commons/Title";
 import { Breadcrumb } from "../components/commons/Breadcrumb";
 import { BookDetails } from "../components/bookLanding/BookDetails";
 import { RelatedContent } from "../components/bookLanding/RelatedContent";
+import { Tags } from "../components/bookLanding/Tags";
+import { Loader } from "../components/commons/Loader";
+import { PageNotFound } from "./PageNotFound";
+
+//Import styles
 import "../assets/styles/bookLanding/bookLanding.css";
 
 //External imports
@@ -10,10 +15,6 @@ import { api } from "../api/api";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { UnderConstructionPage } from "./UnderConstructionPage";
-import { Tags } from "../components/bookLanding/Tags";
-import { Loader } from "../components/commons/Loader";
-import { PageNotFound } from "./PageNotFound";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";

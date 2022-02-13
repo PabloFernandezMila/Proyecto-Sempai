@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../assets/styles/register/register.css";
+import { RequiredInput } from "../commons/RequiredInput";
 
 export function RegisterForm() {
   return (
@@ -10,54 +11,50 @@ export function RegisterForm() {
             <label className="form-element ">
               <b>Name</b>
             </label>
-            <input
+            <RequiredInput
               className="form-element "
               type="text "
               placeholder="Enter your Name "
               name="name "
               id="name "
-              required
               autoComplete="off"
-            ></input>
+            ></RequiredInput>
 
             <label className="form-element ">
               <b>Lastname</b>
             </label>
-            <input
+            <RequiredInput
               className="form-element "
               type="text "
               placeholder="Enter your Last Name "
               name="lastname "
               id="lastname "
-              required
               autoComplete="off"
-            ></input>
+            ></RequiredInput>
 
             <label className="form-element ">
               <b>Email</b>
             </label>
-            <input
+            <RequiredInput
               className="form-element "
               type="email "
               placeholder="Enter your Email "
               name="email "
               id="email "
-              required
               autoComplete="off"
-            ></input>
+            ></RequiredInput>
 
             <label className="form-element ">
               <b>Password</b>
             </label>
-            <input
+            <RequiredInput
               className="form-element "
               type="password "
               placeholder="Enter your Password "
               name="password "
               id="password "
-              required
               autoComplete="off"
-            ></input>
+            ></RequiredInput>
 
             <button
               type="submit "
