@@ -3,6 +3,11 @@ import { Title } from "../components/commons/Title";
 import { Breadcrumb } from "../components/commons/Breadcrumb";
 import { BookDetails } from "../components/bookLanding/BookDetails";
 import { RelatedContent } from "../components/bookLanding/RelatedContent";
+import { Tags } from "../components/bookLanding/Tags";
+import { Loader } from "../components/commons/Loader";
+import { PageNotFound } from "./PageNotFound";
+
+//Import styles
 import "../assets/styles/bookLanding/bookLanding.css";
 
 //External imports
@@ -10,9 +15,6 @@ import { api } from "../api/api";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { UnderConstructionPage } from "./UnderConstructionPage";
-import { Tags } from "../components/bookLanding/Tags";
-import { Loader } from "../components/commons/Loader";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -89,7 +91,7 @@ export function BookLandingPage(props) {
   }
 
   // If the book is not found the system redirects to the Page no found component
-  if (!bookFound) return <UnderConstructionPage></UnderConstructionPage>;
+  if (!bookFound) return <PageNotFound></PageNotFound>;
   else {
     return (
       <div className="landingWrapper flex-centered">

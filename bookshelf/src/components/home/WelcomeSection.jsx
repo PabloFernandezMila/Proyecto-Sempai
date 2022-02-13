@@ -1,5 +1,6 @@
 import "../../assets/styles/home/welcomeSection.css";
-import { HashLink } from "react-router-hash-link";
+
+import { DownArrow } from "../commons/DownArrow";
 
 export function WelcomeSection() {
   return (
@@ -17,9 +18,7 @@ export function WelcomeSection() {
         <div id="column2">
           <div id="column2-image"></div>
         </div>
-        <div className=" arrow-container ">
-          <HashLink className="bounce down-arrow" to="#section2"></HashLink>
-        </div>
+        <DownArrow to="#section2"></DownArrow>
       </div>
     </section>
   );

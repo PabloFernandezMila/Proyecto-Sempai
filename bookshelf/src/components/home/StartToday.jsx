@@ -1,6 +1,7 @@
 import "../../assets/styles/home/startToday.css";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { DownArrow } from "../commons/DownArrow";
+
 export function StartToday() {
   return (
     <section id="section2">
@@ -21,10 +22,7 @@ export function StartToday() {
           Create an account
         </Link>
       </div>
-
-      <div className="arrow-container">
-        <HashLink className="bounce down-arrow" to="#section3"></HashLink>
-      </div>
+      <DownArrow to="#section3"></DownArrow>
     </section>
   );
 }

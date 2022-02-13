@@ -10,7 +10,7 @@ export function Greeting(props) {
     const userIDURL = "http://localhost:4000/users?userID=" + "1";
     api.get(userIDURL).then(function (response) {
       const user = response.data;
-      //Set the name using the first result
+      //Set the name using the first result, later will use user ID
       setUserName(user[0].userName);
     });
   }, []);

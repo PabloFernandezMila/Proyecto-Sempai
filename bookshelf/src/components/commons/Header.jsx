@@ -1,18 +1,20 @@
 import { useState } from "react";
 import "../../assets/styles/common/header.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Greeting } from "./Greeting";
 import { LoginDropDown } from "./LoginDropDown";
 
 //
 
-export function Header(props) {
-  //      <--Start of Search scripts-->
+export function Header() {
+  // Start of Search scripts
+
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
   let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
 
-  //This function is used to close the search are when the area is expanded and the user press escape key
+  //This function is used to close the search area when the area is expanded and the user press escape key
   function pressScapeToCloseSearch(e) {
     var key = e.key;
     if (key === "Escape" && isSearchExpanded) setSearch(!isSearchExpanded);
@@ -21,13 +23,12 @@ export function Header(props) {
   //This function is used to expand the search are when the area focused and the user press space bar key
   function pressTabToExpandSearch(e) {
     var key = e.key;
-    console.log(key);
-    if (key === " " && !isSearchExpanded) e.preventDefault();
-    setSearch(!isSearchExpanded);
+    e.preventDefault();
+    if ((key = " " && !isSearchExpanded)) setSearch(!isSearchExpanded);
   }
-  //      <--Start of Search scripts-->
+  // End of Search scripts
 
-  //      <--Start of Hamburger menu scripts-->
+  // Start of Hamburger menu scripts
   //This function is used to expand or collapse the burger menu on small screens
   let [isBurgerMenuExpanded, setBurgerMenu] = useState(false);
 
@@ -36,7 +37,8 @@ export function Header(props) {
     setBurgerMenu(!isBurgerMenuExpanded);
   }
 
-  //      <--End of Hamburger menu scripts-->
+  // End of Hamburger menu scripts
+
   return (
     <header
       className={
@@ -54,14 +56,14 @@ export function Header(props) {
       </div>
       <Greeting isBurgerMenuExpanded={isBurgerMenuExpanded}></Greeting>
       <div id="logo-wrapper">
-        <Link
+        <HashLink
           id="logo"
           className="roboto-white"
-          to={"/home"}
+          to={"/home#section1"}
           onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
         >
           Bookshelf
-        </Link>
+        </HashLink>
       </div>
       <nav style={isBurgerMenuExpanded ? { display: "initial" } : null}>
         <ul>

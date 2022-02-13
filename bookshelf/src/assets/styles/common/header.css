@@ -59,7 +59,7 @@ header {
     grid-template-columns: 4fr 2.5fr 4fr 0fr;
     grid-template-rows: 1fr;
     grid-template-areas: "logo navbar search login";
-    padding: 2% 2%;
+    padding: 2% 4% 2% 2%;
     align-content: center;
 }
 
@@ -250,16 +250,15 @@ header>nav>ul {
 
 .loginMenuExpanded {
     display: grid;
-    grid-template-rows: 8vh 8vh 8vh 8vh;
-    width: 300px;
-    height: 32vh;
+    grid-template-rows: 70px 80px 80px 80px;
+    width: 350px;
+    height: 320px;
     background-color: rgba(0, 0, 0, 1);
     position: absolute;
     right: 0;
     top: 0;
     align-items: center;
     justify-items: center;
-    padding: 0 20px;
 }
 
 .loginMenuExpandedMobile {
@@ -270,6 +269,7 @@ header>nav>ul {
 
 .loginWelcomeMsg {
     justify-self: start;
+    padding-left: 10px;
 }
 
 .loginMenuExpanded>div>a {
@@ -362,7 +362,7 @@ header>nav>ul {
 }
 
 .slideInFromLeft {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
 
 
@@ -420,6 +420,7 @@ header>nav>ul {
         justify-content: space-between;
         grid-template-areas: "burger-wrapper logo login";
         grid-template-rows: 1fr 0fr;
+        padding: 2% 2%;
     }
     .burger-wrapper {
         display: initial;
