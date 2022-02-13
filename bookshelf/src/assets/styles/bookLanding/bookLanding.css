@@ -1,14 +1,14 @@
 /*######## Table of contents ##########
 #                                    #
-#       1. Fonts import              #
-#       2. Root                      #
-#       3. HTML tags selectors       #
-#       4. General selector          #
-#       5. Specific selectors        #   
-#       6.Media queries              #
+#       1. General selector          #
+#       2. Specific selectors        #   
+#       3.Media queries              #
 #                                    #
 ######################################
 */
+
+
+/*1. General selector */
 
 .landingWrapper {
     background-color: #141414;
@@ -63,7 +63,7 @@ hr {
 }
 
 
-/* 4. General selector */
+/* 2. Specific selector */
 
 .title {
     text-align: center;
@@ -139,7 +139,7 @@ hr {
 }
 
 
-/* 6.Media queries  */
+/* 3.Media queries  */
 
 @media screen and (max-width: 1501px) {
     .related-content-container {

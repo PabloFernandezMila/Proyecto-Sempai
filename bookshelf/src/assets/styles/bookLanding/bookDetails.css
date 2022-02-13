@@ -1,17 +1,13 @@
 /*######## Table of contents ##########
-#                                    #
-#       1. Fonts import              #
-#       2. Root                      #
-#       3. HTML tags selectors       #
-#       4. General selector          #
-#       5. Specific selectors        #   
-#       6.Media queries              #
+#                                    #  
+#       1. General selector          #
+#       2.Media queries              #
 #                                    #
 ######################################
 */
 
 
-/* 4. General selector */
+/* 1. General selector */
 
 .book-cover {
     width: 100%;
