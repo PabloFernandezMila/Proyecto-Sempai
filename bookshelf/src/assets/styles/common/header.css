@@ -47,7 +47,7 @@ html {
 /* 3. HTML tags selectors */
 
 header {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     align-items: center;
     height: 8vh;
     min-height: 70px;
