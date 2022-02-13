@@ -170,7 +170,7 @@ hr {
 @media screen and (max-width: 501px) {
     .related-content-container {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto;
         min-height: 740px;
     }
     .related-title {
@@ -184,7 +184,6 @@ hr {
 @media screen and (max-width: 300px) {
     .related-content-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        min-height: 920px;
+        grid-template-rows: auto;
     }
 }

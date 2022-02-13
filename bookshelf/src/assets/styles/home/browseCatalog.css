@@ -13,10 +13,13 @@
     margin: 30px auto;
 }
 
-#section3 {
+#section3-background {
     background-image: url("../../images/home/section3.jpg");
-    height: 100vh;
-    position: relative;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 #section3-content {

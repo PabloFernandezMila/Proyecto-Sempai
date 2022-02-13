@@ -50,9 +50,9 @@ export function BooksList(props) {
           {booksFromDB.length > 0 ? (
             <div className="books-wrapper">{booksFromDB}</div>
           ) : (
-            <h2 className="roboto-white title-h2">
+            <p className="roboto-white">
               This shelf is empty, please select another
-            </h2>
+            </p>
           )}
         </section>
       )}

@@ -24,7 +24,7 @@ export function Header() {
   function pressTabToExpandSearch(e) {
     var key = e.key;
     e.preventDefault();
-    if ((key = " " && !isSearchExpanded)) setSearch(!isSearchExpanded);
+    if (key === " " && !isSearchExpanded) setSearch(!isSearchExpanded);
   }
   // End of Search scripts
 

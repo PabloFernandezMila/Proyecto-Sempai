@@ -31,9 +31,7 @@ export function RelatedContent(props) {
       />
     ) : null;
   });
-  {
-    /* Check if the length of booksFromDB is bigger than 1, if its 1 it only contains the book of landing page, hence the section should be empty */
-  }
+
   const areRelatedBooks = booksFromDB.length > 1;
   return (
     <div className="related-content roboto-white">
@@ -47,9 +45,9 @@ export function RelatedContent(props) {
           className="related-content-container"
           style={{ display: "block", minHeight: "auto", padding: 0 }}
         >
-          <h2 className="roboto-white title-h2" style={{ padding: 0 }}>
+          <p className="roboto-white title-h2" style={{ padding: 0 }}>
             There is not related content for the current book
-          </h2>
+          </p>
         </div>
       )}
     </div>

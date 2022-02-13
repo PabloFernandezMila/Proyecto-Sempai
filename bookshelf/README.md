@@ -3,9 +3,9 @@
 In the following section will find the documentation for each page.
 The site is responsive adjusting its components in order to fit pc and mobile browsers
 
-Json server url-> localhost:4000
+_IMPORTANT_ -> Json server url-> localhost:4000,this is needed for catalog and booklanding page to work
 
-All books information is retrieved from the Json server
+All books information is retrieved from the Json server, also user name for mobile menu
 
 <---Pages--->
 
@@ -19,8 +19,8 @@ The home page is divided on 3 sections. The first two have an arrow to scroll to
 # Catalog
 
 -Catalog list all the available books on JsonServer file
--Here the user can filter by genre the list, using the Select dropdown by default all books are listed with the Select a genre option
--Also the user can hover on a book card to see more information, the system will retrieve the description from the server, if it is too long it will be trim and added an ellipsis at the end of the string this is to prevent that larger text get out of the container
+-Here the user can filter by genre, using the Select dropdown by default all books are listed with the Select a genre option
+-Also the user can hover on a book card to see more information, the system will retrieve the description from the server, if description it is too long it will be trim and added an ellipsis at the end of the string this is to prevent that larger text get out of the container
 -The user can get to the catalog by clicking on the Genre of a book on the book landing page, in this case the user will be redirected to the catalog page and the dropdown will select the genre clicked by the user, the catalog is filtered by this genre
 
 # Book Landing page
@@ -79,3 +79,7 @@ Footer has the social media links buttons and copyright text
 # Loaders
 
 Implemented loaders on Catalog grid and book landing page, loaders animations were imported from https://www.npmjs.com/package/react-spinners
+
+# Animations
+
+Added animation so the site looks more "alive"
