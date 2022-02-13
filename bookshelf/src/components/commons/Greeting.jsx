@@ -7,7 +7,7 @@ export function Greeting(props) {
 
   useEffect(() => {
     //Get user info using the id to query the DB
-    const userIDURL = "http://localhost:4000/users?userID=" + "1";
+    const userIDURL = "http://localhost:4000/users?userID=1";
     api.get(userIDURL).then(function (response) {
       const user = response.data;
       //Set the name using the first result, later will use user ID
