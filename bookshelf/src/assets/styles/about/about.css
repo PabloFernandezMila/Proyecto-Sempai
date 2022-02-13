@@ -17,3 +17,12 @@
     position: relative;
     min-height: 100vh;
 }
+
+
+/* 2.Media queries */
+
+@media screen and (max-width: 380px) {
+    .about-container {
+        min-height: 200vh;
+    }
+}
