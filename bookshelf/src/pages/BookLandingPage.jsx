@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 import { UnderConstructionPage } from "./UnderConstructionPage";
 import { Tags } from "../components/bookLanding/Tags";
 import { Loader } from "../components/commons/Loader";
+import { PageNotFound } from "./PageNotFound";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
@@ -89,7 +90,7 @@ export function BookLandingPage(props) {
   }
 
   // If the book is not found the system redirects to the Page no found component
-  if (!bookFound) return <UnderConstructionPage></UnderConstructionPage>;
+  if (!bookFound) return <PageNotFound></PageNotFound>;
   else {
     return (
       <div className="landingWrapper flex-centered">
