@@ -3,7 +3,7 @@
 In the following section will find the documentation for each page.
 The site is responsive adjusting its components in order to fit pc and mobile browsers
 
-Json server url-> localhost:4000
+_IMPORTANT_ -> Json server url-> localhost:4000,this is needed for catalog and booklanding page to work
 
 All books information is retrieved from the Json server, also user name for mobile menu
 
@@ -79,3 +79,7 @@ Footer has the social media links buttons and copyright text
 # Loaders
 
 Implemented loaders on Catalog grid and book landing page, loaders animations were imported from https://www.npmjs.com/package/react-spinners
+
+# Animations
+
+Added animation so the site looks more "alive"
