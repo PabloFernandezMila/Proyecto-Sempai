@@ -49,6 +49,7 @@ export function Header() {
         <div
           id="burger-menu"
           className="js-burger-menu"
+          //When the user clicks on the burger menu, the burger menu is expanded or collapsesd
           onClick={toggleBurgerMenu}
         >
           <div id="burger-menu-icon"></div>
@@ -60,6 +61,7 @@ export function Header() {
           id="logo"
           className="roboto-white"
           to={"/home#section1"}
+          //When the burger menu is expanded, if the user clicks on the logo, the burger menu is collapsed
           onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
         >
           Bookshelf
@@ -72,6 +74,7 @@ export function Header() {
               className="roboto-white"
               to={"/home"}
               activeclassname="active"
+              //If the menu is expanded, the burger menu is closed after user click on a link
               onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               Home
@@ -82,6 +85,7 @@ export function Header() {
               to={"/catalog"}
               className="roboto-white"
               activeclassname="active"
+              //If the menu is expanded, the burger menu is closed after user click on a link
               onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               Catalog
@@ -92,6 +96,7 @@ export function Header() {
               className="roboto-white"
               to={"/login"}
               activeclassname="active"
+              //If the menu is expanded, the burger menu is closed after user click on a link
               onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               Login
@@ -102,6 +107,7 @@ export function Header() {
               className="roboto-white"
               to={"/about"}
               activeclassname="active"
+              //If the menu is expanded, the burger menu is closed after user click on a link
               onClick={isBurgerMenuExpanded ? toggleBurgerMenu : null}
             >
               About
@@ -124,11 +130,11 @@ export function Header() {
             : null
         }
         autoComplete="off"
-        //When the user clicks on the Avatar icon, the search area is hidden, to leave room for the profile drop down
       >
         <div
           className="search-button js-search-button"
           tabIndex="0"
+          //When the user clicks on the Avatar icon, the search area is hidden, to leave room for the profile drop down, also if the user navigated with the keyboard
           onClick={() => setSearch(!isSearchExpanded)}
           onKeyDown={(e) => pressTabToExpandSearch(e)}
         >
@@ -157,13 +163,18 @@ export function Header() {
             style={
               isSearchExpanded ? { display: "initial" } : { display: "block" }
             }
+            //If the user press scape the search is closed
             onKeyDown={(e) => pressScapeToCloseSearch(e)}
           />
         </div>
       </form>
       <div
         id="login-wrapper"
-        onClick={() => setIsLoginDropDownExpanded(!isLoginDropDownExpanded)}
+        //If the user clicks on the avatar, the login menu is expanded, and if the search is expanded, it will collapse the search
+        onClick={() => {
+          setIsLoginDropDownExpanded(!isLoginDropDownExpanded);
+          setSearch(false);
+        }}
       >
         <div className="bounce"></div>
       </div>
