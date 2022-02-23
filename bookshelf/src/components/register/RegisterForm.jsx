@@ -63,7 +63,7 @@ export function RegisterForm() {
               Sign up
             </button>
 
-            <div>
+            <div className="register-text-wrapper">
               <p className="register-text form-element ">
                 Already have an account?&nbsp;
               </p>
