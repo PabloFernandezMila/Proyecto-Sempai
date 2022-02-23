@@ -12,6 +12,7 @@ import { useState } from "react";
 import { ScrollToTop } from "./components/commons/ScrollToTop";
 import "../src/assets/styles/common/loader.css";
 import { PageNotFound } from "./pages/PageNotFound";
+import "./assets/styles/app.css";
 
 export function App() {
   //This state controls the filtered content on the Catalog Page

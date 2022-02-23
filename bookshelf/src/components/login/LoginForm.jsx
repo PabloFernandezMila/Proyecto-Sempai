@@ -39,13 +39,13 @@ export function LoginForm() {
               Login
             </button>
 
-            <div>
+            <div className="text-align-center">
               <Link className="form-links form-element" to="/underConstruction">
                 Forgot your password?
               </Link>
             </div>
 
-            <div>
+            <div className="text-align-center">
               <p className="register-text form-element">
                 Don&#39;t have an account?&nbsp;
               </p>

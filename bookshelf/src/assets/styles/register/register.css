@@ -83,7 +83,3 @@
 .form-links:hover {
     border-bottom: solid 1px var(--details-color);
 }
-
-.register-text-wrapper {
-    text-align: center;
-}
