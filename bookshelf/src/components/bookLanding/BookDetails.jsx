@@ -11,17 +11,20 @@ export function BookDetails(props) {
         <img src={bookBackgroundImageURL} alt="Book Cover"></img>
       </div>
       <div className="buttons-container">
-        <Link id="wishlist" to="/underConstruction" className="roboto-white">
-          Add to Wishlist
-        </Link>
-
-        <Link
-          id="request-book"
-          to="/underConstruction"
-          className="roboto-white"
-        >
-          Add to Library
-        </Link>
+        <div className="button-link">
+          <Link id="wishlist" to="/underConstruction" className="roboto-white">
+            Add to Wishlist
+          </Link>
+        </div>
+        <div className="button-link">
+          <Link
+            id="request-book"
+            to="/underConstruction"
+            className="roboto-white"
+          >
+            Add to Library
+          </Link>
+        </div>
       </div>
       <div className="book-info">
         <div className="book-information">
