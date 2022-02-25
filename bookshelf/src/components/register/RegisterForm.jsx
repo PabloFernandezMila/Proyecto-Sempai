@@ -63,7 +63,7 @@ export function RegisterForm() {
               Sign up
             </button>
 
-            <div className="register-text-wrapper">
+            <div className="text-align-center">
               <p className="register-text form-element ">
                 Already have an account?&nbsp;
               </p>
