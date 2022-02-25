@@ -28,6 +28,7 @@
 
 .breadcrumb li {
     display: inline-block;
+    border-bottom: 1px solid var(--details-color);
 }
 
 .breadcrumb li a {
