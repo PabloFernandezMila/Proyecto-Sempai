@@ -19,7 +19,7 @@ export function StartToday() {
           <Link
             id="section2-button"
             className="section-button roboto-white"
-            to="/Login"
+            to="/Register"
           >
             Create an account
           </Link>

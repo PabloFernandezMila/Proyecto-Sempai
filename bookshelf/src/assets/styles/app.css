@@ -70,7 +70,6 @@ b {
 ::placeholder {
     border: none;
     color: grey;
-    font-weight: 100;
 }
 
 input {
