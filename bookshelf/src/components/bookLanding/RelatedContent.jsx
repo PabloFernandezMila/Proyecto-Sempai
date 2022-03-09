@@ -9,7 +9,7 @@ export function RelatedContent(props) {
   //Get info from Json Server
   useEffect(() => {
     //Get books related using the category of the book displayed on the landing page
-    const listURL = "http://localhost:4000/books?bookCategory=" + bookCategory;
+    const listURL = "/books/categories/" + bookCategory;
     api.get(listURL).then(function (response) {
       const books = response.data;
 
