@@ -30,23 +30,21 @@ export function BookLandingPage(props) {
   let idOnly = id.replace(":", "");
 
   //State added to control if the url redirects to an id existing on the DB
-  const [bookFound, setBookFound] = useState(true);
+  const [bookFound, setBookFound] = useState(false);
   const [bookInformation, setBookInformation] = useState([]);
   const [loading, setLoading] = useState(false);
   //Get info from Json Server
   useEffect(() => {
     setLoading(true);
     //Get book info using the id to query the DB
-    const bookURL = "http://localhost:4000/books?id=" + idOnly;
+    const bookURL = "http://localhost:4000/books/" + idOnly;
     api.get(bookURL).then(function (response) {
       const book = response.data;
+      setBookFound(true);
       setLoading(false);
 
-      //If the array is empty means that the ID of the URL does not belong to any book on the DB
-      setBookFound(book.length > 0);
-
       //Update list with the book first book returned
-      setBookInformation(book[0]);
+      setBookInformation(book);
     });
   }, [idOnly]);
   let bookFoundData;

@@ -110,6 +110,7 @@ hr {
     background-position: center;
     transition: all 0.2s ease-in-out;
     border-radius: 15px;
+    min-height: 100px;
 }
 
 .related-cover:hover {
@@ -119,7 +120,7 @@ hr {
 .related-title {
     font-size: 1.2rem;
     text-decoration: underline;
-    margin: 15px;
+    margin-top: 10px;
     text-align: center;
     text-transform: capitalize;
 }
@@ -135,6 +136,7 @@ hr {
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 
