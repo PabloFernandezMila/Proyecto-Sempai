@@ -17,10 +17,10 @@ export function CategoryFilter({ setSelectedFilter, selectedFilter }) {
         <option value="/books" defaultValue>
           Select a genre
         </option>
-        <option value="/books?bookCategory=Classic">Classics</option>
-        <option value="/books?bookCategory=Fantasy">Fantasy</option>
-        <option value="/books?bookCategory=Horror">Horror</option>
-        <option value="/books?bookCategory=Romance">Romance</option>
+        <option value="/books/categories/Classic">Classics</option>
+        <option value="/books/categories/Fantasy">Fantasy</option>
+        <option value="/books/categories/Horror">Horror</option>
+        <option value="/books/categories/Romance">Romance</option>
       </select>
     </div>
   );
