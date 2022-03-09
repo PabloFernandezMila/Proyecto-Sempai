@@ -20,7 +20,7 @@ export function Tags(props) {
             to={"/catalog"}
             className="roboto-white tag"
             onClick={() =>
-              props.setSelectedFilter("/books?bookCategory=" + bookCategory)
+              props.setSelectedFilter("/books/categories/" + bookCategory)
             }
           >
             {bookCategory}
