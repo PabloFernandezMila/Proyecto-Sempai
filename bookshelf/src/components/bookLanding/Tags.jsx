@@ -9,7 +9,8 @@ export function Tags(props) {
         <span className="label roboto-white">Author:</span>
         <span>
           <Link to={"/underConstruction"} className="roboto-white tag">
-            {bookAuthor}
+            {bookAuthor}{" "}
+            {/* TODO Add endpoint and handle the response for bookAuthor */}
           </Link>
         </span>
       </div>
