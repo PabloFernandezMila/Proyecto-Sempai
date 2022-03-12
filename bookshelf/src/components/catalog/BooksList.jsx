@@ -8,8 +8,6 @@ export function BooksList(props) {
   const [booksList, setBookList] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {}, []);
-
   //Get info from Json Server
   useEffect(() => {
     //Get books
