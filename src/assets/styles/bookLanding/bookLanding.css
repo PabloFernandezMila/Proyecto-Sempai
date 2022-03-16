@@ -1,0 +1,191 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. General selector          #
+#       2. Specific selectors        #   
+#       3.Media queries              #
+#                                    #
+######################################
+*/
+
+
+/*1. General selector */
+
+.landingWrapper {
+    background-color: #141414;
+    min-height: 90vh;
+}
+
+.book-section {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "description cover" "tags buttons" "related-content related-content";
+    padding: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--details-color);
+}
+
+.label {
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-right: 5px;
+}
+
+.tag {
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.tag:hover {
+    text-decoration: underline;
+}
+
+.related-content>h2 {
+    margin: 0;
+    padding: 3% 0 0;
+}
+
+.related-cover {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+
+/* 2. Specific selector */
+
+.title {
+    text-align: center;
+    padding-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.tags {
+    grid-area: tags;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.related-content {
+    grid-area: related-content;
+    padding: 0px 30px;
+    height: 100%;
+}
+
+.related-content-container {
+    height: 80%;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    min-height: 400px;
+}
+
+.related-book {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.related-cover {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+    min-height: 100px;
+}
+
+.related-cover:hover {
+    transform: scale(1.1);
+}
+
+.related-title {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.related-title:hover,
+.related-author:hover {
+    color: var(--details-color);
+}
+
+.related-author {
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+
+/* 3.Media queries  */
+
+@media screen and (max-width: 1501px) {
+    .related-content-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        min-height: 560px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .book-section {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    #breadcrumb-wrapper {
+        text-align: center;
+    }
+    h1 {
+        margin-top: 0;
+    }
+    .title {
+        padding: 0 20px;
+        padding-top: 14vh;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .related-content-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        min-height: 740px;
+    }
+    .related-title {
+        font-size: 1rem;
+    }
+    .related-author {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .related-content-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}

@@ -1,0 +1,154 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. Specific selectors        #
+#       2. Media Queries   
+#                                    #
+######################################
+*/
+
+
+/*  1. Specific selectors */
+
+.login-container {
+    margin: 0;
+    width: 100%;
+    background-image: url(../../images/login/login.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    min-height: 100vh;
+}
+
+#login-content {
+    height: auto;
+}
+
+.form-elements {
+    width: 80%;
+    margin-inline: auto;
+}
+
+.form-elements>p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#login-content>form {
+    margin: auto;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#login-content>div>form {
+    margin: auto;
+}
+
+.signin-button {
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border: lightslategray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 1vh 10vw;
+    font-weight: 500;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.signin-button:hover {
+    color: var(--details-color);
+    border-color: var(--details-color);
+}
+
+.login-wrapper {
+    padding: 40px;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    background-color: #0707077c;
+    margin-top: 30px;
+}
+
+.login-wrapper>form {
+    width: 100%;
+}
+
+.flex-item {
+    border: solid 1px var(--details-color);
+}
+
+.form-links {
+    color: var(--details-color);
+    padding: 0;
+}
+
+.form-links:hover {
+    border-bottom: solid 1px var(--details-color);
+}
+
+.register-text {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.form-element {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-elements>label {
+    margin-top: 0;
+}
+
+
+/* 2.Media queries   */
+
+@media screen and (max-width: 1000px) {
+    #login-content {
+        margin-top: 0;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+    #login-content>form {
+        padding: 20px 0;
+    }
+    .form-elements {
+        width: 95%;
+    }
+    form>div>div>a {
+        font-size: 1.25 rem;
+    }
+}
+
+@media screen and (max-height: 916px) {
+    footer {
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .login-wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        padding: 3%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    h1 {
+        margin-inline: 20px;
+    }
+}
