@@ -7,6 +7,7 @@ export function RegisterForm() {
     <section id="register-content">
       <div className="signin flex-item roboto-white tint">
         <form autoComplete="off">
+          {/* TODO add profile picture upload */}
           <div className="form-elements ">
             <label className="form-element ">
               <b>Name</b>

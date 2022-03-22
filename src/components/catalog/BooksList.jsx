@@ -14,13 +14,19 @@ export function BooksList(props) {
     //Display loader by setting it true
     setLoading(true);
     //This prop is the filtered URL
-    api.get(props.selectedFilter).then(function (response) {
-      const books = response.data;
-      //Hide loader by setting it  false
-      setLoading(false);
-      //Update list with the books retrieved from the server
-      setBookList(books);
-    });
+    api.get(props.selectedFilter).then(
+      function (response) {
+        const books = response.data;
+        //Hide loader by setting it  false
+        setLoading(false);
+        //Update list with the books retrieved from the server
+        setBookList(books);
+      },
+      () => {
+        setLoading(false);
+        console.log("fallo el server");
+      }
+    );
   }, [props.selectedFilter]);
 
   //For each book retrieve from the server, the system maps the book properties into a Book card
