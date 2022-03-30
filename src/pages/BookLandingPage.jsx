@@ -25,9 +25,6 @@ const secondLinkLabel = "Catalog";
 export function BookLandingPage(props) {
   //Get book id from params
   const params = useParams();
-  let id = params.id;
-  //Remove the : character
-  let idOnly = id.replace(":", "");
 
   //State added to control if the url redirects to an id existing on the DB
   const [bookFound, setBookFound] = useState(false);
@@ -37,16 +34,22 @@ export function BookLandingPage(props) {
   useEffect(() => {
     setLoading(true);
     //Get book info using the id to query the DB
-    const bookURL = "http://localhost:4000/books/" + idOnly;
-    api.get(bookURL).then(function (response) {
-      const book = response.data;
-      setBookFound(true);
-      setLoading(false);
-
-      //Update list with the book first book returned
-      setBookInformation(book);
-    });
-  }, [idOnly]);
+    const bookURL = "http://localhost:4000/books/" + params.id;
+    api
+      .get(bookURL)
+      .then(function (response) {
+        if (response.status === 200) {
+          const book = response.data;
+          //Update list with the book first book returned
+          setBookInformation(book);
+          setBookFound(true);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log("Unable to retrieve the book with id " + params.id);
+      });
+  }, [params.id]);
   let bookFoundData;
   //If the book is found on the DB the system returns the book details
   if (bookFound) {
@@ -81,7 +84,7 @@ export function BookLandingPage(props) {
           ></Tags>
           <RelatedContent
             bookCategory={bookCategory}
-            idOnly={idOnly}
+            idOnly={params.id}
           ></RelatedContent>
         </section>
       </div>

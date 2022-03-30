@@ -25,7 +25,7 @@ export function BookCard(props) {
           </p>
           <h3>Author</h3>
           <p className="book-author">{bookAuthor}</p>
-          <Link to={"/bookLanding/:" + id} className="roboto-white">
+          <Link to={"/bookLanding/" + id} className="roboto-white">
             See More
           </Link>
         </div>
