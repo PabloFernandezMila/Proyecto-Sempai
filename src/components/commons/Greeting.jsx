@@ -5,13 +5,15 @@ import { useEffect } from "react";
 export function Greeting(props) {
   const [userNamDB, setUserName] = useState("");
 
+  //This variable emulates having an logged in user ID
+  const loggedUserID = 1;
+
   useEffect(() => {
     //Get user info using the id to query the DB
-    const userIDURL = "http://localhost:4000/users?userID=1";
+    const userIDURL = "http://localhost:4000/users/" + loggedUserID + "/name";
     api.get(userIDURL).then(function (response) {
-      const user = response.data;
-      //Set the name using the first result, later will use user ID
-      setUserName(user[0].userName);
+      //Set the name
+      setUserName(response.data);
     });
   }, []);
   return (
