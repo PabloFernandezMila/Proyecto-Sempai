@@ -20,7 +20,7 @@ export function Greeting(props) {
         }
       })
       .catch((error) => {
-        setUserName("Guest");
+        setUserName("to Bookshelf");
       });
   }, []);
 
