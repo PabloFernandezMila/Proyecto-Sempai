@@ -24,7 +24,6 @@ export function BooksList(props) {
       },
       () => {
         setLoading(false);
-        console.log("fallo el server");
       }
     );
   }, [props.selectedFilter]);

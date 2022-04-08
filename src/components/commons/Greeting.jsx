@@ -6,7 +6,7 @@ export function Greeting(props) {
   const [userNamDB, setUserName] = useState("");
 
   //This variable emulates having an logged in user ID
-  const loggedUserID = 11;
+  const loggedUserID = 1;
 
   useEffect(() => {
     //Get user info using the id to query the DB

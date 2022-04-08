@@ -8,11 +8,9 @@ export function RelatedBook(props) {
 
   return (
     <div className="related-book">
-      <Link
-        to={"/bookLanding/:" + id}
-        className="related-cover"
-        style={{ backgroundImage: "url(" + bookBackgroundImageURL + ")" }}
-      ></Link>
+      <Link to={"/bookLanding/:" + id}>
+        <img className="related-cover" src={bookBackgroundImageURL}></img>
+      </Link>
       <Link to={"/bookLanding/" + id} className="related-title roboto-white ">
         {bookTitle}
       </Link>
