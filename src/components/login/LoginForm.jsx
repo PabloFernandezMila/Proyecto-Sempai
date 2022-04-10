@@ -5,7 +5,7 @@ import { api } from "../../api/api.js";
 import { useState } from "react";
 import { SmallLoader } from "../commons/SmallLoader";
 
-export function LoginForm() {
+export function LoginForm(props) {
   //Form States
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -35,6 +35,9 @@ export function LoginForm() {
 
           //TODO revisar
           localStorage.setItem("token", response.data.token);
+
+          props.setIsUserLogged(true);
+
           navigate("../home", { replace: true });
         },
         (errorResponse) => {

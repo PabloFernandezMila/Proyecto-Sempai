@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../assets/styles/common/header.css";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Greeting } from "./Greeting";
 import { LoginDropDown } from "./LoginDropDown";
 import { LoggedDropDown } from "./LoggedDropDown";
+
 //
 
-export function Header() {
+export function Header(props) {
   // Start of Search scripts
 
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
   let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
-  let [userLoggedIn, setUserLoggedIn] = useState(false);
 
   //This function is used to close the search area when the area is expanded and the user press escape key
   function pressScapeToCloseSearch(e) {
@@ -38,18 +38,12 @@ export function Header() {
     setBurgerMenu(!isBurgerMenuExpanded);
   }
 
-  function checkToken() {
-    localStorage.getItem("token") != null
-      ? setUserLoggedIn(true)
-      : setUserLoggedIn(false);
-    console.log(userLoggedIn);
-  }
-
   // End of Hamburger menu scripts
 
   return (
+    //TODO remove login from menu when user is already logged in, also redirect to home if user is logged when entering to login or register URLs
     <header
-      onClick={checkToken}
+      onClick={console.log(props.isUserdLogged)}
       className={
         isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : ""
       }
@@ -66,7 +60,7 @@ export function Header() {
       </div>
       <Greeting
         isBurgerMenuExpanded={isBurgerMenuExpanded}
-        userLoggedIn={userLoggedIn}
+        userLoggedIn={props.isUserLogged}
       ></Greeting>
       <div id="logo-wrapper">
         <HashLink
@@ -105,7 +99,9 @@ export function Header() {
           </li>
           <li
             className="nav_bar-elements"
-            style={!userLoggedIn ? { display: "initial" } : { display: "none" }}
+            style={
+              props.isUserLogged ? { display: "none" } : { display: "initial" }
+            }
           >
             <NavLink
               className="roboto-white"
@@ -196,10 +192,12 @@ export function Header() {
       >
         <div className="bounce"></div>
       </div>
-      {userLoggedIn ? (
+      {props.isUserLogged ? (
         <LoggedDropDown
           isLoginDropDownExpanded={isLoginDropDownExpanded}
           setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
+          isUserLogged={props.isUserLogged}
+          setIsUserLogged={props.setIsUserLogged}
         ></LoggedDropDown>
       ) : (
         <LoginDropDown
