@@ -6,13 +6,16 @@ import { CatalogPage } from "./pages/CatalogPage";
 import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
-import { UnderConstructionPage } from "./pages/UnderConstructionPage";
+
 import { BookLandingPage } from "./pages/BookLandingPage";
 import { useState } from "react";
 import { ScrollToTop } from "./components/commons/ScrollToTop";
 import "../src/assets/styles/common/loader.css";
+import "../src/assets/styles/common/errorMessages.css";
 import { PageNotFound } from "./pages/PageNotFound";
 import "./assets/styles/app.css";
+import { WishList } from "./pages/WishList";
+import { MyLibrary } from "./pages/MyLibrary";
 
 export function App() {
   //This state controls the filtered content on the Catalog Page
@@ -35,10 +38,6 @@ export function App() {
             element={<BookLandingPage setSelectedFilter={setSelectedFilter} />}
           />
 
-          <Route
-            path="/underConstruction"
-            element={<UnderConstructionPage />}
-          />
           <Route path="/register" element={<RegisterPage />} />
           <Route
             path="/catalog"
@@ -50,6 +49,8 @@ export function App() {
               />
             }
           />
+          <Route path="/wishList" element={<WishList />} />
+          <Route path="/myLibrary" element={<MyLibrary />} />
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </main>

@@ -36,7 +36,11 @@ export function BookLandingPage(props) {
     //Get book info using the id to query the DB
     const bookURL = "http://localhost:4000/books/" + params.id;
     api
-      .get(bookURL)
+      .get(bookURL, {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      })
       .then(function (response) {
         if (response.status === 200) {
           const book = response.data;

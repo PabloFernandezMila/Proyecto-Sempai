@@ -12,16 +12,12 @@ export function BookDetails(props) {
       </div>
       <div className="buttons-container">
         <div className="button-link">
-          <Link id="wishlist" to="/underConstruction" className="roboto-white">
+          <Link id="wishlist" to="/wishlist" className="roboto-white">
             Add to Wishlist
           </Link>
         </div>
         <div className="button-link">
-          <Link
-            id="request-book"
-            to="/underConstruction"
-            className="roboto-white"
-          >
+          <Link id="request-book" to="/myLibrary" className="roboto-white">
             Add to Library
           </Link>
         </div>

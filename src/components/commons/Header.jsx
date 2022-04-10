@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Greeting } from "./Greeting";
 import { LoginDropDown } from "./LoginDropDown";
-
+import { LoggedDropDown } from "./LoggedDropDown";
 //
 
 export function Header() {
@@ -13,6 +13,7 @@ export function Header() {
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
   let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
+  let [userLoggedIn, setUserLoggedIn] = useState(false);
 
   //This function is used to close the search area when the area is expanded and the user press escape key
   function pressScapeToCloseSearch(e) {
@@ -37,10 +38,18 @@ export function Header() {
     setBurgerMenu(!isBurgerMenuExpanded);
   }
 
+  function checkToken() {
+    localStorage.getItem("token") != null
+      ? setUserLoggedIn(true)
+      : setUserLoggedIn(false);
+    console.log(userLoggedIn);
+  }
+
   // End of Hamburger menu scripts
 
   return (
     <header
+      onClick={checkToken}
       className={
         isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : ""
       }
@@ -55,7 +64,10 @@ export function Header() {
           <div id="burger-menu-icon"></div>
         </div>
       </div>
-      <Greeting isBurgerMenuExpanded={isBurgerMenuExpanded}></Greeting>
+      <Greeting
+        isBurgerMenuExpanded={isBurgerMenuExpanded}
+        userLoggedIn={userLoggedIn}
+      ></Greeting>
       <div id="logo-wrapper">
         <HashLink
           id="logo"
@@ -91,7 +103,10 @@ export function Header() {
               Catalog
             </NavLink>
           </li>
-          <li className="nav_bar-elements">
+          <li
+            className="nav_bar-elements"
+            style={!userLoggedIn ? { display: "initial" } : { display: "none" }}
+          >
             <NavLink
               className="roboto-white"
               to={"/login"}
@@ -169,6 +184,9 @@ export function Header() {
         </div>
       </form>
       <div
+        style={
+          isBurgerMenuExpanded ? { display: "none" } : { display: "initial" }
+        }
         id="login-wrapper"
         //If the user clicks on the avatar, the login menu is expanded, and if the search is expanded, it will collapse the search
         onClick={() => {
@@ -178,11 +196,17 @@ export function Header() {
       >
         <div className="bounce"></div>
       </div>
-
-      <LoginDropDown
-        isLoginDropDownExpanded={isLoginDropDownExpanded}
-        setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
-      ></LoginDropDown>
+      {userLoggedIn ? (
+        <LoggedDropDown
+          isLoginDropDownExpanded={isLoginDropDownExpanded}
+          setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
+        ></LoggedDropDown>
+      ) : (
+        <LoginDropDown
+          isLoginDropDownExpanded={isLoginDropDownExpanded}
+          setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
+        ></LoginDropDown>
+      )}
     </header>
   );
 }
