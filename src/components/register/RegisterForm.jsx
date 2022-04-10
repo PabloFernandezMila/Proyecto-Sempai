@@ -5,7 +5,7 @@ import { api } from "../../api/api.js";
 import { useState } from "react";
 import { SmallLoader } from "../commons/SmallLoader";
 
-export function RegisterForm() {
+export function RegisterForm(props) {
   //Form States
   const [inputName, setInputName] = useState("");
   const [inputLastname, setInputLastname] = useState("");
@@ -36,6 +36,10 @@ export function RegisterForm() {
         (response) => {
           setLoading(false);
           setDisabledButton(false);
+
+          //Create token
+          localStorage.setItem("token", response.data.token);
+          props.setIsUserLogged(true);
           navigate("../home", { replace: true });
         },
         (errorResponse) => {

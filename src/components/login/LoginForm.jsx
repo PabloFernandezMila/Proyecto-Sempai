@@ -33,7 +33,7 @@ export function LoginForm(props) {
           setLoading(false);
           setDisabledButton(false);
 
-          //TODO revisar
+          //Create token
           localStorage.setItem("token", response.data.token);
 
           props.setIsUserLogged(true);

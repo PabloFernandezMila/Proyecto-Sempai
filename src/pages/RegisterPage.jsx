@@ -12,7 +12,7 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/register";
 const secondLinkLabel = "Register";
 
-export function RegisterPage() {
+export function RegisterPage(props) {
   return (
     <div className="register-container tint">
       <Title title={registerTitle} subtitle={registerSubtitle}></Title>
@@ -22,7 +22,10 @@ export function RegisterPage() {
         secondLinkTo={secondLinkTo}
         secondLinkLabel={secondLinkLabel}
       ></Breadcrumb>
-      <RegisterForm></RegisterForm>
+      <RegisterForm
+        isUserLogged={props.isUserLogged}
+        setIsUserLogged={props.setIsUserLogged}
+      ></RegisterForm>
     </div>
   );
 }

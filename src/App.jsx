@@ -46,7 +46,15 @@ export function App() {
             element={<BookLandingPage setSelectedFilter={setSelectedFilter} />}
           />
 
-          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/register"
+            element={
+              <RegisterPage
+                isUserLogged={isUserLogged}
+                setIsUserLogged={setIsUserLogged}
+              />
+            }
+          />
           <Route
             path="/catalog"
             element={
