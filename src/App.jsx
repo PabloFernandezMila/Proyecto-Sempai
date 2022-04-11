@@ -8,7 +8,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 
 import { BookLandingPage } from "./pages/BookLandingPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ScrollToTop } from "./components/commons/ScrollToTop";
 import "../src/assets/styles/common/loader.css";
 import "../src/assets/styles/common/errorMessages.css";
@@ -21,6 +21,13 @@ export function App() {
   //This state controls the filtered content on the Catalog Page
   const [selectedFilter, setSelectedFilter] = useState("/books");
   const [isUserLogged, setIsUserLogged] = useState(false);
+
+  useEffect(() => {
+    localStorage.getItem("token") != null
+      ? setIsUserLogged(true)
+      : setIsUserLogged(false);
+  }, [localStorage.getItem("token")]);
+
   return (
     <>
       <ScrollToTop />
