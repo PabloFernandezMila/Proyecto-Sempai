@@ -41,9 +41,7 @@ export function Header(props) {
   // End of Hamburger menu scripts
 
   return (
-    //TODO remove login from menu when user is already logged in, also redirect to home if user is logged when entering to login or register URLs
     <header
-      onClick={console.log(props.isUserdLogged)}
       className={
         isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : ""
       }
@@ -52,7 +50,7 @@ export function Header(props) {
         <div
           id="burger-menu"
           className="js-burger-menu"
-          //When the user clicks on the burger menu, the burger menu is expanded or collapsesd
+          //When the user clicks on the burger menu, the burger menu is expanded or collapsed
           onClick={toggleBurgerMenu}
         >
           <div id="burger-menu-icon"></div>

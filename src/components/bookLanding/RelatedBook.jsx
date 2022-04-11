@@ -8,7 +8,7 @@ export function RelatedBook(props) {
 
   return (
     <div className="related-book">
-      <Link to={"/bookLanding/:" + id}>
+      <Link to={"/bookLanding/" + id}>
         <img
           className="related-cover"
           src={bookBackgroundImageURL}
