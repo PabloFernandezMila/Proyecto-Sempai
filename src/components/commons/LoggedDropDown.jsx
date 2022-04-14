@@ -12,6 +12,16 @@ export function LoggedDropDown(props) {
     >
       <p className="roboto-white loginWelcomeMsg">Welcome to Bookshelf</p>
       <div>
+        <Link to="/wishlist" className="roboto-white">
+          Wishlist
+        </Link>
+      </div>
+      <div>
+        <Link to="/mylibrary" className="roboto-white">
+          Library
+        </Link>
+      </div>
+      <div>
         <Link
           to="/home"
           className="roboto-white"

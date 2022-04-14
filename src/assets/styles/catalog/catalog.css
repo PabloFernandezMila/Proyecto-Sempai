@@ -1,15 +1,14 @@
 /*######## Table of contents ##########
 #                                    #
-#       1. Fonts import              #
-#       2. General selector          #
-#       3. Specific selectors        #   
-#       4.Media queries              #
+#       1. General selector          #
+#       2. Specific selectors        #   
+#       3.Media queries              #
 #                                    #
 ######################################
  */
 
 
-/*  1. Fonts import */
+/*   1. General selector  */
 
 .catalog-wrapper {
     margin: 0;

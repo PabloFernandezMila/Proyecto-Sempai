@@ -1,0 +1,205 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. General selector          #
+#       2. Specific selectors        #   
+#       3.Media queries              #
+#                                    #
+######################################
+ */
+
+
+/*   1. General selector  */
+
+.wishlistWrapper {
+    margin: 0;
+    background-color: #141414;
+    height: 100%;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.wishlistSection {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.wishlists-grid-headers {
+    font-weight: 400;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid var(--details-color);
+    background: var(--details-color);
+}
+
+.wishlists-grid-headers>div {
+    padding-left: 5px;
+}
+
+.wishlists-grid-header {
+    background-color: var(--details-color);
+}
+
+.wishlists-grid-row {
+    text-transform: capitalize;
+    border: 1px solid var(--details-color);
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wishlists-grid-row>div {
+    text-align: left;
+    height: 200px;
+    border: solid 1px var(--details-color);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.wishlists-grid-row>div>a {
+    font-size: 1.25rem;
+}
+
+.wishlists-grid-row>div>a:hover {
+    color: var(--details-color);
+}
+
+.wishlist-bookCover {
+    height: 200px;
+    padding-left: 0 !important;
+}
+
+.wishlist-bookCover-Link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.removeFromWishlist {
+    background-image: url(../../images/wishlist/bin.svg);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 200px;
+    margin: auto;
+}
+
+.removeFromWishlist:before {
+    content: url("../../images/wishlist/bin-hover.svg");
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.removeFromWishlist:hover {
+    background-image: url(../../images/wishlist/bin-hover.svg);
+}
+
+
+/* 2. General selector  */
+
+.mobileOnly {
+    visibility: hidden;
+}
+
+
+/* 3. Specific selectors */
+
+.wishlist-title-wrapper {
+    background-image: url("../../images/wishlist/wishlist.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    background-blend-mode: multiply;
+    min-height: 351px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .wishlistSection>div {
+        width: 100%;
+    }
+    .wishlists-grid-headers {
+        display: none;
+    }
+    .wishlists-grid-row {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin: 20px;
+    }
+    .wishlists-grid-row>div {
+        width: 100% !important;
+        height: auto;
+        border: none;
+    }
+    .wishlist-bookCover {
+        width: 125px;
+        justify-content: space-between;
+    }
+    .wishlist-bookCover>a {
+        height: 200px;
+    }
+    .removeFromWishlist {
+        height: 50px;
+        margin: 0;
+    }
+    .wishlists-title::before {
+        content: "Title:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+    }
+    .wishlists-author::before {
+        content: "Author:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+    }
+    .wishlists-category::before {
+        content: "category:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+    }
+    .wishlist-bookCover>.mobileOnly::before {
+        content: "Cover:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+    .removeFromWishlistWrapper::before {
+        content: "Remove:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+    .mobileOnly {
+        visibility: visible;
+    }
+    .wishlists-grid-row>div>a {
+        margin-top: 20px;
+    }
+    .removeFromWishlistWrapper {
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}

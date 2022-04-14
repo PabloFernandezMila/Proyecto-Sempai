@@ -173,7 +173,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 376px) {
     .related-content-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;

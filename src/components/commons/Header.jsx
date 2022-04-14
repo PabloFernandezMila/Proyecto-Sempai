@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../../assets/styles/common/header.css";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -38,10 +38,15 @@ export function Header(props) {
     setBurgerMenu(!isBurgerMenuExpanded);
   }
 
+  function toggleScroll() {
+    document.body.classList.toggle("js-stop-scrolling");
+  }
+
   // End of Hamburger menu scripts
 
   return (
     <header
+      onClick={isLoginDropDownExpanded ? toggleScroll : null}
       className={
         isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : ""
       }
@@ -147,7 +152,14 @@ export function Header(props) {
           onClick={() => setSearch(!isSearchExpanded)}
           onKeyDown={(e) => pressTabToExpandSearch(e)}
         >
-          <div className="search-button-image"></div>
+          <div
+            className="search-button-image"
+            style={
+              isLoginDropDownExpanded
+                ? { visibility: "hidden" }
+                : { visibility: "visible" }
+            }
+          ></div>
         </div>
         <div
           className="search-field roboto-white"
@@ -184,14 +196,25 @@ export function Header(props) {
         id="login-wrapper"
         //If the user clicks on the avatar, the login menu is expanded, and if the search is expanded, it will collapse the search
         onClick={() => {
+          toggleScroll();
           setIsLoginDropDownExpanded(!isLoginDropDownExpanded);
           setSearch(false);
         }}
       >
-        <div className="bounce"></div>
+        <div
+          className="bounce"
+          style={
+            isLoginDropDownExpanded
+              ? { visibility: "hidden" }
+              : { visibility: "visible" }
+          }
+        ></div>
       </div>
       {props.isUserLogged ? (
         <LoggedDropDown
+          onClick={() => {
+            toggleScroll();
+          }}
           isLoginDropDownExpanded={isLoginDropDownExpanded}
           setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
           isUserLogged={props.isUserLogged}
@@ -199,6 +222,9 @@ export function Header(props) {
         ></LoggedDropDown>
       ) : (
         <LoginDropDown
+          onClick={() => {
+            toggleScroll();
+          }}
           isLoginDropDownExpanded={isLoginDropDownExpanded}
           setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
         ></LoginDropDown>

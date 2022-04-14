@@ -218,7 +218,7 @@ header>nav>ul {
     grid-template-rows: 70px 80px 80px 80px;
     width: 350px;
     height: 320px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.98);
     position: absolute;
     right: 0;
     top: 0;
@@ -230,9 +230,9 @@ header>nav>ul {
 
 .loggedMenuExpanded {
     display: grid;
-    grid-template-rows: 70px 80px;
+    grid-template-rows: 70px 80px 80px 80px;
     width: 350px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.96);
     position: absolute;
     right: 0;
     top: 0;
@@ -240,6 +240,9 @@ header>nav>ul {
     justify-items: center;
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .loggedMenuExpanded>div {
@@ -497,6 +500,11 @@ header>nav>ul {
         width: 98%;
     }
     .loginMenuExpanded {
+        width: 100vw;
+        height: 100vh;
+        padding-top: 20vh;
+    }
+    .loggedMenuExpanded {
         width: 100vw;
         height: 100vh;
         padding-top: 20vh;

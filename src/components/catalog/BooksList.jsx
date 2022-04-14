@@ -8,7 +8,7 @@ export function BooksList(props) {
   const [booksList, setBookList] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  //Get info from Json Server
+  //Get info from Server
   useEffect(() => {
     //Get books
     //Display loader by setting it true

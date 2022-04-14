@@ -21,12 +21,12 @@ export function App() {
   //This state controls the filtered content on the Catalog Page
   const [selectedFilter, setSelectedFilter] = useState("/books");
   const [isUserLogged, setIsUserLogged] = useState(false);
-
+  let token = localStorage.getItem("token");
   useEffect(() => {
     localStorage.getItem("token") != null
       ? setIsUserLogged(true)
       : setIsUserLogged(false);
-  }, [localStorage.getItem("token")]);
+  }, [token]);
 
   return (
     <>
@@ -72,8 +72,26 @@ export function App() {
               />
             }
           />
-          <Route path="/wishList" element={<WishList />} />
-          <Route path="/myLibrary" element={<MyLibrary />} />
+          <Route
+            path="/wishList"
+            element={
+              <WishList
+                /* Pass the parameters to catalog in order to filter the view */
+                selectedFilter={selectedFilter}
+                setSelectedFilter={setSelectedFilter}
+              />
+            }
+          />
+          <Route
+            path="/myLibrary"
+            element={
+              <MyLibrary
+                /* Pass the parameters to catalog in order to filter the view */
+                selectedFilter={selectedFilter}
+                setSelectedFilter={setSelectedFilter}
+              />
+            }
+          />
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </main>
