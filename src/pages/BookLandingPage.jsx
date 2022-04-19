@@ -58,16 +58,16 @@ export function BookLandingPage(props) {
   //If the book is found on the DB the system returns the book details
   if (bookFound) {
     // Set of book variables
-    const bookBackgroundImageURL = bookInformation.bookBackgroundImageURL;
-    const bookTitle = bookInformation.bookTitle;
-    const bookFullDescription = "" + bookInformation.bookFullDescription;
-    const bookAuthor = bookInformation.bookAuthor;
-    const bookCategory = bookInformation.bookCategory;
+    const bookbackgroundimageurl = bookInformation.bookbackgroundimageurl;
+    const booktitle = bookInformation.booktitle;
+    const bookfulldescription = "" + bookInformation.bookfulldescription;
+    const bookauthor = bookInformation.bookauthor;
+    const bookcategory = bookInformation.categoryname;
 
     //Moved book data to a variable to make easier to read the returns
     bookFoundData = (
       <div className="landingWrapper">
-        <Title title={bookTitle} subtitle={"By " + bookAuthor}></Title>
+        <Title title={booktitle} subtitle={"By " + bookauthor}></Title>
         <Breadcrumb
           firstLinkTo={firstLinkTo}
           firstLinkLabel={firstLinkLabel}
@@ -76,18 +76,18 @@ export function BookLandingPage(props) {
         ></Breadcrumb>
         <section className="book-section">
           <BookDetails
-            bookBackgroundImageURL={bookBackgroundImageURL}
-            bookFullDescription={bookFullDescription}
-            bookAuthor={bookAuthor}
-            bookCategory={bookCategory}
+            bookbackgroundimageurl={bookbackgroundimageurl}
+            bookfulldescription={bookfulldescription}
+            bookAuthor={bookauthor}
+            bookcategory={bookcategory}
           ></BookDetails>
           <Tags
-            bookAuthor={bookAuthor}
-            bookCategory={bookCategory}
+            bookauthor={bookauthor}
+            bookcategory={bookcategory}
             setSelectedFilter={props.setSelectedFilter}
           ></Tags>
           <RelatedContent
-            bookCategory={bookCategory}
+            bookcategory={bookcategory}
             idOnly={params.id}
           ></RelatedContent>
         </section>

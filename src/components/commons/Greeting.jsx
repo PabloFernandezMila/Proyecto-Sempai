@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { api } from "../../api/api";
-import { useEffect } from "react";
+
+let loggedUserEmail = "";
 
 export function Greeting(props) {
-  const [userNamDB, setUserName] = useState("");
+  const [userNamDB, setUserName] = useState("to Bookshelf");
+  const myToken = localStorage.getItem("token");
+  if (myToken != null && myToken !== "undefined") {
+    const jsonToken = JSON.parse(atob(myToken.split(".")[1]));
+    loggedUserEmail = jsonToken.email;
 
-  //This variable emulates having an logged in user ID
-  const loggedUserID = 1;
-
-  useEffect(() => {
     //Get user info using the id to query the DB
-    const userIDURL = "http://localhost:4000/users/" + loggedUserID + "/name";
+    const userIDURL =
+      "http://localhost:4000/users/" + loggedUserEmail + "/name";
     api
       .get(userIDURL)
       .then(function (response) {
@@ -19,22 +21,11 @@ export function Greeting(props) {
           setUserName(response.data.userName);
         }
       })
-      .catch((error) => {
-        setUserName("to Bookshelf");
-      });
-  }, []);
-
+      .catch((error) => {});
+  }
   return (
-    <div
-      id="greeting-user"
-      className="roboto-white"
-      style={
-        props.isBurgerMenuExpanded
-          ? { display: "initial" }
-          : { display: "none" }
-      }
-    >
-      <p>Welcome {userNamDB}</p>
-    </div>
+    <>
+      <p className={props.greetingStyle}>Welcome {userNamDB}</p>
+    </>
   );
 }

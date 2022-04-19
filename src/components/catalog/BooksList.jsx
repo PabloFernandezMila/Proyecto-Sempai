@@ -17,6 +17,7 @@ export function BooksList(props) {
     api.get(props.selectedFilter).then(
       function (response) {
         const books = response.data;
+
         //Hide loader by setting it  false
         setLoading(false);
         //Update list with the books retrieved from the server
@@ -34,10 +35,10 @@ export function BooksList(props) {
       <BookCard
         key={book.id}
         id={book.id}
-        bookTitle={book.bookTitle}
-        bookBackgroundImageURL={book.bookBackgroundImageURL}
-        bookDescription={book.bookDescription}
-        bookAuthor={book.bookAuthor}
+        booktitle={book.booktitle}
+        bookbackgroundimageurl={book.bookbackgroundimageurl}
+        bookdescription={book.bookdescription}
+        bookauthor={book.bookauthor}
       />
     );
   });

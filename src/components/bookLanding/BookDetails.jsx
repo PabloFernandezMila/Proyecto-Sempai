@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "../../assets/styles/bookLanding/bookDetails.css";
 
 export function BookDetails(props) {
-  const bookBackgroundImageURL = props.bookBackgroundImageURL;
-  const bookFullDescription = props.bookFullDescription;
+  const bookbackgroundimageurl = props.bookbackgroundimageurl;
+  const bookfulldescription = props.bookfulldescription;
 
   return (
     <>
       <div className="book-cover">
-        <img src={bookBackgroundImageURL} alt="Book Cover"></img>
+        <img src={bookbackgroundimageurl} alt="Book Cover"></img>
       </div>
       <div className="buttons-container">
         <div className="button-link">
@@ -27,7 +27,7 @@ export function BookDetails(props) {
           <h3 className="roboto-white">Description</h3>
 
           {/* In order to look better added the \n  string on description to determine when a paragraph ends */}
-          {bookFullDescription.split("\n").map((paragraph, i) => (
+          {bookfulldescription.split("\\n").map((paragraph, i) => (
             <p key={i} className="roboto-white">
               {paragraph}
             </p>

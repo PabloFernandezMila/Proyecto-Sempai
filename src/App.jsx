@@ -16,6 +16,7 @@ import { PageNotFound } from "./pages/PageNotFound";
 import "./assets/styles/app.css";
 import { WishList } from "./pages/WishList";
 import { MyLibrary } from "./pages/MyLibrary";
+import { ComingSoon } from "./components/commons/ComingSoon";
 
 export function App() {
   //This state controls the filtered content on the Catalog Page
@@ -92,6 +93,7 @@ export function App() {
               />
             }
           />
+          <Route path="/comingSoon" element={<ComingSoon />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </main>

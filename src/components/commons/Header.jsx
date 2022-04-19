@@ -14,7 +14,7 @@ export function Header(props) {
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
   let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
-
+  let isMobile = window.innerWidth < 1000;
   //This function is used to close the search area when the area is expanded and the user press escape key
   function pressScapeToCloseSearch(e) {
     var key = e.key;
@@ -46,7 +46,6 @@ export function Header(props) {
 
   return (
     <header
-      onClick={isLoginDropDownExpanded ? toggleScroll : null}
       className={
         isBurgerMenuExpanded ? "js-header-expanded slideInFromLeft" : ""
       }
@@ -61,10 +60,16 @@ export function Header(props) {
           <div id="burger-menu-icon"></div>
         </div>
       </div>
-      <Greeting
-        isBurgerMenuExpanded={isBurgerMenuExpanded}
-        userLoggedIn={props.isUserLogged}
-      ></Greeting>
+      <div
+        id="greeting-user"
+        className="roboto-white"
+        style={
+          isBurgerMenuExpanded ? { display: "initial" } : { display: "none" }
+        }
+      >
+        <Greeting></Greeting>
+      </div>
+
       <div id="logo-wrapper">
         <HashLink
           id="logo"
@@ -132,7 +137,7 @@ export function Header(props) {
       {/* The scripts checks if the search was expanded, if true adds a class, if not the class is removed. This allows the system to expand or collapse the search area*/}
       {/* When the search button is clicked the isSearchExpanded variable changes its value to trigger the behaviors mentioned above */}
       <form
-        action="/underConstruction"
+        action="/comingSoon"
         className={
           isSearchExpanded || isBurgerMenuExpanded
             ? "search js-search-form js-expanded"
@@ -196,7 +201,9 @@ export function Header(props) {
         id="login-wrapper"
         //If the user clicks on the avatar, the login menu is expanded, and if the search is expanded, it will collapse the search
         onClick={() => {
-          toggleScroll();
+          if (isMobile) {
+            toggleScroll();
+          }
           setIsLoginDropDownExpanded(!isLoginDropDownExpanded);
           setSearch(false);
         }}
@@ -212,19 +219,17 @@ export function Header(props) {
       </div>
       {props.isUserLogged ? (
         <LoggedDropDown
-          onClick={() => {
-            toggleScroll();
-          }}
+          toggleScroll={toggleScroll}
           isLoginDropDownExpanded={isLoginDropDownExpanded}
           setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
           isUserLogged={props.isUserLogged}
           setIsUserLogged={props.setIsUserLogged}
+          isMobile={isMobile}
         ></LoggedDropDown>
       ) : (
         <LoginDropDown
-          onClick={() => {
-            toggleScroll();
-          }}
+          toggleScroll={toggleScroll}
+          isMobile={isMobile}
           isLoginDropDownExpanded={isLoginDropDownExpanded}
           setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
         ></LoginDropDown>

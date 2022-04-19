@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 
 export function RelatedBook(props) {
-  const bookTitle = props.bookTitle;
-  const bookAuthor = props.bookAuthor;
+  const booktitle = props.booktitle;
+  const bookauthor = props.bookauthor;
   const id = props.id;
-  const bookBackgroundImageURL = props.bookBackgroundImageURL;
+  const bookbackgroundimageurl = props.bookbackgroundimageurl;
 
   return (
     <div className="related-book">
       <Link to={"/bookLanding/" + id}>
         <img
           className="related-cover"
-          src={bookBackgroundImageURL}
-          alt={"book cover " + bookTitle}
+          src={bookbackgroundimageurl}
+          alt={"book cover " + booktitle}
         ></img>
       </Link>
       <Link to={"/bookLanding/" + id} className="related-title roboto-white ">
-        {bookTitle}
+        {booktitle}
       </Link>
       <Link to={"/bookLanding/" + id} className="related-author roboto-white ">
-        {bookAuthor}
+        {bookauthor}
       </Link>
     </div>
   );
