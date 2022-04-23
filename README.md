@@ -1,11 +1,9 @@
-# Welcome to Bookshelf 2.0
+# Welcome to Bookshelf 3.0
 
 In the following section will find the documentation for each page.
 The site is responsive adjusting its components in order to fit pc and mobile browsers
 
-**IMPORTANT** The Json server needs to be run on port 4000 in order to work, is required for Catalog and Landing pages (url-> localhost:4000)
-
-All books information is retrieved from the Json server, also user name for mobile menu
+All information is retrieved from the DB using endpoints of the API, so in order to work properly the API and DB must be running.
 
 ## Pages
 
@@ -19,7 +17,7 @@ The home page is divided on 3 sections. The first two have an arrow to scroll to
 
 ### Catalog
 
-- Catalog list all the available books on JsonServer file
+- Catalog list all the available books on DB
 - Here the user can filter by genre, using the Select dropdown by default all books are listed with the Select a genre option
 - Also the user can hover on a book card to see more information, the system will retrieve the description from the server, if description it is too long it will be trim and added an ellipsis at the end of the string this is to prevent that larger text get out of the container
 - The user can get to the catalog by clicking on the Genre of a book on the book landing page, in this case the user will be redirected to the catalog page and the dropdown will select the genre clicked by the user, the catalog is filtered by this genre
@@ -29,14 +27,16 @@ The home page is divided on 3 sections. The first two have an arrow to scroll to
 - Here the user can see the book details in depth
 - Related section, on this section the user can select a related book, if clicked the user will be redirected to the book landing page
 - The user can click on the Genre of the book and will be redirected to the catalog filtered by that genre
-- Add to wishlist and add to library are not implemented yet (Work in progress)
-
-### Login (_Work in progress_)
+- Add to wishlist and add to library are now implemented
+- 
+### Login 
 
 - Layout is finished
 - Email format validation
+- Email and password validation with error messages from API responses
 - Redirect to the Register page
 - Redirection to the home page after completing the form
+- Forgot password is not implemented, the user is redirected to a generic page indicating that that feature is coming soon
 
 ### About
 
@@ -44,10 +44,10 @@ Static data page
 
 ### Register
 
-Layout is finished
-Email format validation
-Redirect to the Login page
-Redirection to the home page after completing the form
+- Layout is finished
+- Existing email validation
+- Redirect to the Login page
+- Redirection to the home page after completing the form
 
 ## Common Components
 
@@ -62,15 +62,16 @@ Redirection to the home page after completing the form
 
 - Also added keyboard support, users can tab to the icon and press spacebar to expand or escape to collapse
 
-- Search is not working yet, users will be redirected to UnderConstruction page
+- Search is now working yet, users will be redirected to Search page. Searchs by Title, Author and Description on the DB 
 
 ### Header > Greeting
 
-- The greeting component will take the name from the DB and is used on mobile burger for now until Login is implemented, for demo purposes
+- The greeting component takes the name from the DB and is used on mobile burger 
 
 ### Header > Profile icon
 
 - Added dropdown where the user can login or create an account
+- If user logged in the dropdown changes, adding link to Wishlist, Library, and Logout
 
 ### Footer
 
@@ -78,7 +79,7 @@ Redirection to the home page after completing the form
 
 ### Loaders
 
-- Implemented loaders on Catalog grid and book landing page, loaders animations were imported from https://www.npmjs.com/package/react-spinners
+- Implemented loaders for pages and buttons, loaders animations were imported from https://www.npmjs.com/package/react-spinners
 
 ### Animations
 
