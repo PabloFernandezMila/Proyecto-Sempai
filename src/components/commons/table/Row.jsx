@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { api } from "../../../api/api";
+import jwt_decode from "jwt-decode";
 
 export function Row(props) {
   const bookBackgroundImageURL = props.bookBackgroundImageURL;
@@ -7,15 +8,25 @@ export function Row(props) {
   const bookAuthor = props.bookAuthor;
   const bookCategory = props.bookCategory;
   const id = props.id;
+  const removeEndpoint = props.removeEndpoint;
 
-  function removeFromWishlist(id) {
+  function remove(id) {
+    //Get user id
+    const jwt = localStorage.getItem("token");
+    const jwtDecoded = jwt_decode(jwt);
+    const loggedUserEmail = jwtDecoded.email;
+
     api
-      .delete("http://localhost:4000/wishlist/" + id, {
+      .delete("http://localhost:4000/" + removeEndpoint, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
+        data: {
+          email: loggedUserEmail,
+          id: id,
+        },
       })
-      .then(() => console.log("Delete successful"));
+      .then(() => window.location.reload(false));
   }
   return (
     <div className="roboto-white wishlists-grid-row">
@@ -61,7 +72,7 @@ export function Row(props) {
         <div className="mobileOnly"></div>
         <div
           className="removeFromWishlist"
-          onClick={() => removeFromWishlist(id)}
+          onClick={() => remove(id)}
           style={{ width: "100px" }}
         ></div>
       </div>

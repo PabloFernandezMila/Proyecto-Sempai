@@ -6,6 +6,7 @@ import { RelatedContent } from "../components/bookLanding/RelatedContent";
 import { Tags } from "../components/bookLanding/Tags";
 import { Loader } from "../components/commons/Loader";
 import { PageNotFound } from "./PageNotFound";
+import { useNavigate } from "react-router-dom";
 
 //Import styles
 import "../assets/styles/bookLanding/bookLanding.css";
@@ -25,6 +26,8 @@ const secondLinkLabel = "Catalog";
 export function BookLandingPage(props) {
   //Get book id from params
   const params = useParams();
+
+  let navigate = useNavigate();
 
   //State added to control if the url redirects to an id existing on the DB
   const [bookFound, setBookFound] = useState(false);
@@ -50,10 +53,13 @@ export function BookLandingPage(props) {
         }
         setLoading(false);
       })
-      .catch((err) => {
+      .catch((error) => {
+        if (error.message === "Network Error") {
+          navigate("../error", { replace: true });
+        }
         console.log("Unable to retrieve the book with id " + params.id);
       });
-  }, [params.id]);
+  }, [params.id, navigate]);
   let bookFoundData;
   //If the book is found on the DB the system returns the book details
   if (bookFound) {
@@ -80,6 +86,7 @@ export function BookLandingPage(props) {
             bookfulldescription={bookfulldescription}
             bookAuthor={bookauthor}
             bookcategory={bookcategory}
+            bookid={params.id}
           ></BookDetails>
           <Tags
             bookauthor={bookauthor}
@@ -96,12 +103,19 @@ export function BookLandingPage(props) {
   }
 
   // If the book is not found the system redirects to the Page no found component
-  if (!bookFound) return <PageNotFound></PageNotFound>;
-  else {
+  const content = bookFound ? (
+    <div className="landingWrapper flex-centered">{bookFoundData}</div>
+  ) : (
+    <PageNotFound></PageNotFound>
+  );
+
+  if (loading)
     return (
       <div className="landingWrapper flex-centered">
-        {loading ? <Loader></Loader> : bookFoundData}
+        <Loader></Loader>
       </div>
     );
+  else {
+    return content;
   }
 }

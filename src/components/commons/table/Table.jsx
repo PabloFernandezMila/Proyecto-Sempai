@@ -7,16 +7,18 @@ export function Table(props) {
       <Row
         key={book.id}
         id={book.id}
-        bookTitle={book.bookTitle}
-        bookBackgroundImageURL={book.bookBackgroundImageURL}
-        bookAuthor={book.bookAuthor}
-        bookCategory={book.bookCategory}
-        selectedFilter={props.selectedFilter}
-        setSelectedFilter={props.setSelectedFilter}
+        bookTitle={book.booktitle}
+        bookBackgroundImageURL={book.bookbackgroundimageurl}
+        bookAuthor={book.bookauthor}
+        bookCategory={book.categoryname}
+        selectedFilter={props.selectedfilter}
+        setSelectedFilter={props.setSelectedfilter}
+        removeEndpoint={props.removeEndpoint}
       />
     );
   });
   return (
+    //TODO Fix hover effect
     <div className="roboto-white">
       <div>
         <div className="wishlists-grid-headers">

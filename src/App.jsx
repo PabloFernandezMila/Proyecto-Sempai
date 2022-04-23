@@ -16,6 +16,7 @@ import { PageNotFound } from "./pages/PageNotFound";
 import "./assets/styles/app.css";
 import { WishList } from "./pages/WishList";
 import { MyLibrary } from "./pages/MyLibrary";
+import { Error } from "./pages/ErrorPage";
 import { ComingSoon } from "./components/commons/ComingSoon";
 
 export function App() {
@@ -94,6 +95,7 @@ export function App() {
             }
           />
           <Route path="/comingSoon" element={<ComingSoon />}></Route>
+          <Route path="/error" element={<Error />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </main>

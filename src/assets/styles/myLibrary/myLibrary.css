@@ -10,7 +10,7 @@
 
 /*   1. General selector  */
 
-.wishlistWrapper {
+.myLibraryWrapper {
     margin: 0;
     background-color: #141414;
     height: 100%;
@@ -18,7 +18,7 @@
     min-height: 90vh;
 }
 
-.wishlistSection {
+.myLibrarySection {
     height: auto;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
     overflow: hidden;
 }
 
-.wishlists-grid-headers {
+.myLibrarys-grid-headers {
     font-weight: 400;
     font-size: 1.25rem;
     display: flex;
@@ -38,15 +38,15 @@
     background: var(--details-color);
 }
 
-.wishlists-grid-headers>div {
+.myLibrarys-grid-headers>div {
     padding-left: 5px;
 }
 
-.wishlists-grid-header {
+.myLibrarys-grid-header {
     background-color: var(--details-color);
 }
 
-.wishlists-grid-row {
+.myLibrarys-grid-row {
     text-transform: capitalize;
     border: 1px solid var(--details-color);
     text-align: center;
@@ -56,7 +56,7 @@
     align-items: center;
 }
 
-.wishlists-grid-row>div {
+.myLibrarys-grid-row>div {
     text-align: left;
     height: 200px;
     border: solid 1px var(--details-color);
@@ -65,24 +65,24 @@
     padding-left: 5px;
 }
 
-.wishlists-grid-row>div>a {
+.myLibrarys-grid-row>div>a {
     font-size: 1.25rem;
 }
 
-.wishlists-grid-row>div>a:hover {
+.myLibrarys-grid-row>div>a:hover {
     color: var(--details-color);
 }
 
-.wishlists-grid-row>div>a:hover:before {
+.myLibrarys-grid-row>div>a:hover:before {
     color: white;
 }
 
-.wishlist-bookCover {
+.myLibrary-bookCover {
     height: 200px;
     padding-left: 0 !important;
 }
 
-.wishlist-bookCover-Link {
+.myLibrary-bookCover-Link {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -91,8 +91,8 @@
     background-position: center;
 }
 
-.removeFromWishlist {
-    background-image: url(../../images/wishlist/bin.svg);
+.removeFrommyLibrary {
+    background-image: url(../../images/myLibrary/bin.svg);
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center;
@@ -103,15 +103,15 @@
     margin: auto;
 }
 
-.removeFromWishlist:before {
-    content: url("../../images/wishlist/bin-hover.svg");
+.removeFrommyLibrary:before {
+    content: url("../../images/myLibrary/bin-hover.svg");
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
-.removeFromWishlist:hover {
-    background-image: url(../../images/wishlist/bin-hover.svg);
+.removeFrommyLibrary:hover {
+    background-image: url(../../images/myLibrary/bin-hover.svg);
 }
 
 
@@ -124,8 +124,8 @@
 
 /* 3. Specific selectors */
 
-.wishlist-title-wrapper {
-    background-image: url("../../images/wishlist/wishlist.jpg");
+.myLibrary-title-wrapper {
+    background-image: url("../../images/myLibrary/myLibrary.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 35vh;
@@ -134,53 +134,53 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .wishlistSection>div {
+    .myLibrarySection>div {
         width: 100%;
     }
-    .wishlists-grid-headers {
+    .myLibrarys-grid-headers {
         display: none;
     }
-    .wishlists-grid-row {
+    .myLibrarys-grid-row {
         flex-direction: column;
         height: auto;
         padding: 20px;
         margin: 20px;
     }
-    .wishlists-grid-row>div {
+    .myLibrarys-grid-row>div {
         width: 100% !important;
         height: auto;
         border: none;
     }
-    .wishlist-bookCover {
+    .myLibrary-bookCover {
         width: 125px;
         justify-content: space-between;
     }
-    .wishlist-bookCover>a {
+    .myLibrary-bookCover>a {
         height: 200px;
     }
-    .removeFromWishlist {
+    .removeFrommyLibrary {
         height: 50px;
         margin: 0;
     }
-    .wishlists-title::before {
+    .myLibrarys-title::before {
         content: "Title:";
         text-decoration: underline;
         text-decoration-color: var(--details-color);
         margin-right: 5px;
     }
-    .wishlists-author::before {
+    .myLibrarys-author::before {
         content: "Author:";
         text-decoration: underline;
         text-decoration-color: var(--details-color);
         margin-right: 5px;
     }
-    .wishlists-category::before {
+    .myLibrarys-category::before {
         content: "category:";
         text-decoration: underline;
         text-decoration-color: var(--details-color);
         margin-right: 5px;
     }
-    .wishlist-bookCover>.mobileOnly::before {
+    .myLibrary-bookCover>.mobileOnly::before {
         content: "Cover:";
         text-decoration: underline;
         text-decoration-color: var(--details-color);
@@ -188,7 +188,7 @@
         font-weight: 300;
         font-size: 1.25rem;
     }
-    .removeFromWishlistWrapper::before {
+    .removeFrommyLibraryWrapper::before {
         content: "Remove:";
         text-decoration: underline;
         text-decoration-color: var(--details-color);
@@ -199,10 +199,10 @@
     .mobileOnly {
         visibility: visible;
     }
-    .wishlists-grid-row>div>a {
+    .myLibrarys-grid-row>div>a {
         margin-top: 20px;
     }
-    .removeFromWishlistWrapper {
+    .removeFrommyLibraryWrapper {
         justify-content: space-between;
         margin-top: 20px;
     }

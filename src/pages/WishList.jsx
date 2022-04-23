@@ -17,15 +17,18 @@ const secondLinkLabel = "Catalog";
 
 export function WishList(props) {
   const [userNamDB, setUserName] = useState("");
+  let loggedUserEmail = "Guest";
 
   //Get user id
-  const jwt = localStorage.getItem("token");
-  const jwtDecoded = jwt_decode(jwt);
-  const loggedUserID = jwtDecoded.id;
-
+  if (typeof localStorage.getItem("token") === "string") {
+    const jwt = localStorage.getItem("token");
+    const jwtDecoded = jwt_decode(jwt);
+    loggedUserEmail = jwtDecoded.email;
+  }
   useEffect(() => {
     //Get user info using the id to query the DB
-    const userIDURL = "http://localhost:4000/users/" + loggedUserID + "/name";
+    const userIDURL =
+      "http://localhost:4000/users/" + loggedUserEmail + "/name";
     api
       .get(userIDURL)
       .then(function (response) {
@@ -37,7 +40,7 @@ export function WishList(props) {
       .catch((error) => {
         setUserName("to Bookshelf");
       });
-  }, [loggedUserID]);
+  }, [loggedUserEmail]);
 
   let navigate = useNavigate();
   const [booksList, setBookList] = useState([]);
@@ -48,10 +51,8 @@ export function WishList(props) {
     //Get books
     //Display loader by setting it true
     setLoading(true);
-    //This prop is the filtered URL
-
     api
-      .get("http://localhost:4000/wishlist/:loggedUserID", {
+      .get("http://localhost:4000/wishlist/" + loggedUserEmail, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -64,16 +65,15 @@ export function WishList(props) {
         //Update list with the books retrieved from the server
         setBookList(books);
       })
-      .catch((error) => {
-        //Catch login errors
-        if (
-          error.response.data.status === 401 ||
-          error.response.data.status === 400
-        ) {
-          navigate("../login", { replace: true });
+      .catch(function (error) {
+        if (error.response) {
+          // Request made and server responded
+          if (error.response.status === 401 || error.response.status === 400) {
+            navigate("../login", { replace: true });
+          }
         }
       });
-  }, [navigate]);
+  }, [navigate, loggedUserEmail]);
 
   const table =
     booksList.length > 0 ? (
@@ -83,10 +83,17 @@ export function WishList(props) {
         } /* Pass the parameters to catalog in order to filter the view */
         selectedFilter={props.selectedFilter}
         setSelectedFilter={props.setSelectedFilter}
+        removeEndpoint={"wishlist/remove"}
       ></Table>
     ) : (
-      <div>
-        <h1 className="roboto-white"> Your library is empty</h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1 className="roboto-white"> Your Wishlist is empty</h1>
         <h2 className="roboto-white">
           Please add books from the book landing page
         </h2>

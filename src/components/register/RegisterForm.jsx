@@ -36,7 +36,7 @@ export function RegisterForm(props) {
         (response) => {
           setLoading(false);
           setDisabledButton(false);
-
+          //TODO Store token on the DB
           //Create token
           localStorage.setItem("token", response.data.token);
           props.setIsUserLogged(true);

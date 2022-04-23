@@ -13,15 +13,12 @@ export function Greeting(props) {
     //Get user info using the id to query the DB
     const userIDURL =
       "http://localhost:4000/users/" + loggedUserEmail + "/name";
-    api
-      .get(userIDURL)
-      .then(function (response) {
-        //Set the name
-        if (response.status === 200) {
-          setUserName(response.data.userName);
-        }
-      })
-      .catch((error) => {});
+    api.get(userIDURL).then(function (response) {
+      //Set the name
+      if (response.status === 200) {
+        setUserName(response.data.userName);
+      }
+    });
   }
   return (
     <>

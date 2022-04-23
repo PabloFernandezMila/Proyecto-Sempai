@@ -14,9 +14,9 @@ const firstLinkTo = "/home";
 const firstLinkLabel = "Home";
 const secondLinkTo = "/catalog";
 const secondLinkLabel = "Catalog";
-let loggedUserEmail = "notLogged";
 
 export function MyLibrary(props) {
+  let loggedUserEmail = "Guest";
   const [userNamDB, setUserName] = useState("");
   let navigate = useNavigate();
 
