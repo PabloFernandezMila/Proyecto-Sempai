@@ -1,4 +1,4 @@
-# Welcome to Bookshelf 3.0
+# Welcome to Bookshelf 3.0 UI 
 
 In the following section will find the documentation for each page.
 The site is responsive adjusting its components in order to fit pc and mobile browsers
