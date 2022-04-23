@@ -2,27 +2,35 @@ import { useNavigate } from "react-router-dom";
 import { api } from "../api/api";
 import { Title } from "../components/commons/Title";
 import { Breadcrumb } from "../components/commons/Breadcrumb";
-import "../assets/styles/wishlist/wishlist.css";
+import "../assets/styles/myLibrary/myLibrary.css";
 import { Table } from "../components/commons/table/Table";
 import { Loader } from "../components/commons/Loader";
 import { useEffect } from "react";
 import { useState } from "react";
+import jwt_decode from "jwt-decode";
 
 // Breadcrumb variables
 const firstLinkTo = "/home";
 const firstLinkLabel = "Home";
 const secondLinkTo = "/catalog";
 const secondLinkLabel = "Catalog";
+let loggedUserEmail = "notLogged";
 
 export function MyLibrary(props) {
   const [userNamDB, setUserName] = useState("");
+  let navigate = useNavigate();
 
-  //This variable emulates having an logged in user ID
-  const loggedUserID = 2;
+  //Get user id
+  if (typeof localStorage.getItem("token") === "string") {
+    const jwt = localStorage.getItem("token");
+    const jwtDecoded = jwt_decode(jwt);
+    loggedUserEmail = jwtDecoded.email;
+  }
 
   useEffect(() => {
     //Get user info using the id to query the DB
-    const userIDURL = "http://localhost:4000/users/" + loggedUserID + "/name";
+    const userIDURL =
+      "http://localhost:4000/users/" + loggedUserEmail + "/name";
     api
       .get(userIDURL)
       .then(function (response) {
@@ -34,20 +42,19 @@ export function MyLibrary(props) {
       .catch((error) => {
         setUserName("to Bookshelf");
       });
-  }, []);
+  }, [loggedUserEmail]);
 
-  let navigate = useNavigate();
   const [booksList, setBookList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [accessGranted, setAccessGranted] = useState(false);
+
   //Get info from Server
   useEffect(() => {
     //Get books
     //Display loader by setting it true
     setLoading(true);
-    //This prop is the filtered URL
     api
-      .get("http://localhost:4000/myLibrary/", {
+      .get("http://localhost:4000/myLibrary/" + loggedUserEmail, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -60,16 +67,15 @@ export function MyLibrary(props) {
         //Update list with the books retrieved from the server
         setBookList(books);
       })
-      .catch((error) => {
-        //Catch login errors
-        if (
-          error.response.data.status === 401 ||
-          error.response.data.status === 400
-        ) {
-          navigate("../login", { replace: true });
+      .catch(function (error) {
+        if (error.response) {
+          // Request made and server responded
+          if (error.response.status === 401 || error.response.status === 400) {
+            navigate("../login", { replace: true });
+          }
         }
       });
-  }, [navigate]);
+  }, [navigate, loggedUserEmail]);
 
   const table =
     booksList.length > 0 ? (
@@ -79,10 +85,17 @@ export function MyLibrary(props) {
         } /* Pass the parameters to catalog in order to filter the view */
         selectedFilter={props.selectedFilter}
         setSelectedFilter={props.setSelectedFilter}
+        removeEndpoint={"myLibrary/remove"}
       ></Table>
     ) : (
-      <div>
-        <h1 className="roboto-white"> Your library is empty</h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1 className="roboto-white"> Your Library is empty</h1>
         <h2 className="roboto-white">
           Please add books from the book landing page
         </h2>
@@ -90,11 +103,11 @@ export function MyLibrary(props) {
     );
 
   return (
-    <div className="wishlistWrapper">
+    <div className="myLibraryWrapper">
       {accessGranted ? (
         <>
-          <div className="wishlist-title-wrapper tint">
-            <Title title={userNamDB + "'s Library"}></Title>
+          <div className="myLibrary-title-wrapper tint">
+            <Title title={userNamDB + "'s myLibrary"}></Title>
             <Breadcrumb
               firstLinkTo={firstLinkTo}
               firstLinkLabel={firstLinkLabel}
@@ -102,12 +115,12 @@ export function MyLibrary(props) {
               secondLinkLabel={secondLinkLabel}
             ></Breadcrumb>
           </div>
-          <section className="wishlistSection">
+          <section className="myLibrarySection">
             <>{loading ? <Loader></Loader> : table}</>
           </section>
         </>
       ) : (
-        //If user is not logged in, the app displays a loader instead of any wishlist component
+        //If user is not logged in, the app displays a loader instead of any myLibrary component
         <div style={{ paddingTop: "35vh" }}>
           <Loader></Loader>
         </div>
