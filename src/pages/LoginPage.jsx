@@ -12,7 +12,7 @@ const firstLinkLabel = "Home";
 const secondLinkTo = "/login";
 const secondLinkLabel = "Login";
 
-export function LoginPage() {
+export function LoginPage(props) {
   return (
     <div className="login-container tint">
       <Title title={loginTitle} subtitle={loginSubtitle}></Title>
@@ -22,7 +22,10 @@ export function LoginPage() {
         secondLinkTo={secondLinkTo}
         secondLinkLabel={secondLinkLabel}
       ></Breadcrumb>
-      <LoginForm></LoginForm>
+      <LoginForm
+        isUserLogged={props.isUserLogged}
+        setIsUserLogged={props.setIsUserLogged}
+      ></LoginForm>
     </div>
   );
 }

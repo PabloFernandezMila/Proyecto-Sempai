@@ -4,9 +4,12 @@ export function LoginDropDown(props) {
   return (
     <div
       className={props.isLoginDropDownExpanded ? "loginMenuExpanded" : "hidden"}
-      onClick={() =>
-        props.setIsLoginDropDownExpanded(!props.isLoginDropDownExpanded)
-      }
+      onClick={() => {
+        props.setIsLoginDropDownExpanded(!props.isLoginDropDownExpanded);
+        if (props.isMobile) {
+          props.toggleScroll();
+        }
+      }}
     >
       <p className="roboto-white loginWelcomeMsg">Welcome to Bookshelf</p>
       <div>

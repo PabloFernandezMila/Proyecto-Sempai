@@ -52,13 +52,18 @@ hr {
 }
 
 .related-cover {
-    height: 100%;
-    width: 100%;
+    height: 300px;
+    width: auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.2s ease-in-out;
     border-radius: 15px;
+    min-height: 100px;
+}
+
+.related-cover:hover {
+    transform: scale(1.1);
 }
 
 
@@ -100,21 +105,6 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.related-cover {
-    height: 100%;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.2s ease-in-out;
-    border-radius: 15px;
-    min-height: 100px;
-}
-
-.related-cover:hover {
-    transform: scale(1.1);
 }
 
 .related-title {
@@ -183,7 +173,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 376px) {
     .related-content-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;

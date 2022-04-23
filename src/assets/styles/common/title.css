@@ -66,13 +66,14 @@
 
 @media (min-height: 500px) and (max-height: 700px) {
     #title-wrapper {
-        height: 25vh;
+        height: 31vh;
     }
 }
 
 @media screen and (max-width: 600px) {
     #title-wrapper {
         height: 35vh;
+        min-height: 210px;
     }
     .title-h2 {
         padding: 3%;

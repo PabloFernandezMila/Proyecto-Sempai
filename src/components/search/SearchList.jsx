@@ -1,33 +1,39 @@
-import { BookCard } from "./BookCard";
+import { BookCard } from "../catalog/BookCard";
 import { api } from "../../api/api.js";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Loader } from "../commons/Loader";
 
-export function BooksList(props) {
+export function SearchList(props) {
   const [booksList, setBookList] = useState([]);
   const [loading, setLoading] = useState(false);
+  let inputSearch = props.inputSearch;
 
   //Get info from Server
   useEffect(() => {
     //Get books
     //Display loader by setting it true
     setLoading(true);
-    //This prop is the filtered URL
-    api.get(props.selectedFilter).then(
-      function (response) {
-        const books = response.data;
 
-        //Hide loader by setting it  false
-        setLoading(false);
-        //Update list with the books retrieved from the server
-        setBookList(books);
-      },
-      () => {
-        setLoading(false);
-      }
-    );
-  }, [props.selectedFilter]);
+    //This prop is the filtered URL
+    api
+      .post("/search", {
+        search: inputSearch,
+      })
+      .then(
+        function (response) {
+          const books = response.data;
+
+          //Hide loader by setting it  false
+          setLoading(false);
+          //Update list with the books retrieved from the server
+          setBookList(books);
+        },
+        () => {
+          setLoading(false);
+        }
+      );
+  }, [inputSearch]);
 
   //For each book retrieve from the server, the system maps the book properties into a Book card
   const booksFromDB = booksList.map(function (book) {
@@ -54,9 +60,7 @@ export function BooksList(props) {
           {booksFromDB.length > 0 ? (
             <div className="books-wrapper">{booksFromDB}</div>
           ) : (
-            <p className="roboto-white">
-              This shelf is empty, please select another
-            </p>
+            <p className="roboto-white">No books found, try another input</p>
           )}
         </section>
       )}

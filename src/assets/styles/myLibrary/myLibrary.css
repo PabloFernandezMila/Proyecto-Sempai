@@ -1,0 +1,209 @@
+/*######## Table of contents ##########
+#                                    #
+#       1. General selector          #
+#       2. Specific selectors        #   
+#       3.Media queries              #
+#                                    #
+######################################
+ */
+
+
+/*   1. General selector  */
+
+.myLibraryWrapper {
+    margin: 0;
+    background-color: #141414;
+    height: 100%;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.myLibrarySection {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.myLibrarys-grid-headers {
+    font-weight: 400;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid var(--details-color);
+    background: var(--details-color);
+}
+
+.myLibrarys-grid-headers>div {
+    padding-left: 5px;
+}
+
+.myLibrarys-grid-header {
+    background-color: var(--details-color);
+}
+
+.myLibrarys-grid-row {
+    text-transform: capitalize;
+    border: 1px solid var(--details-color);
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myLibrarys-grid-row>div {
+    text-align: left;
+    height: 200px;
+    border: solid 1px var(--details-color);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.myLibrarys-grid-row>div>a {
+    font-size: 1.25rem;
+}
+
+.myLibrarys-grid-row>div>a:hover {
+    color: var(--details-color);
+}
+
+.myLibrarys-grid-row>div>a:hover:before {
+    color: white;
+}
+
+.myLibrary-bookCover {
+    height: 200px;
+    padding-left: 0 !important;
+}
+
+.myLibrary-bookCover-Link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.removeFrommyLibrary {
+    background-image: url(../../images/myLibrary/bin.svg);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 200px;
+    margin: auto;
+}
+
+.removeFrommyLibrary:before {
+    content: url("../../images/myLibrary/bin-hover.svg");
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.removeFrommyLibrary:hover {
+    background-image: url(../../images/myLibrary/bin-hover.svg);
+}
+
+
+/* 2. General selector  */
+
+.mobileOnly {
+    visibility: hidden;
+}
+
+
+/* 3. Specific selectors */
+
+.myLibrary-title-wrapper {
+    background-image: url("../../images/myLibrary/myLibrary.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    background-blend-mode: multiply;
+    min-height: 351px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .myLibrarySection>div {
+        width: 100%;
+    }
+    .myLibrarys-grid-headers {
+        display: none;
+    }
+    .myLibrarys-grid-row {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin: 20px;
+    }
+    .myLibrarys-grid-row>div {
+        width: 100% !important;
+        height: auto;
+        border: none;
+    }
+    .myLibrary-bookCover {
+        width: 125px;
+        justify-content: space-between;
+    }
+    .myLibrary-bookCover>a {
+        height: 200px;
+    }
+    .removeFrommyLibrary {
+        height: 50px;
+        margin: 0;
+    }
+    .myLibrarys-title::before {
+        content: "Title:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+    }
+    .myLibrarys-author::before {
+        content: "Author:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+    }
+    .myLibrarys-category::before {
+        content: "category:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+    }
+    .myLibrary-bookCover>.mobileOnly::before {
+        content: "Cover:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+    .removeFrommyLibraryWrapper::before {
+        content: "Remove:";
+        text-decoration: underline;
+        text-decoration-color: var(--details-color);
+        margin-right: 5px;
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+    .mobileOnly {
+        visibility: visible;
+    }
+    .myLibrarys-grid-row>div>a {
+        margin-top: 20px;
+    }
+    .removeFrommyLibraryWrapper {
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}

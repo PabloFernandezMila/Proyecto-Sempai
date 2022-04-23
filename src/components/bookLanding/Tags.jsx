@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 
 export function Tags(props) {
-  const bookAuthor = props.bookAuthor;
-  const bookCategory = props.bookCategory;
+  const bookauthor = props.bookauthor;
+  const bookcategory = props.bookcategory;
   return (
     <div className="tags">
       <div>
         <span className="label roboto-white">Author:</span>
         <span>
-          <Link to={"/underConstruction"} className="roboto-white tag">
-            {bookAuthor}{" "}
-            {/* TODO Add endpoint and handle the response for bookAuthor */}
+          <Link to={"/comingSoon"} className="roboto-white tag">
+            {bookauthor}
           </Link>
         </span>
       </div>
@@ -21,10 +20,10 @@ export function Tags(props) {
             to={"/catalog"}
             className="roboto-white tag"
             onClick={() =>
-              props.setSelectedFilter("/books/categories/" + bookCategory)
+              props.setSelectedFilter("/books/categories/" + bookcategory)
             }
           >
-            {bookCategory}
+            {bookcategory}
           </Link>
         </span>
       </div>

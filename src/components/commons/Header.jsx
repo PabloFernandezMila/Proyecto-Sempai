@@ -1,19 +1,37 @@
 import { useState } from "react";
 import "../../assets/styles/common/header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Greeting } from "./Greeting";
 import { LoginDropDown } from "./LoginDropDown";
+import { LoggedDropDown } from "./LoggedDropDown";
 
 //
 
-export function Header() {
+export function Header(props) {
+  let navigate = useNavigate();
   // Start of Search scripts
+  const [searchTyping, setSearchTyping] = useState("");
+
+  //Form Handlers
+  const handleInputSearch = (event) => {
+    setSearchTyping(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    props.setInputSearch(searchTyping);
+    if (isBurgerMenuExpanded) {
+      toggleBurgerMenu();
+    }
+    setSearch(false);
+    navigate("../searchresults", { replace: true });
+  };
 
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
   let [isLoginDropDownExpanded, setIsLoginDropDownExpanded] = useState(false);
-
+  let isMobile = window.innerWidth < 1000;
   //This function is used to close the search area when the area is expanded and the user press escape key
   function pressScapeToCloseSearch(e) {
     var key = e.key;
@@ -37,6 +55,10 @@ export function Header() {
     setBurgerMenu(!isBurgerMenuExpanded);
   }
 
+  function toggleScroll() {
+    document.body.classList.toggle("js-stop-scrolling");
+  }
+
   // End of Hamburger menu scripts
 
   return (
@@ -49,13 +71,22 @@ export function Header() {
         <div
           id="burger-menu"
           className="js-burger-menu"
-          //When the user clicks on the burger menu, the burger menu is expanded or collapsesd
+          //When the user clicks on the burger menu, the burger menu is expanded or collapsed
           onClick={toggleBurgerMenu}
         >
           <div id="burger-menu-icon"></div>
         </div>
       </div>
-      <Greeting isBurgerMenuExpanded={isBurgerMenuExpanded}></Greeting>
+      <div
+        id="greeting-user"
+        className="roboto-white"
+        style={
+          isBurgerMenuExpanded ? { display: "initial" } : { display: "none" }
+        }
+      >
+        <Greeting></Greeting>
+      </div>
+
       <div id="logo-wrapper">
         <HashLink
           id="logo"
@@ -91,7 +122,12 @@ export function Header() {
               Catalog
             </NavLink>
           </li>
-          <li className="nav_bar-elements">
+          <li
+            className="nav_bar-elements"
+            style={
+              props.isUserLogged ? { display: "none" } : { display: "initial" }
+            }
+          >
             <NavLink
               className="roboto-white"
               to={"/login"}
@@ -118,7 +154,7 @@ export function Header() {
       {/* The scripts checks if the search was expanded, if true adds a class, if not the class is removed. This allows the system to expand or collapse the search area*/}
       {/* When the search button is clicked the isSearchExpanded variable changes its value to trigger the behaviors mentioned above */}
       <form
-        action="/underConstruction"
+        action="/comingSoon"
         className={
           isSearchExpanded || isBurgerMenuExpanded
             ? "search js-search-form js-expanded"
@@ -130,6 +166,7 @@ export function Header() {
             : null
         }
         autoComplete="off"
+        onSubmit={handleSearchSubmit}
       >
         <div
           className="search-button js-search-button"
@@ -138,7 +175,14 @@ export function Header() {
           onClick={() => setSearch(!isSearchExpanded)}
           onKeyDown={(e) => pressTabToExpandSearch(e)}
         >
-          <div className="search-button-image"></div>
+          <div
+            className="search-button-image"
+            style={
+              isLoginDropDownExpanded
+                ? { visibility: "hidden" }
+                : { visibility: "visible" }
+            }
+          ></div>
         </div>
         <div
           className="search-field roboto-white"
@@ -157,7 +201,7 @@ export function Header() {
             }
             id="search-text"
             type="text"
-            placeholder="Title, author or genres"
+            placeholder="Title, author or description"
             className="roboto-white js-search-input"
             maxLength="35"
             style={
@@ -165,24 +209,50 @@ export function Header() {
             }
             //If the user press scape the search is closed
             onKeyDown={(e) => pressScapeToCloseSearch(e)}
+            onChange={handleInputSearch}
           />
         </div>
       </form>
       <div
+        style={
+          isBurgerMenuExpanded ? { display: "none" } : { display: "initial" }
+        }
         id="login-wrapper"
         //If the user clicks on the avatar, the login menu is expanded, and if the search is expanded, it will collapse the search
         onClick={() => {
+          if (isMobile) {
+            toggleScroll();
+          }
           setIsLoginDropDownExpanded(!isLoginDropDownExpanded);
           setSearch(false);
         }}
       >
-        <div className="bounce"></div>
+        <div
+          className="bounce"
+          style={
+            isLoginDropDownExpanded
+              ? { visibility: "hidden" }
+              : { visibility: "visible" }
+          }
+        ></div>
       </div>
-
-      <LoginDropDown
-        isLoginDropDownExpanded={isLoginDropDownExpanded}
-        setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
-      ></LoginDropDown>
+      {props.isUserLogged ? (
+        <LoggedDropDown
+          toggleScroll={toggleScroll}
+          isLoginDropDownExpanded={isLoginDropDownExpanded}
+          setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
+          isUserLogged={props.isUserLogged}
+          setIsUserLogged={props.setIsUserLogged}
+          isMobile={isMobile}
+        ></LoggedDropDown>
+      ) : (
+        <LoginDropDown
+          toggleScroll={toggleScroll}
+          isMobile={isMobile}
+          isLoginDropDownExpanded={isLoginDropDownExpanded}
+          setIsLoginDropDownExpanded={setIsLoginDropDownExpanded}
+        ></LoginDropDown>
+      )}
     </header>
   );
 }
