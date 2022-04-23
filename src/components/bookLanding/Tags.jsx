@@ -10,7 +10,6 @@ export function Tags(props) {
         <span>
           <Link to={"/comingSoon"} className="roboto-white tag">
             {bookauthor}
-            {/* TODO Add UI for book Author */}
           </Link>
         </span>
       </div>

@@ -6,7 +6,7 @@ import { CatalogPage } from "./pages/CatalogPage";
 import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
-
+import { ComingSoon } from "./components/commons/ComingSoon";
 import { BookLandingPage } from "./pages/BookLandingPage";
 import { useState, useEffect } from "react";
 import { ScrollToTop } from "./components/commons/ScrollToTop";
@@ -17,12 +17,16 @@ import "./assets/styles/app.css";
 import { WishList } from "./pages/WishList";
 import { MyLibrary } from "./pages/MyLibrary";
 import { Error } from "./pages/ErrorPage";
-import { ComingSoon } from "./components/commons/ComingSoon";
+import { SearchResults } from "./pages/SearchResults";
 
 export function App() {
   //This state controls the filtered content on the Catalog Page
   const [selectedFilter, setSelectedFilter] = useState("/books");
   const [isUserLogged, setIsUserLogged] = useState(false);
+
+  //Search input state, this will be used to pass the search text input to the Search result page
+  const [inputSearch, setInputSearch] = useState("");
+
   let token = localStorage.getItem("token");
   useEffect(() => {
     localStorage.getItem("token") != null
@@ -33,7 +37,12 @@ export function App() {
   return (
     <>
       <ScrollToTop />
-      <Header isUserLogged={isUserLogged} setIsUserLogged={setIsUserLogged} />
+      <Header
+        isUserLogged={isUserLogged}
+        setIsUserLogged={setIsUserLogged}
+        inputSearch={inputSearch}
+        setInputSearch={setInputSearch}
+      />
       <main>
         <Routes>
           <Route path="/home" element={<HomePage />} />
@@ -94,8 +103,12 @@ export function App() {
               />
             }
           />
-          <Route path="/comingSoon" element={<ComingSoon />}></Route>
+          <Route
+            path="/searchResults"
+            element={<SearchResults inputSearch={inputSearch} />}
+          ></Route>
           <Route path="/error" element={<Error />}></Route>
+          <Route path="/comingSoon" element={<ComingSoon />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </main>

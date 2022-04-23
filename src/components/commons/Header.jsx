@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../assets/styles/common/header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Greeting } from "./Greeting";
 import { LoginDropDown } from "./LoginDropDown";
@@ -9,7 +9,23 @@ import { LoggedDropDown } from "./LoggedDropDown";
 //
 
 export function Header(props) {
+  let navigate = useNavigate();
   // Start of Search scripts
+  const [searchTyping, setSearchTyping] = useState("");
+
+  //Form Handlers
+  const handleInputSearch = (event) => {
+    setSearchTyping(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    props.setInputSearch(searchTyping);
+    isBurgerMenuExpanded
+      ? setBurgerMenu(!isBurgerMenuExpanded)
+      : setBurgerMenu(isBurgerMenuExpanded);
+    navigate("../searchresults", { replace: true });
+  };
 
   //This state is used to trigger the display of the search field when the search icon is clicked
   let [isSearchExpanded, setSearch] = useState(false);
@@ -149,6 +165,7 @@ export function Header(props) {
             : null
         }
         autoComplete="off"
+        onSubmit={handleSearchSubmit}
       >
         <div
           className="search-button js-search-button"
@@ -183,7 +200,7 @@ export function Header(props) {
             }
             id="search-text"
             type="text"
-            placeholder="Title, author or genres"
+            placeholder="Title, author or description"
             className="roboto-white js-search-input"
             maxLength="35"
             style={
@@ -191,6 +208,7 @@ export function Header(props) {
             }
             //If the user press scape the search is closed
             onKeyDown={(e) => pressScapeToCloseSearch(e)}
+            onChange={handleInputSearch}
           />
         </div>
       </form>
