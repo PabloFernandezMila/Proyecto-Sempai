@@ -60,9 +60,7 @@ export function SearchList(props) {
           {booksFromDB.length > 0 ? (
             <div className="books-wrapper">{booksFromDB}</div>
           ) : (
-            <p className="roboto-white">
-              This shelf is empty, please select another
-            </p>
+            <p className="roboto-white">No books found, try another input</p>
           )}
         </section>
       )}

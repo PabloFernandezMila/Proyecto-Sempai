@@ -21,9 +21,10 @@ export function Header(props) {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     props.setInputSearch(searchTyping);
-    isBurgerMenuExpanded
-      ? setBurgerMenu(!isBurgerMenuExpanded)
-      : setBurgerMenu(isBurgerMenuExpanded);
+    if (isBurgerMenuExpanded) {
+      toggleBurgerMenu();
+    }
+    setSearch(false);
     navigate("../searchresults", { replace: true });
   };
 
