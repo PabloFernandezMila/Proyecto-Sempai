@@ -57,7 +57,6 @@ export function BookLandingPage(props) {
         if (error.message === "Network Error") {
           navigate("../error", { replace: true });
         }
-        console.log("Unable to retrieve the book with id " + params.id);
       });
   }, [params.id, navigate]);
   let bookFoundData;

@@ -55,9 +55,9 @@ export function BookDetails(props) {
 
           //Display error
           setError(response.error);
+          console.log(error);
           setLoadingWishlist(false);
           setDisabledButtonWishlist(false);
-          console.log(response.status);
           // Request made and server responded
           if (response.status === 401 || response.status === 400) {
             setResponseMessageWishlist("Please Login");
